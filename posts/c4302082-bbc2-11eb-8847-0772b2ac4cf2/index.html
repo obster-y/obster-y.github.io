@@ -21,7 +21,7 @@
 
 <script class="hexo-configurations">
     var NexT = window.NexT || {};
-    var CONFIG = {"hostname":"obster-y.github.io","root":"/","images":"/images","scheme":"Gemini","version":"8.1.0","exturl":false,"sidebar":{"position":"right","display":"post","padding":18,"offset":12},"copycode":true,"bookmark":{"enable":false,"color":"#222","save":"auto"},"fancybox":false,"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":"gitalk","storage":true,"lazyload":false,"nav":null,"activeClass":"gitalk"},"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"fadeInDown","post_body":"fadeInDown","coll_header":"fadeInLeft","sidebar":"fadeInUp"}},"prism":false,"i18n":{"placeholder":"Searching...","empty":"We didn't find any results for the search: ${query}","hits_time":"${hits} results found in ${time} ms","hits":"${hits} results found"},"path":"/search.xml","localsearch":{"enable":true,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false}};
+    var CONFIG = {"hostname":"obster-y.github.io","root":"/","images":"/images","scheme":"Gemini","version":"8.1.0","exturl":false,"sidebar":{"position":"right","display":"post","padding":18,"offset":12},"copycode":true,"bookmark":{"enable":false,"color":"#222","save":"auto"},"fancybox":false,"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":"gitalk","storage":true,"lazyload":false,"nav":null},"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"fadeInDown","post_body":"fadeInDown","coll_header":"fadeInLeft","sidebar":"fadeInUp"}},"prism":false,"i18n":{"placeholder":"Searching...","empty":"We didn't find any results for the search: ${query}","hits_time":"${hits} results found in ${time} ms","hits":"${hits} results found"},"path":"/search.xml","localsearch":{"enable":true,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false}};
   </script>
 <meta name="description" content="Divide and Conquer - 分治法概念分治法字面上的解释是“分而治之”，就是把一个复杂的问题分成两个或更多的相同或相似的子问题，再把子问题分成更小的子问题……直到最后子问题可以简单的直接求解，并且原问题的解即子问题的解的合并。这个技巧是很多高效算法的基础，如排序算法(快速排序，归并排序)，傅立叶变换(快速傅立叶变换)。 分治法的设计思想将一个难以直接解决的大问题，分割成一些规模较小的">
 <meta property="og:type" content="article">
@@ -638,7 +638,11 @@ f(n, m)=\max{\{f(n-1,m), f(n-1,m-w[n])+P(n,m)\}}
 
 
 
-    <div class="comments" id="gitalk-container"></div>
+    
+  <div class="comments">
+    <div id="utterances-container"></div>
+  </div>
+  
 
 <script>
   window.addEventListener('tabs:register', () => {
@@ -749,23 +753,16 @@ f(n, m)=\max{\{f(n-1,m), f(n-1,m-w[n])+P(n,m)\}}
 
 
 
-<link rel="stylesheet" href="//cdn.jsdelivr.net/npm/gitalk@1.7.0/dist/gitalk.css">
-
 <script>
-NexT.utils.loadComments('#gitalk-container', () => {
-  NexT.utils.getScript('//cdn.jsdelivr.net/npm/gitalk@1.7.0/dist/gitalk.min.js', () => {
-    var gitalk = new Gitalk({
-      clientID    : '75e1c55d870581bdcb2e',
-      clientSecret: '318aa15c76d3dd2026abf66ce448f54e3a9ae8da',
-      repo        : 'comments',
-      owner       : 'obster-y',
-      admin       : ['obster-y'],
-      id          : 'f1f1c1937589827ad034f3259041f20c',
-        language: 'en',
-      distractionFreeMode: true
-    });
-    gitalk.render('gitalk-container');
-  }, window.Gitalk);
+NexT.utils.loadComments('#utterances-container', () => {
+  const script = document.createElement('script');
+  script.src = 'https://utteranc.es/client.js';
+  script.setAttribute('repo', "obster-y/comments");
+  script.setAttribute('issue-term', "pathname");
+  script.setAttribute('theme', "github-dark");
+  script.crossOrigin = 'anonymous';
+  script.async = true;
+  document.querySelector('#utterances-container').appendChild(script);
 });
 </script><!-- hexo-inject:begin --><!-- hexo-inject:end -->
 
