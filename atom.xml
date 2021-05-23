@@ -52,7 +52,7 @@ Ein Tutorial zum Einrichten der Software.  --&gt;</summary>
     <link href="https://obster-y.github.io/posts/c4302081-bbc2-11eb-8847-0772b2ac4cf2/"/>
     <id>https://obster-y.github.io/posts/c4302081-bbc2-11eb-8847-0772b2ac4cf2/</id>
     <published>2020-12-09T02:00:00.000Z</published>
-    <updated>2021-05-23T12:31:19.092Z</updated>
+    <updated>2021-05-23T12:56:52.796Z</updated>
     
     
       
@@ -77,7 +77,7 @@ Ein Tutorial zum Einrichten der Software.  --&gt;</summary>
     <link href="https://obster-y.github.io/posts/c4304784-bbc2-11eb-8847-0772b2ac4cf2/"/>
     <id>https://obster-y.github.io/posts/c4304784-bbc2-11eb-8847-0772b2ac4cf2/</id>
     <published>2020-12-08T16:00:00.000Z</published>
-    <updated>2021-05-23T12:31:19.092Z</updated>
+    <updated>2021-05-23T12:57:33.832Z</updated>
     
     
     <summary type="html">正则表达式基础入门</summary>
@@ -98,7 +98,7 @@ Ein Tutorial zum Einrichten der Software.  --&gt;</summary>
     <link href="https://obster-y.github.io/posts/c4302071-bbc2-11eb-8847-0772b2ac4cf2/"/>
     <id>https://obster-y.github.io/posts/c4302071-bbc2-11eb-8847-0772b2ac4cf2/</id>
     <published>2020-07-04T12:21:58.000Z</published>
-    <updated>2021-05-23T12:31:19.088Z</updated>
+    <updated>2021-05-23T12:57:58.672Z</updated>
     
     
     <summary type="html">通过个人的折腾经历，总结出的键盘与输入法相关的知识</summary>
@@ -121,7 +121,7 @@ Ein Tutorial zum Einrichten der Software.  --&gt;</summary>
     <link href="https://obster-y.github.io/posts/c4302082-bbc2-11eb-8847-0772b2ac4cf2/"/>
     <id>https://obster-y.github.io/posts/c4302082-bbc2-11eb-8847-0772b2ac4cf2/</id>
     <published>2020-03-22T05:28:54.000Z</published>
-    <updated>2021-05-23T12:31:19.092Z</updated>
+    <updated>2021-05-23T12:57:15.680Z</updated>
     
     
     <summary type="html">&lt;h1 id=&quot;Divide-and-Conquer-分治法&quot;&gt;&lt;a href=&quot;#Divide-and-Conquer-分治法&quot; class=&quot;headerlink&quot; title=&quot;Divide and Conquer - 分治法&quot;&gt;&lt;/a&gt;Divide and Conquer - 分治法&lt;/h1&gt;&lt;h2 id=&quot;概念&quot;&gt;&lt;a href=&quot;#概念&quot; class=&quot;headerlink&quot; title=&quot;概念&quot;&gt;&lt;/a&gt;概念&lt;/h2&gt;&lt;p&gt;分治法字面上的解释是“分而治之”，就是把一个复杂的问题分成两个或更多的相同或相似的子问题，再把子问题分成更小的子问题……直到最后子问题可以简单的直接求解，并且原问题的解即子问题的解的合并。这个技巧是很多高效算法的基础，如排序算法(快速排序，归并排序)，傅立叶变换(快速傅立叶变换)。&lt;/p&gt;
@@ -145,7 +145,7 @@ Ein Tutorial zum Einrichten der Software.  --&gt;</summary>
     <link href="https://obster-y.github.io/posts/c4304787-bbc2-11eb-8847-0772b2ac4cf2/"/>
     <id>https://obster-y.github.io/posts/c4304787-bbc2-11eb-8847-0772b2ac4cf2/</id>
     <published>2020-03-20T05:47:58.000Z</published>
-    <updated>2021-05-23T12:31:19.096Z</updated>
+    <updated>2021-05-23T12:57:25.492Z</updated>
     
     
     <summary type="html">&lt;h1 id=&quot;Introduction&quot;&gt;&lt;a href=&quot;#Introduction&quot; class=&quot;headerlink&quot; title=&quot;Introduction&quot;&gt;&lt;/a&gt;Introduction&lt;/h1&gt;</summary>
@@ -162,7 +162,7 @@ Ein Tutorial zum Einrichten der Software.  --&gt;</summary>
     <link href="https://obster-y.github.io/posts/c4304785-bbc2-11eb-8847-0772b2ac4cf2/"/>
     <id>https://obster-y.github.io/posts/c4304785-bbc2-11eb-8847-0772b2ac4cf2/</id>
     <published>2020-02-29T07:59:55.000Z</published>
-    <updated>2021-05-23T12:31:19.092Z</updated>
+    <updated>2021-05-23T12:57:42.880Z</updated>
     
     
     <summary type="html">&lt;p&gt;First day of Basic Algorithm training in Leetcode.&lt;br&gt;&lt;a href=&quot;https://leetcode.com/problems/two-sum/&quot;&gt;Two Sum&lt;/a&gt;&lt;/p&gt;

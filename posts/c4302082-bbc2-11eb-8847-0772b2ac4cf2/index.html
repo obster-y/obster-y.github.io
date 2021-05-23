@@ -31,7 +31,7 @@
 <meta property="og:description" content="Divide and Conquer - 分治法概念分治法字面上的解释是“分而治之”，就是把一个复杂的问题分成两个或更多的相同或相似的子问题，再把子问题分成更小的子问题……直到最后子问题可以简单的直接求解，并且原问题的解即子问题的解的合并。这个技巧是很多高效算法的基础，如排序算法(快速排序，归并排序)，傅立叶变换(快速傅立叶变换)。 分治法的设计思想将一个难以直接解决的大问题，分割成一些规模较小的">
 <meta property="og:locale" content="en_US">
 <meta property="article:published_time" content="2020-03-22T05:28:54.000Z">
-<meta property="article:modified_time" content="2021-05-23T12:31:19.092Z">
+<meta property="article:modified_time" content="2021-05-23T12:57:15.680Z">
 <meta property="article:author" content="Obster-Y">
 <meta property="article:tag" content="algorithm">
 <meta property="article:tag" content="optimization">
@@ -416,7 +416,7 @@ mjx-container[display="true"] + br {
           <i class="far fa-calendar-check"></i>
         </span>
         <span class="post-meta-item-text">Edited on</span>
-        <time title="Modified: 2021-05-23 20:31:19" itemprop="dateModified" datetime="2021-05-23T20:31:19+08:00">2021-05-23</time>
+        <time title="Modified: 2021-05-23 20:57:15" itemprop="dateModified" datetime="2021-05-23T20:57:15+08:00">2021-05-23</time>
       </span>
     <span class="post-meta-item">
       <span class="post-meta-item-icon">
@@ -584,7 +584,7 @@ f(n, m)=\max{\{f(n-1,m), f(n-1,m-w[n])+P(n,m)\}}
 <p>分支定界法常以广度优先或以最小耗费（最大效益）优先的方式搜索问题的解空间树。问题的解空间树是表示问题解空间的一棵有序树，常见的有子集树和排列树。在搜索问题的解空间树时，分支定界法与回溯法对当前扩展结点所使用的扩展方式不同。在分支定界法中，每一个活结点只有一次机会成为扩展结点。活结点一旦成为扩展结点，就一次性产生其所有儿子结点。在这些儿子结点中，那些导致不可行解或导致非最优解的儿子结点被舍弃，其余儿子结点被子加入活结点表中。此后，从活结点表中取下一结点成为当前扩展结点，并重复上述结点扩展过程。这个过程一直持续到找到所求的解或活结点表为空时为止。</p>
 <h2 id="和回溯法的区别"><a href="#和回溯法的区别" class="headerlink" title="和回溯法的区别"></a>和回溯法的区别</h2><p>有一些问题其实无论用回溯法还是分支定界法都可以得到很好的解决，但是另外一些则不然。也许我们需要具体一些的分析——到底何时使用分支限界而何时使用回溯呢？</p>
 <p>回溯法深度优先搜索堆栈活结点的所有可行子结点被遍历后才被从栈中弹出找出满足约束条件的所有解</p>
-<p>分支定界法广度优先或最小消耗优先搜索队列、优先队列每个结点只有一次成为活结点的机会找出满足约束条件的一个解或特定意义下的最优解<br>意义下的最优解</p>
+<p>分支定界法广度优先或最小消耗优先搜索队列、优先队列每个结点只有一次成为活结点的机会找出满足约束条件的一个解或特定意义下的最优解</p>
 
     </div>
 
