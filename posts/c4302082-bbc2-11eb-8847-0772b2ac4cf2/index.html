@@ -21,24 +21,24 @@
 
 <script class="hexo-configurations">
     var NexT = window.NexT || {};
-    var CONFIG = {"hostname":"obster-y.github.io","root":"/","images":"/images","scheme":"Gemini","version":"8.1.0","exturl":false,"sidebar":{"position":"right","display":"post","padding":18,"offset":12},"copycode":false,"bookmark":{"enable":false,"color":"#222","save":"auto"},"fancybox":false,"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"fadeInDown","post_body":"fadeInDown","coll_header":"fadeInLeft","sidebar":"fadeInUp"}},"prism":false,"i18n":{"placeholder":"Searching...","empty":"We didn't find any results for the search: ${query}","hits_time":"${hits} results found in ${time} ms","hits":"${hits} results found"},"path":"/search.xml","localsearch":{"enable":true,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false}};
+    var CONFIG = {"hostname":"obster-y.github.io","root":"/","images":"/images","scheme":"Gemini","version":"8.1.0","exturl":false,"sidebar":{"position":"right","display":"post","padding":18,"offset":12},"copycode":true,"bookmark":{"enable":false,"color":"#222","save":"auto"},"fancybox":false,"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":"gitalk","storage":true,"lazyload":false,"nav":null,"activeClass":"gitalk"},"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"fadeInDown","post_body":"fadeInDown","coll_header":"fadeInLeft","sidebar":"fadeInUp"}},"prism":false,"i18n":{"placeholder":"Searching...","empty":"We didn't find any results for the search: ${query}","hits_time":"${hits} results found in ${time} ms","hits":"${hits} results found"},"path":"/search.xml","localsearch":{"enable":true,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false}};
   </script>
 <meta name="description" content="Divide and Conquer - 分治法概念分治法字面上的解释是“分而治之”，就是把一个复杂的问题分成两个或更多的相同或相似的子问题，再把子问题分成更小的子问题……直到最后子问题可以简单的直接求解，并且原问题的解即子问题的解的合并。这个技巧是很多高效算法的基础，如排序算法(快速排序，归并排序)，傅立叶变换(快速傅立叶变换)。 分治法的设计思想将一个难以直接解决的大问题，分割成一些规模较小的">
 <meta property="og:type" content="article">
 <meta property="og:title" content="5 Common Optimization Algorithm">
-<meta property="og:url" content="https://obster-y.github.io/2020/03/22/Programming-Datastruct-and-Algorithm-5-common-optimization-algorithm/index.html">
+<meta property="og:url" content="https://obster-y.github.io/posts/c4302082-bbc2-11eb-8847-0772b2ac4cf2/index.html">
 <meta property="og:site_name" content="Obster-Y&#39;s Blog">
 <meta property="og:description" content="Divide and Conquer - 分治法概念分治法字面上的解释是“分而治之”，就是把一个复杂的问题分成两个或更多的相同或相似的子问题，再把子问题分成更小的子问题……直到最后子问题可以简单的直接求解，并且原问题的解即子问题的解的合并。这个技巧是很多高效算法的基础，如排序算法(快速排序，归并排序)，傅立叶变换(快速傅立叶变换)。 分治法的设计思想将一个难以直接解决的大问题，分割成一些规模较小的">
 <meta property="og:locale" content="en_US">
 <meta property="article:published_time" content="2020-03-22T05:28:54.000Z">
-<meta property="article:modified_time" content="2020-12-23T12:09:40.000Z">
+<meta property="article:modified_time" content="2021-05-23T12:31:19.092Z">
 <meta property="article:author" content="Obster-Y">
 <meta property="article:tag" content="algorithm">
 <meta property="article:tag" content="optimization">
 <meta name="twitter:card" content="summary">
 
 
-<link rel="canonical" href="https://obster-y.github.io/2020/03/22/Programming-Datastruct-and-Algorithm-5-common-optimization-algorithm/">
+<link rel="canonical" href="https://obster-y.github.io/posts/c4302082-bbc2-11eb-8847-0772b2ac4cf2/">
 
 
 <script class="page-configurations">
@@ -209,7 +209,8 @@ mjx-container[display="true"] {
 mjx-container[display="true"] + br {
   display: none;
 }
-</style><!-- hexo-inject:begin --><!-- hexo-inject:end --></head>
+</style><link rel="alternate" href="/atom.xml" title="Obster-Y's Blog" type="application/atom+xml"><!-- hexo-inject:begin --><!-- hexo-inject:end -->
+</head>
 
 <body itemscope itemtype="http://schema.org/WebPage" class="use-motion">
   <!-- hexo-inject:begin --><!-- hexo-inject:end --><div class="headband"></div>
@@ -232,7 +233,7 @@ mjx-container[display="true"] + br {
       <h1 class="site-title">Obster-Y's Blog</h1>
       <i class="logo-line"></i>
     </a>
-      <p class="site-subtitle" itemprop="description">An useless site</p>
+      <p class="site-subtitle" itemprop="description">A useless site</p>
   </div>
 
   <div class="site-nav-right">
@@ -337,7 +338,7 @@ mjx-container[display="true"] + br {
       <div class="site-state-item site-state-tags">
             <a href="/tags/">
           
-        <span class="site-state-item-count">6</span>
+        <span class="site-state-item-count">8</span>
         <span class="site-state-item-name">tags</span></a>
       </div>
   </nav>
@@ -384,7 +385,7 @@ mjx-container[display="true"] + br {
   
 
   <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="en">
-    <link itemprop="mainEntityOfPage" href="https://obster-y.github.io/2020/03/22/Programming-Datastruct-and-Algorithm-5-common-optimization-algorithm/">
+    <link itemprop="mainEntityOfPage" href="https://obster-y.github.io/posts/c4302082-bbc2-11eb-8847-0772b2ac4cf2/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="image" content="/images/profile.jpg">
@@ -415,7 +416,7 @@ mjx-container[display="true"] + br {
           <i class="far fa-calendar-check"></i>
         </span>
         <span class="post-meta-item-text">Edited on</span>
-        <time title="Modified: 2020-12-23 20:09:40" itemprop="dateModified" datetime="2020-12-23T20:09:40+08:00">2020-12-23</time>
+        <time title="Modified: 2021-05-23 20:31:19" itemprop="dateModified" datetime="2021-05-23T20:31:19+08:00">2021-05-23</time>
       </span>
     <span class="post-meta-item">
       <span class="post-meta-item-icon">
@@ -460,7 +461,7 @@ mjx-container[display="true"] + br {
 <p>特征2 是应用分治法的前提,它也是大多数问题可以满足的，此特征反映了递归思想的应用；</p>
 <p>特征3 是关键，能否利用分治法完全取决于问题是否具有第三条特征，如果具备了第一条和第二条特征，而不具备第三条特征，则可以考虑用<strong>贪心法</strong>或<strong>动态规划法</strong>。</p>
 <p>特征4 涉及到分治法的效率，如果各子问题是不独立的则分治法要做许多不必要的工作，重复地解公共的子问题，此时虽然可用分治法，但一般用<strong>动态规划法</strong>较好。</p>
-<h2 id="基本步骤"><a href="#基本步骤" class="headerlink" title="基本步骤"></a>基本步骤</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line">fuction Divide-and-Conquer(P):</span><br><span class="line"></span><br><span class="line">    # if question small enough to solve directly</span><br><span class="line">    if |P| ≤ n0:</span><br><span class="line">        return(ADHOC(P))</span><br><span class="line"></span><br><span class="line">    # divide P into subquestion (P_1 ,P_2 ,...,P_k), solve them recursively</span><br><span class="line">    for i ← 1 to k:</span><br><span class="line">        do y_i ← Divide-and-Conquer(Pi)</span><br><span class="line"></span><br><span class="line">    # merge all solution</span><br><span class="line">    T ← MERGE(y_1, y_2, ... ,y_k)</span><br><span class="line"></span><br><span class="line">    return(T)</span><br></pre></td></tr></table></figure>
+<h2 id="基本步骤"><a href="#基本步骤" class="headerlink" title="基本步骤"></a>基本步骤</h2><figure class="highlight reasonml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line">fuction Divide-<span class="keyword">and</span>-<span class="constructor">Conquer(P)</span>:</span><br><span class="line"></span><br><span class="line">    # <span class="keyword">if</span> question small enough <span class="keyword">to</span> solve directly</span><br><span class="line">    <span class="keyword">if</span> <span class="pattern-match">|<span class="constructor">P</span>| ≤ n0:</span></span><br><span class="line"><span class="pattern-match">        return(<span class="constructor">ADHOC(P)</span>)</span></span><br><span class="line"><span class="pattern-match"></span></span><br><span class="line"><span class="pattern-match">    # divide <span class="constructor">P</span> into subquestion (<span class="constructor">P_1</span> ,<span class="constructor">P_2</span> ,<span class="operator">...</span>,<span class="constructor">P_k</span>), solve them recursively</span></span><br><span class="line"><span class="pattern-match">    <span class="keyword">for</span> i ← 1 <span class="keyword">to</span> k:</span></span><br><span class="line"><span class="pattern-match">        <span class="keyword">do</span> y<span class="constructor">_i</span> ← <span class="constructor">Divide</span>-<span class="keyword">and</span>-<span class="constructor">Conquer(Pi)</span></span></span><br><span class="line"><span class="pattern-match"></span></span><br><span class="line"><span class="pattern-match">    # merge all solution</span></span><br><span class="line"><span class="pattern-match">    <span class="constructor">T</span> ← <span class="constructor">MERGE(<span class="params">y_1</span>, <span class="params">y_2</span>, <span class="operator">...</span> ,<span class="params">y_k</span>)</span></span></span><br><span class="line"><span class="pattern-match"></span></span><br><span class="line"><span class="pattern-match">    return(<span class="constructor">T</span>)</span></span><br></pre></td></tr></table></figure>
 <ol>
 <li>一定是先找到最小问题规模时的求解方法</li>
 <li>然后考虑随着问题规模增大时的求解方法</li>
@@ -522,7 +523,7 @@ mjx-container[display="true"] + br {
 <script type="math/tex; mode=display">
 \begin{equation}
 f(n, m)=\max{\{f(n-1,m), f(n-1,m-w[n])+P(n,m)\}}
-\end{equation}</script><h2 id="代码"><a href="#代码" class="headerlink" title="代码"></a>代码</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br></pre></td><td class="code"><pre><span class="line">// 第一个阶段 </span><br><span class="line">for(j=1; j&lt;=m; j=j+1){</span><br><span class="line">    xn[j] = 初始值;</span><br><span class="line"></span><br><span class="line">    // 其他n-1个阶段</span><br><span class="line">    for(i=n-1; i&gt;=1; i=i-1){</span><br><span class="line"></span><br><span class="line">        // f(i)与i有关的表达式</span><br><span class="line">        for(j=1; j&gt;=f(i); j=j+1){</span><br><span class="line">            xi[j] = j = max(或min) {g(xi-1[j1:j2]),... ,g(xi-1[jk:jk+1])};</span><br><span class="line">        }</span><br><span class="line">    }</span><br><span class="line">}</span><br><span class="line"></span><br><span class="line">// 由子问题的最优解求解整个问题的最优解的方案</span><br><span class="line">t = g(x1[j1:j2]);</span><br><span class="line"></span><br><span class="line">for(i=2; i&lt;=n-1; i=i+1){</span><br><span class="line">    t = t-xi-1[ji];</span><br><span class="line"></span><br><span class="line">    for(j=1; j&gt;=f(i); j=j+1){</span><br><span class="line">        if(t=xi[ji]){</span><br><span class="line">            break;</span><br><span class="line">        }</span><br><span class="line">    }</span><br><span class="line">}</span><br></pre></td></tr></table></figure>
+\end{equation}</script><h2 id="代码"><a href="#代码" class="headerlink" title="代码"></a>代码</h2><figure class="highlight jboss-cli"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br></pre></td><td class="code"><pre><span class="line"><span class="string">//</span> 第一个阶段 </span><br><span class="line">for<span class="params">(<span class="attr">j</span>=1; j&lt;=m; <span class="attr">j</span>=j+1)</span>{</span><br><span class="line">    xn[j] = 初始值;</span><br><span class="line"></span><br><span class="line">    <span class="string">//</span> 其他n-1个阶段</span><br><span class="line">    for<span class="params">(<span class="attr">i</span>=n-1; i&gt;=1; <span class="attr">i</span>=i-1)</span>{</span><br><span class="line"></span><br><span class="line">        <span class="string">//</span> f<span class="params">(i)</span>与i有关的表达式</span><br><span class="line">        for<span class="params">(<span class="attr">j</span>=1; j&gt;=f(i)</span>; j=j+1){</span><br><span class="line">            xi[j] = j = max<span class="params">(或min)</span> {g<span class="params">(xi-1[j1:j2])</span>,<span class="string">...</span> ,g<span class="params">(xi-1[jk:jk+1])</span>};</span><br><span class="line">        }</span><br><span class="line">    }</span><br><span class="line">}</span><br><span class="line"></span><br><span class="line"><span class="string">//</span> 由子问题的最优解求解整个问题的最优解的方案</span><br><span class="line">t = g<span class="params">(x1[j1:j2])</span>;</span><br><span class="line"></span><br><span class="line">for<span class="params">(<span class="attr">i</span>=2; i&lt;=n-1; <span class="attr">i</span>=i+1)</span>{</span><br><span class="line">    t = t-xi-1[ji];</span><br><span class="line"></span><br><span class="line">    for<span class="params">(<span class="attr">j</span>=1; j&gt;=f(i)</span>; j=j+1){</span><br><span class="line">        <span class="keyword">if</span><span class="params">(<span class="attr">t</span>=xi[ji])</span>{</span><br><span class="line">            break;</span><br><span class="line">        }</span><br><span class="line">    }</span><br><span class="line">}</span><br></pre></td></tr></table></figure>
 <h1 id="Greedy-Algorithm-贪心算法"><a href="#Greedy-Algorithm-贪心算法" class="headerlink" title="Greedy Algorithm - 贪心算法"></a>Greedy Algorithm - 贪心算法</h1><h2 id="概念-2"><a href="#概念-2" class="headerlink" title="概念"></a>概念</h2><p>所谓贪心算法是指，在对问题求解时，总是做出在当前看来是最好的选择。也就是说，不从整体最优上加以考虑，他所做出的仅是在某种意义上的局部最优解。</p>
 <p>贪心算法没有固定的算法框架，算法设计的关键是贪心策略的选择。必须注意的是，贪心算法不是对所有问题都能得到整体最优解，选择的贪心策略必须具备无后效性，即某个状态以后的过程不会影响以前的状态，只与当前状态有关。</p>
 <p>所以对所采用的贪心策略一定要仔细分析其是否满足无后效性。</p>
@@ -562,8 +563,8 @@ f(n, m)=\max{\{f(n-1,m), f(n-1,m-w[n])+P(n,m)\}}
 <li><p>以深度优先方式搜索解空间，并在搜索过程中用剪枝函数避免无效搜索。</p>
 </li>
 </ol>
-<h2 id="代码-1"><a href="#代码-1" class="headerlink" title="代码"></a>代码</h2><p>非递归<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br></pre></td><td class="code"><pre><span class="line">int a[n],i;</span><br><span class="line">i = 1;</span><br><span class="line">while (i&gt;0 (有路可走) and (未达到目标))</span><br><span class="line">{</span><br><span class="line">    if(i &gt; n){</span><br><span class="line">        搜索到一个解，输出；</span><br><span class="line">    }</span><br><span class="line">    else{</span><br><span class="line">        a[i]第一个可能的值；</span><br><span class="line"></span><br><span class="line">        while(a[i]在不满足约束条件且在搜索空间内){</span><br><span class="line">            a[i]下一个可能的值；</span><br><span class="line">        }</span><br><span class="line"></span><br><span class="line">        if(a[i]在搜索空间内){</span><br><span class="line">            标识占用的资源；</span><br><span class="line">            i = i+1; // 扩展下一个结点</span><br><span class="line">        }</span><br><span class="line"></span><br><span class="line">        else{</span><br><span class="line">            清理所占的状态空间; // 回溯</span><br><span class="line">            i = i – 1; </span><br><span class="line">        }</span><br><span class="line">    }</span><br><span class="line">}</span><br></pre></td></tr></table></figure></p>
-<p>递归<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br></pre></td><td class="code"><pre><span class="line">int a[n];</span><br><span class="line">function Search(int i)</span><br><span class="line">{</span><br><span class="line">    if(i &gt; n){</span><br><span class="line">       输出结果;</span><br><span class="line">    }</span><br><span class="line">    else{</span><br><span class="line">       // 枚举i所有可能的路径</span><br><span class="line">       for(j = 下界; j &lt;= 上界; j=j+1){</span><br><span class="line"></span><br><span class="line">           // 满足限界函数和约束条件</span><br><span class="line">           if(fun(j)){</span><br><span class="line">                a[i] = j;</span><br><span class="line">                ...</span><br><span class="line">                Search(i + 1);</span><br><span class="line">                回溯前的清理工作(如a[i]置空值等);</span><br><span class="line">            }</span><br><span class="line">        }</span><br><span class="line">    }</span><br><span class="line">}</span><br></pre></td></tr></table></figure></p>
+<h2 id="代码-1"><a href="#代码-1" class="headerlink" title="代码"></a>代码</h2><p>非递归<br><figure class="highlight gauss"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br></pre></td><td class="code"><pre><span class="line">int a[n],i;</span><br><span class="line">i = <span class="number">1</span>;</span><br><span class="line"><span class="keyword">while</span> (i&gt;<span class="number">0</span> (有路可走) <span class="keyword">and</span> (未达到目标))</span><br><span class="line">{</span><br><span class="line">    <span class="keyword">if</span>(i &gt; n){</span><br><span class="line">        搜索到一个解，输出；</span><br><span class="line">    }</span><br><span class="line">    <span class="keyword">else</span>{</span><br><span class="line">        a[i]第一个可能的值；</span><br><span class="line"></span><br><span class="line">        <span class="keyword">while</span>(a[i]在不满足约束条件且在搜索空间内){</span><br><span class="line">            a[i]下一个可能的值；</span><br><span class="line">        }</span><br><span class="line"></span><br><span class="line">        <span class="keyword">if</span>(a[i]在搜索空间内){</span><br><span class="line">            标识占用的资源；</span><br><span class="line">            i = i+<span class="number">1</span>; <span class="comment">// 扩展下一个结点</span></span><br><span class="line">        }</span><br><span class="line"></span><br><span class="line">        <span class="keyword">else</span>{</span><br><span class="line">            清理所占的状态空间; <span class="comment">// 回溯</span></span><br><span class="line">            i = i – <span class="number">1</span>; </span><br><span class="line">        }</span><br><span class="line">    }</span><br><span class="line">}</span><br></pre></td></tr></table></figure></p>
+<p>递归<br><figure class="highlight reasonml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">int</span> a<span class="literal">[<span class="identifier">n</span>]</span>;</span><br><span class="line"><span class="keyword">function</span> <span class="constructor">Search(<span class="params">int</span> <span class="params">i</span>)</span></span><br><span class="line">{</span><br><span class="line">    <span class="keyword">if</span>(i &gt; n){</span><br><span class="line">       输出结果;</span><br><span class="line">    }</span><br><span class="line">    <span class="keyword">else</span>{</span><br><span class="line">       <span class="comment">// 枚举i所有可能的路径</span></span><br><span class="line">       <span class="keyword">for</span>(j = 下界; j &lt;= 上界; j=j+<span class="number">1</span>){</span><br><span class="line"></span><br><span class="line">           <span class="comment">// 满足限界函数和约束条件</span></span><br><span class="line">           <span class="keyword">if</span>(<span class="keyword">fun</span>(j)){</span><br><span class="line">                a<span class="literal">[<span class="identifier">i</span>]</span> = j;</span><br><span class="line">                ...</span><br><span class="line">                <span class="constructor">Search(<span class="params">i</span> + 1)</span>;</span><br><span class="line">                回溯前的清理工作(如a<span class="literal">[<span class="identifier">i</span>]</span>置空值等);</span><br><span class="line">            }</span><br><span class="line">        }</span><br><span class="line">    }</span><br><span class="line">}</span><br></pre></td></tr></table></figure></p>
 <h2 id="常见解决问题-2"><a href="#常见解决问题-2" class="headerlink" title="常见解决问题"></a>常见解决问题</h2><ol>
 <li>N皇后问题</li>
 </ol>
@@ -583,7 +584,7 @@ f(n, m)=\max{\{f(n-1,m), f(n-1,m-w[n])+P(n,m)\}}
 <p>分支定界法常以广度优先或以最小耗费（最大效益）优先的方式搜索问题的解空间树。问题的解空间树是表示问题解空间的一棵有序树，常见的有子集树和排列树。在搜索问题的解空间树时，分支定界法与回溯法对当前扩展结点所使用的扩展方式不同。在分支定界法中，每一个活结点只有一次机会成为扩展结点。活结点一旦成为扩展结点，就一次性产生其所有儿子结点。在这些儿子结点中，那些导致不可行解或导致非最优解的儿子结点被舍弃，其余儿子结点被子加入活结点表中。此后，从活结点表中取下一结点成为当前扩展结点，并重复上述结点扩展过程。这个过程一直持续到找到所求的解或活结点表为空时为止。</p>
 <h2 id="和回溯法的区别"><a href="#和回溯法的区别" class="headerlink" title="和回溯法的区别"></a>和回溯法的区别</h2><p>有一些问题其实无论用回溯法还是分支定界法都可以得到很好的解决，但是另外一些则不然。也许我们需要具体一些的分析——到底何时使用分支限界而何时使用回溯呢？</p>
 <p>回溯法深度优先搜索堆栈活结点的所有可行子结点被遍历后才被从栈中弹出找出满足约束条件的所有解</p>
-<p>分支定界法广度优先或最小消耗优先搜索队列、优先队列每个结点只有一次成为活结点的机会找出满足约束条件的一个解或特定意义下的最优解</p>
+<p>分支定界法广度优先或最小消耗优先搜索队列、优先队列每个结点只有一次成为活结点的机会找出满足约束条件的一个解或特定意义下的最优解<br>意义下的最优解</p>
 
     </div>
 
@@ -592,6 +593,23 @@ f(n, m)=\max{\{f(n-1,m), f(n-1,m-w[n])+P(n,m)\}}
     
 
     <footer class="post-footer">
+          
+
+<div class="post-copyright">
+<ul>
+  <li class="post-copyright-author">
+      <strong>Post author:  </strong>Obster-Y
+  </li>
+  <li class="post-copyright-link">
+      <strong>Post link: </strong>
+      <a href="https://obster-y.github.io/posts/c4302082-bbc2-11eb-8847-0772b2ac4cf2/" title="5 Common Optimization Algorithm">https://obster-y.github.io/posts/c4302082-bbc2-11eb-8847-0772b2ac4cf2/</a>
+  </li>
+  <li class="post-copyright-license">
+    <strong>Copyright Notice:  </strong>All articles in this blog are licensed under <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/" rel="noopener" target="_blank"><i class="fab fa-fw fa-creative-commons"></i>BY-NC-SA</a> unless stating additionally.
+  </li>
+</ul>
+</div>
+
           <div class="post-tags">
               <a href="/tags/algorithm/" rel="tag"><i class="fa fa-tag"></i> algorithm</a>
               <a href="/tags/optimization/" rel="tag"><i class="fa fa-tag"></i> optimization</a>
@@ -601,12 +619,12 @@ f(n, m)=\max{\{f(n-1,m), f(n-1,m-w[n])+P(n,m)\}}
 
           <div class="post-nav">
             <div class="post-nav-item">
-                <a href="/2020/07/04/Tools-From-Keyboard-Layout-to-Input-Method-Scheme/" rel="prev" title="From Keyboard, Keyboard layout to Input Method and its' scheme </br> 从键盘、键盘布局到输入法、输入方案">
+                <a href="/posts/c4302071-bbc2-11eb-8847-0772b2ac4cf2/" rel="prev" title="From Keyboard, Keyboard layout to Input Method and its' scheme </br> 从键盘、键盘布局到输入法、输入方案">
                   <i class="fa fa-chevron-left"></i> From Keyboard, Keyboard layout to Input Method and its' scheme </br> 从键盘、键盘布局到输入法、输入方案
                 </a>
             </div>
             <div class="post-nav-item">
-                <a href="/2020/03/20/Programming-DataWhale-Intro/" rel="next" title="[DataWhale-Introduction-to-Data-Mining]">
+                <a href="/posts/c4304787-bbc2-11eb-8847-0772b2ac4cf2/" rel="next" title="[DataWhale-Introduction-to-Data-Mining]">
                   [DataWhale-Introduction-to-Data-Mining] <i class="fa fa-chevron-right"></i>
                 </a>
             </div>
@@ -620,6 +638,7 @@ f(n, m)=\max{\{f(n-1,m), f(n-1,m-w[n])+P(n,m)\}}
 
 
 
+    <div class="comments" id="gitalk-container"></div>
 
 <script>
   window.addEventListener('tabs:register', () => {
@@ -726,9 +745,29 @@ f(n, m)=\max{\{f(n-1,m), f(n-1,m-w[n])+P(n,m)\}}
     MathJax.texReset();
     MathJax.typeset();
   }
+</script>
+
+
+
+<link rel="stylesheet" href="//cdn.jsdelivr.net/npm/gitalk@1.7.0/dist/gitalk.css">
+
+<script>
+NexT.utils.loadComments('#gitalk-container', () => {
+  NexT.utils.getScript('//cdn.jsdelivr.net/npm/gitalk@1.7.0/dist/gitalk.min.js', () => {
+    var gitalk = new Gitalk({
+      clientID    : '75e1c55d870581bdcb2e',
+      clientSecret: '318aa15c76d3dd2026abf66ce448f54e3a9ae8da',
+      repo        : 'comments',
+      owner       : 'obster-y',
+      admin       : [''],
+      id          : 'f1f1c1937589827ad034f3259041f20c',
+        language: 'en',
+      distractionFreeMode: true
+    });
+    gitalk.render('gitalk-container');
+  }, window.Gitalk);
+});
 </script><!-- hexo-inject:begin --><!-- hexo-inject:end -->
-
-
 
 </body>
 </html>

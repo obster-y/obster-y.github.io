@@ -21,23 +21,24 @@
 
 <script class="hexo-configurations">
     var NexT = window.NexT || {};
-    var CONFIG = {"hostname":"obster-y.github.io","root":"/","images":"/images","scheme":"Gemini","version":"8.1.0","exturl":false,"sidebar":{"position":"right","display":"post","padding":18,"offset":12},"copycode":false,"bookmark":{"enable":false,"color":"#222","save":"auto"},"fancybox":false,"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"fadeInDown","post_body":"fadeInDown","coll_header":"fadeInLeft","sidebar":"fadeInUp"}},"prism":false,"i18n":{"placeholder":"Searching...","empty":"We didn't find any results for the search: ${query}","hits_time":"${hits} results found in ${time} ms","hits":"${hits} results found"},"path":"/search.xml","localsearch":{"enable":true,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false}};
+    var CONFIG = {"hostname":"obster-y.github.io","root":"/","images":"/images","scheme":"Gemini","version":"8.1.0","exturl":false,"sidebar":{"position":"right","display":"post","padding":18,"offset":12},"copycode":true,"bookmark":{"enable":false,"color":"#222","save":"auto"},"fancybox":false,"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":"gitalk","storage":true,"lazyload":false,"nav":null,"activeClass":"gitalk"},"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"fadeInDown","post_body":"fadeInDown","coll_header":"fadeInLeft","sidebar":"fadeInUp"}},"prism":false,"i18n":{"placeholder":"Searching...","empty":"We didn't find any results for the search: ${query}","hits_time":"${hits} results found in ${time} ms","hits":"${hits} results found"},"path":"/search.xml","localsearch":{"enable":true,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false}};
   </script>
 <meta name="description" content="正则表达式基础入门">
 <meta property="og:type" content="article">
 <meta property="og:title" content="Something about Regular Expressions">
-<meta property="og:url" content="https://obster-y.github.io/2020/12/09/Programming-Regex-Intro/index.html">
+<meta property="og:url" content="https://obster-y.github.io/posts/c4304784-bbc2-11eb-8847-0772b2ac4cf2/index.html">
 <meta property="og:site_name" content="Obster-Y&#39;s Blog">
 <meta property="og:description" content="正则表达式基础入门">
 <meta property="og:locale" content="en_US">
 <meta property="article:published_time" content="2020-12-08T16:00:00.000Z">
-<meta property="article:modified_time" content="2020-12-10T14:11:45.000Z">
+<meta property="article:modified_time" content="2021-05-23T12:31:19.092Z">
 <meta property="article:author" content="Obster-Y">
+<meta property="article:tag" content="Unfinished">
 <meta property="article:tag" content="regex">
 <meta name="twitter:card" content="summary">
 
 
-<link rel="canonical" href="https://obster-y.github.io/2020/12/09/Programming-Regex-Intro/">
+<link rel="canonical" href="https://obster-y.github.io/posts/c4304784-bbc2-11eb-8847-0772b2ac4cf2/">
 
 
 <script class="page-configurations">
@@ -208,7 +209,8 @@ mjx-container[display="true"] {
 mjx-container[display="true"] + br {
   display: none;
 }
-</style><!-- hexo-inject:begin --><!-- hexo-inject:end --></head>
+</style><link rel="alternate" href="/atom.xml" title="Obster-Y's Blog" type="application/atom+xml"><!-- hexo-inject:begin --><!-- hexo-inject:end -->
+</head>
 
 <body itemscope itemtype="http://schema.org/WebPage" class="use-motion">
   <!-- hexo-inject:begin --><!-- hexo-inject:end --><div class="headband"></div>
@@ -231,7 +233,7 @@ mjx-container[display="true"] + br {
       <h1 class="site-title">Obster-Y's Blog</h1>
       <i class="logo-line"></i>
     </a>
-      <p class="site-subtitle" itemprop="description">An useless site</p>
+      <p class="site-subtitle" itemprop="description">A useless site</p>
   </div>
 
   <div class="site-nav-right">
@@ -336,7 +338,7 @@ mjx-container[display="true"] + br {
       <div class="site-state-item site-state-tags">
             <a href="/tags/">
           
-        <span class="site-state-item-count">6</span>
+        <span class="site-state-item-count">8</span>
         <span class="site-state-item-name">tags</span></a>
       </div>
   </nav>
@@ -383,7 +385,7 @@ mjx-container[display="true"] + br {
   
 
   <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="en">
-    <link itemprop="mainEntityOfPage" href="https://obster-y.github.io/2020/12/09/Programming-Regex-Intro/">
+    <link itemprop="mainEntityOfPage" href="https://obster-y.github.io/posts/c4304784-bbc2-11eb-8847-0772b2ac4cf2/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="image" content="/images/profile.jpg">
@@ -414,7 +416,7 @@ mjx-container[display="true"] + br {
           <i class="far fa-calendar-check"></i>
         </span>
         <span class="post-meta-item-text">Edited on</span>
-        <time title="Modified: 2020-12-10 22:11:45" itemprop="dateModified" datetime="2020-12-10T22:11:45+08:00">2020-12-10</time>
+        <time title="Modified: 2021-05-23 20:31:19" itemprop="dateModified" datetime="2021-05-23T20:31:19+08:00">2021-05-23</time>
       </span>
     <span class="post-meta-item">
       <span class="post-meta-item-icon">
@@ -875,7 +877,7 @@ mjx-container[display="true"] + br {
 </div>
 <h3 id="优先级"><a href="#优先级" class="headerlink" title="优先级"></a>优先级</h3><h3 id="平衡组"><a href="#平衡组" class="headerlink" title="平衡组"></a>平衡组</h3><h2 id="3-思维"><a href="#3-思维" class="headerlink" title="3 思维"></a>3 思维</h2><h2 id="4-在不同语言的具体应用"><a href="#4-在不同语言的具体应用" class="headerlink" title="4 在不同语言的具体应用"></a>4 在不同语言的具体应用</h2><h2 id="5-正则的底层运作过程"><a href="#5-正则的底层运作过程" class="headerlink" title="5 正则的底层运作过程"></a>5 正则的底层运作过程</h2><hr>
 <p><strong>参考文献</strong></p>
-<p><a target="_blank" rel="noopener" href="http://www.zjmainstay.cn/my-regexp">http://www.zjmainstay.cn/my-regexp</a><br><a target="_blank" rel="noopener" href="http://www.zjmainstay.cn/deep-regexp">http://www.zjmainstay.cn/deep-regexp</a><br><a target="_blank" rel="noopener" href="https://www.php.net/manual/zh/reference.pcre.pattern.modifiers.php">https://www.php.net/manual/zh/reference.pcre.pattern.modifiers.php</a><br><a target="_blank" rel="noopener" href="https://www.runoob.com/python/python-reg-expressions.html#flags">https://www.runoob.com/python/python-reg-expressions.html#flags</a><br><a target="_blank" rel="noopener" href="https://blog.csdn.net/lxcnn/article/details/4355364">https://blog.csdn.net/lxcnn/article/details/4355364</a><br><a target="_blank" rel="noopener" href="https://blog.csdn.net/lxcnn/article/details/4304651">https://blog.csdn.net/lxcnn/article/details/4304651</a><br><a target="_blank" rel="noopener" href="https://blog.csdn.net/zx48822821/article/details/80743997">https://blog.csdn.net/zx48822821/article/details/80743997</a><br><a target="_blank" rel="noopener" href="https://blog.csdn.net/ww430430/article/details/78403536">https://blog.csdn.net/ww430430/article/details/78403536</a><br><a target="_blank" rel="noopener" href="https://blog.csdn.net/qq_20412595/article/details/82633501">https://blog.csdn.net/qq_20412595/article/details/82633501</a></p>
+<p><a target="_blank" rel="noopener" href="http://www.zjmainstay.cn/my-regexp">http://www.zjmainstay.cn/my-regexp</a><br><a target="_blank" rel="noopener" href="http://www.zjmainstay.cn/deep-regexp">http://www.zjmainstay.cn/deep-regexp</a><br><a target="_blank" rel="noopener" href="https://www.php.net/manual/zh/reference.pcre.pattern.modifiers.php">https://www.php.net/manual/zh/reference.pcre.pattern.modifiers.php</a><br><a target="_blank" rel="noopener" href="https://www.runoob.com/python/python-reg-expressions.html#flags">https://www.runoob.com/python/python-reg-expressions.html#flags</a><br><a target="_blank" rel="noopener" href="https://blog.csdn.net/lxcnn/article/details/4355364">https://blog.csdn.net/lxcnn/article/details/4355364</a><br><a target="_blank" rel="noopener" href="https://blog.csdn.net/lxcnn/article/details/4304651">https://blog.csdn.net/lxcnn/article/details/4304651</a><br><a target="_blank" rel="noopener" href="https://blog.csdn.net/zx48822821/article/details/80743997">https://blog.csdn.net/zx48822821/article/details/80743997</a><br><a target="_blank" rel="noopener" href="https://blog.csdn.net/ww430430/article/details/78403536">https://blog.csdn.net/ww430430/article/details/78403536</a><br><a target="_blank" rel="noopener" href="https://blog.csdn.net/qq_20412595/article/details/82633501ticle/details/82633501">https://blog.csdn.net/qq_20412595/article/details/82633501ticle/details/82633501</a></p>
 
     </div>
 
@@ -884,7 +886,25 @@ mjx-container[display="true"] + br {
     
 
     <footer class="post-footer">
+          
+
+<div class="post-copyright">
+<ul>
+  <li class="post-copyright-author">
+      <strong>Post author:  </strong>Obster-Y
+  </li>
+  <li class="post-copyright-link">
+      <strong>Post link: </strong>
+      <a href="https://obster-y.github.io/posts/c4304784-bbc2-11eb-8847-0772b2ac4cf2/" title="Something about Regular Expressions">https://obster-y.github.io/posts/c4304784-bbc2-11eb-8847-0772b2ac4cf2/</a>
+  </li>
+  <li class="post-copyright-license">
+    <strong>Copyright Notice:  </strong>All articles in this blog are licensed under <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/" rel="noopener" target="_blank"><i class="fab fa-fw fa-creative-commons"></i>BY-NC-SA</a> unless stating additionally.
+  </li>
+</ul>
+</div>
+
           <div class="post-tags">
+              <a href="/tags/Unfinished/" rel="tag"><i class="fa fa-tag"></i> Unfinished</a>
               <a href="/tags/regex/" rel="tag"><i class="fa fa-tag"></i> regex</a>
           </div>
 
@@ -892,12 +912,12 @@ mjx-container[display="true"] + br {
 
           <div class="post-nav">
             <div class="post-nav-item">
-                <a href="/2020/12/09/Entertainment-Subtitles/" rel="prev" title="Subtitles of series or movies">
+                <a href="/posts/c4302081-bbc2-11eb-8847-0772b2ac4cf2/" rel="prev" title="Subtitles of series or movies">
                   <i class="fa fa-chevron-left"></i> Subtitles of series or movies
                 </a>
             </div>
             <div class="post-nav-item">
-                <a href="/2020/07/04/Tools-From-Keyboard-Layout-to-Input-Method-Scheme/" rel="next" title="From Keyboard, Keyboard layout to Input Method and its' scheme </br> 从键盘、键盘布局到输入法、输入方案">
+                <a href="/posts/c4302071-bbc2-11eb-8847-0772b2ac4cf2/" rel="next" title="From Keyboard, Keyboard layout to Input Method and its' scheme </br> 从键盘、键盘布局到输入法、输入方案">
                   From Keyboard, Keyboard layout to Input Method and its' scheme </br> 从键盘、键盘布局到输入法、输入方案 <i class="fa fa-chevron-right"></i>
                 </a>
             </div>
@@ -911,6 +931,7 @@ mjx-container[display="true"] + br {
 
 
 
+    <div class="comments" id="gitalk-container"></div>
 
 <script>
   window.addEventListener('tabs:register', () => {
@@ -1017,9 +1038,29 @@ mjx-container[display="true"] + br {
     MathJax.texReset();
     MathJax.typeset();
   }
+</script>
+
+
+
+<link rel="stylesheet" href="//cdn.jsdelivr.net/npm/gitalk@1.7.0/dist/gitalk.css">
+
+<script>
+NexT.utils.loadComments('#gitalk-container', () => {
+  NexT.utils.getScript('//cdn.jsdelivr.net/npm/gitalk@1.7.0/dist/gitalk.min.js', () => {
+    var gitalk = new Gitalk({
+      clientID    : '75e1c55d870581bdcb2e',
+      clientSecret: '318aa15c76d3dd2026abf66ce448f54e3a9ae8da',
+      repo        : 'comments',
+      owner       : 'obster-y',
+      admin       : [''],
+      id          : '195b4dd8a6758d3a46fc8b2f26f290b9',
+        language: 'en',
+      distractionFreeMode: true
+    });
+    gitalk.render('gitalk-container');
+  }, window.Gitalk);
+});
 </script><!-- hexo-inject:begin --><!-- hexo-inject:end -->
-
-
 
 </body>
 </html>

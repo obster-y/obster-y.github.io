@@ -21,7 +21,7 @@
 
 <script class="hexo-configurations">
     var NexT = window.NexT || {};
-    var CONFIG = {"hostname":"obster-y.github.io","root":"/","images":"/images","scheme":"Gemini","version":"8.1.0","exturl":false,"sidebar":{"position":"right","display":"post","padding":18,"offset":12},"copycode":false,"bookmark":{"enable":false,"color":"#222","save":"auto"},"fancybox":false,"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"fadeInDown","post_body":"fadeInDown","coll_header":"fadeInLeft","sidebar":"fadeInUp"}},"prism":false,"i18n":{"placeholder":"Searching...","empty":"We didn't find any results for the search: ${query}","hits_time":"${hits} results found in ${time} ms","hits":"${hits} results found"},"path":"/search.xml","localsearch":{"enable":true,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false}};
+    var CONFIG = {"hostname":"obster-y.github.io","root":"/","images":"/images","scheme":"Gemini","version":"8.1.0","exturl":false,"sidebar":{"position":"right","display":"post","padding":18,"offset":12},"copycode":true,"bookmark":{"enable":false,"color":"#222","save":"auto"},"fancybox":false,"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":"gitalk","storage":true,"lazyload":false,"nav":null,"activeClass":"gitalk"},"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"fadeInDown","post_body":"fadeInDown","coll_header":"fadeInLeft","sidebar":"fadeInUp"}},"prism":false,"i18n":{"placeholder":"Searching...","empty":"We didn't find any results for the search: ${query}","hits_time":"${hits} results found in ${time} ms","hits":"${hits} results found"},"path":"/search.xml","localsearch":{"enable":true,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false}};
   </script>
 <meta property="og:type" content="website">
 <meta property="og:title" content="Tags">
@@ -206,7 +206,8 @@ mjx-container[display="true"] {
 mjx-container[display="true"] + br {
   display: none;
 }
-</style><!-- hexo-inject:begin --><!-- hexo-inject:end --></head>
+</style><link rel="alternate" href="/atom.xml" title="Obster-Y's Blog" type="application/atom+xml"><!-- hexo-inject:begin --><!-- hexo-inject:end -->
+</head>
 
 <body itemscope itemtype="http://schema.org/WebPage" class="use-motion">
   <!-- hexo-inject:begin --><!-- hexo-inject:end --><div class="headband"></div>
@@ -229,7 +230,7 @@ mjx-container[display="true"] + br {
       <h1 class="site-title">Obster-Y's Blog</h1>
       <i class="logo-line"></i>
     </a>
-      <p class="site-subtitle" itemprop="description">An useless site</p>
+      <p class="site-subtitle" itemprop="description">A useless site</p>
   </div>
 
   <div class="site-nav-right">
@@ -333,7 +334,7 @@ mjx-container[display="true"] + br {
       <div class="site-state-item site-state-tags">
             <a href="/tags/">
           
-        <span class="site-state-item-count">6</span>
+        <span class="site-state-item-count">8</span>
         <span class="site-state-item-name">tags</span></a>
       </div>
   </nav>
@@ -391,10 +392,10 @@ mjx-container[display="true"] + br {
       
       <div class="post-body"><div class="tag-cloud">
   <div class="tag-cloud-title">
-    6 tags in total
+    8 tags in total
   </div>
   <div class="tag-cloud-tags">
-    <a href="/tags/Tools/" style="font-size: 12px;" class="tag-cloud-0">Tools</a> <a href="/tags/algorithm/" style="font-size: 12px;" class="tag-cloud-0">algorithm</a> <a href="/tags/geek/" style="font-size: 12px;" class="tag-cloud-0">geek</a> <a href="/tags/keyboard/" style="font-size: 12px;" class="tag-cloud-0">keyboard</a> <a href="/tags/optimization/" style="font-size: 12px;" class="tag-cloud-0">optimization</a> <a href="/tags/regex/" style="font-size: 12px;" class="tag-cloud-0">regex</a>
+    <a href="/tags/Algorithm/" style="font-size: 12px;" class="tag-cloud-0">Algorithm</a> <a href="/tags/Subtitle/" style="font-size: 12px;" class="tag-cloud-0">Subtitle</a> <a href="/tags/Unfinished/" style="font-size: 30px;" class="tag-cloud-10">Unfinished</a> <a href="/tags/algorithm/" style="font-size: 12px;" class="tag-cloud-0">algorithm</a> <a href="/tags/geek/" style="font-size: 12px;" class="tag-cloud-0">geek</a> <a href="/tags/keyboard/" style="font-size: 12px;" class="tag-cloud-0">keyboard</a> <a href="/tags/optimization/" style="font-size: 12px;" class="tag-cloud-0">optimization</a> <a href="/tags/regex/" style="font-size: 12px;" class="tag-cloud-0">regex</a>
   </div>
 </div>
 
@@ -408,6 +409,7 @@ mjx-container[display="true"] + br {
     
 
 
+    <div class="comments" id="gitalk-container"></div>
 
 <script>
   window.addEventListener('tabs:register', () => {
@@ -514,9 +516,29 @@ mjx-container[display="true"] + br {
     MathJax.texReset();
     MathJax.typeset();
   }
+</script>
+
+
+
+<link rel="stylesheet" href="//cdn.jsdelivr.net/npm/gitalk@1.7.0/dist/gitalk.css">
+
+<script>
+NexT.utils.loadComments('#gitalk-container', () => {
+  NexT.utils.getScript('//cdn.jsdelivr.net/npm/gitalk@1.7.0/dist/gitalk.min.js', () => {
+    var gitalk = new Gitalk({
+      clientID    : '75e1c55d870581bdcb2e',
+      clientSecret: '318aa15c76d3dd2026abf66ce448f54e3a9ae8da',
+      repo        : 'comments',
+      owner       : 'obster-y',
+      admin       : [''],
+      id          : 'f47af1d1eda4d807b02bba32be15120b',
+        language: 'en',
+      distractionFreeMode: true
+    });
+    gitalk.render('gitalk-container');
+  }, window.Gitalk);
+});
 </script><!-- hexo-inject:begin --><!-- hexo-inject:end -->
-
-
 
 </body>
 </html>

@@ -17,10 +17,10 @@
   --btn-default-hover-bg: #222;
   --btn-default-hover-color: #fff;
   --btn-default-hover-border-color: #222;
-  --highlight-background: #282b2e;
-  --highlight-foreground: #e0e2e4;
-  --highlight-gutter-background: #3a3d40;
-  --highlight-gutter-foreground: #cdcfd1;
+  --highlight-background: #333;
+  --highlight-foreground: #fff;
+  --highlight-gutter-background: #474747;
+  --highlight-gutter-foreground: #eaeaea;
 }
 @media (prefers-color-scheme: dark) {
   :root {
@@ -42,10 +42,10 @@
     --btn-default-hover-bg: #666;
     --btn-default-hover-color: #ccc;
     --btn-default-hover-border-color: #666;
-    --highlight-background: #282b2e;
-    --highlight-foreground: #e0e2e4;
-    --highlight-gutter-background: #3a3d40;
-    --highlight-gutter-foreground: #cdcfd1;
+    --highlight-background: #333;
+    --highlight-foreground: #fff;
+    --highlight-gutter-background: #474747;
+    --highlight-gutter-foreground: #eaeaea;
   }
   img {
     opacity: 0.75;
@@ -389,94 +389,130 @@ td {
   transform: rotate(45deg);
 }
 /**
- * Obsidian style
- * ported by Alexander Marenin (http://github.com/ioncreature)
+ * nnfx dark - a theme inspired by Netscape Navigator/Firefox
+ *
+ * @version 1.0.0
+ * @author (c) 2020 Jim Mason <jmason@ibinx.com>
+ * @license https://creativecommons.org/licenses/by-sa/4.0  CC BY-SA 4.0
  */
 
 .hljs {
   display: block;
   overflow-x: auto;
   padding: 0.5em;
-  background: #282b2e;
+  background: #333;
+  color: #fff;
 }
 
-.hljs-keyword,
-.hljs-selector-tag,
-.hljs-literal,
-.hljs-selector-id {
-  color: #93c763;
-}
-
-.hljs-number {
-  color: #ffcd22;
-}
-
-.hljs {
-  color: #e0e2e4;
-}
-
-.hljs-attribute {
-  color: #668bb0;
-}
-
-.hljs-code,
-.hljs-class .hljs-title,
-.hljs-section {
-  color: white;
-}
-
-.hljs-regexp,
-.hljs-link {
-  color: #d39745;
-}
-
-.hljs-meta {
-  color: #557182;
-}
-
-.hljs-tag,
-.hljs-name,
-.hljs-bullet,
-.hljs-subst,
-.hljs-emphasis,
-.hljs-type,
-.hljs-built_in,
-.hljs-selector-attr,
-.hljs-selector-pseudo,
-.hljs-addition,
-.hljs-variable,
-.hljs-template-tag,
-.hljs-template-variable {
-  color: #8cbbad;
-}
-
-.hljs-string,
-.hljs-symbol {
-  color: #ec7600;
+.xml .hljs-meta {
+  font-weight: bold;
+  font-style: italic;
+  color: #69f;
 }
 
 .hljs-comment,
-.hljs-quote,
-.hljs-deletion {
-  color: #818e96;
+.hljs-quote {
+  font-style: italic;
+  color: #9c6;
 }
 
-.hljs-selector-class {
-  color: #A082BD
-}
-
-.hljs-keyword,
-.hljs-selector-tag,
-.hljs-literal,
-.hljs-doctag,
-.hljs-title,
-.hljs-section,
-.hljs-type,
 .hljs-name,
+.hljs-keyword {
+  color: #a7a;
+}
+
+.hljs-name,
+.hljs-attr {
+  font-weight: bold;
+}
+
+.hljs-string {
+  font-weight: normal;
+}
+
+.hljs-variable,
+.hljs-template-variable {
+  color: #588;
+}
+
+.hljs-code,
+.hljs-string,
+.hljs-meta-string,
+.hljs-number,
+.hljs-regexp,
+.hljs-link {
+  color: #bce;
+}
+
+.hljs-title,
+.hljs-symbol,
+.hljs-bullet,
+.hljs-built_in,
+.hljs-builtin-name {
+  color: #d40;
+}
+
+.hljs-section,
+.hljs-meta {
+  color: #a85;
+}
+
+.hljs-class .hljs-title,
+.hljs-type {
+  color: #96c;
+}
+
+.hljs-function .hljs-title,
+.hljs-attr,
+.hljs-subst {
+  color: #fff;
+}
+
+.hljs-formula {
+  background-color: #eee;
+  font-style: italic;
+}
+
+.hljs-addition {
+  background-color: #797;
+}
+
+.hljs-deletion {
+  background-color: #c99;
+}
+
+.hljs-selector-id,
+.hljs-selector-class {
+  color: #964;
+}
+
+.hljs-doctag,
 .hljs-strong {
   font-weight: bold;
 }
 
+.hljs-emphasis {
+  font-style: italic;
+}
+
+.highlight:hover .copy-btn,
+pre:hover .copy-btn {
+  opacity: 1;
+}
+.copy-btn {
+  color: #333;
+  cursor: pointer;
+  line-height: 1.6;
+  opacity: 0;
+  padding: 2px 6px;
+  position: absolute;
+  transition: opacity 0.2s ease-in-out;
+  background: #fff;
+  border: 0;
+  font-size: 0.8125em;
+  right: 0;
+  top: 0;
+}
 code,
 kbd,
 figure.highlight,
@@ -491,7 +527,7 @@ pre {
 }
 pre,
 code {
-  font-family: consolas, Menlo, monospace, 'PingFang SC', 'Microsoft YaHei';
+  font-family: Sarasa Mono SC Nerd, Font Awesome, consolas, Menlo, monospace, 'PingFang SC', 'Microsoft YaHei';
 }
 code {
   border-radius: 3px;
@@ -2265,6 +2301,13 @@ pre code {
 .post-block:last-of-type .post-eof {
   display: none;
 }
+.post-copyright ul {
+  list-style: none;
+  padding: 0.5em 1em;
+  background: var(--card-bg-color);
+  border-left: 3px solid #ff2a2a;
+  margin: 1em 0 0;
+}
 .post-tags {
   margin-top: 40px;
   text-align: center;
@@ -2652,6 +2695,14 @@ ul.breadcrumb li:last-child {
     border-bottom-color: #eee;
     color: #eee;
   }
+}
+.gt-header a,
+.gt-comments a,
+.gt-popup a {
+  border-bottom: 0;
+}
+.gt-container .gt-popup .gt-action.is--active::before {
+  top: 0.7em;
 }
 .search-active {
   overflow: hidden;
