@@ -6,7 +6,7 @@
   <link href="https://obster-y.github.io/atom.xml" rel="self"/>
   
   <link href="https://obster-y.github.io/"/>
-  <updated>2021-05-25T15:34:46.785Z</updated>
+  <updated>2021-05-25T15:54:43.625Z</updated>
   <id>https://obster-y.github.io/</id>
   
   <author>
@@ -21,10 +21,10 @@
     <link href="https://obster-y.github.io/posts/c4304786-bbc2-11eb-8847-0772b2ac4cf2/"/>
     <id>https://obster-y.github.io/posts/c4304786-bbc2-11eb-8847-0772b2ac4cf2/</id>
     <published>2021-05-21T09:58:18.000Z</published>
-    <updated>2021-05-25T15:34:46.785Z</updated>
+    <updated>2021-05-25T15:54:43.625Z</updated>
     
     
-    <summary type="html">&lt;p&gt;A tutorial to custom i3-wm and status bar with polybar.&lt;/p&gt;
+    <summary type="html">&lt;p&gt;A tutorial to customize i3-wm and status bar with polybar.&lt;/p&gt;
 &lt;p&gt;The result of this tutorial:&lt;/p&gt;
 &lt;p&gt;&lt;img src=&quot;/imgs/Tool/Softwares/i3wm-01.png&quot; alt=&quot;&quot;&gt;&lt;/p&gt;</summary>
     

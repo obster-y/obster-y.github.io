@@ -791,7 +791,7 @@ f(n, m)=\max{\{f(n-1,m), f(n-1,m-w[n])+P(n,m)\}}
   <entry>
     <title>Setting i3-wm from scratch</title>
     <url>/posts/c4304786-bbc2-11eb-8847-0772b2ac4cf2/</url>
-    <content><![CDATA[<p>A tutorial to custom i3-wm and status bar with polybar.</p>
+    <content><![CDATA[<p>A tutorial to customize i3-wm and status bar with polybar.</p>
 <p>The result of this tutorial:</p>
 <p><img src="/imgs/Tool/Softwares/i3wm-01.png" alt=""></p>
 <a id="more"></a>
