@@ -25,12 +25,12 @@
     var NexT = window.NexT || {};
     var CONFIG = {"hostname":"obster-y.github.io","root":"/","images":"/images","scheme":"Gemini","version":"8.1.0","exturl":false,"sidebar":{"position":"right","display":"post","padding":18,"offset":12},"copycode":true,"bookmark":{"enable":false,"color":"#222","save":"auto"},"fancybox":false,"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":"gitalk","storage":true,"lazyload":false,"nav":null},"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"fadeInDown","post_body":"fadeInDown","coll_header":"fadeInLeft","sidebar":"fadeInUp"}},"prism":false,"i18n":{"placeholder":"Searching...","empty":"We didn't find any results for the search: ${query}","hits_time":"${hits} results found in ${time} ms","hits":"${hits} results found"},"path":"/search.xml","localsearch":{"enable":true,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false}};
   </script>
-<meta name="description" content="Introduction">
+<meta name="description" content="Very basic introduction to data mining.">
 <meta property="og:type" content="article">
-<meta property="og:title" content="[DataWhale-Introduction-to-Data-Mining]">
+<meta property="og:title" content="Introduction to Data Mining(Datawhale)">
 <meta property="og:url" content="https://obster-y.github.io/posts/c4304787-bbc2-11eb-8847-0772b2ac4cf2/index.html">
 <meta property="og:site_name" content="Obster-Y&#39;s Blog">
-<meta property="og:description" content="Introduction">
+<meta property="og:description" content="Very basic introduction to data mining.">
 <meta property="og:locale" content="en_US">
 <meta property="og:image" content="https://obster-y.github.io/imgs/Programming/datawhale-dmintro/DataWhale-Intro-Chart-Suggestion-ENG.jpg">
 <meta property="og:image" content="https://obster-y.github.io/imgs/Programming/datawhale-dmintro/DataWhale-Intro-output_6_1.png">
@@ -51,8 +51,9 @@
 <meta property="og:image" content="https://obster-y.github.io/imgs/Programming/datawhale-dmintro/DataWhale-output_55_1.png">
 <meta property="og:image" content="https://obster-y.github.io/imgs/Programming/datawhale-dmintro/DataWhale-output_58_1.png">
 <meta property="article:published_time" content="2020-03-20T05:47:58.000Z">
-<meta property="article:modified_time" content="2021-05-23T12:57:25.492Z">
+<meta property="article:modified_time" content="2021-05-25T15:03:29.825Z">
 <meta property="article:author" content="Obster-Y">
+<meta property="article:tag" content="Data Mining">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:image" content="https://obster-y.github.io/imgs/Programming/datawhale-dmintro/DataWhale-Intro-Chart-Suggestion-ENG.jpg">
 
@@ -69,7 +70,7 @@
     lang   : 'en'
   };
 </script>
-<title>[DataWhale-Introduction-to-Data-Mining] | Obster-Y's Blog</title>
+<title>Introduction to Data Mining(Datawhale) | Obster-Y's Blog</title>
   
 
 
@@ -272,6 +273,8 @@ mjx-container[display="true"] + br {
         <li class="menu-item menu-item-series"><a href="/series/" rel="section"><i class="fa fa-list fa-fw"></i>Series</a></li>
         <li class="menu-item menu-item-archives"><a href="/archives/" rel="section"><i class="fa fa-archive fa-fw"></i>Archives</a></li>
         <li class="menu-item menu-item-about"><a href="/about/" rel="section"><i class="fa fa-user fa-fw"></i>About</a></li>
+        <li class="menu-item menu-item-english"><a href="https://obster-y.github.io/" rel="section"><i class="fa fa-globe fa-fw"></i>English</a></li>
+        <li class="menu-item menu-item-简体中文"><a href="https://obster-y.github.io/zh-cn" rel="section"><i class="fa fa-globe fa-fw"></i>简体中文</a></li>
       <li class="menu-item menu-item-search">
         <a role="button" class="popup-trigger"><i class="fa fa-search fa-fw"></i>Search
         </a>
@@ -357,7 +360,7 @@ mjx-container[display="true"] + br {
       <div class="site-state-item site-state-tags">
             <a href="/tags/">
           
-        <span class="site-state-item-count">8</span>
+        <span class="site-state-item-count">11</span>
         <span class="site-state-item-name">tags</span></a>
       </div>
   </nav>
@@ -417,7 +420,7 @@ mjx-container[display="true"] + br {
     </span>
       <header class="post-header">
         <h1 class="post-title" itemprop="name headline">
-          [DataWhale-Introduction-to-Data-Mining]
+          Introduction to Data Mining(Datawhale)
         </h1>
 
         <div class="post-meta-container">
@@ -435,7 +438,7 @@ mjx-container[display="true"] + br {
           <i class="far fa-calendar-check"></i>
         </span>
         <span class="post-meta-item-text">Edited on</span>
-        <time title="Modified: 2021-05-23 20:57:25" itemprop="dateModified" datetime="2021-05-23T20:57:25+08:00">2021-05-23</time>
+        <time title="Modified: 2021-05-25 23:03:29" itemprop="dateModified" datetime="2021-05-25T23:03:29+08:00">2021-05-25</time>
       </span>
     <span class="post-meta-item">
       <span class="post-meta-item-icon">
@@ -465,8 +468,9 @@ mjx-container[display="true"] + br {
     
     
     <div class="post-body" itemprop="articleBody">
-        <h1 id="Introduction"><a href="#Introduction" class="headerlink" title="Introduction"></a>Introduction</h1><a id="more"></a>
-<h1 id="Exploratory-Data-Analysis"><a href="#Exploratory-Data-Analysis" class="headerlink" title="Exploratory-Data-Analysis"></a>Exploratory-Data-Analysis</h1><h2 id="Exploratory-Data-Analysis-1"><a href="#Exploratory-Data-Analysis-1" class="headerlink" title="Exploratory Data Analysis"></a>Exploratory Data Analysis</h2><h3 id="What-is-EDA"><a href="#What-is-EDA" class="headerlink" title="What is EDA"></a>What is EDA</h3><p>EDA is like detective work: Exploratory data analysis is an attitude, a state of flexibility, a willingness to look for those things that we believe are not there, as well as those that we believe to be there.</p>
+        <p>Very basic introduction to data mining.</p>
+<a id="more"></a>
+<h1 id="Introduction"><a href="#Introduction" class="headerlink" title="Introduction"></a>Introduction</h1><h1 id="Exploratory-Data-Analysis"><a href="#Exploratory-Data-Analysis" class="headerlink" title="Exploratory-Data-Analysis"></a>Exploratory-Data-Analysis</h1><h2 id="Exploratory-Data-Analysis-1"><a href="#Exploratory-Data-Analysis-1" class="headerlink" title="Exploratory Data Analysis"></a>Exploratory Data Analysis</h2><h3 id="What-is-EDA"><a href="#What-is-EDA" class="headerlink" title="What is EDA"></a>What is EDA</h3><p>EDA is like detective work: Exploratory data analysis is an attitude, a state of flexibility, a willingness to look for those things that we believe are not there, as well as those that we believe to be there.</p>
 <p>EDA is active and incisive: Exploratory data analysis is actively incisive rather than passively descriptive, with real emphasis on the discovery of the unexpected.</p>
 <h3 id="Philosophy-of-EDA"><a href="#Philosophy-of-EDA" class="headerlink" title="Philosophy of EDA"></a>Philosophy of EDA</h3><ul>
 <li>Confirm understanding of the data</li>
@@ -1082,7 +1086,7 @@ Lasso is finished
   </li>
   <li class="post-copyright-link">
       <strong>Post link: </strong>
-      <a href="https://obster-y.github.io/posts/c4304787-bbc2-11eb-8847-0772b2ac4cf2/" title="[DataWhale-Introduction-to-Data-Mining]">https://obster-y.github.io/posts/c4304787-bbc2-11eb-8847-0772b2ac4cf2/</a>
+      <a href="https://obster-y.github.io/posts/c4304787-bbc2-11eb-8847-0772b2ac4cf2/" title="Introduction to Data Mining(Datawhale)">https://obster-y.github.io/posts/c4304787-bbc2-11eb-8847-0772b2ac4cf2/</a>
   </li>
   <li class="post-copyright-license">
     <strong>Copyright Notice:  </strong>All articles in this blog are licensed under <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/" rel="noopener external nofollow noreferrer" target="_blank"><i class="fab fa-fw fa-creative-commons"></i>BY-NC-SA</a> unless stating additionally.
@@ -1090,6 +1094,9 @@ Lasso is finished
 </ul>
 </div>
 
+          <div class="post-tags">
+              <a href="/tags/Data-Mining/" rel="tag"><i class="fa fa-tag"></i> Data Mining</a>
+          </div>
 
         
 
@@ -1100,8 +1107,8 @@ Lasso is finished
                 </a>
             </div>
             <div class="post-nav-item">
-                <a href="/posts/c4304785-bbc2-11eb-8847-0772b2ac4cf2/" rel="next" title="[30d in Leetcode(Basic Algorithm)]">
-                  [30d in Leetcode(Basic Algorithm)] <i class="fa fa-chevron-right"></i>
+                <a href="/posts/c4304785-bbc2-11eb-8847-0772b2ac4cf2/" rel="next" title="30 days in Leetcode (Basic Algorithm)">
+                  30 days in Leetcode (Basic Algorithm) <i class="fa fa-chevron-right"></i>
                 </a>
             </div>
           </div>

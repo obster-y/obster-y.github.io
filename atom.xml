@@ -6,7 +6,7 @@
   <link href="https://obster-y.github.io/atom.xml" rel="self"/>
   
   <link href="https://obster-y.github.io/"/>
-  <updated>2021-05-23T12:50:36.464Z</updated>
+  <updated>2021-05-25T15:34:46.785Z</updated>
   <id>https://obster-y.github.io/</id>
   
   <author>
@@ -17,33 +17,25 @@
   <generator uri="https://hexo.io/">Hexo</generator>
   
   <entry>
-    <title>Setting i3-wm from scratch &lt;br/&gt; 从零开始配置 i3-wm</title>
+    <title>Setting i3-wm from scratch</title>
     <link href="https://obster-y.github.io/posts/c4304786-bbc2-11eb-8847-0772b2ac4cf2/"/>
     <id>https://obster-y.github.io/posts/c4304786-bbc2-11eb-8847-0772b2ac4cf2/</id>
     <published>2021-05-21T09:58:18.000Z</published>
-    <updated>2021-05-23T12:50:36.464Z</updated>
+    <updated>2021-05-25T15:34:46.785Z</updated>
     
     
-    <summary type="html">&lt;style&gt;
-  hr{
-    text-align:center;
-    height : 1px;
-    background : solid black;
-  }
-&lt;/style&gt;
-
-&lt;p&gt;A tutorial to custom i3-wm and status bar with polybar.&lt;/p&gt;
-&lt;p&gt;一篇关于配置i3wm以及polybar的教程。&lt;/p&gt;
-&lt;!-- ソフトウェアのセットアップに関するチュートリアル。
-
-Ein Tutorial zum Einrichten der Software.  --&gt;</summary>
+    <summary type="html">&lt;p&gt;A tutorial to custom i3-wm and status bar with polybar.&lt;/p&gt;
+&lt;p&gt;The result of this tutorial:&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;/imgs/Tool/Softwares/i3wm-01.png&quot; alt=&quot;&quot;&gt;&lt;/p&gt;</summary>
     
     
     
     <category term="Tool" scheme="https://obster-y.github.io/categories/Tool/"/>
     
     
-    <category term="Unfinished" scheme="https://obster-y.github.io/tags/Unfinished/"/>
+    <category term="i3-wm" scheme="https://obster-y.github.io/tags/i3-wm/"/>
+    
+    <category term="polybar" scheme="https://obster-y.github.io/tags/polybar/"/>
     
   </entry>
   
@@ -52,7 +44,7 @@ Ein Tutorial zum Einrichten der Software.  --&gt;</summary>
     <link href="https://obster-y.github.io/posts/c4302081-bbc2-11eb-8847-0772b2ac4cf2/"/>
     <id>https://obster-y.github.io/posts/c4302081-bbc2-11eb-8847-0772b2ac4cf2/</id>
     <published>2020-12-09T02:00:00.000Z</published>
-    <updated>2021-05-23T12:56:52.796Z</updated>
+    <updated>2021-05-23T17:45:49.000Z</updated>
     
     
       
@@ -70,17 +62,21 @@ Ein Tutorial zum Einrichten der Software.  --&gt;</summary>
     
     <category term="Subtitle" scheme="https://obster-y.github.io/tags/Subtitle/"/>
     
+    <category term="Updating" scheme="https://obster-y.github.io/tags/Updating/"/>
+    
   </entry>
   
   <entry>
     <title>Something about Regular Expressions</title>
-    <link href="https://obster-y.github.io/posts/c4304784-bbc2-11eb-8847-0772b2ac4cf2/"/>
-    <id>https://obster-y.github.io/posts/c4304784-bbc2-11eb-8847-0772b2ac4cf2/</id>
+    <link href="https://obster-y.github.io/posts/d5481510-bd26-11eb-b78b-b7b8fc29a318/"/>
+    <id>https://obster-y.github.io/posts/d5481510-bd26-11eb-b78b-b7b8fc29a318/</id>
     <published>2020-12-08T16:00:00.000Z</published>
-    <updated>2021-05-23T12:57:33.832Z</updated>
+    <updated>2021-05-25T15:03:41.905Z</updated>
     
     
-    <summary type="html">正则表达式基础入门</summary>
+    <summary type="html">&lt;h2 id=&quot;0-开始&quot;&gt;&lt;a href=&quot;#0-开始&quot; class=&quot;headerlink&quot; title=&quot;0 开始&quot;&gt;&lt;/a&gt;0 开始&lt;/h2&gt;&lt;p&gt;当在使用正则表达式时，你的目的就是从字符串中提取出你想要的东西，而正则表达式就是描述你要提取对象的一种语言；这种语言是跨平台的，在.NET, Java, JS, Py, Ruby, PHP上都可以使用。&lt;/p&gt;
+&lt;p&gt;为了学习这种描述被提取对象的语言，需要一些基础知识。&lt;/p&gt;
+&lt;p&gt;以下教程主要使用Python标准库的re模块与.NET平台的RegularExpressions模块，并在最后会提供其他语言的范例。&lt;/p&gt;</summary>
     
     
     
@@ -94,25 +90,25 @@ Ein Tutorial zum Einrichten der Software.  --&gt;</summary>
   </entry>
   
   <entry>
-    <title>From Keyboard, Keyboard layout to Input Method and its&#39; scheme &lt;/br&gt; 从键盘、键盘布局到输入法、输入方案</title>
+    <title>From Keyboard, Keyboard layout to Input Method and its&#39; scheme</title>
     <link href="https://obster-y.github.io/posts/c4302071-bbc2-11eb-8847-0772b2ac4cf2/"/>
     <id>https://obster-y.github.io/posts/c4302071-bbc2-11eb-8847-0772b2ac4cf2/</id>
     <published>2020-07-04T12:21:58.000Z</published>
-    <updated>2021-05-23T12:57:58.672Z</updated>
+    <updated>2021-05-25T15:11:52.133Z</updated>
     
     
-    <summary type="html">通过个人的折腾经历，总结出的键盘与输入法相关的知识</summary>
+    <summary type="html">&lt;p&gt;通过个人的折腾经历，总结出的键盘与输入法相关的知识&lt;/p&gt;</summary>
     
     
     
     <category term="Tool" scheme="https://obster-y.github.io/categories/Tool/"/>
     
     
-    <category term="keyboard" scheme="https://obster-y.github.io/tags/keyboard/"/>
-    
-    <category term="geek" scheme="https://obster-y.github.io/tags/geek/"/>
-    
     <category term="Unfinished" scheme="https://obster-y.github.io/tags/Unfinished/"/>
+    
+    <category term="Keyboard" scheme="https://obster-y.github.io/tags/Keyboard/"/>
+    
+    <category term="Geek" scheme="https://obster-y.github.io/tags/Geek/"/>
     
   </entry>
   
@@ -121,48 +117,49 @@ Ein Tutorial zum Einrichten der Software.  --&gt;</summary>
     <link href="https://obster-y.github.io/posts/c4302082-bbc2-11eb-8847-0772b2ac4cf2/"/>
     <id>https://obster-y.github.io/posts/c4302082-bbc2-11eb-8847-0772b2ac4cf2/</id>
     <published>2020-03-22T05:28:54.000Z</published>
-    <updated>2021-05-23T12:57:15.680Z</updated>
+    <updated>2021-05-25T15:02:46.493Z</updated>
     
     
-    <summary type="html">&lt;h1 id=&quot;Divide-and-Conquer-分治法&quot;&gt;&lt;a href=&quot;#Divide-and-Conquer-分治法&quot; class=&quot;headerlink&quot; title=&quot;Divide and Conquer - 分治法&quot;&gt;&lt;/a&gt;Divide and Conquer - 分治法&lt;/h1&gt;&lt;h2 id=&quot;概念&quot;&gt;&lt;a href=&quot;#概念&quot; class=&quot;headerlink&quot; title=&quot;概念&quot;&gt;&lt;/a&gt;概念&lt;/h2&gt;&lt;p&gt;分治法字面上的解释是“分而治之”，就是把一个复杂的问题分成两个或更多的相同或相似的子问题，再把子问题分成更小的子问题……直到最后子问题可以简单的直接求解，并且原问题的解即子问题的解的合并。这个技巧是很多高效算法的基础，如排序算法(快速排序，归并排序)，傅立叶变换(快速傅立叶变换)。&lt;/p&gt;
-&lt;h3 id=&quot;分治法的设计思想&quot;&gt;&lt;a href=&quot;#分治法的设计思想&quot; class=&quot;headerlink&quot; title=&quot;分治法的设计思想&quot;&gt;&lt;/a&gt;分治法的设计思想&lt;/h3&gt;&lt;p&gt;将一个难以直接解决的大问题，分割成一些规模较小的相同问题，以便各个击破，分而治之。&lt;/p&gt;
-&lt;h3 id=&quot;分治策略&quot;&gt;&lt;a href=&quot;#分治策略&quot; class=&quot;headerlink&quot; title=&quot;分治策略&quot;&gt;&lt;/a&gt;分治策略&lt;/h3&gt;&lt;p&gt;对于一个规模为 &lt;mjx-container class=&quot;MathJax&quot; jax=&quot;SVG&quot;&gt;&lt;svg style=&quot;vertical-align: -0.025ex&quot; xmlns=&quot;http://www.w3.org/2000/svg&quot; width=&quot;1.357ex&quot; height=&quot;1.025ex&quot; role=&quot;img&quot; focusable=&quot;false&quot; viewBox=&quot;0 -442 600 453&quot;&gt;&lt;g stroke=&quot;currentColor&quot; fill=&quot;currentColor&quot; stroke-width=&quot;0&quot; transform=&quot;matrix(1 0 0 -1 0 0)&quot;&gt;&lt;g data-mml-node=&quot;math&quot;&gt;&lt;g data-mml-node=&quot;mi&quot;&gt;&lt;path data-c=&quot;1D45B&quot; d=&quot;M21 287Q22 293 24 303T36 341T56 388T89 425T135 442Q171 442 195 424T225 390T231 369Q231 367 232 367L243 378Q304 442 382 442Q436 442 469 415T503 336T465 179T427 52Q427 26 444 26Q450 26 453 27Q482 32 505 65T540 145Q542 153 560 153Q580 153 580 145Q580 144 576 130Q568 101 554 73T508 17T439 -10Q392 -10 371 17T350 73Q350 92 386 193T423 345Q423 404 379 404H374Q288 404 229 303L222 291L189 157Q156 26 151 16Q138 -11 108 -11Q95 -11 87 -5T76 7T74 17Q74 30 112 180T152 343Q153 348 153 366Q153 405 129 405Q91 405 66 305Q60 285 60 284Q58 278 41 278H27Q21 284 21 287Z&quot;&gt;&lt;/path&gt;&lt;/g&gt;&lt;/g&gt;&lt;/g&gt;&lt;/svg&gt;&lt;/mjx-container&gt; 的问题，若该问题可以容易地解决（比如说规模 &lt;mjx-container class=&quot;MathJax&quot; jax=&quot;SVG&quot;&gt;&lt;svg style=&quot;vertical-align: -0.025ex&quot; xmlns=&quot;http://www.w3.org/2000/svg&quot; width=&quot;1.357ex&quot; height=&quot;1.025ex&quot; role=&quot;img&quot; focusable=&quot;false&quot; viewBox=&quot;0 -442 600 453&quot;&gt;&lt;g stroke=&quot;currentColor&quot; fill=&quot;currentColor&quot; stroke-width=&quot;0&quot; transform=&quot;matrix(1 0 0 -1 0 0)&quot;&gt;&lt;g data-mml-node=&quot;math&quot;&gt;&lt;g data-mml-node=&quot;mi&quot;&gt;&lt;path data-c=&quot;1D45B&quot; d=&quot;M21 287Q22 293 24 303T36 341T56 388T89 425T135 442Q171 442 195 424T225 390T231 369Q231 367 232 367L243 378Q304 442 382 442Q436 442 469 415T503 336T465 179T427 52Q427 26 444 26Q450 26 453 27Q482 32 505 65T540 145Q542 153 560 153Q580 153 580 145Q580 144 576 130Q568 101 554 73T508 17T439 -10Q392 -10 371 17T350 73Q350 92 386 193T423 345Q423 404 379 404H374Q288 404 229 303L222 291L189 157Q156 26 151 16Q138 -11 108 -11Q95 -11 87 -5T76 7T74 17Q74 30 112 180T152 343Q153 348 153 366Q153 405 129 405Q91 405 66 305Q60 285 60 284Q58 278 41 278H27Q21 284 21 287Z&quot;&gt;&lt;/path&gt;&lt;/g&gt;&lt;/g&gt;&lt;/g&gt;&lt;/svg&gt;&lt;/mjx-container&gt; 较小）则直接解决，否则将其分解为 &lt;mjx-container class=&quot;MathJax&quot; jax=&quot;SVG&quot;&gt;&lt;svg style=&quot;vertical-align: -0.025ex&quot; xmlns=&quot;http://www.w3.org/2000/svg&quot; width=&quot;1.179ex&quot; height=&quot;1.595ex&quot; role=&quot;img&quot; focusable=&quot;false&quot; viewBox=&quot;0 -694 521 705&quot;&gt;&lt;g stroke=&quot;currentColor&quot; fill=&quot;currentColor&quot; stroke-width=&quot;0&quot; transform=&quot;matrix(1 0 0 -1 0 0)&quot;&gt;&lt;g data-mml-node=&quot;math&quot;&gt;&lt;g data-mml-node=&quot;mi&quot;&gt;&lt;path data-c=&quot;1D458&quot; d=&quot;M121 647Q121 657 125 670T137 683Q138 683 209 688T282 694Q294 694 294 686Q294 679 244 477Q194 279 194 272Q213 282 223 291Q247 309 292 354T362 415Q402 442 438 442Q468 442 485 423T503 369Q503 344 496 327T477 302T456 291T438 288Q418 288 406 299T394 328Q394 353 410 369T442 390L458 393Q446 405 434 405H430Q398 402 367 380T294 316T228 255Q230 254 243 252T267 246T293 238T320 224T342 206T359 180T365 147Q365 130 360 106T354 66Q354 26 381 26Q429 26 459 145Q461 153 479 153H483Q499 153 499 144Q499 139 496 130Q455 -11 378 -11Q333 -11 305 15T277 90Q277 108 280 121T283 145Q283 167 269 183T234 206T200 217T182 220H180Q168 178 159 139T145 81T136 44T129 20T122 7T111 -2Q98 -11 83 -11Q66 -11 57 -1T48 16Q48 26 85 176T158 471L195 616Q196 629 188 632T149 637H144Q134 637 131 637T124 640T121 647Z&quot;&gt;&lt;/path&gt;&lt;/g&gt;&lt;/g&gt;&lt;/g&gt;&lt;/svg&gt;&lt;/mjx-container&gt; 个规模较小的子问题，这些子问题互相独立且与原问题形式相同，递归地解这些子问题，然后将各子问题的解合并得到原问题的解。这种算法设计策略叫做分治法。&lt;/p&gt;
-&lt;p&gt;如果原问题可分割成 &lt;mjx-container class=&quot;MathJax&quot; jax=&quot;SVG&quot;&gt;&lt;svg style=&quot;vertical-align: -0.025ex&quot; xmlns=&quot;http://www.w3.org/2000/svg&quot; width=&quot;1.179ex&quot; height=&quot;1.595ex&quot; role=&quot;img&quot; focusable=&quot;false&quot; viewBox=&quot;0 -694 521 705&quot;&gt;&lt;g stroke=&quot;currentColor&quot; fill=&quot;currentColor&quot; stroke-width=&quot;0&quot; transform=&quot;matrix(1 0 0 -1 0 0)&quot;&gt;&lt;g data-mml-node=&quot;math&quot;&gt;&lt;g data-mml-node=&quot;mi&quot;&gt;&lt;path data-c=&quot;1D458&quot; d=&quot;M121 647Q121 657 125 670T137 683Q138 683 209 688T282 694Q294 694 294 686Q294 679 244 477Q194 279 194 272Q213 282 223 291Q247 309 292 354T362 415Q402 442 438 442Q468 442 485 423T503 369Q503 344 496 327T477 302T456 291T438 288Q418 288 406 299T394 328Q394 353 410 369T442 390L458 393Q446 405 434 405H430Q398 402 367 380T294 316T228 255Q230 254 243 252T267 246T293 238T320 224T342 206T359 180T365 147Q365 130 360 106T354 66Q354 26 381 26Q429 26 459 145Q461 153 479 153H483Q499 153 499 144Q499 139 496 130Q455 -11 378 -11Q333 -11 305 15T277 90Q277 108 280 121T283 145Q283 167 269 183T234 206T200 217T182 220H180Q168 178 159 139T145 81T136 44T129 20T122 7T111 -2Q98 -11 83 -11Q66 -11 57 -1T48 16Q48 26 85 176T158 471L195 616Q196 629 188 632T149 637H144Q134 637 131 637T124 640T121 647Z&quot;&gt;&lt;/path&gt;&lt;/g&gt;&lt;/g&gt;&lt;/g&gt;&lt;/svg&gt;&lt;/mjx-container&gt; 个子问题，&lt;mjx-container class=&quot;MathJax&quot; jax=&quot;SVG&quot;&gt;&lt;svg style=&quot;vertical-align: -0.312ex&quot; xmlns=&quot;http://www.w3.org/2000/svg&quot; width=&quot;9.702ex&quot; height=&quot;1.882ex&quot; role=&quot;img&quot; focusable=&quot;false&quot; viewBox=&quot;0 -694 4288.1 832&quot;&gt;&lt;g stroke=&quot;currentColor&quot; fill=&quot;currentColor&quot; stroke-width=&quot;0&quot; transform=&quot;matrix(1 0 0 -1 0 0)&quot;&gt;&lt;g data-mml-node=&quot;math&quot;&gt;&lt;g data-mml-node=&quot;mn&quot;&gt;&lt;path data-c=&quot;31&quot; d=&quot;M213 578L200 573Q186 568 160 563T102 556H83V602H102Q149 604 189 617T245 641T273 663Q275 666 285 666Q294 666 302 660V361L303 61Q310 54 315 52T339 48T401 46H427V0H416Q395 3 257 3Q121 3 100 0H88V46H114Q136 46 152 46T177 47T193 50T201 52T207 57T213 61V578Z&quot;&gt;&lt;/path&gt;&lt;/g&gt;&lt;g data-mml-node=&quot;mo&quot; transform=&quot;translate(777.8, 0)&quot;&gt;&lt;path data-c=&quot;3C&quot; d=&quot;M694 -11T694 -19T688 -33T678 -40Q671 -40 524 29T234 166L90 235Q83 240 83 250Q83 261 91 266Q664 540 678 540Q681 540 687 534T694 519T687 505Q686 504 417 376L151 250L417 124Q686 -4 687 -5Q694 -11 694 -19Z&quot;&gt;&lt;/path&gt;&lt;/g&gt;&lt;g data-mml-node=&quot;mi&quot; transform=&quot;translate(1833.6, 0)&quot;&gt;&lt;path data-c=&quot;1D458&quot; d=&quot;M121 647Q121 657 125 670T137 683Q138 683 209 688T282 694Q294 694 294 686Q294 679 244 477Q194 279 194 272Q213 282 223 291Q247 309 292 354T362 415Q402 442 438 442Q468 442 485 423T503 369Q503 344 496 327T477 302T456 291T438 288Q418 288 406 299T394 328Q394 353 410 369T442 390L458 393Q446 405 434 405H430Q398 402 367 380T294 316T228 255Q230 254 243 252T267 246T293 238T320 224T342 206T359 180T365 147Q365 130 360 106T354 66Q354 26 381 26Q429 26 459 145Q461 153 479 153H483Q499 153 499 144Q499 139 496 130Q455 -11 378 -11Q333 -11 305 15T277 90Q277 108 280 121T283 145Q283 167 269 183T234 206T200 217T182 220H180Q168 178 159 139T145 81T136 44T129 20T122 7T111 -2Q98 -11 83 -11Q66 -11 57 -1T48 16Q48 26 85 176T158 471L195 616Q196 629 188 632T149 637H144Q134 637 131 637T124 640T121 647Z&quot;&gt;&lt;/path&gt;&lt;/g&gt;&lt;g data-mml-node=&quot;mo&quot; transform=&quot;translate(2632.3, 0)&quot;&gt;&lt;path data-c=&quot;2264&quot; d=&quot;M674 636Q682 636 688 630T694 615T687 601Q686 600 417 472L151 346L399 228Q687 92 691 87Q694 81 694 76Q694 58 676 56H670L382 192Q92 329 90 331Q83 336 83 348Q84 359 96 365Q104 369 382 500T665 634Q669 636 674 636ZM84 -118Q84 -108 99 -98H678Q694 -104 694 -118Q694 -130 679 -138H98Q84 -131 84 -118Z&quot;&gt;&lt;/path&gt;&lt;/g&gt;&lt;g data-mml-node=&quot;mi&quot; transform=&quot;translate(3688.1, 0)&quot;&gt;&lt;path data-c=&quot;1D45B&quot; d=&quot;M21 287Q22 293 24 303T36 341T56 388T89 425T135 442Q171 442 195 424T225 390T231 369Q231 367 232 367L243 378Q304 442 382 442Q436 442 469 415T503 336T465 179T427 52Q427 26 444 26Q450 26 453 27Q482 32 505 65T540 145Q542 153 560 153Q580 153 580 145Q580 144 576 130Q568 101 554 73T508 17T439 -10Q392 -10 371 17T350 73Q350 92 386 193T423 345Q423 404 379 404H374Q288 404 229 303L222 291L189 157Q156 26 151 16Q138 -11 108 -11Q95 -11 87 -5T76 7T74 17Q74 30 112 180T152 343Q153 348 153 366Q153 405 129 405Q91 405 66 305Q60 285 60 284Q58 278 41 278H27Q21 284 21 287Z&quot;&gt;&lt;/path&gt;&lt;/g&gt;&lt;/g&gt;&lt;/g&gt;&lt;/svg&gt;&lt;/mjx-container&gt;，且这些子问题都可解并可利用这些子问题的解求出原问题的解，那么这种分治法就是可行的。由分治法产生的子问题往往是原问题的较小模式，这就为使用&lt;strong&gt;递归技术&lt;/strong&gt;提供了方便。在这种情况下，反复应用分治手段，可以使子问题与原问题类型一致而其规模却不断缩小，最终使子问题缩小到很容易直接求出其解,这自然导致递归过程的产生。分治与递归像一对孪生兄弟，经常同时应用在算法设计之中，并由此产生许多高效算法。&lt;br&gt;</summary>
+    <summary type="html">&lt;p&gt;Summary of five common optimization algorithm.&lt;/p&gt;</summary>
     
     
     
     <category term="Programming" scheme="https://obster-y.github.io/categories/Programming/"/>
     
     
-    <category term="algorithm" scheme="https://obster-y.github.io/tags/algorithm/"/>
+    <category term="Unfinished" scheme="https://obster-y.github.io/tags/Unfinished/"/>
     
-    <category term="optimization" scheme="https://obster-y.github.io/tags/optimization/"/>
+    <category term="Algorithm" scheme="https://obster-y.github.io/tags/Algorithm/"/>
+    
+    <category term="Optimization" scheme="https://obster-y.github.io/tags/Optimization/"/>
     
   </entry>
   
   <entry>
-    <title>[DataWhale-Introduction-to-Data-Mining]</title>
+    <title>Introduction to Data Mining(Datawhale)</title>
     <link href="https://obster-y.github.io/posts/c4304787-bbc2-11eb-8847-0772b2ac4cf2/"/>
     <id>https://obster-y.github.io/posts/c4304787-bbc2-11eb-8847-0772b2ac4cf2/</id>
     <published>2020-03-20T05:47:58.000Z</published>
-    <updated>2021-05-23T12:57:25.492Z</updated>
+    <updated>2021-05-25T15:03:29.825Z</updated>
     
     
-    <summary type="html">&lt;h1 id=&quot;Introduction&quot;&gt;&lt;a href=&quot;#Introduction&quot; class=&quot;headerlink&quot; title=&quot;Introduction&quot;&gt;&lt;/a&gt;Introduction&lt;/h1&gt;</summary>
+    <summary type="html">&lt;p&gt;Very basic introduction to data mining.&lt;/p&gt;</summary>
     
     
     
     <category term="Programming" scheme="https://obster-y.github.io/categories/Programming/"/>
     
     
+    <category term="Data Mining" scheme="https://obster-y.github.io/tags/Data-Mining/"/>
+    
   </entry>
   
   <entry>
-    <title>[30d in Leetcode(Basic Algorithm)]</title>
+    <title>30 days in Leetcode (Basic Algorithm)</title>
     <link href="https://obster-y.github.io/posts/c4304785-bbc2-11eb-8847-0772b2ac4cf2/"/>
     <id>https://obster-y.github.io/posts/c4304785-bbc2-11eb-8847-0772b2ac4cf2/</id>
     <published>2020-02-29T07:59:55.000Z</published>
-    <updated>2021-05-23T12:57:42.880Z</updated>
+    <updated>2021-05-25T15:02:59.781Z</updated>
     
     
     <summary type="html">&lt;p&gt;First day of Basic Algorithm training in Leetcode.&lt;br&gt;&lt;a href=&quot;https://leetcode.com/problems/two-sum/&quot;&gt;Two Sum&lt;/a&gt;&lt;/p&gt;
