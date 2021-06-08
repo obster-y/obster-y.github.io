@@ -6,7 +6,7 @@
   <link href="https://obster-y.github.io/atom.xml" rel="self"/>
   
   <link href="https://obster-y.github.io/"/>
-  <updated>2021-05-25T15:54:43.625Z</updated>
+  <updated>2021-05-27T14:26:59.718Z</updated>
   <id>https://obster-y.github.io/</id>
   
   <author>
@@ -17,14 +17,33 @@
   <generator uri="https://hexo.io/">Hexo</generator>
   
   <entry>
+    <title>HEXO plugin：hexo-generator-anything</title>
+    <link href="https://obster-y.github.io/posts/837737c2-bef7-11eb-bac7-4f63fad82170/"/>
+    <id>https://obster-y.github.io/posts/837737c2-bef7-11eb-bac7-4f63fad82170/</id>
+    <published>2021-05-27T18:23:21.000Z</published>
+    <updated>2021-05-27T14:26:59.718Z</updated>
+    
+    
+    <summary type="html">&lt;p&gt;A hexo plugin to generate any index pages based on meta info of posts. Similar to hexo-generator-categories, but has more space to customize.&lt;/p&gt;</summary>
+    
+    
+    
+    <category term="Tool" scheme="https://obster-y.github.io/categories/Tool/"/>
+    
+    
+    <category term="blog" scheme="https://obster-y.github.io/tags/blog/"/>
+    
+  </entry>
+  
+  <entry>
     <title>Setting i3-wm from scratch</title>
     <link href="https://obster-y.github.io/posts/c4304786-bbc2-11eb-8847-0772b2ac4cf2/"/>
     <id>https://obster-y.github.io/posts/c4304786-bbc2-11eb-8847-0772b2ac4cf2/</id>
     <published>2021-05-21T09:58:18.000Z</published>
-    <updated>2021-05-25T15:54:43.625Z</updated>
+    <updated>2021-05-26T13:55:52.314Z</updated>
     
     
-    <summary type="html">&lt;p&gt;A tutorial to customize i3-wm and status bar with polybar.&lt;/p&gt;
+    <summary type="html">&lt;p&gt;A tutorial of customizing i3-wm and status bar in polybar.&lt;/p&gt;
 &lt;p&gt;The result of this tutorial:&lt;/p&gt;
 &lt;p&gt;&lt;img src=&quot;/imgs/Tool/Softwares/i3wm-01.png&quot; alt=&quot;&quot;&gt;&lt;/p&gt;</summary>
     
@@ -60,9 +79,9 @@
     <category term="Entertainment" scheme="https://obster-y.github.io/categories/Entertainment/"/>
     
     
-    <category term="Subtitle" scheme="https://obster-y.github.io/tags/Subtitle/"/>
-    
     <category term="Updating" scheme="https://obster-y.github.io/tags/Updating/"/>
+    
+    <category term="Subtitle" scheme="https://obster-y.github.io/tags/Subtitle/"/>
     
   </entry>
   
@@ -71,10 +90,10 @@
     <link href="https://obster-y.github.io/posts/d5481510-bd26-11eb-b78b-b7b8fc29a318/"/>
     <id>https://obster-y.github.io/posts/d5481510-bd26-11eb-b78b-b7b8fc29a318/</id>
     <published>2020-12-08T16:00:00.000Z</published>
-    <updated>2021-05-25T15:03:41.905Z</updated>
+    <updated>2021-05-26T09:21:28.395Z</updated>
     
     
-    <summary type="html">&lt;h2 id=&quot;0-开始&quot;&gt;&lt;a href=&quot;#0-开始&quot; class=&quot;headerlink&quot; title=&quot;0 开始&quot;&gt;&lt;/a&gt;0 开始&lt;/h2&gt;&lt;p&gt;当在使用正则表达式时，你的目的就是从字符串中提取出你想要的东西，而正则表达式就是描述你要提取对象的一种语言；这种语言是跨平台的，在.NET, Java, JS, Py, Ruby, PHP上都可以使用。&lt;/p&gt;
+    <summary type="html">&lt;h2 id=&quot;开始&quot;&gt;&lt;a href=&quot;#开始&quot; class=&quot;headerlink&quot; title=&quot;开始&quot;&gt;&lt;/a&gt;开始&lt;/h2&gt;&lt;p&gt;当在使用正则表达式时，你的目的就是从字符串中提取出你想要的东西，而正则表达式就是描述你要提取对象的一种语言；这种语言是跨平台的，在.NET, Java, JS, Py, Ruby, PHP上都可以使用。&lt;/p&gt;
 &lt;p&gt;为了学习这种描述被提取对象的语言，需要一些基础知识。&lt;/p&gt;
 &lt;p&gt;以下教程主要使用Python标准库的re模块与.NET平台的RegularExpressions模块，并在最后会提供其他语言的范例。&lt;/p&gt;</summary>
     
@@ -83,9 +102,9 @@
     <category term="Programming" scheme="https://obster-y.github.io/categories/Programming/"/>
     
     
-    <category term="Unfinished" scheme="https://obster-y.github.io/tags/Unfinished/"/>
+    <category term="Updating" scheme="https://obster-y.github.io/tags/Updating/"/>
     
-    <category term="regex" scheme="https://obster-y.github.io/tags/regex/"/>
+    <category term="Regex" scheme="https://obster-y.github.io/tags/Regex/"/>
     
   </entry>
   
@@ -94,21 +113,21 @@
     <link href="https://obster-y.github.io/posts/c4302071-bbc2-11eb-8847-0772b2ac4cf2/"/>
     <id>https://obster-y.github.io/posts/c4302071-bbc2-11eb-8847-0772b2ac4cf2/</id>
     <published>2020-07-04T12:21:58.000Z</published>
-    <updated>2021-05-25T15:11:52.133Z</updated>
+    <updated>2021-05-26T09:21:44.459Z</updated>
     
     
-    <summary type="html">&lt;p&gt;通过个人的折腾经历，总结出的键盘与输入法相关的知识&lt;/p&gt;</summary>
+    <summary type="html">&lt;p&gt;Knowledge when configuring my keyboard and input method.&lt;/p&gt;</summary>
     
     
     
     <category term="Tool" scheme="https://obster-y.github.io/categories/Tool/"/>
     
     
-    <category term="Unfinished" scheme="https://obster-y.github.io/tags/Unfinished/"/>
-    
     <category term="Keyboard" scheme="https://obster-y.github.io/tags/Keyboard/"/>
     
     <category term="Geek" scheme="https://obster-y.github.io/tags/Geek/"/>
+    
+    <category term="Updating" scheme="https://obster-y.github.io/tags/Updating/"/>
     
   </entry>
   
@@ -117,7 +136,7 @@
     <link href="https://obster-y.github.io/posts/c4302082-bbc2-11eb-8847-0772b2ac4cf2/"/>
     <id>https://obster-y.github.io/posts/c4302082-bbc2-11eb-8847-0772b2ac4cf2/</id>
     <published>2020-03-22T05:28:54.000Z</published>
-    <updated>2021-05-25T15:02:46.493Z</updated>
+    <updated>2021-05-26T09:21:18.703Z</updated>
     
     
     <summary type="html">&lt;p&gt;Summary of five common optimization algorithm.&lt;/p&gt;</summary>
@@ -127,7 +146,7 @@
     <category term="Programming" scheme="https://obster-y.github.io/categories/Programming/"/>
     
     
-    <category term="Unfinished" scheme="https://obster-y.github.io/tags/Unfinished/"/>
+    <category term="Updating" scheme="https://obster-y.github.io/tags/Updating/"/>
     
     <category term="Algorithm" scheme="https://obster-y.github.io/tags/Algorithm/"/>
     
@@ -140,7 +159,7 @@
     <link href="https://obster-y.github.io/posts/c4304787-bbc2-11eb-8847-0772b2ac4cf2/"/>
     <id>https://obster-y.github.io/posts/c4304787-bbc2-11eb-8847-0772b2ac4cf2/</id>
     <published>2020-03-20T05:47:58.000Z</published>
-    <updated>2021-05-25T15:03:29.825Z</updated>
+    <updated>2021-05-26T07:01:28.124Z</updated>
     
     
     <summary type="html">&lt;p&gt;Very basic introduction to data mining.&lt;/p&gt;</summary>
@@ -159,13 +178,12 @@
     <link href="https://obster-y.github.io/posts/c4304785-bbc2-11eb-8847-0772b2ac4cf2/"/>
     <id>https://obster-y.github.io/posts/c4304785-bbc2-11eb-8847-0772b2ac4cf2/</id>
     <published>2020-02-29T07:59:55.000Z</published>
-    <updated>2021-05-25T15:02:59.781Z</updated>
+    <updated>2021-05-26T09:18:26.051Z</updated>
     
     
     <summary type="html">&lt;p&gt;First day of Basic Algorithm training in Leetcode.&lt;br&gt;&lt;a href=&quot;https://leetcode.com/problems/two-sum/&quot;&gt;Two Sum&lt;/a&gt;&lt;/p&gt;
 &lt;figure class=&quot;highlight python&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;3&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;4&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;5&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;6&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;7&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;8&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;class&quot;&gt;&lt;span class=&quot;keyword&quot;&gt;class&lt;/span&gt; &lt;span class=&quot;title&quot;&gt;Solution&lt;/span&gt;:&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    &lt;span class=&quot;function&quot;&gt;&lt;span class=&quot;keyword&quot;&gt;def&lt;/span&gt; &lt;span class=&quot;title&quot;&gt;twoSum&lt;/span&gt;(&lt;span class=&quot;params&quot;&gt;self, nums: List[&lt;span class=&quot;built_in&quot;&gt;int&lt;/span&gt;], target: &lt;span class=&quot;built_in&quot;&gt;int&lt;/span&gt;&lt;/span&gt;) -&amp;gt; List[int]:&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;        &lt;span class=&quot;keyword&quot;&gt;if&lt;/span&gt; &lt;span class=&quot;built_in&quot;&gt;len&lt;/span&gt;(nums) &amp;lt; &lt;span class=&quot;number&quot;&gt;2&lt;/span&gt;: &lt;span class=&quot;keyword&quot;&gt;return&lt;/span&gt; []&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;        dic = &amp;#123;&amp;#125;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;        &lt;span class=&quot;keyword&quot;&gt;for&lt;/span&gt; i, e &lt;span class=&quot;keyword&quot;&gt;in&lt;/span&gt; &lt;span class=&quot;built_in&quot;&gt;enumerate&lt;/span&gt;(nums):&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;            &lt;span class=&quot;keyword&quot;&gt;if&lt;/span&gt; e &lt;span class=&quot;keyword&quot;&gt;in&lt;/span&gt; dic:&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;                &lt;span class=&quot;keyword&quot;&gt;return&lt;/span&gt; [dic[e], i]&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;            dic[target - e] = i&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
-&lt;p&gt;&lt;img src=&quot;/imgs/Programming/30dayinlc/30d-in-Leetcode-01-Two-Sum-LC.png&quot; alt=&quot;&quot;&gt;&lt;/p&gt;
-&lt;h2 id=&quot;&quot;&gt;&lt;a href=&quot;#&quot; class=&quot;headerlink&quot; title=&quot;&quot;&gt;&lt;/a&gt;</summary>
+&lt;p&gt;&lt;img src=&quot;/imgs/Programming/30dayinlc/30d-in-Leetcode-01-Two-Sum-LC.png&quot; alt=&quot;&quot;&gt;&lt;br&gt;</summary>
     
     
     
