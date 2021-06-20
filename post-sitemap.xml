@@ -9,8 +9,16 @@
 
 
     <url>
-        <loc>https://obster-y.github.io/posts/837737c2-bef7-11eb-bac7-4f63fad82170/</loc>
-        <lastmod>2021-05-27T14:26:59.718Z</lastmod>
+        <loc>https://obster-y.github.io/posts/ace36491-cf7c-11eb-b771-47c436b9f4e4/</loc>
+        <lastmod>2021-06-20T13:17:38.579Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.6</priority>
+
+    </url>
+
+    <url>
+        <loc>https://obster-y.github.io/posts/5f054001-c85f-11eb-b360-c71a36657d19/</loc>
+        <lastmod>2021-06-20T12:41:12.359Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.6</priority>
 
@@ -18,7 +26,135 @@
 
     <url>
         <loc>https://obster-y.github.io/posts/c4304786-bbc2-11eb-8847-0772b2ac4cf2/</loc>
-        <lastmod>2021-05-26T13:55:52.314Z</lastmod>
+        <lastmod>2021-06-20T12:41:11.095Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.6</priority>
+
+    </url>
+
+    <url>
+        <loc>https://obster-y.github.io/posts/fd5a6ef0-c860-11eb-b0c2-1da70d79dcb1/</loc>
+        <lastmod>2021-06-20T12:39:44.370Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.6</priority>
+
+    </url>
+
+    <url>
+        <loc>https://obster-y.github.io/posts/f52cc0d0-bbf3-11eb-bae2-4bf0ec29f6b0/</loc>
+        <lastmod>2021-06-20T12:06:04.275Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.6</priority>
+
+    </url>
+
+    <url>
+        <loc>https://obster-y.github.io/posts/fb4b1160-bbf3-11eb-a568-b166605ec6b8/</loc>
+        <lastmod>2021-06-20T07:37:19.726Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.6</priority>
+
+    </url>
+
+    <url>
+        <loc>https://obster-y.github.io/posts/b4c93490-bd3a-11eb-9038-b921475f734a/</loc>
+        <lastmod>2021-06-20T07:37:08.822Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.6</priority>
+
+    </url>
+
+    <url>
+        <loc>https://obster-y.github.io/posts/57ff41a1-cf7d-11eb-b6cc-f33fd02118ad/</loc>
+        <lastmod>2021-06-20T07:31:46.394Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.6</priority>
+
+    </url>
+
+    <url>
+        <loc>https://obster-y.github.io/posts/57ff41a0-cf7d-11eb-b6cc-f33fd02118ad/</loc>
+        <lastmod>2021-06-20T03:23:30.114Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.6</priority>
+
+    </url>
+
+    <url>
+        <loc>https://obster-y.github.io/posts/2a54bc33-cf7d-11eb-b478-e7278c8d3426/</loc>
+        <lastmod>2021-06-19T13:52:34.469Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.6</priority>
+
+    </url>
+
+    <url>
+        <loc>https://obster-y.github.io/posts/2a54bc32-cf7d-11eb-b478-e7278c8d3426/</loc>
+        <lastmod>2021-06-19T13:49:19.185Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.6</priority>
+
+    </url>
+
+    <url>
+        <loc>https://obster-y.github.io/posts/2a54bc30-cf7d-11eb-b478-e7278c8d3426/</loc>
+        <lastmod>2021-06-19T13:34:00.981Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.6</priority>
+
+    </url>
+
+    <url>
+        <loc>https://obster-y.github.io/posts/2a549521-cf7d-11eb-b478-e7278c8d3426/</loc>
+        <lastmod>2021-06-19T13:33:34.069Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.6</priority>
+
+    </url>
+
+    <url>
+        <loc>https://obster-y.github.io/posts/2a549520-cf7d-11eb-b478-e7278c8d3426/</loc>
+        <lastmod>2021-06-19T13:32:52.309Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.6</priority>
+
+    </url>
+
+    <url>
+        <loc>https://obster-y.github.io/posts/2a54bc31-cf7d-11eb-b478-e7278c8d3426/</loc>
+        <lastmod>2021-06-19T13:31:40.881Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.6</priority>
+
+    </url>
+
+    <url>
+        <loc>https://obster-y.github.io/posts/57ff41a3-cf7d-11eb-b6cc-f33fd02118ad/</loc>
+        <lastmod>2021-06-19T13:23:16.289Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.6</priority>
+
+    </url>
+
+    <url>
+        <loc>https://obster-y.github.io/posts/2a54bc36-cf7d-11eb-b478-e7278c8d3426/</loc>
+        <lastmod>2021-06-19T13:22:59.985Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.6</priority>
+
+    </url>
+
+    <url>
+        <loc>https://obster-y.github.io/posts/2a54bc34-cf7d-11eb-b478-e7278c8d3426/</loc>
+        <lastmod>2021-06-19T13:22:55.889Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.6</priority>
+
+    </url>
+
+    <url>
+        <loc>https://obster-y.github.io/posts/2a54bc35-cf7d-11eb-b478-e7278c8d3426/</loc>
+        <lastmod>2021-06-19T13:22:51.645Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.6</priority>
 
@@ -26,7 +162,15 @@
 
     <url>
         <loc>https://obster-y.github.io/posts/c4302071-bbc2-11eb-8847-0772b2ac4cf2/</loc>
-        <lastmod>2021-05-26T09:21:44.459Z</lastmod>
+        <lastmod>2021-05-30T12:44:38.725Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.6</priority>
+
+    </url>
+
+    <url>
+        <loc>https://obster-y.github.io/posts/837737c2-bef7-11eb-bac7-4f63fad82170/</loc>
+        <lastmod>2021-05-27T14:43:39.384Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.6</priority>
 

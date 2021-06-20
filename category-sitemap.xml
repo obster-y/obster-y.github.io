@@ -9,22 +9,43 @@
 
 
     <url>
-        <loc>https://obster-y.github.io/categories/Tool/</loc>
-        <lastmod>2021-05-27T14:26:59.718Z</lastmod>
+        <loc>https://obster-y.github.io/categories/M-Office/</loc>
+        <lastmod>2021-06-20T13:17:38.579Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.2</priority>
+    </url>
+
+    <url>
+        <loc>https://obster-y.github.io/categories/Softwares/</loc>
+        <lastmod>2021-06-20T12:41:12.359Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.2</priority>
     </url>
 
     <url>
         <loc>https://obster-y.github.io/categories/Programming/</loc>
-        <lastmod>2021-05-26T09:21:28.395Z</lastmod>
+        <lastmod>2021-06-20T12:39:44.370Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.2</priority>
+    </url>
+
+    <url>
+        <loc>https://obster-y.github.io/categories/English/</loc>
+        <lastmod>2021-06-20T12:06:04.275Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.2</priority>
     </url>
 
     <url>
         <loc>https://obster-y.github.io/categories/Entertainment/</loc>
-        <lastmod>2021-05-23T17:45:49.000Z</lastmod>
+        <lastmod>2021-06-20T07:37:19.726Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.2</priority>
+    </url>
+
+    <url>
+        <loc>https://obster-y.github.io/categories/Tool/</loc>
+        <lastmod>2021-05-30T12:44:38.725Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.2</priority>
     </url>
