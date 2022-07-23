@@ -1,0 +1,754 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <!-- hexo-inject:begin --><!-- hexo-inject:end --><meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=2">
+<meta name="theme-color" content="#222">
+<meta name="generator" content="Hexo 5.2.0">
+<meta name="baidu-site-verification" content="code-mytiWBVdjL" />
+<meta name="google-site-verification" content="nxAePyZIesHQ1FCgWQZBV1m6HPxrrxb4YjjUfmGavJo" />
+
+
+  <link rel="apple-touch-icon" sizes="180x180" href="/zh-cn/images/logo.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/zh-cn/images/cls-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/zh-cn/images/cls-16x16.png">
+  <link rel="mask-icon" href="/zh-cn/images/logo.png" color="#222">
+
+<link rel="stylesheet" href="/zh-cn/css/main.css">
+
+
+
+<link rel="stylesheet" href="//cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5.15.1/css/all.min.css">
+  <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/animate.css@3.1.1/animate.min.css">
+
+<script class="hexo-configurations">
+    var NexT = window.NexT || {};
+    var CONFIG = {"hostname":"obster-y.github.io","root":"/zh-cn/","images":"/zh-cn/images","scheme":"Gemini","version":"8.1.0","exturl":false,"sidebar":{"position":"right","display":"post","padding":18,"offset":12},"copycode":true,"bookmark":{"enable":false,"color":"#222","save":"auto"},"fancybox":false,"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":"gitalk","storage":true,"lazyload":false,"nav":null},"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"fadeInDown","post_body":"fadeInDown","coll_header":"fadeInLeft","sidebar":"fadeInUp"}},"prism":false,"i18n":{"placeholder":"搜索...","empty":"没有找到任何搜索结果：${query}","hits_time":"找到 ${hits} 个搜索结果（用时 ${time} 毫秒）","hits":"找到 ${hits} 个搜索结果"},"path":"/zh-cn/search.xml","localsearch":{"enable":true,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false}};
+  </script>
+<meta name="description" content="A simple tutorial to use excel more powerful. Please try these tips on your excel when you reading it.  Keyboard Shortcuts Get &amp; Transform Data Text to Columns Formulas Pivot Charts &amp; Tables C">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Using Excel more powerful">
+<meta property="og:url" content="https://obster-y.github.io/zh-cn/posts/54909d12-e96e-11eb-9720-69e6dcb77eed/index.html">
+<meta property="og:site_name" content="Y某的博客">
+<meta property="og:description" content="A simple tutorial to use excel more powerful. Please try these tips on your excel when you reading it.  Keyboard Shortcuts Get &amp; Transform Data Text to Columns Formulas Pivot Charts &amp; Tables C">
+<meta property="og:locale" content="en_US">
+<meta property="og:image" content="https://obster-y.github.io/imgs/Tool/Softwares/M$Office/excel-power/shift_move.gif">
+<meta property="og:image" content="https://obster-y.github.io/imgs/Tool/Softwares/M$Office/excel-power/quick_sum_1.gif">
+<meta property="og:image" content="https://obster-y.github.io/imgs/Tool/Softwares/M$Office/excel-power/quick_sum_2.gif">
+<meta property="og:image" content="https://obster-y.github.io/imgs/Tool/Softwares/M$Office/excel-power/fill_blank.gif">
+<meta property="og:image" content="https://obster-y.github.io/imgs/Tool/Softwares/M$Office/excel-power/get_data_from_web.gif">
+<meta property="og:image" content="https://obster-y.github.io/imgs/Tool/Softwares/M$Office/excel-power/text_to_columns.gif">
+<meta property="og:image" content="https://obster-y.github.io/imgs/Tool/Softwares/M$Office/excel-power/table.gif">
+<meta property="og:image" content="https://obster-y.github.io/imgs/Tool/Softwares/M$Office/excel-power/pivot.gif">
+<meta property="og:image" content="https://obster-y.github.io/imgs/Tool/Softwares/M$Office/excel-power/two_label.gif">
+<meta property="og:image" content="https://obster-y.github.io/imgs/Tool/Softwares/M$Office/excel-power/fp_unformat_sheet.gif">
+<meta property="og:image" content="https://obster-y.github.io/imgs/Tool/Softwares/M$Office/excel-power/fp_more_than_one.gif">
+<meta property="og:image" content="https://obster-y.github.io/imgs/Tool/Softwares/M$Office/excel-power/fp_merged_cells.gif">
+<meta property="og:image" content="https://obster-y.github.io/imgs/Tool/Softwares/M$Office/excel-power/cf_preset.gif">
+<meta property="og:image" content="https://obster-y.github.io/imgs/Tool/Softwares/M$Office/excel-power/cf_custom.gif">
+<meta property="article:published_time" content="2021-07-20T01:15:34.000Z">
+<meta property="article:modified_time" content="2021-07-20T15:30:41.480Z">
+<meta property="article:author" content="Obster-Y">
+<meta property="article:tag" content="Excel">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://obster-y.github.io/imgs/Tool/Softwares/M$Office/excel-power/shift_move.gif">
+
+
+<link rel="canonical" href="https://obster-y.github.io/zh-cn/posts/54909d12-e96e-11eb-9720-69e6dcb77eed/">
+
+
+<script class="page-configurations">
+  // https://hexo.io/docs/variables.html
+  CONFIG.page = {
+    sidebar: "",
+    isHome : false,
+    isPost : true,
+    lang   : 'en'
+  };
+</script>
+<title>Using Excel more powerful | Y某的博客</title>
+  
+
+
+
+  <noscript>
+  <style>
+  body { margin-top: 2rem; }
+
+  .use-motion .menu-item,
+  .use-motion .sidebar,
+  .use-motion .post-block,
+  .use-motion .pagination,
+  .use-motion .comments,
+  .use-motion .post-header,
+  .use-motion .post-body,
+  .use-motion .collection-header {
+    visibility: visible;
+  }
+
+  .use-motion .header,
+  .use-motion .site-brand-container .toggle,
+  .use-motion .footer { opacity: initial; }
+
+  .use-motion .site-title,
+  .use-motion .site-subtitle,
+  .use-motion .custom-logo-image {
+    opacity: initial;
+    top: initial;
+  }
+
+  .use-motion .logo-line {
+    transform: scaleX(1);
+  }
+
+  .search-pop-overlay, .sidebar-nav { display: none; }
+  .sidebar-panel { display: block; }
+  </style>
+</noscript>
+
+<!-- hexo injector head_end start -->
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.12.0/dist/katex.min.css">
+<!-- hexo injector head_end end --><style>mjx-container[jax="SVG"] {
+  direction: ltr;
+}
+
+mjx-container[jax="SVG"] > svg {
+  overflow: visible;
+}
+
+mjx-container[jax="SVG"] > svg a {
+  fill: blue;
+  stroke: blue;
+}
+
+mjx-container[jax="SVG"][display="true"] {
+  display: block;
+  text-align: center;
+  margin: 1em 0;
+}
+
+mjx-container[jax="SVG"][justify="left"] {
+  text-align: left;
+}
+
+mjx-container[jax="SVG"][justify="right"] {
+  text-align: right;
+}
+
+g[data-mml-node="merror"] > g {
+  fill: red;
+  stroke: red;
+}
+
+g[data-mml-node="merror"] > rect[data-background] {
+  fill: yellow;
+  stroke: none;
+}
+
+g[data-mml-node="mtable"] > line[data-line] {
+  stroke-width: 70px;
+  fill: none;
+}
+
+g[data-mml-node="mtable"] > rect[data-frame] {
+  stroke-width: 70px;
+  fill: none;
+}
+
+g[data-mml-node="mtable"] > .mjx-dashed {
+  stroke-dasharray: 140;
+}
+
+g[data-mml-node="mtable"] > .mjx-dotted {
+  stroke-linecap: round;
+  stroke-dasharray: 0,140;
+}
+
+g[data-mml-node="mtable"] > svg {
+  overflow: visible;
+}
+
+[jax="SVG"] mjx-tool {
+  display: inline-block;
+  position: relative;
+  width: 0;
+  height: 0;
+}
+
+[jax="SVG"] mjx-tool > mjx-tip {
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+mjx-tool > mjx-tip {
+  display: inline-block;
+  padding: .2em;
+  border: 1px solid #888;
+  font-size: 70%;
+  background-color: #F8F8F8;
+  color: black;
+  box-shadow: 2px 2px 5px #AAAAAA;
+}
+
+g[data-mml-node="maction"][data-toggle] {
+  cursor: pointer;
+}
+
+mjx-status {
+  display: block;
+  position: fixed;
+  left: 1em;
+  bottom: 1em;
+  min-width: 25%;
+  padding: .2em .4em;
+  border: 1px solid #888;
+  font-size: 90%;
+  background-color: #F8F8F8;
+  color: black;
+}
+
+foreignObject[data-mjx-xml] {
+  font-family: initial;
+  line-height: normal;
+  overflow: visible;
+}
+
+.MathJax path {
+  stroke-width: 3;
+}
+
+mjx-container[display="true"] {
+  overflow: auto hidden;
+}
+
+mjx-container[display="true"] + br {
+  display: none;
+}
+</style><link rel="alternate" href="/zh-cn/atom.xml" title="Y某的博客" type="application/atom+xml"><!-- hexo-inject:begin --><!-- hexo-inject:end -->
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage" class="use-motion">
+  <!-- hexo-inject:begin --><!-- hexo-inject:end --><div class="headband"></div>
+
+  <main class="main">
+    <header class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-container">
+  <div class="site-nav-toggle">
+    <div class="toggle" aria-label="切换导航栏">
+        <span class="toggle-line"></span>
+        <span class="toggle-line"></span>
+        <span class="toggle-line"></span>
+    </div>
+  </div>
+
+  <div class="site-meta">
+
+    <a href="/zh-cn/" class="brand" rel="start">
+      <i class="logo-line"></i>
+      <h1 class="site-title">Y某的博客</h1>
+      <i class="logo-line"></i>
+    </a>
+      <p class="site-subtitle" itemprop="description">这里的东西都没啥用(真的)</p>
+  </div>
+
+  <div class="site-nav-right">
+    <div class="toggle popup-trigger">
+        <i class="fa fa-search fa-fw fa-lg"></i>
+    </div>
+  </div>
+</div>
+
+
+
+<nav class="site-nav">
+  <ul class="main-menu menu">
+        <li class="menu-item menu-item-home"><a href="/zh-cn/" rel="section"><i class="fa fa-home fa-fw"></i>首页</a></li>
+        <li class="menu-item menu-item-tags"><a href="/zh-cn/tags/" rel="section"><i class="fa fa-tags fa-fw"></i>标签</a></li>
+        <li class="menu-item menu-item-categories"><a href="/zh-cn/categories/" rel="section"><i class="fa fa-th fa-fw"></i>分类</a></li>
+        <li class="menu-item menu-item-series"><a href="/zh-cn/series/" rel="section"><i class="fa fa-list fa-fw"></i>系列</a></li>
+        <li class="menu-item menu-item-archives"><a href="/zh-cn/archives/" rel="section"><i class="fa fa-archive fa-fw"></i>归档</a></li>
+        <li class="menu-item menu-item-about"><a href="/zh-cn/about/" rel="section"><i class="fa fa-user fa-fw"></i>关于</a></li>
+        <li class="menu-item menu-item-english"><a href="https://obster-y.github.io/" rel="section"><i class="fa fa-globe fa-fw"></i>English</a></li>
+        <li class="menu-item menu-item-简体中文"><a href="https://obster-y.github.io/zh-cn/" rel="section"><i class="fa fa-globe fa-fw"></i>简体中文</a></li>
+      <li class="menu-item menu-item-search">
+        <a role="button" class="popup-trigger"><i class="fa fa-search fa-fw"></i>搜索
+        </a>
+      </li>
+  </ul>
+</nav>
+
+
+
+  <div class="search-pop-overlay">
+    <div class="popup search-popup"><div class="search-header">
+  <span class="search-icon">
+    <i class="fa fa-search"></i>
+  </span>
+  <div class="search-input-container">
+    <input autocomplete="off" autocapitalize="off" maxlength="80"
+           placeholder="搜索..." spellcheck="false"
+           type="search" class="search-input">
+  </div>
+  <span class="popup-btn-close">
+    <i class="fa fa-times-circle"></i>
+  </span>
+</div>
+<div class="search-result-container no-result">
+  <div class="search-result-icon">
+    <i class="fa fa-spinner fa-pulse fa-5x"></i>
+  </div>
+</div>
+
+    </div>
+  </div>
+
+</div>
+        
+  
+  <div class="toggle sidebar-toggle">
+    <span class="toggle-line"></span>
+    <span class="toggle-line"></span>
+    <span class="toggle-line"></span>
+  </div>
+
+  <aside class="sidebar">
+
+    <div class="sidebar-inner sidebar-nav-active sidebar-toc-active">
+      <ul class="sidebar-nav">
+        <li class="sidebar-nav-toc">
+          Table of Contents
+        </li>
+        <li class="sidebar-nav-overview">
+          Overview
+        </li>
+      </ul>
+
+      <div class="sidebar-panel-container">
+        <!--noindex-->
+        <section class="post-toc-wrap sidebar-panel">
+            <div class="post-toc animated"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#Keyboard-Shortcuts"><span class="nav-text">Keyboard Shortcuts</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#Get-amp-Transform-Data"><span class="nav-text">Get &amp; Transform Data</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#Text-to-Columns"><span class="nav-text">Text to Columns</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#Formulas"><span class="nav-text">Formulas</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#Table-Pivot-Charts-amp-Tables"><span class="nav-text">Table, Pivot Charts &amp; Tables</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#Table"><span class="nav-text">Table</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Pivot-Charts-amp-Tables"><span class="nav-text">Pivot Charts &amp; Tables</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#Cell-Format"><span class="nav-text">Cell Format</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#Format-Painter"><span class="nav-text">Format Painter</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#Conditional-Formatting"><span class="nav-text">Conditional Formatting</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#Preset-rules"><span class="nav-text">Preset rules</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Define-your-own-rules"><span class="nav-text">Define your own rules</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#Quick-Access-Toolbar"><span class="nav-text">Quick Access Toolbar</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#Reference"><span class="nav-text">Reference</span></a></li></ol></div>
+        </section>
+        <!--/noindex-->
+
+        <section class="site-overview-wrap sidebar-panel">
+          <div class="site-author site-overview-item animated" itemprop="author" itemscope itemtype="http://schema.org/Person">
+    <img class="site-author-image" itemprop="image" alt="Obster-Y"
+      src="/zh-cn/images/t1.jpg">
+  <p class="site-author-name" itemprop="name">Obster-Y</p>
+  <div class="site-description" itemprop="description"></div>
+</div>
+<div class="site-state-wrap site-overview-item animated">
+  <nav class="site-state">
+      <div class="site-state-item site-state-posts">
+          <a href="/zh-cn/archives/">
+        
+          <span class="site-state-item-count">18</span>
+          <span class="site-state-item-name">日志</span>
+        </a>
+      </div>
+      <div class="site-state-item site-state-categories">
+            <a href="/zh-cn/categories/">
+          
+        <span class="site-state-item-count">5</span>
+        <span class="site-state-item-name">分类</span></a>
+      </div>
+      <div class="site-state-item site-state-tags">
+            <a href="/zh-cn/tags/">
+          
+        <span class="site-state-item-count">17</span>
+        <span class="site-state-item-name">标签</span></a>
+      </div>
+  </nav>
+</div>
+  <div class="links-of-author site-overview-item animated">
+      <span class="links-of-author-item">
+        <a href="https://github.com/obster-y" title="GitHub → https:&#x2F;&#x2F;github.com&#x2F;obster-y" rel="noopener external nofollow noreferrer" target="_blank"><i class="fab fa-github fa-fw"></i>GitHub</a>
+      </span>
+  </div>
+
+
+
+        </section>
+      </div>
+        <div class="back-to-top animated">
+          <i class="fa fa-arrow-up"></i>
+          <span>0%</span>
+        </div>
+    </div>
+  </aside>
+  <div class="sidebar-dimmer"></div>
+
+
+    </header>
+
+    
+  <div class="reading-progress-bar"></div>
+
+  <a href="https://github.com/obster-y" class="github-corner" rel="noopener external nofollow noreferrer" target="_blank"><svg width="80" height="80" viewBox="0 0 250 250" aria-hidden="true"><path d="M0,0 L115,115 L130,115 L142,142 L250,250 L250,0 Z"></path><path d="M128.3,109.0 C113.8,99.7 119.0,89.6 119.0,89.6 C122.0,82.7 120.5,78.6 120.5,78.6 C119.2,72.0 123.4,76.3 123.4,76.3 C127.3,80.9 125.5,87.3 125.5,87.3 C122.9,97.6 130.6,101.9 134.4,103.2" fill="currentColor" style="transform-origin: 130px 106px;" class="octo-arm"></path><path d="M115.0,115.0 C114.9,115.1 118.7,116.5 119.8,115.4 L133.7,101.6 C136.9,99.2 139.9,98.4 142.2,98.6 C133.8,88.0 127.5,74.4 143.8,58.0 C148.5,53.4 154.0,51.2 159.7,51.0 C160.3,49.4 163.2,43.6 171.4,40.1 C171.4,40.1 176.1,42.5 178.8,56.2 C183.1,58.6 187.2,61.8 190.9,65.4 C194.5,69.0 197.7,73.2 200.1,77.6 C213.8,80.2 216.3,84.9 216.3,84.9 C212.7,93.1 206.9,96.0 205.4,96.6 C205.1,102.4 203.0,107.8 198.3,112.5 C181.9,128.9 168.3,122.5 157.7,114.1 C157.9,116.9 156.7,120.9 152.7,124.9 L141.0,136.5 C139.8,137.7 141.6,141.9 141.8,141.8 Z" fill="currentColor" class="octo-body"></path></svg></a>
+
+<noscript>
+  <div class="noscript-warning">Theme NexT works best with JavaScript enabled</div>
+</noscript>
+
+
+    <div class="main-inner post posts-expand">
+
+
+  
+
+
+<div class="post-block">
+  
+  
+
+  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="en">
+    <link itemprop="mainEntityOfPage" href="https://obster-y.github.io/zh-cn/posts/54909d12-e96e-11eb-9720-69e6dcb77eed/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/zh-cn/images/t1.jpg">
+      <meta itemprop="name" content="Obster-Y">
+      <meta itemprop="description" content="">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Y某的博客">
+    </span>
+      <header class="post-header">
+        <h1 class="post-title" itemprop="name headline">
+          Using Excel more powerful
+        </h1>
+
+        <div class="post-meta-container">
+          <div class="post-meta">
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar"></i>
+      </span>
+      <span class="post-meta-item-text">Posted on</span>
+      
+
+      <time title="Created: 2021-07-20 09:15:34 / Modified: 23:30:41" itemprop="dateCreated datePublished" datetime="2021-07-20T09:15:34+08:00">2021-07-20</time>
+    </span>
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-folder"></i>
+      </span>
+      <span class="post-meta-item-text">In</span>
+        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+          <a href="/zh-cn/categories/M-Office/" itemprop="url" rel="index"><span itemprop="name">M$Office</span></a>
+        </span>
+    </span>
+
+
+  
+    <span class="post-meta-item" title="Views" id="busuanzi_container_page_pv" style="display: none;">
+      <span class="post-meta-item-icon">
+        <i class="far fa-eye"></i>
+      </span>
+      <span class="post-meta-item-text">Views: </span>
+      <span id="busuanzi_value_page_pv"></span>
+    </span>
+</div>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+        <p>A simple tutorial to use excel more powerful.</p>
+<p>Please try these tips on your excel when you reading it.</p>
+<ul>
+<li>Keyboard Shortcuts</li>
+<li>Get &amp; Transform Data</li>
+<li>Text to Columns</li>
+<li>Formulas</li>
+<li>Pivot Charts &amp; Tables</li>
+<li>Cell Format</li>
+<li>Format Painter</li>
+<li>Conditional Formatting</li>
+<li>Quick Access Toolbar</li>
+</ul>
+<p>The original title of this post is `Making you excel yourself in Excel’, but it sounds too geek and stupid, so I changed it.</p>
+<a id="more"></a>
+<h1 id="Keyboard-Shortcuts"><a href="#Keyboard-Shortcuts" class="headerlink" title="Keyboard Shortcuts"></a>Keyboard Shortcuts</h1><p>I prefer using more keyboards rather than mouse. Many actions can be implemented by preset shortcuts(like Ctrl + 1) or by Alt leaded shortcuts. Here are just some common shortcuts.</p>
+<ol>
+<li><p>Ctrl &amp; Shift + ↑↓←→</p>
+<p> Ctrl will move cell cursor to the last non-blank cell(That means if there is a blank cell in a row, ctrl will not move to the end but a cell before the blank)</p>
+<p> Shift will select cell will cell cursor moving.</p>
+<p> Then combine these two key can select a area quickly without mouse.</p>
+</li>
+<li><p>Shift</p>
+<p> With only Shift, you can move cells/rows/columns without replace original data</p>
+<p> <img src="/imgs/Tool/Softwares/M$Office/excel-power/shift_move.gif" alt=""></p>
+</li>
+<li><p>Ctrl + b/i/u (for bold, italic and underline) or Ctrl + 2/3/4/5 (for bold, italic, underline and strikethrough)</p>
+<p> These shortcuts are same in Word, formatting text in selected cell.</p>
+</li>
+<li><p>Ctrl + 9/0 </p>
+<p> Ctrl + 9/0 can hide row or column of the selected cell.</p>
+</li>
+<li><p>Ctrl + 1</p>
+<p> I use this key lot, It open the `Format Cell’ Dialogue, like change the number format or cell format.</p>
+</li>
+<li><p>Ctrl + t</p>
+<p> Create a `Table’(If you don’t know this notion, you can search online or take it as a table in database software).</p>
+</li>
+<li><p>Alt + = (For quick sum)</p>
+<p> If you only select data and leave no blank row/column, this shortcut only calculate rows sum of each columns; if you leave a blank column, it calculate column sum; if both, calculate both.</p>
+<p> <img src="/imgs/Tool/Softwares/M$Office/excel-power/quick_sum_1.gif" alt=""></p>
+<p> To calculate each parts’ sum, use Ctrl + g shortcut to open ‘Go To’ and choose ‘blank’, then press Alt + =.</p>
+<p> <img src="/imgs/Tool/Softwares/M$Office/excel-power/quick_sum_2.gif" alt=""></p>
+</li>
+<li><p>Ctrl + Enter</p>
+<p> Fill each cell in your selection with the value you just input.</p>
+<p> I often use it to fill the blank value</p>
+<p> <img src="/imgs/Tool/Softwares/M$Office/excel-power/fill_blank.gif" alt=""></p>
+</li>
+<li><p>Ctrl + Shift + 1/2/3/4/5/6 (for changing number format in selected cells)</p>
+</li>
+<li><p>Ctrl + Shift + 7 (Add an outside border for entire selected cell)</p>
+</li>
+<li><p>F4</p>
+<p>When not in selecting areas, F4 will repeat the last action, It’s useful to repeat some formatting work.</p>
+<p>It has a second usage, pressing it when you are reference some area, it will change your selection into absolute reference.</p>
+</li>
+</ol>
+<h1 id="Get-amp-Transform-Data"><a href="#Get-amp-Transform-Data" class="headerlink" title="Get &amp; Transform Data"></a>Get &amp; Transform Data</h1><p>One useful tool is ‘From Web’, it can analysis webpage and extract tables on that page, then you can import it directly and save ‘copy - paste - adjust format’ process.</p>
+<p><img src="/imgs/Tool/Softwares/M$Office/excel-power/get_data_from_web.gif" alt=""></p>
+<h1 id="Text-to-Columns"><a href="#Text-to-Columns" class="headerlink" title="Text to Columns"></a>Text to Columns</h1><p>This is an excellent tool, you can use it when you have a group of data organized in some pattern but excel cannot recognize it so it is presented as one column in excel.</p>
+<p>‘Text to columns’ provides two options, by width or delimiter, mostly we just change the ‘delimiters’ settings and let others default. It’s kind of like a Janet and John version of regular expression (I’ve wrote a post about it, click here[TODO]).</p>
+<p><img src="/imgs/Tool/Softwares/M$Office/excel-power/text_to_columns.gif" alt=""></p>
+<h1 id="Formulas"><a href="#Formulas" class="headerlink" title="Formulas"></a>Formulas</h1><p>Excel is famous for its formulas, and I’m not going to tell a detailed usage of one formula, I just put some formula I often use.</p>
+<ol>
+<li><p>VLOOKUP(lookup_value, table_array, col_index_num, range_lookup)</p>
+<p> This function is used to search each value in table A as the key, and the key-value pair stored in table B. Just make sure the table_array is absolute referenced.</p>
+</li>
+<li><p>LEFT, RIGHT, MIDDLE</p>
+<p> These function are used to manipulate string value, like the slice operator in the array.</p>
+</li>
+<li><p>&amp;</p>
+<p> &amp; is not a function but it can join two value into one string.</p>
+</li>
+</ol>
+<h1 id="Table-Pivot-Charts-amp-Tables"><a href="#Table-Pivot-Charts-amp-Tables" class="headerlink" title="Table, Pivot Charts &amp; Tables"></a>Table, Pivot Charts &amp; Tables</h1><h2 id="Table"><a href="#Table" class="headerlink" title="Table"></a>Table</h2><p>In excel, a file endwith ‘.xls’ or ‘.xlsx’ are called Books, a tab named sheet are called tab, thus there will be a smaller notion called table as table in database.</p>
+<p>When you use filter, if there is a blank row, then if you don’t select all data manually, then the default filter will ignore data after blank row, same as table.</p>
+<p>After creating a table, many useful action can be done. I’ll only introduce slicer tool and leave others. This slicer can create sort of dynamic chart and make your table better.</p>
+<p><img src="/imgs/Tool/Softwares/M$Office/excel-power/table.gif" alt=""></p>
+<h2 id="Pivot-Charts-amp-Tables"><a href="#Pivot-Charts-amp-Tables" class="headerlink" title="Pivot Charts &amp; Tables"></a>Pivot Charts &amp; Tables</h2><p>Pivot table and pivot charts can be see as one thing, They can also make your table dynamic. It’s a great tool to explore the data.</p>
+<p><img src="/imgs/Tool/Softwares/M$Office/excel-power/pivot.gif" alt=""></p>
+<h1 id="Cell-Format"><a href="#Cell-Format" class="headerlink" title="Cell Format"></a>Cell Format</h1><p>Well, cell format is a very basic thing in excel, I’ll only show how I create a table with two labels in one cell.</p>
+<p><img src="/imgs/Tool/Softwares/M$Office/excel-power/two_label.gif" alt=""></p>
+<h1 id="Format-Painter"><a href="#Format-Painter" class="headerlink" title="Format Painter"></a>Format Painter</h1><p>Format Painter is very powerful, you just need to know how to use it.</p>
+<ol>
+<li><p>Use(lock) it more than one time</p>
+<p> Very simple, double click it, then the painter will be selected temoparily, click it to close it after you done you work with it.</p>
+</li>
+<li><p>Use it with keyboard</p>
+<p> Also simple, click it, and press your keys. I always use it to clear all cell formats in one sheet, by select a blank cell(which has no format) and click format painter, and Ctrl+A, then format whole sheet.</p>
+<p> <img src="/imgs/Tool/Softwares/M$Office/excel-power/fp_unformat_sheet.gif" alt=""></p>
+</li>
+<li><p>Use multiple cell format</p>
+<p> You can paste more than one cell format to more than one cell, like this.</p>
+<p> <img src="/imgs/Tool/Softwares/M$Office/excel-power/fp_more_than_one.gif" alt=""></p>
+</li>
+<li><p>Use it to make cell like merged but work well with filter.</p>
+<p> Merging cells can make a lot of inconvenience and not make table more beautiful, but painter can paste a ‘merged’ format to make it look like this.</p>
+<p> <img src="/imgs/Tool/Softwares/M$Office/excel-power/fp_merged_cells.gif" alt=""></p>
+</li>
+</ol>
+<h1 id="Conditional-Formatting"><a href="#Conditional-Formatting" class="headerlink" title="Conditional Formatting"></a>Conditional Formatting</h1><p>Conditional formatting is another brilliant part of excel. This post will dabble on it, more detailed usage can be easily found online.</p>
+<p>Core ideas of conditional formatting is apply which FORMAT on which AREAS with which filter RULES.</p>
+<h2 id="Preset-rules"><a href="#Preset-rules" class="headerlink" title="Preset rules"></a>Preset rules</h2><p>They are easy to understand, just try them.</p>
+<p><img src="/imgs/Tool/Softwares/M$Office/excel-power/cf_preset.gif" alt=""></p>
+<h2 id="Define-your-own-rules"><a href="#Define-your-own-rules" class="headerlink" title="Define your own rules"></a>Define your own rules</h2><p>A very simple example, I want highligh column ‘Item’ if its region is ‘Central’ with red color and yellow if it’s ‘East’ region.</p>
+<p>There are some hidden rules that if you define a rule to A cell, then you select an area to apply it, the value in the rule(if not absolute) will follow the change of outside cells.</p>
+<p>So it’s simple, I need to determine whether this cell have ‘Central’ or ‘East’, use the ‘FIND’ function. <code>=FIND(&quot;Central&quot;,B2)&gt;0</code></p>
+<p>Then apply this rule to <code>$D$2:$D$44</code>, and repeat with ‘Yellow’ and ‘East’.</p>
+<p><img src="/imgs/Tool/Softwares/M$Office/excel-power/cf_custom.gif" alt=""></p>
+<p>One more tips, if your rules don’t work, try inspect the value of it, cause if you copy or cut some cells, the applied area will be change with it. A good solution is use the <code>Table</code>, then you don’t need to worry this.</p>
+<h1 id="Quick-Access-Toolbar"><a href="#Quick-Access-Toolbar" class="headerlink" title="Quick Access Toolbar"></a>Quick Access Toolbar</h1><p>Like I did in Powerpoint, put some useful option in the QAT, save you from finding these buttons.</p>
+<h1 id="Reference"><a href="#Reference" class="headerlink" title="Reference"></a>Reference</h1><p>Tools for screen recording:</p>
+<p><a target="_blank" rel="noopener external nofollow noreferrer" href="https://github.com/NickeManarin/ScreenToGif">https://github.com/NickeManarin/ScreenToGif</a></p>
+
+    </div>
+
+    
+    
+    
+
+    <footer class="post-footer">
+          
+
+<div class="post-copyright">
+<ul>
+  <li class="post-copyright-author">
+      <strong>Post author:  </strong>Obster-Y
+  </li>
+  <li class="post-copyright-link">
+      <strong>Post link: </strong>
+      <a href="https://obster-y.github.io/zh-cn/posts/54909d12-e96e-11eb-9720-69e6dcb77eed/" title="Using Excel more powerful">https://obster-y.github.io/zh-cn/posts/54909d12-e96e-11eb-9720-69e6dcb77eed/</a>
+  </li>
+  <li class="post-copyright-license">
+    <strong>Copyright Notice:  </strong>All articles in this blog are licensed under <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/" rel="noopener external nofollow noreferrer" target="_blank"><i class="fab fa-fw fa-creative-commons"></i>BY-NC-SA</a> unless stating additionally.
+  </li>
+</ul>
+</div>
+
+          <div class="post-tags">
+              <a href="/zh-cn/tags/Excel/" rel="tag"><i class="fa fa-tag"></i> Excel</a>
+          </div>
+
+        
+
+          <div class="post-nav">
+            <div class="post-nav-item">
+                <a href="/zh-cn/posts/b6277b00-365a-11ec-a498-d524ecc7212f/" rel="prev" title="Office：0-基础知识">
+                  <i class="fa fa-chevron-left"></i> Office：0-基础知识
+                </a>
+            </div>
+            <div class="post-nav-item">
+                <a href="/zh-cn/posts/ace36491-cf7c-11eb-b771-47c436b9f4e4/" rel="next" title="Making PowerPoint more powerful">
+                  Making PowerPoint more powerful <i class="fa fa-chevron-right"></i>
+                </a>
+            </div>
+          </div>
+    </footer>
+  </article>
+</div>
+
+
+
+
+
+
+    
+  <div class="comments">
+    <div id="utterances-container"></div>
+  </div>
+  
+
+<script>
+  window.addEventListener('tabs:register', () => {
+    let { activeClass } = CONFIG.comments;
+    if (CONFIG.comments.storage) {
+      activeClass = localStorage.getItem('comments_active') || activeClass;
+    }
+    if (activeClass) {
+      const activeTab = document.querySelector(`a[href="#comment-${activeClass}"]`);
+      if (activeTab) {
+        activeTab.click();
+      }
+    }
+  });
+  if (CONFIG.comments.storage) {
+    window.addEventListener('tabs:click', event => {
+      if (!event.target.matches('.tabs-comment .tab-content .tab-pane')) return;
+      const commentClass = event.target.classList[1];
+      localStorage.setItem('comments_active', commentClass);
+    });
+  }
+</script>
+</div>
+  </main>
+
+  <footer class="footer">
+    <div class="footer-inner">
+
+
+<div class="copyright">
+  &copy; 2018 – 
+  <span itemprop="copyrightYear">2022</span>
+  <span class="with-love">
+    <i class="fa fa-heart"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">Obster-Y</span>
+</div>
+<div class="busuanzi-count">
+    <span class="post-meta-item" id="busuanzi_container_site_pv" style="display: none;">
+      <span class="post-meta-item-icon">
+        <i class="fa fa-eye"></i>
+      </span>
+      <span class="site-pv" title="总访问量">
+        <span id="busuanzi_value_site_pv"></span>
+      </span>
+    </span>
+</div>
+
+    </div>
+  </footer>
+
+  
+
+
+  <script src="//cdn.jsdelivr.net/npm/animejs@3.2.1/lib/anime.min.js"></script>
+
+<script src="/zh-cn/js/utils.js"></script><script src="/zh-cn/js/motion.js"></script><script src="/zh-cn/js/next-boot.js"></script>
+
+  
+
+<script src="/zh-cn/js/local-search.js"></script>
+
+
+
+
+
+
+  
+  <script async src="https://busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+
+
+
+
+
+  <script>
+  if (typeof MathJax === 'undefined') {
+    window.MathJax = {
+      tex: {
+        inlineMath: {'[+]': [['$', '$']]},
+        tags: ''
+      },
+      options: {
+        renderActions: {
+          insertedScript: [200, () => {
+            document.querySelectorAll('mjx-container').forEach(node => {
+              const target = node.parentNode;
+              if (target.nodeName.toLowerCase() === 'li') {
+                target.parentNode.classList.add('has-jax');
+              }
+            });
+          }, '', false]
+        }
+      }
+    };
+    const script = document.createElement('script');
+    script.src = '//cdn.jsdelivr.net/npm/mathjax@3.1.2/es5/tex-mml-chtml.js';
+    script.defer = true;
+    document.head.appendChild(script);
+  } else {
+    MathJax.startup.document.state(0);
+    MathJax.typesetClear();
+    MathJax.texReset();
+    MathJax.typeset();
+  }
+</script>
+
+
+
+<script>
+NexT.utils.loadComments('#utterances-container', () => {
+  const script = document.createElement('script');
+  script.src = 'https://utteranc.es/client.js';
+  script.setAttribute('repo', "obster-y/comments");
+  script.setAttribute('issue-term', "pathname");
+  script.setAttribute('theme', "github-dark");
+  script.crossOrigin = 'anonymous';
+  script.async = true;
+  document.querySelector('#utterances-container').appendChild(script);
+});
+</script><!-- hexo-inject:begin --><!-- hexo-inject:end -->
+
+</body>
+</html>

@@ -1,0 +1,1798 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <!-- hexo-inject:begin --><!-- hexo-inject:end --><meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=2">
+<meta name="theme-color" content="#222">
+<meta name="generator" content="Hexo 5.2.0">
+<meta name="baidu-site-verification" content="code-mytiWBVdjL" />
+<meta name="google-site-verification" content="nxAePyZIesHQ1FCgWQZBV1m6HPxrrxb4YjjUfmGavJo" />
+
+
+  <link rel="apple-touch-icon" sizes="180x180" href="/zh-cn/images/logo.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/zh-cn/images/cls-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/zh-cn/images/cls-16x16.png">
+  <link rel="mask-icon" href="/zh-cn/images/logo.png" color="#222">
+
+<link rel="stylesheet" href="/zh-cn/css/main.css">
+
+
+
+<link rel="stylesheet" href="//cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5.15.1/css/all.min.css">
+  <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/animate.css@3.1.1/animate.min.css">
+
+<script class="hexo-configurations">
+    var NexT = window.NexT || {};
+    var CONFIG = {"hostname":"obster-y.github.io","root":"/zh-cn/","images":"/zh-cn/images","scheme":"Gemini","version":"8.1.0","exturl":false,"sidebar":{"position":"right","display":"post","padding":18,"offset":12},"copycode":true,"bookmark":{"enable":false,"color":"#222","save":"auto"},"fancybox":false,"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":"gitalk","storage":true,"lazyload":false,"nav":null},"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"fadeInDown","post_body":"fadeInDown","coll_header":"fadeInLeft","sidebar":"fadeInUp"}},"prism":false,"i18n":{"placeholder":"搜索...","empty":"没有找到任何搜索结果：${query}","hits_time":"找到 ${hits} 个搜索结果（用时 ${time} 毫秒）","hits":"找到 ${hits} 个搜索结果"},"path":"/zh-cn/search.xml","localsearch":{"enable":true,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false}};
+  </script>
+<meta name="description" content="123456789101112131415161718192021222324252627import osimport shutilimport numpy as npimport pandas as pdimport pandas_profiling as pdpfimport timeimport warningswarnings.filterwarnings(&amp;#x27;ignore&amp;#x">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Y某的博客">
+<meta property="og:url" content="https://obster-y.github.io/zh-cn/imgs/Programming/datawhale-dmintro/DataWhale-Intro/Tianchi-SecondHandCarTrade.html">
+<meta property="og:site_name" content="Y某的博客">
+<meta property="og:description" content="123456789101112131415161718192021222324252627import osimport shutilimport numpy as npimport pandas as pdimport pandas_profiling as pdpfimport timeimport warningswarnings.filterwarnings(&amp;#x27;ignore&amp;#x">
+<meta property="og:locale" content="zh_CN">
+<meta property="og:image" content="https://obster-y.github.io/zh-cn/imgs/Programming/datawhale-dmintro/DataWhale-Intro/output_14_1.png">
+<meta property="og:image" content="https://obster-y.github.io/zh-cn/imgs/Programming/datawhale-dmintro/DataWhale-Intro/output_14_2.png">
+<meta property="og:image" content="https://obster-y.github.io/zh-cn/imgs/Programming/datawhale-dmintro/DataWhale-Intro/output_16_1.png">
+<meta property="og:image" content="https://obster-y.github.io/zh-cn/imgs/Programming/datawhale-dmintro/DataWhale-Intro/output_17_1.png">
+<meta property="og:image" content="https://obster-y.github.io/zh-cn/imgs/Programming/datawhale-dmintro/DataWhale-Intro/output_17_2.png">
+<meta property="og:image" content="https://obster-y.github.io/zh-cn/imgs/Programming/datawhale-dmintro/DataWhale-Intro/output_18_1.png">
+<meta property="og:image" content="https://obster-y.github.io/zh-cn/imgs/Programming/datawhale-dmintro/DataWhale-Intro/output_23_1.png">
+<meta property="og:image" content="https://obster-y.github.io/zh-cn/imgs/Programming/datawhale-dmintro/DataWhale-Intro/output_24_0.png">
+<meta property="og:image" content="https://obster-y.github.io/zh-cn/imgs/Programming/datawhale-dmintro/DataWhale-Intro/output_25_1.png">
+<meta property="og:image" content="https://obster-y.github.io/zh-cn/imgs/Programming/datawhale-dmintro/DataWhale-Intro/output_31_1.png">
+<meta property="og:image" content="https://obster-y.github.io/zh-cn/imgs/Programming/datawhale-dmintro/DataWhale-Intro/output_38_1.png">
+<meta property="og:image" content="https://obster-y.github.io/zh-cn/imgs/Programming/datawhale-dmintro/DataWhale-Intro/output_39_1.png">
+<meta property="og:image" content="https://obster-y.github.io/zh-cn/imgs/Programming/datawhale-dmintro/DataWhale-Intro/output_40_1.png">
+<meta property="og:image" content="https://obster-y.github.io/zh-cn/imgs/Programming/datawhale-dmintro/DataWhale-Intro/output_45_1.png">
+<meta property="og:image" content="https://obster-y.github.io/zh-cn/imgs/Programming/datawhale-dmintro/DataWhale-Intro/output_52_1.png">
+<meta property="og:image" content="https://obster-y.github.io/zh-cn/imgs/Programming/datawhale-dmintro/DataWhale-Intro/output_52_4.png">
+<meta property="og:image" content="https://obster-y.github.io/zh-cn/imgs/Programming/datawhale-dmintro/DataWhale-Intro/output_53_2.png">
+<meta property="og:image" content="https://obster-y.github.io/zh-cn/imgs/Programming/datawhale-dmintro/DataWhale-Intro/output_53_3.png">
+<meta property="og:image" content="https://obster-y.github.io/zh-cn/imgs/Programming/datawhale-dmintro/DataWhale-Intro/output_55_1.png">
+<meta property="og:image" content="https://obster-y.github.io/zh-cn/imgs/Programming/datawhale-dmintro/DataWhale-Intro/output_58_1.png">
+<meta property="article:published_time" content="2022-07-23T06:33:50.239Z">
+<meta property="article:modified_time" content="2020-03-29T20:57:08.000Z">
+<meta property="article:author" content="Obster-Y">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://obster-y.github.io/zh-cn/imgs/Programming/datawhale-dmintro/DataWhale-Intro/output_14_1.png">
+
+
+<link rel="canonical" href="https://obster-y.github.io/zh-cn/imgs/Programming/datawhale-dmintro/DataWhale-Intro/Tianchi-SecondHandCarTrade">
+
+
+<script class="page-configurations">
+  // https://hexo.io/docs/variables.html
+  CONFIG.page = {
+    sidebar: "",
+    isHome : false,
+    isPost : false,
+    lang   : 'zh-CN'
+  };
+</script>
+<title> | Y某的博客
+</title>
+  
+
+
+
+  <noscript>
+  <style>
+  body { margin-top: 2rem; }
+
+  .use-motion .menu-item,
+  .use-motion .sidebar,
+  .use-motion .post-block,
+  .use-motion .pagination,
+  .use-motion .comments,
+  .use-motion .post-header,
+  .use-motion .post-body,
+  .use-motion .collection-header {
+    visibility: visible;
+  }
+
+  .use-motion .header,
+  .use-motion .site-brand-container .toggle,
+  .use-motion .footer { opacity: initial; }
+
+  .use-motion .site-title,
+  .use-motion .site-subtitle,
+  .use-motion .custom-logo-image {
+    opacity: initial;
+    top: initial;
+  }
+
+  .use-motion .logo-line {
+    transform: scaleX(1);
+  }
+
+  .search-pop-overlay, .sidebar-nav { display: none; }
+  .sidebar-panel { display: block; }
+  </style>
+</noscript>
+
+<!-- hexo injector head_end start -->
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.12.0/dist/katex.min.css">
+<!-- hexo injector head_end end --><style>mjx-container[jax="SVG"] {
+  direction: ltr;
+}
+
+mjx-container[jax="SVG"] > svg {
+  overflow: visible;
+}
+
+mjx-container[jax="SVG"] > svg a {
+  fill: blue;
+  stroke: blue;
+}
+
+mjx-container[jax="SVG"][display="true"] {
+  display: block;
+  text-align: center;
+  margin: 1em 0;
+}
+
+mjx-container[jax="SVG"][justify="left"] {
+  text-align: left;
+}
+
+mjx-container[jax="SVG"][justify="right"] {
+  text-align: right;
+}
+
+g[data-mml-node="merror"] > g {
+  fill: red;
+  stroke: red;
+}
+
+g[data-mml-node="merror"] > rect[data-background] {
+  fill: yellow;
+  stroke: none;
+}
+
+g[data-mml-node="mtable"] > line[data-line] {
+  stroke-width: 70px;
+  fill: none;
+}
+
+g[data-mml-node="mtable"] > rect[data-frame] {
+  stroke-width: 70px;
+  fill: none;
+}
+
+g[data-mml-node="mtable"] > .mjx-dashed {
+  stroke-dasharray: 140;
+}
+
+g[data-mml-node="mtable"] > .mjx-dotted {
+  stroke-linecap: round;
+  stroke-dasharray: 0,140;
+}
+
+g[data-mml-node="mtable"] > svg {
+  overflow: visible;
+}
+
+[jax="SVG"] mjx-tool {
+  display: inline-block;
+  position: relative;
+  width: 0;
+  height: 0;
+}
+
+[jax="SVG"] mjx-tool > mjx-tip {
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+mjx-tool > mjx-tip {
+  display: inline-block;
+  padding: .2em;
+  border: 1px solid #888;
+  font-size: 70%;
+  background-color: #F8F8F8;
+  color: black;
+  box-shadow: 2px 2px 5px #AAAAAA;
+}
+
+g[data-mml-node="maction"][data-toggle] {
+  cursor: pointer;
+}
+
+mjx-status {
+  display: block;
+  position: fixed;
+  left: 1em;
+  bottom: 1em;
+  min-width: 25%;
+  padding: .2em .4em;
+  border: 1px solid #888;
+  font-size: 90%;
+  background-color: #F8F8F8;
+  color: black;
+}
+
+foreignObject[data-mjx-xml] {
+  font-family: initial;
+  line-height: normal;
+  overflow: visible;
+}
+
+.MathJax path {
+  stroke-width: 3;
+}
+
+mjx-container[display="true"] {
+  overflow: auto hidden;
+}
+
+mjx-container[display="true"] + br {
+  display: none;
+}
+</style><link rel="alternate" href="/zh-cn/atom.xml" title="Y某的博客" type="application/atom+xml"><!-- hexo-inject:begin --><!-- hexo-inject:end -->
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage" class="use-motion">
+  <!-- hexo-inject:begin --><!-- hexo-inject:end --><div class="headband"></div>
+
+  <main class="main">
+    <header class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-container">
+  <div class="site-nav-toggle">
+    <div class="toggle" aria-label="切换导航栏">
+        <span class="toggle-line"></span>
+        <span class="toggle-line"></span>
+        <span class="toggle-line"></span>
+    </div>
+  </div>
+
+  <div class="site-meta">
+
+    <a href="/zh-cn/" class="brand" rel="start">
+      <i class="logo-line"></i>
+      <h1 class="site-title">Y某的博客</h1>
+      <i class="logo-line"></i>
+    </a>
+      <p class="site-subtitle" itemprop="description">这里的东西都没啥用(真的)</p>
+  </div>
+
+  <div class="site-nav-right">
+    <div class="toggle popup-trigger">
+        <i class="fa fa-search fa-fw fa-lg"></i>
+    </div>
+  </div>
+</div>
+
+
+
+<nav class="site-nav">
+  <ul class="main-menu menu">
+        <li class="menu-item menu-item-home"><a href="/zh-cn/" rel="section"><i class="fa fa-home fa-fw"></i>首页</a></li>
+        <li class="menu-item menu-item-tags"><a href="/zh-cn/tags/" rel="section"><i class="fa fa-tags fa-fw"></i>标签</a></li>
+        <li class="menu-item menu-item-categories"><a href="/zh-cn/categories/" rel="section"><i class="fa fa-th fa-fw"></i>分类</a></li>
+        <li class="menu-item menu-item-series"><a href="/zh-cn/series/" rel="section"><i class="fa fa-list fa-fw"></i>系列</a></li>
+        <li class="menu-item menu-item-archives"><a href="/zh-cn/archives/" rel="section"><i class="fa fa-archive fa-fw"></i>归档</a></li>
+        <li class="menu-item menu-item-about"><a href="/zh-cn/about/" rel="section"><i class="fa fa-user fa-fw"></i>关于</a></li>
+        <li class="menu-item menu-item-english"><a href="https://obster-y.github.io/" rel="section"><i class="fa fa-globe fa-fw"></i>English</a></li>
+        <li class="menu-item menu-item-简体中文"><a href="https://obster-y.github.io/zh-cn/" rel="section"><i class="fa fa-globe fa-fw"></i>简体中文</a></li>
+      <li class="menu-item menu-item-search">
+        <a role="button" class="popup-trigger"><i class="fa fa-search fa-fw"></i>搜索
+        </a>
+      </li>
+  </ul>
+</nav>
+
+
+
+  <div class="search-pop-overlay">
+    <div class="popup search-popup"><div class="search-header">
+  <span class="search-icon">
+    <i class="fa fa-search"></i>
+  </span>
+  <div class="search-input-container">
+    <input autocomplete="off" autocapitalize="off" maxlength="80"
+           placeholder="搜索..." spellcheck="false"
+           type="search" class="search-input">
+  </div>
+  <span class="popup-btn-close">
+    <i class="fa fa-times-circle"></i>
+  </span>
+</div>
+<div class="search-result-container no-result">
+  <div class="search-result-icon">
+    <i class="fa fa-spinner fa-pulse fa-5x"></i>
+  </div>
+</div>
+
+    </div>
+  </div>
+
+</div>
+        
+  
+  <div class="toggle sidebar-toggle">
+    <span class="toggle-line"></span>
+    <span class="toggle-line"></span>
+    <span class="toggle-line"></span>
+  </div>
+
+  <aside class="sidebar">
+
+    <div class="sidebar-inner sidebar-nav-active sidebar-toc-active">
+      <ul class="sidebar-nav">
+        <li class="sidebar-nav-toc">
+          文章目录
+        </li>
+        <li class="sidebar-nav-overview">
+          站点概览
+        </li>
+      </ul>
+
+      <div class="sidebar-panel-container">
+        <!--noindex-->
+        <section class="post-toc-wrap sidebar-panel">
+            <div class="post-toc animated"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#Exploratory-Data-Analysis"><span class="nav-text">Exploratory Data Analysis</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Feature-Engineering"><span class="nav-text">Feature Engineering</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#Data-Washing"><span class="nav-text">Data Washing</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E7%89%B9%E5%BE%81-%E8%BF%87%E6%BB%A4%E5%BC%8F"><span class="nav-text">特征-过滤式</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Model"><span class="nav-text">Model</span></a></li></ol></div>
+        </section>
+        <!--/noindex-->
+
+        <section class="site-overview-wrap sidebar-panel">
+          <div class="site-author site-overview-item animated" itemprop="author" itemscope itemtype="http://schema.org/Person">
+    <img class="site-author-image" itemprop="image" alt="Obster-Y"
+      src="/zh-cn/images/t1.jpg">
+  <p class="site-author-name" itemprop="name">Obster-Y</p>
+  <div class="site-description" itemprop="description"></div>
+</div>
+<div class="site-state-wrap site-overview-item animated">
+  <nav class="site-state">
+      <div class="site-state-item site-state-posts">
+          <a href="/zh-cn/archives/">
+        
+          <span class="site-state-item-count">18</span>
+          <span class="site-state-item-name">日志</span>
+        </a>
+      </div>
+      <div class="site-state-item site-state-categories">
+            <a href="/zh-cn/categories/">
+          
+        <span class="site-state-item-count">5</span>
+        <span class="site-state-item-name">分类</span></a>
+      </div>
+      <div class="site-state-item site-state-tags">
+            <a href="/zh-cn/tags/">
+          
+        <span class="site-state-item-count">17</span>
+        <span class="site-state-item-name">标签</span></a>
+      </div>
+  </nav>
+</div>
+  <div class="links-of-author site-overview-item animated">
+      <span class="links-of-author-item">
+        <a href="https://github.com/obster-y" title="GitHub → https:&#x2F;&#x2F;github.com&#x2F;obster-y" rel="noopener external nofollow noreferrer" target="_blank"><i class="fab fa-github fa-fw"></i>GitHub</a>
+      </span>
+  </div>
+
+
+
+        </section>
+      </div>
+        <div class="back-to-top animated">
+          <i class="fa fa-arrow-up"></i>
+          <span>0%</span>
+        </div>
+    </div>
+  </aside>
+  <div class="sidebar-dimmer"></div>
+
+
+    </header>
+
+    
+  <div class="reading-progress-bar"></div>
+
+  <a href="https://github.com/obster-y" class="github-corner" rel="noopener external nofollow noreferrer" target="_blank"><svg width="80" height="80" viewBox="0 0 250 250" aria-hidden="true"><path d="M0,0 L115,115 L130,115 L142,142 L250,250 L250,0 Z"></path><path d="M128.3,109.0 C113.8,99.7 119.0,89.6 119.0,89.6 C122.0,82.7 120.5,78.6 120.5,78.6 C119.2,72.0 123.4,76.3 123.4,76.3 C127.3,80.9 125.5,87.3 125.5,87.3 C122.9,97.6 130.6,101.9 134.4,103.2" fill="currentColor" style="transform-origin: 130px 106px;" class="octo-arm"></path><path d="M115.0,115.0 C114.9,115.1 118.7,116.5 119.8,115.4 L133.7,101.6 C136.9,99.2 139.9,98.4 142.2,98.6 C133.8,88.0 127.5,74.4 143.8,58.0 C148.5,53.4 154.0,51.2 159.7,51.0 C160.3,49.4 163.2,43.6 171.4,40.1 C171.4,40.1 176.1,42.5 178.8,56.2 C183.1,58.6 187.2,61.8 190.9,65.4 C194.5,69.0 197.7,73.2 200.1,77.6 C213.8,80.2 216.3,84.9 216.3,84.9 C212.7,93.1 206.9,96.0 205.4,96.6 C205.1,102.4 203.0,107.8 198.3,112.5 C181.9,128.9 168.3,122.5 157.7,114.1 C157.9,116.9 156.7,120.9 152.7,124.9 L141.0,136.5 C139.8,137.7 141.6,141.9 141.8,141.8 Z" fill="currentColor" class="octo-body"></path></svg></a>
+
+<noscript>
+  <div class="noscript-warning">Theme NexT works best with JavaScript enabled</div>
+</noscript>
+
+
+    <div class="main-inner page posts-expand">
+  
+  
+
+
+    
+    
+    
+    <div class="post-block" lang="zh-CN"><header class="post-header">
+
+<h1 class="post-title" itemprop="name headline">
+</h1>
+
+<div class="post-meta-container">
+  <ul class="breadcrumb">
+            <li><a href="/zh-cn/imgs/">IMGS</a></li>
+            <li><a href="/zh-cn/imgs/Programming/">PROGRAMMING</a></li>
+            <li><a href="/zh-cn/imgs/Programming/datawhale-dmintro/">DATAWHALE-DMINTRO</a></li>
+            <li><a href="/zh-cn/imgs/Programming/datawhale-dmintro/DataWhale-Intro/">DATAWHALE-INTRO</a></li>
+            <li>TIANCHI-SECONDHANDCARTRADE</li>
+          
+  </ul>
+</div>
+
+</header>
+
+      
+      
+      <div class="post-body">
+          <figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> os</span><br><span class="line"><span class="keyword">import</span> shutil</span><br><span class="line"><span class="keyword">import</span> numpy <span class="keyword">as</span> np</span><br><span class="line"><span class="keyword">import</span> pandas <span class="keyword">as</span> pd</span><br><span class="line"><span class="keyword">import</span> pandas_profiling <span class="keyword">as</span> pdpf</span><br><span class="line"><span class="keyword">import</span> time</span><br><span class="line"></span><br><span class="line"><span class="keyword">import</span> warnings</span><br><span class="line">warnings.filterwarnings(<span class="string">&#x27;ignore&#x27;</span>)</span><br><span class="line"></span><br><span class="line"><span class="keyword">import</span> matplotlib</span><br><span class="line"><span class="keyword">import</span> matplotlib.pyplot <span class="keyword">as</span> plt</span><br><span class="line"><span class="keyword">import</span> seaborn <span class="keyword">as</span> sbn</span><br><span class="line">%matplotlib inline</span><br><span class="line"></span><br><span class="line"><span class="keyword">import</span> missingno <span class="keyword">as</span> msno</span><br><span class="line"><span class="keyword">import</span> pivottablejs</span><br><span class="line"></span><br><span class="line"><span class="keyword">import</span> lightgbm <span class="keyword">as</span> lgb</span><br><span class="line"><span class="keyword">import</span> xgboost <span class="keyword">as</span> xgb</span><br><span class="line"></span><br><span class="line"><span class="keyword">from</span> sklearn.decomposition <span class="keyword">import</span> PCA, FastICA, FactorAnalysis, SparsePCA</span><br><span class="line"></span><br><span class="line"><span class="keyword">from</span> sklearn.model_selection <span class="keyword">import</span> GridSearchCV, cross_val_score, StratifiedKFold, train_test_split</span><br><span class="line"><span class="keyword">from</span> sklearn.metrics <span class="keyword">import</span> mean_squared_error, mean_absolute_error</span><br><span class="line"></span><br><span class="line">os.chdir(<span class="string">r&quot;D:\Tianchi&quot;</span>)</span><br></pre></td></tr></table></figure>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">Sta_inf</span>(<span class="params">data</span>):</span></span><br><span class="line">    print(<span class="string">&#x27;-&#x27;</span>*<span class="number">20</span> + <span class="string">&#x27;Statistic Info&#x27;</span> + <span class="string">&#x27;-&#x27;</span>*<span class="number">20</span> +<span class="string">&#x27;\n&#x27;</span>)</span><br><span class="line">    print(<span class="string">&#x27;_min =\n&#x27;</span>,np.<span class="built_in">min</span>(data))</span><br><span class="line">    print(<span class="string">&#x27;_max =\n&#x27;</span>,np.<span class="built_in">max</span>(data))</span><br><span class="line">    print(<span class="string">&#x27;_mean =\n&#x27;</span>,np.mean(data))</span><br><span class="line">    print(<span class="string">&#x27;_ptp =\n&#x27;</span>,np.ptp(data))</span><br><span class="line">    print(<span class="string">&#x27;_std =\n&#x27;</span>,np.std(data))</span><br><span class="line">    print(<span class="string">&#x27;_var =\n&#x27;</span>,np.var(data))</span><br></pre></td></tr></table></figure>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br></pre></td><td class="code"><pre><span class="line"><span class="string">&#x27;&#x27;&#x27; 数据含义</span></span><br><span class="line"><span class="string">SaleID 	交易ID，唯一编码</span></span><br><span class="line"><span class="string">name 	汽车交易名称，已脱敏</span></span><br><span class="line"><span class="string">regDate 	汽车注册日期，例如20160101，2016年01月01日</span></span><br><span class="line"><span class="string">model 	车型编码，已脱敏</span></span><br><span class="line"><span class="string">brand 	汽车品牌，已脱敏</span></span><br><span class="line"><span class="string">bodyType 	车身类型：豪华轿车：0，微型车：1，厢型车：2，大巴车：3，敞篷车：4，双门汽车：5，商务车：6，搅拌车：7</span></span><br><span class="line"><span class="string">fuelType 	燃油类型：汽油：0，柴油：1，液化石油气：2，天然气：3，混合动力：4，其他：5，电动：6</span></span><br><span class="line"><span class="string">gearbox 	变速箱：手动：0，自动：1</span></span><br><span class="line"><span class="string">power 	发动机功率：范围 [ 0, 600 ]</span></span><br><span class="line"><span class="string">kilometer 	汽车已行驶公里，单位万km</span></span><br><span class="line"><span class="string">notRepairedDamage 	汽车有尚未修复的损坏：是：0，否：1</span></span><br><span class="line"><span class="string">regionCode 	地区编码，已脱敏</span></span><br><span class="line"><span class="string">seller 	销售方：个体：0，非个体：1</span></span><br><span class="line"><span class="string">offerType 	报价类型：提供：0，请求：1</span></span><br><span class="line"><span class="string">creatDate 	汽车上线时间，即开始售卖时间</span></span><br><span class="line"><span class="string">price 	二手车交易价格（预测目标）</span></span><br><span class="line"><span class="string">v系列特征 	匿名特征，包含v0-14在内15个匿名特征</span></span><br><span class="line"><span class="string">&#x27;&#x27;&#x27;</span></span><br></pre></td></tr></table></figure>
+<pre><code>&#39; 数据含义\nSaleID \t交易ID，唯一编码\nname \t汽车交易名称，已脱敏\nregDate \t汽车注册日期，例如20160101，2016年01月01日\nmodel \t车型编码，已脱敏\nbrand \t汽车品牌，已脱敏\nbodyType \t车身类型：豪华轿车：0，微型车：1，厢型车：2，大巴车：3，敞篷车：4，双门汽车：5，商务车：6，搅拌车：7\nfuelType \t燃油类型：汽油：0，柴油：1，液化石油气：2，天然气：3，混合动力：4，其他：5，电动：6\ngearbox \t变速箱：手动：0，自动：1\npower \t发动机功率：范围 [ 0, 600 ]\nkilometer \t汽车已行驶公里，单位万km\nnotRepairedDamage \t汽车有尚未修复的损坏：是：0，否：1\nregionCode \t地区编码，已脱敏\nseller \t销售方：个体：0，非个体：1\nofferType \t报价类型：提供：0，请求：1\ncreatDate \t汽车上线时间，即开始售卖时间\nprice \t二手车交易价格（预测目标）\nv系列特征 \t匿名特征，包含v0-14在内15个匿名特征\n&#39;
+</code></pre><h2 id="Exploratory-Data-Analysis"><a href="#Exploratory-Data-Analysis" class="headerlink" title="Exploratory Data Analysis"></a>Exploratory Data Analysis</h2><p>读取数据</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">data_train = pd.read_csv(<span class="string">r&#x27;data/used_car_train_20200313.csv&#x27;</span>, encoding=<span class="string">&#x27;utf-8&#x27;</span>, sep=<span class="string">&#x27; &#x27;</span>, )</span><br><span class="line">data_test = pd.read_csv(<span class="string">r&#x27;data/used_car_testA_20200313.csv&#x27;</span>, encoding=<span class="string">&#x27;utf-8&#x27;</span>, sep=<span class="string">&#x27; &#x27;</span>, )</span><br></pre></td></tr></table></figure>
+<p>数据集基本信息</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">print(<span class="string">&#x27;-&#x27;</span>*<span class="number">20</span>)</span><br><span class="line">print(data_train.shape, <span class="string">&#x27;\n&#x27;</span>, data_train.columns)</span><br><span class="line">print(data_train.describe().iloc[:,<span class="number">0</span>:<span class="number">4</span>])</span><br><span class="line">print(<span class="string">&#x27;-&#x27;</span>*<span class="number">20</span>)</span><br><span class="line">print(data_test.shape, <span class="string">&#x27;\n&#x27;</span>, data_test.columns)</span><br><span class="line">print(data_test.describe().iloc[:,<span class="number">0</span>:<span class="number">4</span>])</span><br></pre></td></tr></table></figure>
+<pre><code>--------------------
+(150000, 31) 
+ Index([&#39;SaleID&#39;, &#39;name&#39;, &#39;regDate&#39;, &#39;model&#39;, &#39;brand&#39;, &#39;bodyType&#39;, &#39;fuelType&#39;,
+       &#39;gearbox&#39;, &#39;power&#39;, &#39;kilometer&#39;, &#39;notRepairedDamage&#39;, &#39;regionCode&#39;,
+       &#39;seller&#39;, &#39;offerType&#39;, &#39;creatDate&#39;, &#39;price&#39;, &#39;v_0&#39;, &#39;v_1&#39;, &#39;v_2&#39;, &#39;v_3&#39;,
+       &#39;v_4&#39;, &#39;v_5&#39;, &#39;v_6&#39;, &#39;v_7&#39;, &#39;v_8&#39;, &#39;v_9&#39;, &#39;v_10&#39;, &#39;v_11&#39;, &#39;v_12&#39;,
+       &#39;v_13&#39;, &#39;v_14&#39;],
+      dtype=&#39;object&#39;)
+              SaleID           name       regDate          model
+count  150000.000000  150000.000000  1.500000e+05  149999.000000
+mean    74999.500000   68349.172873  2.003417e+07      47.129021
+std     43301.414527   61103.875095  5.364988e+04      49.536040
+min         0.000000       0.000000  1.991000e+07       0.000000
+25%     37499.750000   11156.000000  1.999091e+07      10.000000
+50%     74999.500000   51638.000000  2.003091e+07      30.000000
+75%    112499.250000  118841.250000  2.007111e+07      66.000000
+max    149999.000000  196812.000000  2.015121e+07     247.000000
+--------------------
+(50000, 30) 
+ Index([&#39;SaleID&#39;, &#39;name&#39;, &#39;regDate&#39;, &#39;model&#39;, &#39;brand&#39;, &#39;bodyType&#39;, &#39;fuelType&#39;,
+       &#39;gearbox&#39;, &#39;power&#39;, &#39;kilometer&#39;, &#39;notRepairedDamage&#39;, &#39;regionCode&#39;,
+       &#39;seller&#39;, &#39;offerType&#39;, &#39;creatDate&#39;, &#39;v_0&#39;, &#39;v_1&#39;, &#39;v_2&#39;, &#39;v_3&#39;, &#39;v_4&#39;,
+       &#39;v_5&#39;, &#39;v_6&#39;, &#39;v_7&#39;, &#39;v_8&#39;, &#39;v_9&#39;, &#39;v_10&#39;, &#39;v_11&#39;, &#39;v_12&#39;, &#39;v_13&#39;,
+       &#39;v_14&#39;],
+      dtype=&#39;object&#39;)
+              SaleID           name       regDate         model
+count   50000.000000   50000.000000  5.000000e+04  50000.000000
+mean   174999.500000   68542.223280  2.003393e+07     46.844520
+std     14433.901067   61052.808133  5.368870e+04     49.469548
+min    150000.000000       0.000000  1.991000e+07      0.000000
+25%    162499.750000   11203.500000  1.999091e+07     10.000000
+50%    174999.500000   52248.500000  2.003091e+07     29.000000
+75%    187499.250000  118856.500000  2.007110e+07     65.000000
+max    199999.000000  196805.000000  2.015121e+07    246.000000
+</code></pre><p>数据集各列值统计</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">for</span> col <span class="keyword">in</span> data_train.columns:</span><br><span class="line">    print(data_train[col].value_counts(), <span class="string">&#x27;\n&#x27;</span>)</span><br><span class="line">    print(<span class="string">&quot;Unique_value_count:&quot;</span>, data_train[col].nunique(), <span class="string">&#x27;\n&#x27;</span>)</span><br><span class="line">    print(<span class="string">&#x27;-&#x27;</span>*<span class="number">20</span>)</span><br></pre></td></tr></table></figure>
+<pre><code>2047      1
+113949    1
+15661     1
+13612     1
+3371      1
+         ..
+8913      1
+10960     1
+53967     1
+56014     1
+0         1
+Name: SaleID, Length: 150000, dtype: int64 
+
+Unique_value_count: 150000 
+
+--------------------
+708       282
+387       282
+55        280
+1541      263
+203       233
+         ... 
+5074        1
+7123        1
+11221       1
+13270       1
+174485      1
+Name: name, Length: 99662, dtype: int64 
+
+Unique_value_count: 99662 
+
+--------------------
+20000008    180
+20000011    158
+20000004    157
+20000010    157
+20000002    155
+           ... 
+19910807      1
+19910902      1
+20151209      1
+19911011      1
+20151201      1
+Name: regDate, Length: 3894, dtype: int64 
+
+Unique_value_count: 3894 
+
+--------------------
+0.0      11762
+19.0      9573
+4.0       8445
+1.0       6038
+29.0      5186
+         ...  
+245.0        2
+209.0        2
+240.0        2
+242.0        2
+247.0        1
+Name: model, Length: 248, dtype: int64 
+
+Unique_value_count: 248 
+
+--------------------
+0     31480
+4     16737
+14    16089
+10    14249
+1     13794
+6     10217
+9      7306
+5      4665
+13     3817
+11     2945
+3      2461
+7      2361
+16     2223
+8      2077
+25     2064
+27     2053
+21     1547
+15     1458
+19     1388
+20     1236
+12     1109
+22     1085
+26      966
+30      940
+17      913
+24      772
+28      649
+32      592
+29      406
+37      333
+2       321
+31      318
+18      316
+36      228
+34      227
+33      218
+23      186
+35      180
+38       65
+39        9
+Name: brand, dtype: int64 
+
+Unique_value_count: 40 
+
+--------------------
+0.0    41420
+1.0    35272
+2.0    30324
+3.0    13491
+4.0     9609
+5.0     7607
+6.0     6482
+7.0     1289
+Name: bodyType, dtype: int64 
+
+Unique_value_count: 8 
+
+--------------------
+0.0    91656
+1.0    46991
+2.0     2212
+3.0      262
+4.0      118
+5.0       45
+6.0       36
+Name: fuelType, dtype: int64 
+
+Unique_value_count: 7 
+
+--------------------
+0.0    111623
+1.0     32396
+Name: gearbox, dtype: int64 
+
+Unique_value_count: 2 
+
+--------------------
+0       12829
+75       9593
+150      6495
+60       6374
+140      5963
+        ...  
+1597        1
+1596        1
+572         1
+316         1
+575         1
+Name: power, Length: 566, dtype: int64 
+
+Unique_value_count: 566 
+
+--------------------
+15.0    96877
+12.5    15722
+10.0     6459
+9.0      5257
+8.0      4573
+7.0      4084
+6.0      3725
+5.0      3144
+4.0      2718
+3.0      2501
+2.0      2354
+0.5      1840
+1.0       746
+Name: kilometer, dtype: int64 
+
+Unique_value_count: 13 
+
+--------------------
+0.0    111361
+-       24324
+1.0     14315
+Name: notRepairedDamage, dtype: int64 
+
+Unique_value_count: 3 
+
+--------------------
+419     369
+764     258
+125     137
+176     136
+462     134
+       ... 
+6414      1
+7063      1
+4239      1
+5931      1
+7267      1
+Name: regionCode, Length: 7905, dtype: int64 
+
+Unique_value_count: 7905 
+
+--------------------
+0    149999
+1         1
+Name: seller, dtype: int64 
+
+Unique_value_count: 2 
+
+--------------------
+0    150000
+Name: offerType, dtype: int64 
+
+Unique_value_count: 1 
+
+--------------------
+20160403    5848
+20160404    5606
+20160320    5485
+20160312    5383
+20160402    5382
+            ... 
+20151227       1
+20151217       1
+20160131       1
+20160130       1
+20160115       1
+Name: creatDate, Length: 96, dtype: int64 
+
+Unique_value_count: 96 
+
+--------------------
+500      2337
+1500     2158
+1200     1922
+1000     1850
+2500     1821
+         ... 
+25321       1
+8886        1
+8801        1
+37920       1
+8188        1
+Name: price, Length: 3763, dtype: int64 
+
+Unique_value_count: 3763 
+
+--------------------
+45.349115    20
+48.087217    16
+47.568450    15
+48.618150    15
+47.840357    15
+             ..
+44.752849     1
+47.710369     1
+45.626634     1
+43.795918     1
+42.340691     1
+Name: v_0, Length: 143997, dtype: int64 
+
+Unique_value_count: 143997 
+
+--------------------
+-3.245133    20
+ 3.183323    16
+ 1.942732    15
+ 3.354949    15
+ 2.796739    15
+             ..
+ 3.418050     1
+-2.994782     1
+-3.022811     1
+-3.220458     1
+-3.309574     1
+Name: v_1, Length: 143998, dtype: int64 
+
+Unique_value_count: 143998 
+
+--------------------
+-0.349860    20
+ 0.826577    16
+ 0.887762    15
+-0.158364    15
+ 0.980616    15
+             ..
+-0.722279     1
+ 0.214464     1
+ 0.019754     1
+-1.154275     1
+-0.891405     1
+Name: v_2, Length: 143997, dtype: int64 
+
+Unique_value_count: 143997 
+
+--------------------
+-0.218201    20
+-1.312990    16
+-2.006612    15
+-1.619873    15
+-1.612432    15
+             ..
+ 3.480942     1
+-1.724122     1
+ 3.100129     1
+-3.044833     1
+ 1.927354     1
+Name: v_3, Length: 143998, dtype: int64 
+
+Unique_value_count: 143998 
+
+--------------------
+-1.626828    20
+ 0.696775    16
+-0.365900    15
+-0.364986    15
+-0.379815    15
+             ..
+ 0.243463     1
+ 1.202133     1
+-0.973844     1
+-0.550933     1
+-0.629790     1
+Name: v_4, Length: 143998, dtype: int64 
+
+Unique_value_count: 143998 
+
+--------------------
+0.000000    4485
+0.269406      20
+0.256226      16
+0.261082      15
+0.277097      15
+            ... 
+0.237881       1
+0.228538       1
+0.272297       1
+0.243947       1
+0.254857       1
+Name: v_5, Length: 139624, dtype: int64 
+
+Unique_value_count: 139624 
+
+--------------------
+0.000000    35465
+0.000053       20
+0.093472       16
+0.075212       15
+0.087562       15
+            ...  
+0.112769        1
+0.000540        1
+0.122172        1
+0.111154        1
+0.111825        1
+Name: v_6, Length: 109766, dtype: int64 
+
+Unique_value_count: 109766 
+
+--------------------
+0.000000    5467
+0.124213      20
+0.130272      16
+0.139667      15
+0.051680      15
+            ... 
+0.051634       1
+0.037816       1
+0.024212       1
+0.077910       1
+0.125709       1
+Name: v_7, Length: 138709, dtype: int64 
+
+Unique_value_count: 138709 
+
+--------------------
+0.000000    1597
+0.067358      20
+0.074742      16
+0.073268      15
+0.075905      15
+            ... 
+0.039385       1
+0.083553       1
+0.032876       1
+0.052331       1
+0.037786       1
+Name: v_8, Length: 142451, dtype: int64 
+
+Unique_value_count: 142451 
+
+--------------------
+0.000000    3486
+0.014867      20
+0.082765      16
+0.101150      15
+0.051535      15
+            ... 
+0.067019       1
+0.030366       1
+0.095158       1
+0.028713       1
+0.098763       1
+Name: v_9, Length: 140617, dtype: int64 
+
+Unique_value_count: 140617 
+
+--------------------
+ 2.329386    20
+-4.303481    16
+-3.163236    15
+-4.757359    15
+-4.383929    15
+             ..
+ 3.076637     1
+-4.074684     1
+ 2.034086     1
+ 2.212329     1
+ 2.903413     1
+Name: v_10, Length: 143997, dtype: int64 
+
+Unique_value_count: 143997 
+
+--------------------
+-2.255591    20
+-0.330053    16
+-1.107940    15
+-0.802614    15
+-1.436494    15
+             ..
+-2.418401     1
+-0.622637     1
+ 0.195040     1
+-0.802083     1
+ 0.920200     1
+Name: v_11, Length: 143997, dtype: int64 
+
+Unique_value_count: 143997 
+
+--------------------
+ 0.847433    20
+ 2.486297    16
+ 2.375256    15
+ 3.097963    15
+ 2.104470    15
+             ..
+ 0.342035     1
+-2.909754     1
+ 0.756550     1
+-2.862605     1
+-1.811578     1
+Name: v_12, Length: 143997, dtype: int64 
+
+Unique_value_count: 143997 
+
+--------------------
+-1.698497    20
+-0.043463    16
+ 0.548697    15
+-0.834697    15
+-0.499453    15
+             ..
+-2.415566     1
+-1.634300     1
+-1.192429     1
+-0.265945     1
+ 1.151207     1
+Name: v_13, Length: 143998, dtype: int64 
+
+Unique_value_count: 143998 
+
+--------------------
+ 0.003015    20
+-2.290344    16
+-3.059444    15
+ 1.027487    15
+ 0.869586    15
+             ..
+ 0.273255     1
+ 1.406113     1
+ 0.530243     1
+ 0.423112     1
+ 0.025664     1
+Name: v_14, Length: 143998, dtype: int64 
+
+Unique_value_count: 143998 
+
+--------------------
+</code></pre><p>根据各列统计，删除不提供信息的列，对非数字值进行调整</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">data_train.drop(columns=[<span class="string">&#x27;seller&#x27;</span>,<span class="string">&#x27;offerType&#x27;</span>], inplace=<span class="literal">True</span>)</span><br><span class="line">data_test.drop(columns=[<span class="string">&#x27;seller&#x27;</span>,<span class="string">&#x27;offerType&#x27;</span>], inplace=<span class="literal">True</span>)</span><br><span class="line">print(data_train.shape, data_train.columns)</span><br><span class="line">print(data_test.shape, data_test.columns)</span><br><span class="line"></span><br><span class="line">data_train[<span class="string">&#x27;notRepairedDamage&#x27;</span>].replace(<span class="string">&#x27;-&#x27;</span>, np.nan, inplace=<span class="literal">True</span>)</span><br><span class="line">print(data_train[<span class="string">&#x27;notRepairedDamage&#x27;</span>].value_counts())</span><br></pre></td></tr></table></figure>
+<pre><code>(150000, 29) Index([&#39;SaleID&#39;, &#39;name&#39;, &#39;regDate&#39;, &#39;model&#39;, &#39;brand&#39;, &#39;bodyType&#39;, &#39;fuelType&#39;,
+       &#39;gearbox&#39;, &#39;power&#39;, &#39;kilometer&#39;, &#39;notRepairedDamage&#39;, &#39;regionCode&#39;,
+       &#39;creatDate&#39;, &#39;price&#39;, &#39;v_0&#39;, &#39;v_1&#39;, &#39;v_2&#39;, &#39;v_3&#39;, &#39;v_4&#39;, &#39;v_5&#39;, &#39;v_6&#39;,
+       &#39;v_7&#39;, &#39;v_8&#39;, &#39;v_9&#39;, &#39;v_10&#39;, &#39;v_11&#39;, &#39;v_12&#39;, &#39;v_13&#39;, &#39;v_14&#39;],
+      dtype=&#39;object&#39;)
+(50000, 28) Index([&#39;SaleID&#39;, &#39;name&#39;, &#39;regDate&#39;, &#39;model&#39;, &#39;brand&#39;, &#39;bodyType&#39;, &#39;fuelType&#39;,
+       &#39;gearbox&#39;, &#39;power&#39;, &#39;kilometer&#39;, &#39;notRepairedDamage&#39;, &#39;regionCode&#39;,
+       &#39;creatDate&#39;, &#39;v_0&#39;, &#39;v_1&#39;, &#39;v_2&#39;, &#39;v_3&#39;, &#39;v_4&#39;, &#39;v_5&#39;, &#39;v_6&#39;, &#39;v_7&#39;,
+       &#39;v_8&#39;, &#39;v_9&#39;, &#39;v_10&#39;, &#39;v_11&#39;, &#39;v_12&#39;, &#39;v_13&#39;, &#39;v_14&#39;],
+      dtype=&#39;object&#39;)
+0.0    111361
+1.0     14315
+Name: notRepairedDamage, dtype: int64
+</code></pre><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">print(data_train.isnull().<span class="built_in">sum</span>(), <span class="string">&#x27;\n&#x27;</span>)</span><br><span class="line">print(data_test.isnull().<span class="built_in">sum</span>(), <span class="string">&#x27;\n&#x27;</span>)</span><br></pre></td></tr></table></figure>
+<pre><code>SaleID                  0
+name                    0
+regDate                 0
+model                   1
+brand                   0
+bodyType             4506
+fuelType             8680
+gearbox              5981
+power                   0
+kilometer               0
+notRepairedDamage       0
+regionCode              0
+seller                  0
+offerType               0
+creatDate               0
+price                   0
+v_0                     0
+v_1                     0
+v_2                     0
+v_3                     0
+v_4                     0
+v_5                     0
+v_6                     0
+v_7                     0
+v_8                     0
+v_9                     0
+v_10                    0
+v_11                    0
+v_12                    0
+v_13                    0
+v_14                    0
+dtype: int64 
+
+SaleID                  0
+name                    0
+regDate                 0
+model                   0
+brand                   0
+bodyType             1413
+fuelType             2893
+gearbox              1910
+power                   0
+kilometer               0
+notRepairedDamage       0
+regionCode              0
+seller                  0
+offerType               0
+creatDate               0
+v_0                     0
+v_1                     0
+v_2                     0
+v_3                     0
+v_4                     0
+v_5                     0
+v_6                     0
+v_7                     0
+v_8                     0
+v_9                     0
+v_10                    0
+v_11                    0
+v_12                    0
+v_13                    0
+v_14                    0
+dtype: int64 
+</code></pre><p>观察预测值</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">data_train_Y = data_train[<span class="string">&#x27;price&#x27;</span>]</span><br><span class="line">print(data_train_Y.value_counts(), <span class="string">&#x27;\n&#x27;</span>)</span><br><span class="line"></span><br><span class="line">plt.hist(data_train_Y,bins=<span class="number">100</span>, log=<span class="literal">False</span>)</span><br><span class="line">plt.show()</span><br><span class="line">plt.hist(data_train_Y,bins=<span class="number">100</span>, log=<span class="literal">True</span>)</span><br><span class="line">plt.show()</span><br><span class="line">plt.close()</span><br></pre></td></tr></table></figure>
+<pre><code>500      2337
+1500     2158
+1200     1922
+1000     1850
+2500     1821
+         ... 
+25321       1
+8886        1
+8801        1
+37920       1
+8188        1
+Name: price, Length: 3763, dtype: int64 
+</code></pre><p><img src="output_14_1.png" alt="png"></p>
+<p><img src="output_14_2.png" alt="png"></p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> scipy.stats <span class="keyword">as</span> st</span><br><span class="line"></span><br><span class="line"><span class="comment"># plt.figure(1); plt.title(&#x27;Johnson SU&#x27;)</span></span><br><span class="line"><span class="comment"># sbn.distplot(data_train_Y, kde=False, fit=st.johnsonsu)</span></span><br><span class="line"><span class="comment"># plt.figure(2); plt.title(&#x27;Normal&#x27;)</span></span><br><span class="line"><span class="comment"># sbn.distplot(data_train_Y, kde=False, fit=st.norm)</span></span><br><span class="line"><span class="comment"># plt.figure(3); plt.title(&#x27;Log Normal&#x27;)</span></span><br><span class="line"><span class="comment"># sbn.distplot(data_train_Y, kde=False, fit=st.lognorm)</span></span><br></pre></td></tr></table></figure>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">sbn.distplot(data_train_Y)</span><br><span class="line">print(<span class="string">&quot;Skewness: %f&quot;</span> % data_train_Y.skew())</span><br><span class="line">print(<span class="string">&quot;Kurtosis: %f&quot;</span> % data_train_Y.kurt())</span><br></pre></td></tr></table></figure>
+<pre><code>Skewness: 3.346487
+Kurtosis: 18.995183
+</code></pre><p><img src="output_16_1.png" alt="png"></p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># pd.DataFrame(&#123;&#x27;skew&#x27;:data_train.skew(), &#x27;kurt&#x27;:data_train.kurt()&#125;)</span></span><br><span class="line"></span><br><span class="line">plt.figure(<span class="number">1</span>); plt.title(<span class="string">&#x27;skew&#x27;</span>)</span><br><span class="line">sbn.distplot(data_train.skew(), kde = <span class="literal">False</span>)</span><br><span class="line">plt.figure(<span class="number">2</span>); plt.title(<span class="string">&#x27;kurt&#x27;</span>)</span><br><span class="line">sbn.distplot(data_train.kurt(), kde = <span class="literal">False</span>)</span><br></pre></td></tr></table></figure>
+<pre><code>&lt;matplotlib.axes._subplots.AxesSubplot at 0x25abb14a7f0&gt;
+</code></pre><p><img src="output_17_1.png" alt="png"></p>
+<p><img src="output_17_2.png" alt="png"></p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sbn.distplot(np.log(data_train_Y))</span><br></pre></td></tr></table></figure>
+<pre><code>&lt;matplotlib.axes._subplots.AxesSubplot at 0x25abb20f198&gt;
+</code></pre><p><img src="output_18_1.png" alt="png"></p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">col_num_train = data_train.select_dtypes(exclude=<span class="string">&#x27;object&#x27;</span>).columns</span><br><span class="line">print(col_num_train)</span><br><span class="line">col_cat_train = data_train.select_dtypes(include=<span class="string">&#x27;object&#x27;</span>).columns</span><br><span class="line">print(col_cat_train)</span><br><span class="line"></span><br><span class="line">col_num_test = data_test.select_dtypes(exclude=<span class="string">&#x27;object&#x27;</span>).columns</span><br><span class="line">col_cat_test = data_test.select_dtypes(include=<span class="string">&#x27;object&#x27;</span>).columns</span><br></pre></td></tr></table></figure>
+<pre><code>Index([&#39;SaleID&#39;, &#39;name&#39;, &#39;regDate&#39;, &#39;model&#39;, &#39;brand&#39;, &#39;bodyType&#39;, &#39;fuelType&#39;,
+       &#39;gearbox&#39;, &#39;power&#39;, &#39;kilometer&#39;, &#39;regionCode&#39;, &#39;creatDate&#39;, &#39;price&#39;,
+       &#39;v_0&#39;, &#39;v_1&#39;, &#39;v_2&#39;, &#39;v_3&#39;, &#39;v_4&#39;, &#39;v_5&#39;, &#39;v_6&#39;, &#39;v_7&#39;, &#39;v_8&#39;, &#39;v_9&#39;,
+       &#39;v_10&#39;, &#39;v_11&#39;, &#39;v_12&#39;, &#39;v_13&#39;, &#39;v_14&#39;],
+      dtype=&#39;object&#39;)
+Index([&#39;notRepairedDamage&#39;], dtype=&#39;object&#39;)
+</code></pre><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line">categorical_col = [<span class="string">&#x27;name&#x27;</span>, <span class="string">&#x27;model&#x27;</span>, <span class="string">&#x27;brand&#x27;</span>, <span class="string">&#x27;bodyType&#x27;</span>, <span class="string">&#x27;fuelType&#x27;</span>,</span><br><span class="line">                   <span class="string">&#x27;gearbox&#x27;</span>, <span class="string">&#x27;notRepairedDamage&#x27;</span>, <span class="string">&#x27;regionCode&#x27;</span>]</span><br><span class="line"></span><br><span class="line">numerical_col = [<span class="string">&#x27;price&#x27;</span>, <span class="string">&#x27;power&#x27;</span>, <span class="string">&#x27;kilometer&#x27;</span>, <span class="string">&#x27;v_0&#x27;</span>, <span class="string">&#x27;v_1&#x27;</span>, <span class="string">&#x27;v_2&#x27;</span>, <span class="string">&#x27;v_3&#x27;</span>, <span class="string">&#x27;v_4&#x27;</span>, </span><br><span class="line">                <span class="string">&#x27;v_5&#x27;</span>, <span class="string">&#x27;v_6&#x27;</span>, <span class="string">&#x27;v_7&#x27;</span>, <span class="string">&#x27;v_8&#x27;</span>, <span class="string">&#x27;v_9&#x27;</span>, <span class="string">&#x27;v_10&#x27;</span>, <span class="string">&#x27;v_11&#x27;</span>, <span class="string">&#x27;v_12&#x27;</span>, <span class="string">&#x27;v_13&#x27;</span>,<span class="string">&#x27;v_14&#x27;</span>]</span><br><span class="line"></span><br><span class="line">print(<span class="string">&#x27;categorical data info&#x27;</span>)</span><br><span class="line"><span class="keyword">for</span> col <span class="keyword">in</span> categorical_col:</span><br><span class="line"><span class="comment">#     print(data_train[col].value_counts(), &#x27;\n&#x27;)</span></span><br><span class="line">    print(<span class="string">&quot;train &#123;0&#125; - unique value count: &#123;1&#125; \n&#123;2&#125;&quot;</span>.<span class="built_in">format</span>(col, data_train[col].nunique(), <span class="string">&#x27;-&#x27;</span>*<span class="number">20</span>))</span><br><span class="line"><span class="keyword">for</span> col <span class="keyword">in</span> categorical_col:</span><br><span class="line"><span class="comment">#     print(data_test[col].value_counts(), &#x27;\n&#x27;)</span></span><br><span class="line">    print(<span class="string">&quot;test &#123;0&#125; - unique value count: &#123;1&#125; \n&#123;2&#125;&quot;</span>.<span class="built_in">format</span>(col, data_test[col].nunique(), <span class="string">&#x27;-&#x27;</span>*<span class="number">20</span>))</span><br></pre></td></tr></table></figure>
+<pre><code>categorical data info
+train name - unique value count: 99662 
+--------------------
+train model - unique value count: 248 
+--------------------
+train brand - unique value count: 40 
+--------------------
+train bodyType - unique value count: 8 
+--------------------
+train fuelType - unique value count: 7 
+--------------------
+train gearbox - unique value count: 2 
+--------------------
+train notRepairedDamage - unique value count: 2 
+--------------------
+train regionCode - unique value count: 7905 
+--------------------
+test name - unique value count: 37453 
+--------------------
+test model - unique value count: 247 
+--------------------
+test brand - unique value count: 40 
+--------------------
+test bodyType - unique value count: 8 
+--------------------
+test fuelType - unique value count: 7 
+--------------------
+test gearbox - unique value count: 2 
+--------------------
+test notRepairedDamage - unique value count: 3 
+--------------------
+test regionCode - unique value count: 6971 
+--------------------
+</code></pre><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">print(<span class="string">&#x27;numerical data info&#x27;</span>)</span><br><span class="line">print(data_train[numerical_col].corr())</span><br></pre></td></tr></table></figure>
+<pre><code>numerical data info
+              price     power  kilometer       v_0       v_1       v_2  \
+price      1.000000  0.219834  -0.440519  0.628397  0.060914  0.085322   
+power      0.219834  1.000000  -0.019631  0.215028  0.023746 -0.031487   
+kilometer -0.440519 -0.019631   1.000000 -0.225034 -0.022228 -0.110375   
+v_0        0.628397  0.215028  -0.225034  1.000000  0.245049 -0.452591   
+v_1        0.060914  0.023746  -0.022228  0.245049  1.000000 -0.001133   
+v_2        0.085322 -0.031487  -0.110375 -0.452591 -0.001133  1.000000   
+v_3       -0.730946 -0.185342   0.402502 -0.710480 -0.001915  0.001224   
+v_4       -0.147085 -0.141013  -0.214861 -0.259714 -0.000468 -0.001021   
+v_5        0.164317  0.119727   0.049502  0.726250  0.109303 -0.921857   
+v_6        0.068970  0.025648  -0.024664  0.243783  0.999415  0.023877   
+v_7       -0.053024 -0.060397  -0.017835 -0.584363 -0.110806  0.973689   
+v_8        0.685798  0.155956  -0.407686  0.514149 -0.298966  0.180285   
+v_9       -0.206205 -0.140203  -0.149422 -0.186243 -0.007698 -0.236164   
+v_10      -0.246175 -0.092717   0.083358 -0.582943 -0.921904  0.274341   
+v_11      -0.275320 -0.122107   0.066542 -0.667809  0.370445  0.800915   
+v_12       0.692823  0.161990  -0.370153  0.415711 -0.087593  0.535270   
+v_13      -0.013993 -0.103430  -0.285158 -0.136938  0.017349 -0.055376   
+v_14       0.035911 -0.023808  -0.120389 -0.039809  0.002143 -0.013785   
+
+                v_3       v_4       v_5       v_6       v_7       v_8  \
+price     -0.730946 -0.147085  0.164317  0.068970 -0.053024  0.685798   
+power     -0.185342 -0.141013  0.119727  0.025648 -0.060397  0.155956   
+kilometer  0.402502 -0.214861  0.049502 -0.024664 -0.017835 -0.407686   
+v_0       -0.710480 -0.259714  0.726250  0.243783 -0.584363  0.514149   
+v_1       -0.001915 -0.000468  0.109303  0.999415 -0.110806 -0.298966   
+v_2        0.001224 -0.001021 -0.921857  0.023877  0.973689  0.180285   
+v_3        1.000000 -0.001694 -0.233412 -0.000747  0.191278 -0.933161   
+v_4       -0.001694  1.000000 -0.259739 -0.011275 -0.054241  0.051741   
+v_5       -0.233412 -0.259739  1.000000  0.091229 -0.939385  0.010686   
+v_6       -0.000747 -0.011275  0.091229  1.000000 -0.085410 -0.294956   
+v_7        0.191278 -0.054241 -0.939385 -0.085410  1.000000  0.028695   
+v_8       -0.933161  0.051741  0.010686 -0.294956  0.028695  1.000000   
+v_9        0.079292  0.962928 -0.050343 -0.023057 -0.264091 -0.063577   
+v_10       0.247385  0.071116 -0.440588 -0.917056  0.410014  0.094497   
+v_11       0.429777  0.110660 -0.845954  0.386446  0.813175 -0.369353   
+v_12      -0.811301 -0.134611 -0.258521 -0.070238  0.385378  0.882121   
+v_13      -0.246052  0.934580 -0.162689  0.000758 -0.154535  0.250423   
+v_14      -0.058561 -0.178518  0.037804 -0.003322 -0.020218  0.030416   
+
+                v_9      v_10      v_11      v_12      v_13      v_14  
+price     -0.206205 -0.246175 -0.275320  0.692823 -0.013993  0.035911  
+power     -0.140203 -0.092717 -0.122107  0.161990 -0.103430 -0.023808  
+kilometer -0.149422  0.083358  0.066542 -0.370153 -0.285158 -0.120389  
+v_0       -0.186243 -0.582943 -0.667809  0.415711 -0.136938 -0.039809  
+v_1       -0.007698 -0.921904  0.370445 -0.087593  0.017349  0.002143  
+v_2       -0.236164  0.274341  0.800915  0.535270 -0.055376 -0.013785  
+v_3        0.079292  0.247385  0.429777 -0.811301 -0.246052 -0.058561  
+v_4        0.962928  0.071116  0.110660 -0.134611  0.934580 -0.178518  
+v_5       -0.050343 -0.440588 -0.845954 -0.258521 -0.162689  0.037804  
+v_6       -0.023057 -0.917056  0.386446 -0.070238  0.000758 -0.003322  
+v_7       -0.264091  0.410014  0.813175  0.385378 -0.154535 -0.020218  
+v_8       -0.063577  0.094497 -0.369353  0.882121  0.250423  0.030416  
+v_9        1.000000  0.026562 -0.056200 -0.313634  0.880545 -0.214151  
+v_10       0.026562  1.000000  0.006306  0.001289 -0.000580  0.002244  
+v_11      -0.056200  0.006306  1.000000  0.006695 -0.001671 -0.001156  
+v_12      -0.313634  0.001289  0.006695  1.000000  0.001512  0.002045  
+v_13       0.880545 -0.000580 -0.001671  0.001512  1.000000  0.001419  
+v_14      -0.214151  0.002244 -0.001156  0.002045  0.001419  1.000000  
+</code></pre><p>correlation</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">f , ax = plt.subplots(figsize = (<span class="number">7</span>, <span class="number">7</span>))</span><br><span class="line"></span><br><span class="line">plt.title(<span class="string">&#x27;Correlation of Numeric Features with Price&#x27;</span>,y=<span class="number">1</span>,size=<span class="number">16</span>)</span><br><span class="line"></span><br><span class="line">sbn.heatmap(data_train[numerical_col].corr(), square = <span class="literal">True</span>,  vmax=<span class="number">0.8</span>)</span><br></pre></td></tr></table></figure>
+<pre><code>&lt;matplotlib.axes._subplots.AxesSubplot at 0x25abb2f5358&gt;
+</code></pre><p><img src="output_23_1.png" alt="png"></p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">f = pd.melt(data_train, value_vars = numerical_col)</span><br><span class="line">g = sbn.FacetGrid(f, col=<span class="string">&quot;variable&quot;</span>,  col_wrap=<span class="number">3</span>, sharex=<span class="literal">False</span>, sharey=<span class="literal">False</span>)</span><br><span class="line">g = g.<span class="built_in">map</span>(sbn.distplot, <span class="string">&quot;value&quot;</span>)</span><br></pre></td></tr></table></figure>
+<p><img src="output_24_0.png" alt="png"></p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># corr = data_train[numerical_col].corr()</span></span><br><span class="line"><span class="comment"># corr = corr[corr != 1][abs(corr) &gt; 0.7]</span></span><br><span class="line"><span class="comment"># v = [x for x in corr.columns if len(corr[x].value_counts()) &gt; 2]</span></span><br><span class="line"><span class="comment"># sbn.pairplot(data_train[v])</span></span><br></pre></td></tr></table></figure>
+<pre><code>&lt;seaborn.axisgrid.PairGrid at 0x25abc74cda0&gt;
+</code></pre><p><img src="output_25_1.png" alt="png"></p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># pfr = pdpf.ProfileReport(data_train)</span></span><br><span class="line"><span class="comment"># pfr.to_file(&quot;./example.html&quot;)</span></span><br></pre></td></tr></table></figure>
+<pre><code>HBox(children=(FloatProgress(value=0.0, description=&#39;variables&#39;, max=29.0, style=ProgressStyle(description_wid…
+
+
+
+
+
+
+HBox(children=(FloatProgress(value=0.0, description=&#39;correlations&#39;, max=6.0, style=ProgressStyle(description_w…
+
+
+
+
+
+
+HBox(children=(FloatProgress(value=0.0, description=&#39;interactions [continuous]&#39;, max=729.0, style=ProgressStyl…
+
+
+
+
+
+
+HBox(children=(FloatProgress(value=0.0, description=&#39;table&#39;, max=1.0, style=ProgressStyle(description_width=&#39;i…
+
+
+
+
+
+
+HBox(children=(FloatProgress(value=0.0, description=&#39;missing&#39;, max=4.0, style=ProgressStyle(description_width=…
+
+
+
+
+
+
+HBox(children=(FloatProgress(value=0.0, description=&#39;warnings&#39;, max=3.0, style=ProgressStyle(description_width…
+
+
+
+
+
+
+HBox(children=(FloatProgress(value=0.0, description=&#39;package&#39;, max=1.0, style=ProgressStyle(description_width=…
+
+
+
+
+
+
+HBox(children=(FloatProgress(value=0.0, description=&#39;build report structure&#39;, max=1.0, style=ProgressStyle(des…
+</code></pre><h2 id="Feature-Engineering"><a href="#Feature-Engineering" class="headerlink" title="Feature Engineering"></a>Feature Engineering</h2><h3 id="Data-Washing"><a href="#Data-Washing" class="headerlink" title="Data Washing"></a>Data Washing</h3><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">data_train = pd.read_csv(<span class="string">r&#x27;data/used_car_train_20200313.csv&#x27;</span>, encoding=<span class="string">&#x27;utf-8&#x27;</span>, sep=<span class="string">&#x27; &#x27;</span>, )</span><br><span class="line">data_test = pd.read_csv(<span class="string">r&#x27;data/used_car_testA_20200313.csv&#x27;</span>, encoding=<span class="string">&#x27;utf-8&#x27;</span>, sep=<span class="string">&#x27; &#x27;</span>, )</span><br><span class="line"></span><br><span class="line">print(<span class="string">&#x27;-&#x27;</span>*<span class="number">20</span>)</span><br><span class="line">print(data_train.shape, <span class="string">&#x27;\n&#x27;</span>, data_train.columns)</span><br><span class="line">print(data_train.describe().iloc[:,<span class="number">0</span>:<span class="number">4</span>])</span><br><span class="line">print(<span class="string">&#x27;-&#x27;</span>*<span class="number">20</span>)</span><br><span class="line">print(data_test.shape, <span class="string">&#x27;\n&#x27;</span>, data_test.columns)</span><br><span class="line">print(data_test.describe().iloc[:,<span class="number">0</span>:<span class="number">4</span>])</span><br></pre></td></tr></table></figure>
+<pre><code>--------------------
+(150000, 31) 
+ Index([&#39;SaleID&#39;, &#39;name&#39;, &#39;regDate&#39;, &#39;model&#39;, &#39;brand&#39;, &#39;bodyType&#39;, &#39;fuelType&#39;,
+       &#39;gearbox&#39;, &#39;power&#39;, &#39;kilometer&#39;, &#39;notRepairedDamage&#39;, &#39;regionCode&#39;,
+       &#39;seller&#39;, &#39;offerType&#39;, &#39;creatDate&#39;, &#39;price&#39;, &#39;v_0&#39;, &#39;v_1&#39;, &#39;v_2&#39;, &#39;v_3&#39;,
+       &#39;v_4&#39;, &#39;v_5&#39;, &#39;v_6&#39;, &#39;v_7&#39;, &#39;v_8&#39;, &#39;v_9&#39;, &#39;v_10&#39;, &#39;v_11&#39;, &#39;v_12&#39;,
+       &#39;v_13&#39;, &#39;v_14&#39;],
+      dtype=&#39;object&#39;)
+              SaleID           name       regDate          model
+count  150000.000000  150000.000000  1.500000e+05  149999.000000
+mean    74999.500000   68349.172873  2.003417e+07      47.129021
+std     43301.414527   61103.875095  5.364988e+04      49.536040
+min         0.000000       0.000000  1.991000e+07       0.000000
+25%     37499.750000   11156.000000  1.999091e+07      10.000000
+50%     74999.500000   51638.000000  2.003091e+07      30.000000
+75%    112499.250000  118841.250000  2.007111e+07      66.000000
+max    149999.000000  196812.000000  2.015121e+07     247.000000
+--------------------
+(50000, 30) 
+ Index([&#39;SaleID&#39;, &#39;name&#39;, &#39;regDate&#39;, &#39;model&#39;, &#39;brand&#39;, &#39;bodyType&#39;, &#39;fuelType&#39;,
+       &#39;gearbox&#39;, &#39;power&#39;, &#39;kilometer&#39;, &#39;notRepairedDamage&#39;, &#39;regionCode&#39;,
+       &#39;seller&#39;, &#39;offerType&#39;, &#39;creatDate&#39;, &#39;v_0&#39;, &#39;v_1&#39;, &#39;v_2&#39;, &#39;v_3&#39;, &#39;v_4&#39;,
+       &#39;v_5&#39;, &#39;v_6&#39;, &#39;v_7&#39;, &#39;v_8&#39;, &#39;v_9&#39;, &#39;v_10&#39;, &#39;v_11&#39;, &#39;v_12&#39;, &#39;v_13&#39;,
+       &#39;v_14&#39;],
+      dtype=&#39;object&#39;)
+              SaleID           name       regDate         model
+count   50000.000000   50000.000000  5.000000e+04  50000.000000
+mean   174999.500000   68542.223280  2.003393e+07     46.844520
+std     14433.901067   61052.808133  5.368870e+04     49.469548
+min    150000.000000       0.000000  1.991000e+07      0.000000
+25%    162499.750000   11203.500000  1.999091e+07     10.000000
+50%    174999.500000   52248.500000  2.003091e+07     29.000000
+75%    187499.250000  118856.500000  2.007110e+07     65.000000
+max    199999.000000  196805.000000  2.015121e+07    246.000000
+</code></pre><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">outliers_proc</span>(<span class="params">data: pd.core.frame.DataFrame, col_name: [<span class="built_in">str</span>],</span></span></span><br><span class="line"><span class="function"><span class="params">                  scale=<span class="number">3</span></span>) -&gt; pd.core.frame.DataFrame:</span></span><br><span class="line">    <span class="string">&quot;&quot;&quot;</span></span><br><span class="line"><span class="string">    用于清洗异常值，默认用 box_plot（scale=3）进行清洗</span></span><br><span class="line"><span class="string">    :param data: 接收 dataFrame 数据格式</span></span><br><span class="line"><span class="string">    :param col_name: pandas 列名</span></span><br><span class="line"><span class="string">    :param scale: 尺度</span></span><br><span class="line"><span class="string">    :return:</span></span><br><span class="line"><span class="string">    &quot;&quot;&quot;</span></span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">box_plot_outliers</span>(<span class="params">data_ser: pd.core.series.Series,</span></span></span><br><span class="line"><span class="function"><span class="params">                          box_scale: <span class="built_in">int</span></span>) -&gt; pd.core.series.Series:</span></span><br><span class="line">        <span class="string">&quot;&quot;&quot;</span></span><br><span class="line"><span class="string">        利用箱线图去除异常值</span></span><br><span class="line"><span class="string">        :param data_ser: 接收 pandas.Series 数据格式</span></span><br><span class="line"><span class="string">        :param box_scale: 箱线图尺度，</span></span><br><span class="line"><span class="string">        :return:</span></span><br><span class="line"><span class="string">        &quot;&quot;&quot;</span></span><br><span class="line">        iqr = box_scale * (data_ser.quantile(<span class="number">0.75</span>) - data_ser.quantile(<span class="number">0.25</span>))</span><br><span class="line">        val_low = data_ser.quantile(<span class="number">0.25</span>) - iqr</span><br><span class="line">        val_up = data_ser.quantile(<span class="number">0.75</span>) + iqr</span><br><span class="line">        rule_low = (data_ser &lt; val_low)</span><br><span class="line">        rule_up = (data_ser &gt; val_up)</span><br><span class="line">        <span class="keyword">return</span> (rule_low, rule_up), (val_low, val_up)</span><br><span class="line"></span><br><span class="line">    data_n = data.copy()</span><br><span class="line">    data_series = data_n[col_name]</span><br><span class="line">    rule, value = box_plot_outliers(data_series, box_scale=scale)</span><br><span class="line">    index = np.arange(data_series.shape[<span class="number">0</span>])[rule[<span class="number">0</span>] | rule[<span class="number">1</span>]]</span><br><span class="line">    print(<span class="string">&quot;Delete number is: &#123;&#125;&quot;</span>.<span class="built_in">format</span>(<span class="built_in">len</span>(index)))</span><br><span class="line">    data_n = data_n.drop(index)</span><br><span class="line">    data_n.reset_index(drop=<span class="literal">True</span>, inplace=<span class="literal">True</span>)</span><br><span class="line">    print(<span class="string">&quot;Now column number is: &#123;&#125;&quot;</span>.<span class="built_in">format</span>(data_n.shape[<span class="number">0</span>]))</span><br><span class="line">    index_low = np.arange(data_series.shape[<span class="number">0</span>])[rule[<span class="number">0</span>]]</span><br><span class="line">    outliers = data_series.iloc[index_low]</span><br><span class="line">    print(<span class="string">&quot;Description of data less than the lower bound is:&quot;</span>)</span><br><span class="line">    print(pd.Series(outliers).describe())</span><br><span class="line">    index_up = np.arange(data_series.shape[<span class="number">0</span>])[rule[<span class="number">1</span>]]</span><br><span class="line">    outliers = data_series.iloc[index_up]</span><br><span class="line">    print(<span class="string">&quot;Description of data larger than the upper bound is:&quot;</span>)</span><br><span class="line">    print(pd.Series(outliers).describe())</span><br><span class="line"></span><br><span class="line">    fig, ax = plt.subplots(<span class="number">1</span>, <span class="number">2</span>, figsize=(<span class="number">10</span>, <span class="number">7</span>))</span><br><span class="line">    sbn.boxplot(y=data[col_name], data=data, palette=<span class="string">&quot;Set1&quot;</span>, ax=ax[<span class="number">0</span>])</span><br><span class="line">    sbn.boxplot(y=data_n[col_name], data=data_n, palette=<span class="string">&quot;Set1&quot;</span>, ax=ax[<span class="number">1</span>])</span><br><span class="line">    <span class="keyword">return</span> data_n</span><br></pre></td></tr></table></figure>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">data_train = outliers_proc(data_train, <span class="string">&#x27;power&#x27;</span>, scale=<span class="number">3</span>)</span><br></pre></td></tr></table></figure>
+<pre><code>Delete number is: 963
+Now column number is: 149037
+Description of data less than the lower bound is:
+count    0.0
+mean     NaN
+std      NaN
+min      NaN
+25%      NaN
+50%      NaN
+75%      NaN
+max      NaN
+Name: power, dtype: float64
+Description of data larger than the upper bound is:
+count      963.000000
+mean       846.836968
+std       1929.418081
+min        376.000000
+25%        400.000000
+50%        436.000000
+75%        514.000000
+max      19312.000000
+Name: power, dtype: float64
+</code></pre><p><img src="output_31_1.png" alt="png"></p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># 训练集和测试集放在一起，方便构造特征</span></span><br><span class="line">data_train[<span class="string">&#x27;is_train_data&#x27;</span>] = <span class="number">1</span></span><br><span class="line">data_test[<span class="string">&#x27;is_train_data&#x27;</span>] = <span class="number">0</span></span><br><span class="line">data = pd.concat([data_train, data_test], ignore_index=<span class="literal">True</span>)</span><br></pre></td></tr></table></figure>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># 使用时间：data[&#x27;creatDate&#x27;] - data[&#x27;regDate&#x27;]，表现汽车使用时间，一般来说价格与使用时间成反比</span></span><br><span class="line"><span class="comment"># 不过要注意，数据里有时间出错的格式，所以我们需要 errors=&#x27;coerce&#x27;</span></span><br><span class="line">data[<span class="string">&#x27;used_time&#x27;</span>] = (</span><br><span class="line">    pd.to_datetime(data[<span class="string">&#x27;creatDate&#x27;</span>], <span class="built_in">format</span>=<span class="string">&#x27;%Y%m%d&#x27;</span>, errors=<span class="string">&#x27;coerce&#x27;</span>) -</span><br><span class="line">    pd.to_datetime(data[<span class="string">&#x27;regDate&#x27;</span>], <span class="built_in">format</span>=<span class="string">&#x27;%Y%m%d&#x27;</span>, errors=<span class="string">&#x27;coerce&#x27;</span>)).dt.days</span><br></pre></td></tr></table></figure>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">data[<span class="string">&#x27;city&#x27;</span>] = data[<span class="string">&#x27;regionCode&#x27;</span>].apply(<span class="keyword">lambda</span> x : <span class="built_in">str</span>(x)[:-<span class="number">3</span>])</span><br></pre></td></tr></table></figure>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># 计算某品牌的销售统计量，同学们还可以计算其他特征的统计量</span></span><br><span class="line"><span class="comment"># 这里要以 train 的数据计算统计量</span></span><br><span class="line">Train_gb = data_train.groupby(<span class="string">&quot;brand&quot;</span>)</span><br><span class="line">all_info = &#123;&#125;</span><br><span class="line"><span class="keyword">for</span> kind, kind_data <span class="keyword">in</span> Train_gb:</span><br><span class="line">    info = &#123;&#125;</span><br><span class="line">    kind_data = kind_data[kind_data[<span class="string">&#x27;price&#x27;</span>] &gt; <span class="number">0</span>]</span><br><span class="line">    info[<span class="string">&#x27;brand_amount&#x27;</span>] = <span class="built_in">len</span>(kind_data)</span><br><span class="line">    info[<span class="string">&#x27;brand_price_max&#x27;</span>] = kind_data.price.<span class="built_in">max</span>()</span><br><span class="line">    info[<span class="string">&#x27;brand_price_median&#x27;</span>] = kind_data.price.median()</span><br><span class="line">    info[<span class="string">&#x27;brand_price_min&#x27;</span>] = kind_data.price.<span class="built_in">min</span>()</span><br><span class="line">    info[<span class="string">&#x27;brand_price_sum&#x27;</span>] = kind_data.price.<span class="built_in">sum</span>()</span><br><span class="line">    info[<span class="string">&#x27;brand_price_std&#x27;</span>] = kind_data.price.std()</span><br><span class="line">    info[<span class="string">&#x27;brand_price_average&#x27;</span>] = <span class="built_in">round</span>(kind_data.price.<span class="built_in">sum</span>() / (<span class="built_in">len</span>(kind_data) + <span class="number">1</span>), <span class="number">2</span>)</span><br><span class="line">    all_info[kind] = info</span><br><span class="line">brand_fe = pd.DataFrame(all_info).T.reset_index().rename(columns=&#123;<span class="string">&quot;index&quot;</span>: <span class="string">&quot;brand&quot;</span>&#125;)</span><br><span class="line">data = data.merge(brand_fe, how=<span class="string">&#x27;left&#x27;</span>, on=<span class="string">&#x27;brand&#x27;</span>)</span><br></pre></td></tr></table></figure>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># 数据分桶 以 power 为例</span></span><br><span class="line"><span class="comment"># 这时候我们的缺失值也进桶了，</span></span><br><span class="line"><span class="comment"># 为什么要做数据分桶呢，原因有很多，= =</span></span><br><span class="line"><span class="comment"># 1. 离散后稀疏向量内积乘法运算速度更快，计算结果也方便存储，容易扩展；</span></span><br><span class="line"><span class="comment"># 2. 离散后的特征对异常值更具鲁棒性，如 age&gt;30 为 1 否则为 0，对于年龄为 200 的也不会对模型造成很大的干扰；</span></span><br><span class="line"><span class="comment"># 3. LR 属于广义线性模型，表达能力有限，经过离散化后，每个变量有单独的权重，这相当于引入了非线性，能够提升模型的表达能力，加大拟合；</span></span><br><span class="line"><span class="comment"># 4. 离散后特征可以进行特征交叉，提升表达能力，由 M+N 个变量编程 M*N 个变量，进一步引入非线形，提升了表达能力；</span></span><br><span class="line"><span class="comment"># 5. 特征离散后模型更稳定，如用户年龄区间，不会因为用户年龄长了一岁就变化</span></span><br><span class="line"></span><br><span class="line"><span class="comment"># 当然还有很多原因，LightGBM 在改进 XGBoost 时就增加了数据分桶，增强了模型的泛化性</span></span><br><span class="line"></span><br><span class="line"><span class="built_in">bin</span> = [i*<span class="number">10</span> <span class="keyword">for</span> i <span class="keyword">in</span> <span class="built_in">range</span>(<span class="number">31</span>)]</span><br><span class="line">data[<span class="string">&#x27;power_bin&#x27;</span>] = pd.cut(data[<span class="string">&#x27;power&#x27;</span>], <span class="built_in">bin</span>, labels=<span class="literal">False</span>)</span><br><span class="line">data[[<span class="string">&#x27;power_bin&#x27;</span>, <span class="string">&#x27;power&#x27;</span>]].head()</span><br></pre></td></tr></table></figure>
+<div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>power_bin</th>
+      <th>power</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>0</th>
+      <td>5.0</td>
+      <td>60</td>
+    </tr>
+    <tr>
+      <th>1</th>
+      <td>NaN</td>
+      <td>0</td>
+    </tr>
+    <tr>
+      <th>2</th>
+      <td>16.0</td>
+      <td>163</td>
+    </tr>
+    <tr>
+      <th>3</th>
+      <td>19.0</td>
+      <td>193</td>
+    </tr>
+    <tr>
+      <th>4</th>
+      <td>6.0</td>
+      <td>68</td>
+    </tr>
+  </tbody>
+</table>
+</div>
+
+
+
+
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">data.drop([<span class="string">&#x27;creatDate&#x27;</span>, <span class="string">&#x27;regDate&#x27;</span>, <span class="string">&#x27;regionCode&#x27;</span>], axis=<span class="number">1</span>, inplace=<span class="literal">True</span>)</span><br><span class="line">print(data.shape)</span><br><span class="line">data.columns</span><br></pre></td></tr></table></figure>
+<pre><code>(199037, 39)
+
+
+
+
+
+Index([&#39;SaleID&#39;, &#39;bodyType&#39;, &#39;brand&#39;, &#39;fuelType&#39;, &#39;gearbox&#39;, &#39;is_train_data&#39;,
+       &#39;kilometer&#39;, &#39;model&#39;, &#39;name&#39;, &#39;notRepairedDamage&#39;, &#39;offerType&#39;, &#39;power&#39;,
+       &#39;price&#39;, &#39;seller&#39;, &#39;v_0&#39;, &#39;v_1&#39;, &#39;v_10&#39;, &#39;v_11&#39;, &#39;v_12&#39;, &#39;v_13&#39;, &#39;v_14&#39;,
+       &#39;v_2&#39;, &#39;v_3&#39;, &#39;v_4&#39;, &#39;v_5&#39;, &#39;v_6&#39;, &#39;v_7&#39;, &#39;v_8&#39;, &#39;v_9&#39;, &#39;used_time&#39;,
+       &#39;city&#39;, &#39;brand_amount&#39;, &#39;brand_price_max&#39;, &#39;brand_price_median&#39;,
+       &#39;brand_price_min&#39;, &#39;brand_price_sum&#39;, &#39;brand_price_std&#39;,
+       &#39;brand_price_average&#39;, &#39;power_bin&#39;],
+      dtype=&#39;object&#39;)
+</code></pre><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">data.to_csv(<span class="string">&#x27;data_for_tree.csv&#x27;</span>, index=<span class="number">0</span>)</span><br><span class="line">data[<span class="string">&#x27;power&#x27;</span>].hist()</span><br></pre></td></tr></table></figure>
+<pre><code>&lt;matplotlib.axes._subplots.AxesSubplot at 0x267a92468d0&gt;
+</code></pre><p><img src="output_38_1.png" alt="png"></p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line"><span class="comment"># 我们对其取 log，再做归一化</span></span><br><span class="line"><span class="keyword">from</span> sklearn <span class="keyword">import</span> preprocessing</span><br><span class="line">min_max_scaler = preprocessing.MinMaxScaler()</span><br><span class="line">data[<span class="string">&#x27;power&#x27;</span>] = np.log(data[<span class="string">&#x27;power&#x27;</span>] + <span class="number">1</span>) </span><br><span class="line">data[<span class="string">&#x27;power&#x27;</span>] = ((data[<span class="string">&#x27;power&#x27;</span>] - np.<span class="built_in">min</span>(data[<span class="string">&#x27;power&#x27;</span>])) / (np.<span class="built_in">max</span>(data[<span class="string">&#x27;power&#x27;</span>]) - np.<span class="built_in">min</span>(data[<span class="string">&#x27;power&#x27;</span>])))</span><br><span class="line">data[<span class="string">&#x27;power&#x27;</span>].plot.hist()</span><br></pre></td></tr></table></figure>
+<pre><code>&lt;matplotlib.axes._subplots.AxesSubplot at 0x267abf56160&gt;
+</code></pre><p><img src="output_39_1.png" alt="png"></p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># 所以我们可以直接做归一化</span></span><br><span class="line">data[<span class="string">&#x27;kilometer&#x27;</span>] = ((data[<span class="string">&#x27;kilometer&#x27;</span>] - np.<span class="built_in">min</span>(data[<span class="string">&#x27;kilometer&#x27;</span>])) / </span><br><span class="line">                        (np.<span class="built_in">max</span>(data[<span class="string">&#x27;kilometer&#x27;</span>]) - np.<span class="built_in">min</span>(data[<span class="string">&#x27;kilometer&#x27;</span>])))</span><br><span class="line">data[<span class="string">&#x27;kilometer&#x27;</span>].plot.hist()</span><br></pre></td></tr></table></figure>
+<pre><code>&lt;matplotlib.axes._subplots.AxesSubplot at 0x267adbc2dd8&gt;
+</code></pre><p><img src="output_40_1.png" alt="png"></p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">max_min</span>(<span class="params">x</span>):</span></span><br><span class="line">    <span class="keyword">return</span> (x - np.<span class="built_in">min</span>(x)) / (np.<span class="built_in">max</span>(x) - np.<span class="built_in">min</span>(x))</span><br><span class="line">data[[<span class="string">&#x27;brand_amount&#x27;</span>,<span class="string">&#x27;brand_price_average&#x27;</span>,<span class="string">&#x27;brand_price_max&#x27;</span>,</span><br><span class="line"><span class="string">&#x27;brand_price_median&#x27;</span>,<span class="string">&#x27;brand_price_min&#x27;</span>,<span class="string">&#x27;brand_price_std&#x27;</span>,</span><br><span class="line"><span class="string">&#x27;brand_price_sum&#x27;</span>,]] = \</span><br><span class="line">data[[<span class="string">&#x27;brand_amount&#x27;</span>,<span class="string">&#x27;brand_price_average&#x27;</span>,<span class="string">&#x27;brand_price_max&#x27;</span>,</span><br><span class="line"><span class="string">&#x27;brand_price_median&#x27;</span>,<span class="string">&#x27;brand_price_min&#x27;</span>,<span class="string">&#x27;brand_price_std&#x27;</span>,</span><br><span class="line"><span class="string">&#x27;brand_price_sum&#x27;</span>,]].apply(max_min)</span><br></pre></td></tr></table></figure>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># 对类别特征进行 OneEncoder</span></span><br><span class="line">data = pd.get_dummies(data, columns=[<span class="string">&#x27;model&#x27;</span>, <span class="string">&#x27;brand&#x27;</span>, <span class="string">&#x27;bodyType&#x27;</span>, <span class="string">&#x27;fuelType&#x27;</span>,</span><br><span class="line">                                     <span class="string">&#x27;gearbox&#x27;</span>, <span class="string">&#x27;notRepairedDamage&#x27;</span>, <span class="string">&#x27;power_bin&#x27;</span>])</span><br><span class="line">print(data.shape)</span><br><span class="line">data.columns</span><br></pre></td></tr></table></figure>
+<pre><code>(199037, 370)
+
+
+
+
+
+Index([&#39;SaleID&#39;, &#39;is_train_data&#39;, &#39;kilometer&#39;, &#39;name&#39;, &#39;offerType&#39;, &#39;power&#39;,
+       &#39;price&#39;, &#39;seller&#39;, &#39;v_0&#39;, &#39;v_1&#39;,
+       ...
+       &#39;power_bin_20.0&#39;, &#39;power_bin_21.0&#39;, &#39;power_bin_22.0&#39;, &#39;power_bin_23.0&#39;,
+       &#39;power_bin_24.0&#39;, &#39;power_bin_25.0&#39;, &#39;power_bin_26.0&#39;, &#39;power_bin_27.0&#39;,
+       &#39;power_bin_28.0&#39;, &#39;power_bin_29.0&#39;],
+      dtype=&#39;object&#39;, length=370)
+</code></pre><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># 这份数据可以给 LR 用</span></span><br><span class="line">data.to_csv(<span class="string">&#x27;data_for_lr.csv&#x27;</span>, index=<span class="number">0</span>)</span><br></pre></td></tr></table></figure>
+<h3 id="特征-过滤式"><a href="#特征-过滤式" class="headerlink" title="特征-过滤式"></a>特征-过滤式</h3><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># 当然也可以直接看图</span></span><br><span class="line">data_numeric = data[[<span class="string">&#x27;power&#x27;</span>, <span class="string">&#x27;kilometer&#x27;</span>, <span class="string">&#x27;brand_amount&#x27;</span>, <span class="string">&#x27;brand_price_average&#x27;</span>, </span><br><span class="line">                     <span class="string">&#x27;brand_price_max&#x27;</span>, <span class="string">&#x27;brand_price_median&#x27;</span>,<span class="string">&#x27;price&#x27;</span>]]</span><br><span class="line">correlation = data_numeric.corr()</span><br><span class="line"></span><br><span class="line">f , ax = plt.subplots(figsize = (<span class="number">7</span>, <span class="number">7</span>))</span><br><span class="line">plt.title(<span class="string">&#x27;Correlation of Numeric Features with Price&#x27;</span>,y=<span class="number">1</span>,size=<span class="number">16</span>)</span><br><span class="line">sbn.heatmap(correlation,square = <span class="literal">True</span>,  vmax=<span class="number">0.8</span>)</span><br></pre></td></tr></table></figure>
+<pre><code>&lt;matplotlib.axes._subplots.AxesSubplot at 0x2679cfe6be0&gt;
+</code></pre><p><img src="output_45_1.png" alt="png"></p>
+<h2 id="Model"><a href="#Model" class="headerlink" title="Model"></a>Model</h2><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">reduce_mem_usage</span>(<span class="params">df</span>):</span></span><br><span class="line">    <span class="string">&quot;&quot;&quot; iterate through all the columns of a dataframe and modify the data type</span></span><br><span class="line"><span class="string">        to reduce memory usage.        </span></span><br><span class="line"><span class="string">    &quot;&quot;&quot;</span></span><br><span class="line">    start_mem = df.memory_usage().<span class="built_in">sum</span>() </span><br><span class="line">    print(<span class="string">&#x27;Memory usage of dataframe is &#123;:.2f&#125; MB&#x27;</span>.<span class="built_in">format</span>(start_mem))</span><br><span class="line">    </span><br><span class="line">    <span class="keyword">for</span> col <span class="keyword">in</span> df.columns:</span><br><span class="line">        col_type = df[col].dtype</span><br><span class="line">        </span><br><span class="line">        <span class="keyword">if</span> col_type != <span class="built_in">object</span>:</span><br><span class="line">            c_min = df[col].<span class="built_in">min</span>()</span><br><span class="line">            c_max = df[col].<span class="built_in">max</span>()</span><br><span class="line">            <span class="keyword">if</span> <span class="built_in">str</span>(col_type)[:<span class="number">3</span>] == <span class="string">&#x27;int&#x27;</span>:</span><br><span class="line">                <span class="keyword">if</span> c_min &gt; np.iinfo(np.int8).<span class="built_in">min</span> <span class="keyword">and</span> c_max &lt; np.iinfo(np.int8).<span class="built_in">max</span>:</span><br><span class="line">                    df[col] = df[col].astype(np.int8)</span><br><span class="line">                <span class="keyword">elif</span> c_min &gt; np.iinfo(np.int16).<span class="built_in">min</span> <span class="keyword">and</span> c_max &lt; np.iinfo(np.int16).<span class="built_in">max</span>:</span><br><span class="line">                    df[col] = df[col].astype(np.int16)</span><br><span class="line">                <span class="keyword">elif</span> c_min &gt; np.iinfo(np.int32).<span class="built_in">min</span> <span class="keyword">and</span> c_max &lt; np.iinfo(np.int32).<span class="built_in">max</span>:</span><br><span class="line">                    df[col] = df[col].astype(np.int32)</span><br><span class="line">                <span class="keyword">elif</span> c_min &gt; np.iinfo(np.int64).<span class="built_in">min</span> <span class="keyword">and</span> c_max &lt; np.iinfo(np.int64).<span class="built_in">max</span>:</span><br><span class="line">                    df[col] = df[col].astype(np.int64)  </span><br><span class="line">            <span class="keyword">else</span>:</span><br><span class="line">                <span class="keyword">if</span> c_min &gt; np.finfo(np.float16).<span class="built_in">min</span> <span class="keyword">and</span> c_max &lt; np.finfo(np.float16).<span class="built_in">max</span>:</span><br><span class="line">                    df[col] = df[col].astype(np.float16)</span><br><span class="line">                <span class="keyword">elif</span> c_min &gt; np.finfo(np.float32).<span class="built_in">min</span> <span class="keyword">and</span> c_max &lt; np.finfo(np.float32).<span class="built_in">max</span>:</span><br><span class="line">                    df[col] = df[col].astype(np.float32)</span><br><span class="line">                <span class="keyword">else</span>:</span><br><span class="line">                    df[col] = df[col].astype(np.float64)</span><br><span class="line">        <span class="keyword">else</span>:</span><br><span class="line">            df[col] = df[col].astype(<span class="string">&#x27;category&#x27;</span>)</span><br><span class="line"></span><br><span class="line">    end_mem = df.memory_usage().<span class="built_in">sum</span>() </span><br><span class="line">    print(<span class="string">&#x27;Memory usage after optimization is: &#123;:.2f&#125; MB&#x27;</span>.<span class="built_in">format</span>(end_mem))</span><br><span class="line">    print(<span class="string">&#x27;Decreased by &#123;:.1f&#125;%&#x27;</span>.<span class="built_in">format</span>(<span class="number">100</span> * (start_mem - end_mem) / start_mem))</span><br><span class="line">    <span class="keyword">return</span> df</span><br></pre></td></tr></table></figure>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sample_feature = reduce_mem_usage(pd.read_csv(<span class="string">&#x27;data_for_tree.csv&#x27;</span>))</span><br></pre></td></tr></table></figure>
+<pre><code>Memory usage of dataframe is 62099672.00 MB
+Memory usage after optimization is: 16520303.00 MB
+Decreased by 73.4%
+</code></pre><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">continuous_feature_names = [x <span class="keyword">for</span> x <span class="keyword">in</span> sample_feature.columns <span class="keyword">if</span> x <span class="keyword">not</span> <span class="keyword">in</span> [<span class="string">&#x27;price&#x27;</span>,<span class="string">&#x27;brand&#x27;</span>,<span class="string">&#x27;model&#x27;</span>,<span class="string">&#x27;brand&#x27;</span>]]</span><br></pre></td></tr></table></figure>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">sample_feature = sample_feature.dropna().replace(<span class="string">&#x27;-&#x27;</span>, <span class="number">0</span>).reset_index(drop=<span class="literal">True</span>)</span><br><span class="line">sample_feature[<span class="string">&#x27;notRepairedDamage&#x27;</span>] = sample_feature[<span class="string">&#x27;notRepairedDamage&#x27;</span>].astype(np.float32)</span><br><span class="line">data_train = sample_feature[continuous_feature_names + [<span class="string">&#x27;price&#x27;</span>]]</span><br><span class="line"></span><br><span class="line">data_train_X = data_train[continuous_feature_names]</span><br><span class="line">data_train_y = data_train[<span class="string">&#x27;price&#x27;</span>]</span><br></pre></td></tr></table></figure>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">from</span> sklearn.linear_model <span class="keyword">import</span> LinearRegression</span><br><span class="line">model = LinearRegression(normalize=<span class="literal">True</span>)</span><br><span class="line">model = model.fit(data_train_X, data_train_y)</span><br><span class="line"><span class="string">&#x27;intercept:&#x27;</span>+ <span class="built_in">str</span>(model.intercept_)</span><br><span class="line"><span class="built_in">sorted</span>(<span class="built_in">dict</span>(<span class="built_in">zip</span>(continuous_feature_names, model.coef_)).items(), key=<span class="keyword">lambda</span> x:x[<span class="number">1</span>], reverse=<span class="literal">True</span>)</span><br></pre></td></tr></table></figure>
+<pre><code>[(&#39;v_6&#39;, 3367064.3416418973),
+ (&#39;v_8&#39;, 700675.5609398854),
+ (&#39;v_9&#39;, 170630.27723220928),
+ (&#39;v_7&#39;, 32322.661932026494),
+ (&#39;v_12&#39;, 20473.67079690079),
+ (&#39;v_3&#39;, 17868.079541462153),
+ (&#39;v_11&#39;, 11474.938996675626),
+ (&#39;v_13&#39;, 11261.764560002604),
+ (&#39;v_10&#39;, 2683.920090576799),
+ (&#39;gearbox&#39;, 881.8225039247895),
+ (&#39;fuelType&#39;, 363.90425072159366),
+ (&#39;bodyType&#39;, 189.60271012072778),
+ (&#39;city&#39;, 44.94975120521572),
+ (&#39;power&#39;, 28.553901616757216),
+ (&#39;brand_price_median&#39;, 0.5103728134077985),
+ (&#39;brand_price_std&#39;, 0.4503634709262824),
+ (&#39;brand_amount&#39;, 0.14881120395066205),
+ (&#39;brand_price_max&#39;, 0.003191018670313502),
+ (&#39;SaleID&#39;, 5.3559899198577976e-05),
+ (&#39;offerType&#39;, 6.017042323946953e-06),
+ (&#39;seller&#39;, 1.6369158402085304e-06),
+ (&#39;is_train_data&#39;, -5.66341623198241e-06),
+ (&#39;brand_price_sum&#39;, -2.1750068681876833e-05),
+ (&#39;name&#39;, -0.0002980012713063814),
+ (&#39;used_time&#39;, -0.002515894332869914),
+ (&#39;brand_price_average&#39;, -0.40490484510104074),
+ (&#39;brand_price_min&#39;, -2.2467753486894733),
+ (&#39;power_bin&#39;, -34.42064411731283),
+ (&#39;v_14&#39;, -274.7841180769423),
+ (&#39;kilometer&#39;, -372.897526660724),
+ (&#39;notRepairedDamage&#39;, -495.1903844628292),
+ (&#39;v_0&#39;, -2045.054957354999),
+ (&#39;v_5&#39;, -11022.986240536327),
+ (&#39;v_4&#39;, -15121.731109848046),
+ (&#39;v_2&#39;, -26098.299920467005),
+ (&#39;v_1&#39;, -45556.18929728572)]
+</code></pre><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><span class="line">subsample_index = np.random.randint(low=<span class="number">0</span>, high=<span class="built_in">len</span>(data_train_y), size=<span class="number">50</span>)</span><br><span class="line">plt.scatter(data_train_X[<span class="string">&#x27;v_9&#x27;</span>][subsample_index], </span><br><span class="line">            data_train_y[subsample_index] - model.predict(data_train_X.loc[subsample_index]), </span><br><span class="line">            color=<span class="string">&#x27;black&#x27;</span>)</span><br><span class="line"><span class="comment"># plt.scatter(data_train_X[&#x27;v_9&#x27;][subsample_index], , color=&#x27;blue&#x27;)</span></span><br><span class="line">plt.xlabel(<span class="string">&#x27;v_7&#x27;</span>)</span><br><span class="line">plt.ylabel(<span class="string">&#x27;price&#x27;</span>)</span><br><span class="line">plt.legend([<span class="string">&#x27;True Price&#x27;</span>,<span class="string">&#x27;Predicted Price&#x27;</span>],loc=<span class="string">&#x27;upper right&#x27;</span>)</span><br><span class="line">print(<span class="string">&#x27;The predicted price is obvious different from true price&#x27;</span>)</span><br><span class="line">plt.show()</span><br><span class="line"></span><br><span class="line">print(<span class="string">&#x27;It is clear to see the price shows a typical exponential distribution&#x27;</span>)</span><br><span class="line">plt.figure(figsize=(<span class="number">15</span>,<span class="number">5</span>))</span><br><span class="line">plt.subplot(<span class="number">1</span>,<span class="number">2</span>,<span class="number">1</span>)</span><br><span class="line">sbn.distplot(data_train_y)</span><br><span class="line">plt.subplot(<span class="number">1</span>,<span class="number">2</span>,<span class="number">2</span>)</span><br><span class="line">sbn.distplot(data_train_y[data_train_y &lt; np.quantile(data_train_y, <span class="number">0.9</span>)])</span><br></pre></td></tr></table></figure>
+<pre><code>The predicted price is obvious different from true price
+</code></pre><p><img src="output_52_1.png" alt="png"></p>
+<pre><code>It is clear to see the price shows a typical exponential distribution
+
+
+
+
+
+&lt;matplotlib.axes._subplots.AxesSubplot at 0x24c80b26f98&gt;
+</code></pre><p><img src="output_52_4.png" alt="png"></p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br></pre></td><td class="code"><pre><span class="line">data_train_y_ln = np.log(data_train_y + <span class="number">1</span>)</span><br><span class="line">print(<span class="string">&#x27;The transformed price seems like normal distribution&#x27;</span>)</span><br><span class="line">plt.figure(figsize=(<span class="number">15</span>,<span class="number">5</span>))</span><br><span class="line">plt.subplot(<span class="number">1</span>,<span class="number">2</span>,<span class="number">1</span>)</span><br><span class="line">sbn.distplot(data_train_y_ln)</span><br><span class="line">plt.subplot(<span class="number">1</span>,<span class="number">2</span>,<span class="number">2</span>)</span><br><span class="line">sbn.distplot(data_train_y_ln[data_train_y_ln &lt; np.quantile(data_train_y_ln, <span class="number">0.9</span>)])</span><br><span class="line"></span><br><span class="line">model = model.fit(data_train_X, data_train_y_ln)</span><br><span class="line"></span><br><span class="line">print(<span class="string">&#x27;intercept:&#x27;</span>+ <span class="built_in">str</span>(model.intercept_))</span><br><span class="line"><span class="built_in">sorted</span>(<span class="built_in">dict</span>(<span class="built_in">zip</span>(continuous_feature_names, model.coef_)).items(), key=<span class="keyword">lambda</span> x:x[<span class="number">1</span>], reverse=<span class="literal">True</span>)</span><br><span class="line"></span><br><span class="line">subsample_index = np.random.randint(low=<span class="number">0</span>, high=<span class="built_in">len</span>(data_train_y_ln), size=<span class="number">50</span>)</span><br><span class="line">plt.figure(figsize=(<span class="number">15</span>,<span class="number">5</span>))</span><br><span class="line">plt.subplot(<span class="number">1</span>,<span class="number">2</span>,<span class="number">1</span>)</span><br><span class="line">plt.scatter(data_train_X[<span class="string">&#x27;v_9&#x27;</span>][subsample_index], </span><br><span class="line">            data_train_y_ln[subsample_index] - model.predict(data_train_X.loc[subsample_index]), </span><br><span class="line">            color=<span class="string">&#x27;black&#x27;</span>)</span><br><span class="line"><span class="comment"># plt.scatter(data_train_X[&#x27;v_9&#x27;][subsample_index], , color=&#x27;blue&#x27;)</span></span><br><span class="line">plt.xlabel(<span class="string">&#x27;v_9&#x27;</span>)</span><br><span class="line">plt.ylabel(<span class="string">&#x27;price&#x27;</span>)</span><br><span class="line">plt.legend([<span class="string">&#x27;True Price&#x27;</span>,<span class="string">&#x27;Predicted Price&#x27;</span>],loc=<span class="string">&#x27;upper right&#x27;</span>)</span><br></pre></td></tr></table></figure>
+<pre><code>The transformed price seems like normal distribution
+intercept:18.750749465662786
+
+
+
+
+
+&lt;matplotlib.legend.Legend at 0x24c88718e10&gt;
+</code></pre><p><img src="output_53_2.png" alt="png"></p>
+<p><img src="output_53_3.png" alt="png"></p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> datetime</span><br><span class="line">sample_feature = sample_feature.reset_index(drop=<span class="literal">True</span>)</span><br><span class="line">split_point = <span class="built_in">len</span>(sample_feature) // <span class="number">5</span> * <span class="number">4</span></span><br><span class="line"></span><br><span class="line">train = sample_feature.loc[:split_point].dropna()</span><br><span class="line">val = sample_feature.loc[split_point:].dropna()</span><br><span class="line"></span><br><span class="line">train_X = train[continuous_feature_names]</span><br><span class="line">train_y_ln = np.log(train[<span class="string">&#x27;price&#x27;</span>] + <span class="number">1</span>)</span><br><span class="line">val_X = val[continuous_feature_names]</span><br><span class="line">val_y_ln = np.log(val[<span class="string">&#x27;price&#x27;</span>] + <span class="number">1</span>)</span><br><span class="line"></span><br><span class="line">model = model.fit(train_X, train_y_ln)</span><br><span class="line">mean_absolute_error(val_y_ln, model.predict(val_X))</span><br></pre></td></tr></table></figure>
+<pre><code>0.19577667270300972
+</code></pre><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">from</span> sklearn.model_selection <span class="keyword">import</span> learning_curve, validation_curve</span><br><span class="line"><span class="keyword">from</span> sklearn.model_selection <span class="keyword">import</span> cross_val_score</span><br><span class="line"><span class="keyword">from</span> sklearn.metrics <span class="keyword">import</span> mean_absolute_error,  make_scorer</span><br><span class="line"></span><br><span class="line">? learning_curve</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">plot_learning_curve</span>(<span class="params">estimator, title, X, y, ylim=<span class="literal">None</span>, cv=<span class="literal">None</span>, n_jobs=<span class="number">1</span>, train_size=np.linspace(<span class="params"><span class="number">.1</span>, <span class="number">1.0</span>, <span class="number">5</span></span>)</span>):</span></span><br><span class="line">    plt.figure()</span><br><span class="line">    plt.title(title)</span><br><span class="line">    <span class="keyword">if</span> ylim <span class="keyword">is</span> <span class="keyword">not</span> <span class="literal">None</span>:</span><br><span class="line">        plt.ylim(*ylim)</span><br><span class="line">    plt.xlabel(<span class="string">&#x27;Training example&#x27;</span>)</span><br><span class="line">    plt.ylabel(<span class="string">&#x27;score&#x27;</span>)</span><br><span class="line">    train_sizes, train_scores, test_scores = learning_curve(</span><br><span class="line">        estimator, X, y, cv=cv, n_jobs=n_jobs, train_sizes=train_size, scoring=make_scorer(mean_absolute_error))</span><br><span class="line">    train_scores_mean = np.mean(train_scores, axis=<span class="number">1</span>)</span><br><span class="line">    train_scores_std = np.std(train_scores, axis=<span class="number">1</span>)</span><br><span class="line">    test_scores_mean = np.mean(test_scores, axis=<span class="number">1</span>)</span><br><span class="line">    test_scores_std = np.std(test_scores, axis=<span class="number">1</span>)</span><br><span class="line">    plt.grid()  <span class="comment"># 区域</span></span><br><span class="line">    plt.fill_between(train_sizes, train_scores_mean - train_scores_std,</span><br><span class="line">                     train_scores_mean + train_scores_std, alpha=<span class="number">0.1</span>,</span><br><span class="line">                     color=<span class="string">&quot;r&quot;</span>)</span><br><span class="line">    plt.fill_between(train_sizes, test_scores_mean - test_scores_std,</span><br><span class="line">                     test_scores_mean + test_scores_std, alpha=<span class="number">0.1</span>,</span><br><span class="line">                     color=<span class="string">&quot;g&quot;</span>)</span><br><span class="line">    plt.plot(train_sizes, train_scores_mean, <span class="string">&#x27;o-&#x27;</span>, color=<span class="string">&#x27;r&#x27;</span>,</span><br><span class="line">             label=<span class="string">&quot;Training score&quot;</span>)</span><br><span class="line">    plt.plot(train_sizes, test_scores_mean, <span class="string">&#x27;o-&#x27;</span>, color=<span class="string">&quot;g&quot;</span>,</span><br><span class="line">             label=<span class="string">&quot;Cross-validation score&quot;</span>)</span><br><span class="line">    plt.legend(loc=<span class="string">&quot;best&quot;</span>)</span><br><span class="line">    <span class="keyword">return</span> plt</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">plot_learning_curve(LinearRegression(), <span class="string">&#x27;Liner_model&#x27;</span>,</span><br><span class="line">                    data_train_X[:<span class="number">1000</span>], data_train_y_ln[:<span class="number">1000</span>], ylim=(<span class="number">0.0</span>, <span class="number">0.5</span>), cv=<span class="number">5</span>, n_jobs=<span class="number">1</span>)</span><br></pre></td></tr></table></figure>
+<pre><code>&lt;module &#39;matplotlib.pyplot&#39; from &#39;C:\\Users\\Carlos\\AppData\\Roaming\\Python\\Python36\\site-packages\\matplotlib\\pyplot.py&#39;&gt;
+</code></pre><p><img src="output_55_1.png" alt="png"></p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">from</span> sklearn.linear_model <span class="keyword">import</span> LinearRegression, Ridge, Lasso</span><br><span class="line">models = [LinearRegression(), Ridge(), Lasso()]</span><br><span class="line">result = <span class="built_in">dict</span>()</span><br><span class="line"><span class="keyword">for</span> model <span class="keyword">in</span> models:</span><br><span class="line">    model_name = <span class="built_in">str</span>(model).split(<span class="string">&#x27;(&#x27;</span>)[<span class="number">0</span>]</span><br><span class="line">    scores = cross_val_score(model, X=data_train_X, y=data_train_y_ln, verbose=<span class="number">0</span>, cv = <span class="number">5</span>, scoring=make_scorer(mean_absolute_error))</span><br><span class="line">    result[model_name] = scores</span><br><span class="line">    print(model_name + <span class="string">&#x27; is finished&#x27;</span>)</span><br><span class="line">result = pd.DataFrame(result)</span><br><span class="line">result.index = [<span class="string">&#x27;cv&#x27;</span> + <span class="built_in">str</span>(x) <span class="keyword">for</span> x <span class="keyword">in</span> <span class="built_in">range</span>(<span class="number">1</span>, <span class="number">6</span>)]</span><br><span class="line">result</span><br></pre></td></tr></table></figure>
+<pre><code>LinearRegression is finished
+Ridge is finished
+Lasso is finished
+</code></pre><div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>LinearRegression</th>
+      <th>Ridge</th>
+      <th>Lasso</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>cv1</th>
+      <td>0.190792</td>
+      <td>0.194832</td>
+      <td>0.383899</td>
+    </tr>
+    <tr>
+      <th>cv2</th>
+      <td>0.193758</td>
+      <td>0.197632</td>
+      <td>0.381893</td>
+    </tr>
+    <tr>
+      <th>cv3</th>
+      <td>0.194132</td>
+      <td>0.198123</td>
+      <td>0.384090</td>
+    </tr>
+    <tr>
+      <th>cv4</th>
+      <td>0.191825</td>
+      <td>0.195670</td>
+      <td>0.380526</td>
+    </tr>
+    <tr>
+      <th>cv5</th>
+      <td>0.195758</td>
+      <td>0.199676</td>
+      <td>0.383611</td>
+    </tr>
+  </tbody>
+</table>
+</div>
+
+
+
+
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">from</span> sklearn.linear_model <span class="keyword">import</span> LinearRegression</span><br><span class="line"><span class="keyword">from</span> sklearn.svm <span class="keyword">import</span> SVC</span><br><span class="line"><span class="keyword">from</span> sklearn.tree <span class="keyword">import</span> DecisionTreeRegressor</span><br><span class="line"><span class="keyword">from</span> sklearn.ensemble <span class="keyword">import</span> RandomForestRegressor, GradientBoostingRegressor</span><br><span class="line"><span class="keyword">from</span> sklearn.neural_network <span class="keyword">import</span> MLPRegressor</span><br><span class="line"><span class="keyword">from</span> xgboost.sklearn <span class="keyword">import</span> XGBRegressor</span><br><span class="line"><span class="keyword">from</span> lightgbm.sklearn <span class="keyword">import</span> LGBMRegressor</span><br><span class="line">models = [LinearRegression(),</span><br><span class="line">          DecisionTreeRegressor(),</span><br><span class="line">          RandomForestRegressor(),</span><br><span class="line">          GradientBoostingRegressor(),</span><br><span class="line">          MLPRegressor(solver=<span class="string">&#x27;lbfgs&#x27;</span>, max_iter=<span class="number">100</span>), </span><br><span class="line">          XGBRegressor(n_estimators = <span class="number">100</span>, objective=<span class="string">&#x27;reg:squarederror&#x27;</span>), </span><br><span class="line">          LGBMRegressor(n_estimators = <span class="number">100</span>)]</span><br><span class="line">result = <span class="built_in">dict</span>()</span><br><span class="line"><span class="keyword">for</span> model <span class="keyword">in</span> models:</span><br><span class="line">    model_name = <span class="built_in">str</span>(model).split(<span class="string">&#x27;(&#x27;</span>)[<span class="number">0</span>]</span><br><span class="line">    scores = cross_val_score(model, X=train_X, y=train_y_ln, verbose=<span class="number">0</span>, cv = <span class="number">5</span>, scoring=make_scorer(mean_absolute_error))</span><br><span class="line">    result[model_name] = scores</span><br><span class="line">    print(model_name + <span class="string">&#x27; is finished&#x27;</span>)</span><br><span class="line">result = pd.DataFrame(result)</span><br><span class="line">result.index = [<span class="string">&#x27;cv&#x27;</span> + <span class="built_in">str</span>(x) <span class="keyword">for</span> x <span class="keyword">in</span> <span class="built_in">range</span>(<span class="number">1</span>, <span class="number">6</span>)]</span><br><span class="line">result.T</span><br></pre></td></tr></table></figure>
+<pre><code>LinearRegression is finished
+
+
+
+---------------------------------------------------------------------------
+
+KeyboardInterrupt                         Traceback (most recent call last)
+
+&lt;ipython-input-35-7342f698c9cf&gt; in &lt;module&gt;()
+     16 for model in models:
+     17     model_name = str(model).split(&#39;(&#39;)[0]
+---&gt; 18     scores = cross_val_score(model, X=train_X, y=train_y_ln, verbose=0, cv = 5, scoring=make_scorer(mean_absolute_error))
+     19     result[model_name] = scores
+     20     print(model_name + &#39; is finished&#39;)
+
+
+c:\programs\python\python36\lib\site-packages\sklearn\model_selection\_validation.py in cross_val_score(estimator, X, y, groups, scoring, cv, n_jobs, verbose, fit_params, pre_dispatch, error_score)
+    400                                 fit_params=fit_params,
+    401                                 pre_dispatch=pre_dispatch,
+--&gt; 402                                 error_score=error_score)
+    403     return cv_results[&#39;test_score&#39;]
+    404 
+
+
+c:\programs\python\python36\lib\site-packages\sklearn\model_selection\_validation.py in cross_validate(estimator, X, y, groups, scoring, cv, n_jobs, verbose, fit_params, pre_dispatch, return_train_score, return_estimator, error_score)
+    238             return_times=True, return_estimator=return_estimator,
+    239             error_score=error_score)
+--&gt; 240         for train, test in cv.split(X, y, groups))
+    241 
+    242     zipped_scores = list(zip(*scores))
+
+
+c:\programs\python\python36\lib\site-packages\sklearn\externals\joblib\parallel.py in __call__(self, iterable)
+    984                 self._iterating = self._original_iterator is not None
+    985 
+--&gt; 986             while self.dispatch_one_batch(iterator):
+    987                 pass
+    988 
+
+
+c:\programs\python\python36\lib\site-packages\sklearn\externals\joblib\parallel.py in dispatch_one_batch(self, iterator)
+    823                 return False
+    824             else:
+--&gt; 825                 self._dispatch(tasks)
+    826                 return True
+    827 
+
+
+c:\programs\python\python36\lib\site-packages\sklearn\externals\joblib\parallel.py in _dispatch(self, batch)
+    780         with self._lock:
+    781             job_idx = len(self._jobs)
+--&gt; 782             job = self._backend.apply_async(batch, callback=cb)
+    783             # A job can complete so quickly than its callback is
+    784             # called before we get here, causing self._jobs to
+
+
+c:\programs\python\python36\lib\site-packages\sklearn\externals\joblib\_parallel_backends.py in apply_async(self, func, callback)
+    180     def apply_async(self, func, callback=None):
+    181         &quot;&quot;&quot;Schedule a func to be run&quot;&quot;&quot;
+--&gt; 182         result = ImmediateResult(func)
+    183         if callback:
+    184             callback(result)
+
+
+c:\programs\python\python36\lib\site-packages\sklearn\externals\joblib\_parallel_backends.py in __init__(self, batch)
+    543         # Don&#39;t delay the application, to avoid keeping the input
+    544         # arguments in memory
+--&gt; 545         self.results = batch()
+    546 
+    547     def get(self):
+
+
+c:\programs\python\python36\lib\site-packages\sklearn\externals\joblib\parallel.py in __call__(self)
+    259         with parallel_backend(self._backend):
+    260             return [func(*args, **kwargs)
+--&gt; 261                     for func, args, kwargs in self.items]
+    262 
+    263     def __len__(self):
+
+
+c:\programs\python\python36\lib\site-packages\sklearn\externals\joblib\parallel.py in &lt;listcomp&gt;(.0)
+    259         with parallel_backend(self._backend):
+    260             return [func(*args, **kwargs)
+--&gt; 261                     for func, args, kwargs in self.items]
+    262 
+    263     def __len__(self):
+
+
+c:\programs\python\python36\lib\site-packages\sklearn\model_selection\_validation.py in _fit_and_score(estimator, X, y, scorer, train, test, verbose, parameters, fit_params, return_train_score, return_parameters, return_n_test_samples, return_times, return_estimator, error_score)
+    526             estimator.fit(X_train, **fit_params)
+    527         else:
+--&gt; 528             estimator.fit(X_train, y_train, **fit_params)
+    529 
+    530     except Exception as e:
+
+
+c:\programs\python\python36\lib\site-packages\sklearn\tree\tree.py in fit(self, X, y, sample_weight, check_input, X_idx_sorted)
+   1137             sample_weight=sample_weight,
+   1138             check_input=check_input,
+-&gt; 1139             X_idx_sorted=X_idx_sorted)
+   1140         return self
+   1141 
+
+
+c:\programs\python\python36\lib\site-packages\sklearn\tree\tree.py in fit(self, X, y, sample_weight, check_input, X_idx_sorted)
+    363                                            min_impurity_split)
+    364 
+--&gt; 365         builder.build(self.tree_, X, y, sample_weight, X_idx_sorted)
+    366 
+    367         if self.n_outputs_ == 1:
+
+
+KeyboardInterrupt: 
+</code></pre><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line">objective = [<span class="string">&#x27;regression&#x27;</span>, <span class="string">&#x27;regression_l1&#x27;</span>, <span class="string">&#x27;mape&#x27;</span>, <span class="string">&#x27;huber&#x27;</span>, <span class="string">&#x27;fair&#x27;</span>]</span><br><span class="line"></span><br><span class="line">num_leaves = [<span class="number">3</span>,<span class="number">5</span>,<span class="number">10</span>,<span class="number">15</span>,<span class="number">20</span>,<span class="number">40</span>, <span class="number">55</span>]</span><br><span class="line">max_depth = [<span class="number">3</span>,<span class="number">5</span>,<span class="number">10</span>,<span class="number">15</span>,<span class="number">20</span>,<span class="number">40</span>, <span class="number">55</span>]</span><br><span class="line">bagging_fraction = []</span><br><span class="line">feature_fraction = []</span><br><span class="line">drop_rate = []</span><br><span class="line">best_obj = <span class="built_in">dict</span>()</span><br><span class="line"><span class="keyword">for</span> obj <span class="keyword">in</span> objective:</span><br><span class="line">    model = LGBMRegressor(objective=obj)</span><br><span class="line">    score = np.mean(cross_val_score(model, X=train_X, y=train_y_ln, verbose=<span class="number">0</span>, cv = <span class="number">5</span>, scoring=make_scorer(mean_absolute_error)))</span><br><span class="line">    best_obj[obj] = score</span><br><span class="line">    </span><br><span class="line">best_leaves = <span class="built_in">dict</span>()</span><br><span class="line"><span class="keyword">for</span> leaves <span class="keyword">in</span> num_leaves:</span><br><span class="line">    model = LGBMRegressor(objective=<span class="built_in">min</span>(best_obj.items(), key=<span class="keyword">lambda</span> x:x[<span class="number">1</span>])[<span class="number">0</span>], num_leaves=leaves)</span><br><span class="line">    score = np.mean(cross_val_score(model, X=train_X, y=train_y_ln, verbose=<span class="number">0</span>, cv = <span class="number">5</span>, scoring=make_scorer(mean_absolute_error)))</span><br><span class="line">    best_leaves[leaves] = score</span><br><span class="line">    </span><br><span class="line">best_depth = <span class="built_in">dict</span>()</span><br><span class="line"><span class="keyword">for</span> depth <span class="keyword">in</span> max_depth:</span><br><span class="line">    model = LGBMRegressor(objective=<span class="built_in">min</span>(best_obj.items(), key=<span class="keyword">lambda</span> x:x[<span class="number">1</span>])[<span class="number">0</span>],</span><br><span class="line">                          num_leaves=<span class="built_in">min</span>(best_leaves.items(), key=<span class="keyword">lambda</span> x:x[<span class="number">1</span>])[<span class="number">0</span>],</span><br><span class="line">                          max_depth=depth)</span><br><span class="line">    score = np.mean(cross_val_score(model, X=train_X, y=train_y_ln, verbose=<span class="number">0</span>, cv = <span class="number">5</span>, scoring=make_scorer(mean_absolute_error)))</span><br><span class="line">    best_depth[depth] = score</span><br><span class="line">    </span><br><span class="line">sbn.lineplot(x=[<span class="string">&#x27;0_initial&#x27;</span>,<span class="string">&#x27;1_turning_obj&#x27;</span>,<span class="string">&#x27;2_turning_leaves&#x27;</span>,<span class="string">&#x27;3_turning_depth&#x27;</span>], y=[<span class="number">0.143</span> ,<span class="built_in">min</span>(best_obj.values()), <span class="built_in">min</span>(best_leaves.values()), <span class="built_in">min</span>(best_depth.values())])</span><br></pre></td></tr></table></figure>
+<pre><code>&lt;matplotlib.axes._subplots.AxesSubplot at 0x24c92d99438&gt;
+</code></pre><p><img src="output_58_1.png" alt="png"></p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">from</span> sklearn.model_selection <span class="keyword">import</span> GridSearchCV</span><br><span class="line">parameters = &#123;<span class="string">&#x27;objective&#x27;</span>: objective , <span class="string">&#x27;num_leaves&#x27;</span>: num_leaves, <span class="string">&#x27;max_depth&#x27;</span>: max_depth&#125;</span><br><span class="line">model = LGBMRegressor()</span><br><span class="line">clf = GridSearchCV(model, parameters, cv=<span class="number">5</span>)</span><br><span class="line">clf = clf.fit(data_train_X, data_train_y)</span><br><span class="line">print(clf.best_params_)</span><br><span class="line">model = LGBMRegressor(objective=<span class="string">&#x27;regression&#x27;</span>,</span><br><span class="line">                          num_leaves=<span class="number">55</span>,</span><br><span class="line">                          max_depth=<span class="number">15</span>)</span><br><span class="line">np.mean(cross_val_score(model, X=data_train_X, y=data_train_y_ln, verbose=<span class="number">0</span>, cv = <span class="number">5</span>, scoring=make_scorer(mean_absolute_error)))</span><br></pre></td></tr></table></figure>
+<pre><code>&#123;&#39;max_depth&#39;: 15, &#39;num_leaves&#39;: 55, &#39;objective&#39;: &#39;regression&#39;&#125;
+
+
+
+
+
+0.13754820909576437
+</code></pre>
+      </div>
+      
+      
+      
+    </div>
+  <ul class="breadcrumb">
+            <li><a href="/zh-cn/imgs/">IMGS</a></li>
+            <li><a href="/zh-cn/imgs/Programming/">PROGRAMMING</a></li>
+            <li><a href="/zh-cn/imgs/Programming/datawhale-dmintro/">DATAWHALE-DMINTRO</a></li>
+            <li><a href="/zh-cn/imgs/Programming/datawhale-dmintro/DataWhale-Intro/">DATAWHALE-INTRO</a></li>
+            <li>TIANCHI-SECONDHANDCARTRADE</li>
+          
+  </ul>
+
+    
+    
+
+
+    
+  <div class="comments">
+    <div id="utterances-container"></div>
+  </div>
+  
+
+<script>
+  window.addEventListener('tabs:register', () => {
+    let { activeClass } = CONFIG.comments;
+    if (CONFIG.comments.storage) {
+      activeClass = localStorage.getItem('comments_active') || activeClass;
+    }
+    if (activeClass) {
+      const activeTab = document.querySelector(`a[href="#comment-${activeClass}"]`);
+      if (activeTab) {
+        activeTab.click();
+      }
+    }
+  });
+  if (CONFIG.comments.storage) {
+    window.addEventListener('tabs:click', event => {
+      if (!event.target.matches('.tabs-comment .tab-content .tab-pane')) return;
+      const commentClass = event.target.classList[1];
+      localStorage.setItem('comments_active', commentClass);
+    });
+  }
+</script>
+</div>
+  </main>
+
+  <footer class="footer">
+    <div class="footer-inner">
+
+
+<div class="copyright">
+  &copy; 2018 – 
+  <span itemprop="copyrightYear">2022</span>
+  <span class="with-love">
+    <i class="fa fa-heart"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">Obster-Y</span>
+</div>
+<div class="busuanzi-count">
+    <span class="post-meta-item" id="busuanzi_container_site_pv" style="display: none;">
+      <span class="post-meta-item-icon">
+        <i class="fa fa-eye"></i>
+      </span>
+      <span class="site-pv" title="总访问量">
+        <span id="busuanzi_value_site_pv"></span>
+      </span>
+    </span>
+</div>
+
+    </div>
+  </footer>
+
+  
+
+
+  <script src="//cdn.jsdelivr.net/npm/animejs@3.2.1/lib/anime.min.js"></script>
+
+<script src="/zh-cn/js/utils.js"></script><script src="/zh-cn/js/motion.js"></script><script src="/zh-cn/js/next-boot.js"></script>
+
+  
+
+<script src="/zh-cn/js/local-search.js"></script>
+
+
+
+
+
+
+  
+  <script async src="https://busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+
+
+
+
+
+  <script>
+  if (typeof MathJax === 'undefined') {
+    window.MathJax = {
+      tex: {
+        inlineMath: {'[+]': [['$', '$']]},
+        tags: ''
+      },
+      options: {
+        renderActions: {
+          insertedScript: [200, () => {
+            document.querySelectorAll('mjx-container').forEach(node => {
+              const target = node.parentNode;
+              if (target.nodeName.toLowerCase() === 'li') {
+                target.parentNode.classList.add('has-jax');
+              }
+            });
+          }, '', false]
+        }
+      }
+    };
+    const script = document.createElement('script');
+    script.src = '//cdn.jsdelivr.net/npm/mathjax@3.1.2/es5/tex-mml-chtml.js';
+    script.defer = true;
+    document.head.appendChild(script);
+  } else {
+    MathJax.startup.document.state(0);
+    MathJax.typesetClear();
+    MathJax.texReset();
+    MathJax.typeset();
+  }
+</script>
+
+
+
+<script>
+NexT.utils.loadComments('#utterances-container', () => {
+  const script = document.createElement('script');
+  script.src = 'https://utteranc.es/client.js';
+  script.setAttribute('repo', "obster-y/comments");
+  script.setAttribute('issue-term', "pathname");
+  script.setAttribute('theme', "github-dark");
+  script.crossOrigin = 'anonymous';
+  script.async = true;
+  document.querySelector('#utterances-container').appendChild(script);
+});
+</script><!-- hexo-inject:begin --><!-- hexo-inject:end -->
+
+</body>
+</html>

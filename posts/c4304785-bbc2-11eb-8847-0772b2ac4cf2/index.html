@@ -1,0 +1,773 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <!-- hexo-inject:begin --><!-- hexo-inject:end --><meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=2">
+<meta name="theme-color" content="#222">
+<meta name="generator" content="Hexo 5.2.0">
+<meta name="baidu-site-verification" content="code-mytiWBVdjL" />
+<meta name="google-site-verification" content="nxAePyZIesHQ1FCgWQZBV1m6HPxrrxb4YjjUfmGavJo" />
+
+
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/logo.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/cls-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/cls-16x16.png">
+  <link rel="mask-icon" href="/images/logo.png" color="#222">
+
+<link rel="stylesheet" href="/css/main.css">
+
+
+
+<link rel="stylesheet" href="//cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5.15.1/css/all.min.css">
+  <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/animate.css@3.1.1/animate.min.css">
+
+<script class="hexo-configurations">
+    var NexT = window.NexT || {};
+    var CONFIG = {"hostname":"obster-y.github.io","root":"/","images":"/images","scheme":"Gemini","version":"8.1.0","exturl":false,"sidebar":{"position":"right","display":"post","padding":18,"offset":12},"copycode":true,"bookmark":{"enable":false,"color":"#222","save":"auto"},"fancybox":false,"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":"gitalk","storage":true,"lazyload":false,"nav":null},"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"fadeInDown","post_body":"fadeInDown","coll_header":"fadeInLeft","sidebar":"fadeInUp"}},"prism":false,"i18n":{"placeholder":"Searching...","empty":"We didn't find any results for the search: ${query}","hits_time":"${hits} results found in ${time} ms","hits":"${hits} results found"},"path":"/search.xml","localsearch":{"enable":true,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false}};
+  </script>
+<meta name="description" content="First day of Basic Algorithm training in Leetcode.Two Sum 12345678class Solution:    def twoSum(self, nums: List[int], target: int) -&gt; List[int]:        if len(nums) &lt; 2: return []        dic &#x3D;">
+<meta property="og:type" content="article">
+<meta property="og:title" content="30 days in Leetcode (Basic Algorithm)">
+<meta property="og:url" content="https://obster-y.github.io/posts/c4304785-bbc2-11eb-8847-0772b2ac4cf2/index.html">
+<meta property="og:site_name" content="Obster-Y&#39;s Blog">
+<meta property="og:description" content="First day of Basic Algorithm training in Leetcode.Two Sum 12345678class Solution:    def twoSum(self, nums: List[int], target: int) -&gt; List[int]:        if len(nums) &lt; 2: return []        dic &#x3D;">
+<meta property="og:locale" content="en_US">
+<meta property="og:image" content="https://obster-y.github.io/imgs/Programming/30dayinlc/30d-in-Leetcode-01-Two-Sum-LC.png">
+<meta property="og:image" content="https://obster-y.github.io/imgs/Programming/30dayinlc/30d-in-Leetcode-02-Rm-Dup-LC.png">
+<meta property="og:image" content="https://obster-y.github.io/imgs/Programming/30dayinlc/30d-in-Leetcode-03-Rm-El-LC.png">
+<meta property="og:image" content="https://obster-y.github.io/imgs/Programming/30dayinlc/30d-in-Leetcode-04-3S-LC.png">
+<meta property="og:image" content="https://obster-y.github.io/imgs/Programming/30dayinlc/30d-in-Leetcode-05-3SC-LC.png">
+<meta property="og:image" content="https://obster-y.github.io/imgs/Programming/30dayinlc/30d-in-Leetcode-06-BTST-3.png">
+<meta property="og:image" content="https://obster-y.github.io/imgs/Programming/30dayinlc/30d-in-Leetcode-07-M2SL.png">
+<meta property="og:image" content="https://obster-y.github.io/imgs/Programming/30dayinlc/30d-in-Leetcode-08-RDSL.png">
+<meta property="og:image" content="https://obster-y.github.io/imgs/Programming/30dayinlc/30d-in-Leetcode-09-LLC.png">
+<meta property="og:image" content="https://obster-y.github.io/imgs/Programming/30dayinlc/30d-in-Leetcode-10-Add-2-Nums.png">
+<meta property="og:image" content="https://obster-y.github.io/imgs/Programming/30dayinlc/30d-in-Leetcode-11-Remove-Nth-Node-from-End.png">
+<meta property="og:image" content="https://obster-y.github.io/imgs/Programming/30dayinlc/30d-in-Leetcode-12-Merge-K-Sorted-Lists.png">
+<meta property="og:image" content="https://obster-y.github.io/imgs/Programming/30dayinlc/30d-in-Leetcode-13-roman-to-integer.png">
+<meta property="og:image" content="https://obster-y.github.io/imgs/Programming/30dayinlc/30d-in-Leetcode-14-longest-common-prefix.png">
+<meta property="og:image" content="https://obster-y.github.io/imgs/Programming/30dayinlc/30d-in-Leetcode-15-valid-parentheses.png">
+<meta property="og:image" content="https://obster-y.github.io/imgs/Programming/30dayinlc/30d-in-Leetcode-16-LSWPC.png">
+<meta property="og:image" content="https://obster-y.github.io/imgs/Programming/30dayinlc/30d-in-Leetcode-17-LPC.png">
+<meta property="og:image" content="https://obster-y.github.io/imgs/Programming/30dayinlc/30d-in-Leetcode-18-REXP.png">
+<meta property="og:image" content="https://obster-y.github.io/imgs/Programming/30dayinlc/30d-in-Leetcode-19-Same-Tree.png">
+<meta property="og:image" content="https://obster-y.github.io/imgs/Programming/30dayinlc/30d-in-Leetcode-20-Symmetric-Tree.png">
+<meta property="og:image" content="https://obster-y.github.io/imgs/Programming/30dayinlc/30d-in-Leetcode-21-Maximum-Depth-of-BT.png">
+<meta property="og:image" content="https://obster-y.github.io/imgs/Programming/30dayinlc/30d-in-Leetcode-22-BT-Inorder-Traversal.png">
+<meta property="og:image" content="https://obster-y.github.io/imgs/Programming/30dayinlc/30d-in-Leetcode-23-Unique-BST-II.png">
+<meta property="og:image" content="https://obster-y.github.io/imgs/Programming/30dayinlc/30d-in-Leetcode-24-Recover-BST.png">
+<meta property="og:image" content="https://obster-y.github.io/imgs/Programming/30dayinlc/30d-in-Leetcode-25-Best-Time-to-B-S-Stocks-2.png">
+<meta property="og:image" content="https://obster-y.github.io/imgs/Programming/30dayinlc/30d-in-Leetcode-26-Is-Subsequence.png">
+<meta property="og:image" content="https://obster-y.github.io/imgs/Programming/30dayinlc/30d-in-Leetcode-27-Assign-Cookies.png">
+<meta property="og:image" content="https://obster-y.github.io/imgs/Programming/30dayinlc/30d-in-Leetcode-28-Jump-Game.png">
+<meta property="og:image" content="https://obster-y.github.io/imgs/Programming/30dayinlc/30d-in-Leetcode-29-Gas-Station.png">
+<meta property="og:image" content="https://obster-y.github.io/imgs/Programming/30dayinlc/30d-in-Leetcode-30-Wildcard-Matching.png">
+<meta property="article:published_time" content="2020-02-29T07:59:55.000Z">
+<meta property="article:modified_time" content="2021-05-26T09:18:26.050Z">
+<meta property="article:author" content="Obster-Y">
+<meta property="article:tag" content="Algorithm">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://obster-y.github.io/imgs/Programming/30dayinlc/30d-in-Leetcode-01-Two-Sum-LC.png">
+
+
+<link rel="canonical" href="https://obster-y.github.io/posts/c4304785-bbc2-11eb-8847-0772b2ac4cf2/">
+
+
+<script class="page-configurations">
+  // https://hexo.io/docs/variables.html
+  CONFIG.page = {
+    sidebar: "",
+    isHome : false,
+    isPost : true,
+    lang   : 'en'
+  };
+</script>
+<title>30 days in Leetcode (Basic Algorithm) | Obster-Y's Blog</title>
+  
+
+
+
+  <noscript>
+  <style>
+  body { margin-top: 2rem; }
+
+  .use-motion .menu-item,
+  .use-motion .sidebar,
+  .use-motion .post-block,
+  .use-motion .pagination,
+  .use-motion .comments,
+  .use-motion .post-header,
+  .use-motion .post-body,
+  .use-motion .collection-header {
+    visibility: visible;
+  }
+
+  .use-motion .header,
+  .use-motion .site-brand-container .toggle,
+  .use-motion .footer { opacity: initial; }
+
+  .use-motion .site-title,
+  .use-motion .site-subtitle,
+  .use-motion .custom-logo-image {
+    opacity: initial;
+    top: initial;
+  }
+
+  .use-motion .logo-line {
+    transform: scaleX(1);
+  }
+
+  .search-pop-overlay, .sidebar-nav { display: none; }
+  .sidebar-panel { display: block; }
+  </style>
+</noscript>
+
+<!-- hexo injector head_end start -->
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.12.0/dist/katex.min.css">
+<!-- hexo injector head_end end --><style>mjx-container[jax="SVG"] {
+  direction: ltr;
+}
+
+mjx-container[jax="SVG"] > svg {
+  overflow: visible;
+}
+
+mjx-container[jax="SVG"] > svg a {
+  fill: blue;
+  stroke: blue;
+}
+
+mjx-container[jax="SVG"][display="true"] {
+  display: block;
+  text-align: center;
+  margin: 1em 0;
+}
+
+mjx-container[jax="SVG"][justify="left"] {
+  text-align: left;
+}
+
+mjx-container[jax="SVG"][justify="right"] {
+  text-align: right;
+}
+
+g[data-mml-node="merror"] > g {
+  fill: red;
+  stroke: red;
+}
+
+g[data-mml-node="merror"] > rect[data-background] {
+  fill: yellow;
+  stroke: none;
+}
+
+g[data-mml-node="mtable"] > line[data-line] {
+  stroke-width: 70px;
+  fill: none;
+}
+
+g[data-mml-node="mtable"] > rect[data-frame] {
+  stroke-width: 70px;
+  fill: none;
+}
+
+g[data-mml-node="mtable"] > .mjx-dashed {
+  stroke-dasharray: 140;
+}
+
+g[data-mml-node="mtable"] > .mjx-dotted {
+  stroke-linecap: round;
+  stroke-dasharray: 0,140;
+}
+
+g[data-mml-node="mtable"] > svg {
+  overflow: visible;
+}
+
+[jax="SVG"] mjx-tool {
+  display: inline-block;
+  position: relative;
+  width: 0;
+  height: 0;
+}
+
+[jax="SVG"] mjx-tool > mjx-tip {
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+mjx-tool > mjx-tip {
+  display: inline-block;
+  padding: .2em;
+  border: 1px solid #888;
+  font-size: 70%;
+  background-color: #F8F8F8;
+  color: black;
+  box-shadow: 2px 2px 5px #AAAAAA;
+}
+
+g[data-mml-node="maction"][data-toggle] {
+  cursor: pointer;
+}
+
+mjx-status {
+  display: block;
+  position: fixed;
+  left: 1em;
+  bottom: 1em;
+  min-width: 25%;
+  padding: .2em .4em;
+  border: 1px solid #888;
+  font-size: 90%;
+  background-color: #F8F8F8;
+  color: black;
+}
+
+foreignObject[data-mjx-xml] {
+  font-family: initial;
+  line-height: normal;
+  overflow: visible;
+}
+
+.MathJax path {
+  stroke-width: 3;
+}
+
+mjx-container[display="true"] {
+  overflow: auto hidden;
+}
+
+mjx-container[display="true"] + br {
+  display: none;
+}
+</style><link rel="alternate" href="/atom.xml" title="Obster-Y's Blog" type="application/atom+xml"><!-- hexo-inject:begin --><!-- hexo-inject:end -->
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage" class="use-motion">
+  <!-- hexo-inject:begin --><!-- hexo-inject:end --><div class="headband"></div>
+
+  <main class="main">
+    <header class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-container">
+  <div class="site-nav-toggle">
+    <div class="toggle" aria-label="Toggle navigation bar">
+        <span class="toggle-line"></span>
+        <span class="toggle-line"></span>
+        <span class="toggle-line"></span>
+    </div>
+  </div>
+
+  <div class="site-meta">
+
+    <a href="/" class="brand" rel="start">
+      <i class="logo-line"></i>
+      <h1 class="site-title">Obster-Y's Blog</h1>
+      <i class="logo-line"></i>
+    </a>
+      <p class="site-subtitle" itemprop="description">A useless site</p>
+  </div>
+
+  <div class="site-nav-right">
+    <div class="toggle popup-trigger">
+        <i class="fa fa-search fa-fw fa-lg"></i>
+    </div>
+  </div>
+</div>
+
+
+
+<nav class="site-nav">
+  <ul class="main-menu menu">
+        <li class="menu-item menu-item-home"><a href="/" rel="section"><i class="fa fa-home fa-fw"></i>Home</a></li>
+        <li class="menu-item menu-item-tags"><a href="/tags/" rel="section"><i class="fa fa-tags fa-fw"></i>Tags</a></li>
+        <li class="menu-item menu-item-categories"><a href="/categories/" rel="section"><i class="fa fa-th fa-fw"></i>Categories</a></li>
+        <li class="menu-item menu-item-series"><a href="/series/" rel="section"><i class="fa fa-list fa-fw"></i>Series</a></li>
+        <li class="menu-item menu-item-archives"><a href="/archives/" rel="section"><i class="fa fa-archive fa-fw"></i>Archives</a></li>
+        <li class="menu-item menu-item-about"><a href="/about/" rel="section"><i class="fa fa-user fa-fw"></i>About</a></li>
+        <li class="menu-item menu-item-english"><a href="https://obster-y.github.io/" rel="section"><i class="fa fa-globe fa-fw"></i>English</a></li>
+        <li class="menu-item menu-item-简体中文"><a href="https://obster-y.github.io/zh-cn/" rel="section"><i class="fa fa-globe fa-fw"></i>简体中文</a></li>
+      <li class="menu-item menu-item-search">
+        <a role="button" class="popup-trigger"><i class="fa fa-search fa-fw"></i>Search
+        </a>
+      </li>
+  </ul>
+</nav>
+
+
+
+  <div class="search-pop-overlay">
+    <div class="popup search-popup"><div class="search-header">
+  <span class="search-icon">
+    <i class="fa fa-search"></i>
+  </span>
+  <div class="search-input-container">
+    <input autocomplete="off" autocapitalize="off" maxlength="80"
+           placeholder="Searching..." spellcheck="false"
+           type="search" class="search-input">
+  </div>
+  <span class="popup-btn-close">
+    <i class="fa fa-times-circle"></i>
+  </span>
+</div>
+<div class="search-result-container no-result">
+  <div class="search-result-icon">
+    <i class="fa fa-spinner fa-pulse fa-5x"></i>
+  </div>
+</div>
+
+    </div>
+  </div>
+
+</div>
+        
+  
+  <div class="toggle sidebar-toggle">
+    <span class="toggle-line"></span>
+    <span class="toggle-line"></span>
+    <span class="toggle-line"></span>
+  </div>
+
+  <aside class="sidebar">
+
+    <div class="sidebar-inner sidebar-overview-active">
+      <ul class="sidebar-nav">
+        <li class="sidebar-nav-toc">
+          Table of Contents
+        </li>
+        <li class="sidebar-nav-overview">
+          Overview
+        </li>
+      </ul>
+
+      <div class="sidebar-panel-container">
+        <!--noindex-->
+        <section class="post-toc-wrap sidebar-panel">
+        </section>
+        <!--/noindex-->
+
+        <section class="site-overview-wrap sidebar-panel">
+          <div class="site-author site-overview-item animated" itemprop="author" itemscope itemtype="http://schema.org/Person">
+    <img class="site-author-image" itemprop="image" alt="Obster-Y"
+      src="/images/t1.jpg">
+  <p class="site-author-name" itemprop="name">Obster-Y</p>
+  <div class="site-description" itemprop="description"></div>
+</div>
+<div class="site-state-wrap site-overview-item animated">
+  <nav class="site-state">
+      <div class="site-state-item site-state-posts">
+          <a href="/archives/">
+        
+          <span class="site-state-item-count">45</span>
+          <span class="site-state-item-name">posts</span>
+        </a>
+      </div>
+      <div class="site-state-item site-state-categories">
+            <a href="/categories/">
+          
+        <span class="site-state-item-count">6</span>
+        <span class="site-state-item-name">categories</span></a>
+      </div>
+      <div class="site-state-item site-state-tags">
+            <a href="/tags/">
+          
+        <span class="site-state-item-count">19</span>
+        <span class="site-state-item-name">tags</span></a>
+      </div>
+  </nav>
+</div>
+  <div class="links-of-author site-overview-item animated">
+      <span class="links-of-author-item">
+        <a href="https://github.com/obster-y" title="GitHub → https:&#x2F;&#x2F;github.com&#x2F;obster-y" rel="noopener external nofollow noreferrer" target="_blank"><i class="fab fa-github fa-fw"></i>GitHub</a>
+      </span>
+  </div>
+
+
+
+        </section>
+      </div>
+        <div class="back-to-top animated">
+          <i class="fa fa-arrow-up"></i>
+          <span>0%</span>
+        </div>
+    </div>
+  </aside>
+  <div class="sidebar-dimmer"></div>
+
+
+    </header>
+
+    
+  <div class="reading-progress-bar"></div>
+
+  <a href="https://github.com/obster-y" class="github-corner" rel="noopener external nofollow noreferrer" target="_blank"><svg width="80" height="80" viewBox="0 0 250 250" aria-hidden="true"><path d="M0,0 L115,115 L130,115 L142,142 L250,250 L250,0 Z"></path><path d="M128.3,109.0 C113.8,99.7 119.0,89.6 119.0,89.6 C122.0,82.7 120.5,78.6 120.5,78.6 C119.2,72.0 123.4,76.3 123.4,76.3 C127.3,80.9 125.5,87.3 125.5,87.3 C122.9,97.6 130.6,101.9 134.4,103.2" fill="currentColor" style="transform-origin: 130px 106px;" class="octo-arm"></path><path d="M115.0,115.0 C114.9,115.1 118.7,116.5 119.8,115.4 L133.7,101.6 C136.9,99.2 139.9,98.4 142.2,98.6 C133.8,88.0 127.5,74.4 143.8,58.0 C148.5,53.4 154.0,51.2 159.7,51.0 C160.3,49.4 163.2,43.6 171.4,40.1 C171.4,40.1 176.1,42.5 178.8,56.2 C183.1,58.6 187.2,61.8 190.9,65.4 C194.5,69.0 197.7,73.2 200.1,77.6 C213.8,80.2 216.3,84.9 216.3,84.9 C212.7,93.1 206.9,96.0 205.4,96.6 C205.1,102.4 203.0,107.8 198.3,112.5 C181.9,128.9 168.3,122.5 157.7,114.1 C157.9,116.9 156.7,120.9 152.7,124.9 L141.0,136.5 C139.8,137.7 141.6,141.9 141.8,141.8 Z" fill="currentColor" class="octo-body"></path></svg></a>
+
+<noscript>
+  <div class="noscript-warning">Theme NexT works best with JavaScript enabled</div>
+</noscript>
+
+
+    <div class="main-inner post posts-expand">
+
+
+  
+
+
+<div class="post-block">
+  
+  
+
+  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="en">
+    <link itemprop="mainEntityOfPage" href="https://obster-y.github.io/posts/c4304785-bbc2-11eb-8847-0772b2ac4cf2/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/t1.jpg">
+      <meta itemprop="name" content="Obster-Y">
+      <meta itemprop="description" content="">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Obster-Y's Blog">
+    </span>
+      <header class="post-header">
+        <h1 class="post-title" itemprop="name headline">
+          30 days in Leetcode (Basic Algorithm)
+        </h1>
+
+        <div class="post-meta-container">
+          <div class="post-meta">
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar"></i>
+      </span>
+      <span class="post-meta-item-text">Posted on</span>
+
+      <time title="Created: 2020-02-29 15:59:55" itemprop="dateCreated datePublished" datetime="2020-02-29T15:59:55+08:00">2020-02-29</time>
+    </span>
+      <span class="post-meta-item">
+        <span class="post-meta-item-icon">
+          <i class="far fa-calendar-check"></i>
+        </span>
+        <span class="post-meta-item-text">Edited on</span>
+        <time title="Modified: 2021-05-26 17:18:26" itemprop="dateModified" datetime="2021-05-26T17:18:26+08:00">2021-05-26</time>
+      </span>
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-folder"></i>
+      </span>
+      <span class="post-meta-item-text">In</span>
+        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+          <a href="/categories/Programming/" itemprop="url" rel="index"><span itemprop="name">Programming</span></a>
+        </span>
+    </span>
+
+
+  
+    <span class="post-meta-item" title="Views" id="busuanzi_container_page_pv" style="display: none;">
+      <span class="post-meta-item-icon">
+        <i class="far fa-eye"></i>
+      </span>
+      <span class="post-meta-item-text">Views: </span>
+      <span id="busuanzi_value_page_pv"></span>
+    </span>
+</div>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+        <p>First day of Basic Algorithm training in Leetcode.<br><a target="_blank" rel="noopener external nofollow noreferrer" href="https://leetcode.com/problems/two-sum/">Two Sum</a></p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Solution</span>:</span></span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">twoSum</span>(<span class="params">self, nums: List[<span class="built_in">int</span>], target: <span class="built_in">int</span></span>) -&gt; List[int]:</span></span><br><span class="line">        <span class="keyword">if</span> <span class="built_in">len</span>(nums) &lt; <span class="number">2</span>: <span class="keyword">return</span> []</span><br><span class="line">        dic = &#123;&#125;</span><br><span class="line">        <span class="keyword">for</span> i, e <span class="keyword">in</span> <span class="built_in">enumerate</span>(nums):</span><br><span class="line">            <span class="keyword">if</span> e <span class="keyword">in</span> dic:</span><br><span class="line">                <span class="keyword">return</span> [dic[e], i]</span><br><span class="line">            dic[target - e] = i</span><br></pre></td></tr></table></figure>
+<p><img src="/imgs/Programming/30dayinlc/30d-in-Leetcode-01-Two-Sum-LC.png" alt=""><br><a id="more"></a></p>
+<hr>
+<p>2nd day of Basic Algorithm training in Leetcode.<br><a target="_blank" rel="noopener external nofollow noreferrer" href="https://leetcode.com/problems/remove-duplicates-from-sorted-array/">Remove-duplicates-from-sorted-array</a><br><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Solution</span>:</span></span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">removeDuplicates</span>(<span class="params">self, nums: List[<span class="built_in">int</span>]</span>) -&gt; int:</span></span><br><span class="line">        _ = <span class="built_in">len</span>(nums)</span><br><span class="line">        <span class="keyword">if</span> _ &lt; <span class="number">2</span>: <span class="keyword">return</span> _</span><br><span class="line">        i = <span class="number">0</span></span><br><span class="line">        <span class="keyword">for</span> j xrange(<span class="number">1</span>,_):</span><br><span class="line">            <span class="keyword">if</span> nums[j] != nums[i]:</span><br><span class="line">                i += <span class="number">1</span></span><br><span class="line">                nums[i] = nums[j]</span><br><span class="line">        <span class="keyword">return</span> i+<span class="number">1</span></span><br></pre></td></tr></table></figure></p>
+<p><img src="/imgs/Programming/30dayinlc/30d-in-Leetcode-02-Rm-Dup-LC.png" alt=""></p>
+<hr>
+<p>3rd day of Basic Algorithm training in Leetcode.<br><a target="_blank" rel="noopener external nofollow noreferrer" href="https://leetcode.com/problems/remove-element/">Remove-element</a><br><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Solution</span>:</span></span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">removeElement</span>(<span class="params">self, nums: List[<span class="built_in">int</span>], val: <span class="built_in">int</span></span>) -&gt; int:</span></span><br><span class="line">        <span class="keyword">while</span> val <span class="keyword">in</span> nums: nums.remove(val)</span><br><span class="line">        <span class="keyword">return</span> <span class="built_in">len</span>(nums)</span><br></pre></td></tr></table></figure></p>
+<p><img src="/imgs/Programming/30dayinlc/30d-in-Leetcode-03-Rm-El-LC.png" alt=""></p>
+<hr>
+<p>4th day of Basic Algorithm training in Leetcode.<br><a target="_blank" rel="noopener external nofollow noreferrer" href="https://leetcode.com/problems/3sum/">3sum</a><br><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Solution</span>:</span></span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">threeSum</span>(<span class="params">self, nums: List[<span class="built_in">int</span>]</span>) -&gt; List[List[int]]:</span></span><br><span class="line">        l = <span class="built_in">len</span>(nums)</span><br><span class="line">        <span class="keyword">if</span> l &lt; <span class="number">3</span>: <span class="keyword">return</span> []</span><br><span class="line">        nums.sort()</span><br><span class="line">        res = []</span><br><span class="line">        <span class="keyword">for</span> pt <span class="keyword">in</span> <span class="built_in">range</span>(l - <span class="number">2</span>):</span><br><span class="line">            <span class="keyword">if</span> nums[pt] &gt; <span class="number">0</span>: <span class="keyword">break</span></span><br><span class="line">            <span class="keyword">if</span> pt &gt; <span class="number">0</span> <span class="keyword">and</span> nums[pt] == nums[pt - <span class="number">1</span>]: <span class="keyword">continue</span></span><br><span class="line">            lf, rg = pt + <span class="number">1</span>, l - <span class="number">1</span></span><br><span class="line">            <span class="keyword">while</span> lf &lt; rg:</span><br><span class="line">                _ = nums[lf] + nums[rg] + nums[pt]</span><br><span class="line">                <span class="keyword">if</span> _ &lt; <span class="number">0</span>:</span><br><span class="line">                    lf += <span class="number">1</span></span><br><span class="line">                <span class="keyword">elif</span> _ &gt; <span class="number">0</span>:</span><br><span class="line">                    rg -= <span class="number">1</span></span><br><span class="line">                <span class="keyword">else</span>:</span><br><span class="line">                    res.append([nums[lf], nums[rg], nums[pt]])</span><br><span class="line">                    <span class="keyword">while</span> lf &lt; rg <span class="keyword">and</span> nums[lf] == nums[lf + <span class="number">1</span>]:</span><br><span class="line">                        lf += <span class="number">1</span></span><br><span class="line">                    <span class="keyword">while</span> lf &lt; rg <span class="keyword">and</span> nums[rg] == nums[rg - <span class="number">1</span>]:</span><br><span class="line">                        rg -= <span class="number">1</span></span><br><span class="line">                    lf += <span class="number">1</span></span><br><span class="line">                    rg -= <span class="number">1</span></span><br><span class="line">        <span class="keyword">return</span>(res)</span><br></pre></td></tr></table></figure></p>
+<p><img src="/imgs/Programming/30dayinlc/30d-in-Leetcode-04-3S-LC.png" alt=""></p>
+<hr>
+<p>5th day of Basic Algorithm training in Leetcode.<br><a target="_blank" rel="noopener external nofollow noreferrer" href="https://leetcode.com/problems/3sum-closest/">3sum closest</a><br><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Solution</span>:</span></span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">threeSumClosest</span>(<span class="params">self, nums: [<span class="built_in">int</span>], target: <span class="built_in">int</span></span>) -&gt; int:</span></span><br><span class="line">        l = <span class="built_in">len</span>(nums)</span><br><span class="line">        <span class="keyword">if</span> l &lt; <span class="number">3</span>: <span class="keyword">return</span> []</span><br><span class="line">        nums.sort()</span><br><span class="line">        res = []</span><br><span class="line"></span><br><span class="line">        lastsum = nums[<span class="number">0</span>] + nums[<span class="number">1</span>] + nums[-<span class="number">1</span>]</span><br><span class="line">        _ = lastsum</span><br><span class="line"></span><br><span class="line">        <span class="keyword">for</span> pt <span class="keyword">in</span> <span class="built_in">range</span>(l - <span class="number">2</span>):</span><br><span class="line">            lf, rg = pt + <span class="number">1</span>, l - <span class="number">1</span></span><br><span class="line">            <span class="keyword">if</span> pt &gt; <span class="number">0</span> <span class="keyword">and</span> nums[pt] == nums[pt - <span class="number">1</span>]: <span class="keyword">continue</span></span><br><span class="line">            <span class="keyword">while</span> lf &lt; rg:</span><br><span class="line">                _ = nums[lf] + nums[rg] + nums[pt]</span><br><span class="line">                <span class="keyword">if</span> _ == target:</span><br><span class="line">                    <span class="keyword">return</span> target</span><br><span class="line">                <span class="keyword">if</span> <span class="built_in">abs</span>(lastsum - target) &gt; <span class="built_in">abs</span>(_ - target):</span><br><span class="line">                    lastsum = _</span><br><span class="line">                <span class="keyword">if</span> _ &lt; target:</span><br><span class="line">                    lf += <span class="number">1</span></span><br><span class="line">                <span class="keyword">elif</span> _ &gt; target:</span><br><span class="line">                    rg -= <span class="number">1</span></span><br><span class="line">        <span class="keyword">return</span> lastsum</span><br></pre></td></tr></table></figure></p>
+<p><img src="/imgs/Programming/30dayinlc/30d-in-Leetcode-05-3SC-LC.png" alt=""></p>
+<hr>
+<p>6th day of Basic Algorithm training in Leetcode.<br><a target="_blank" rel="noopener external nofollow noreferrer" href="https://leetcode.com/problems/best-time-to-buy-and-sell-stock-iii/">Best Time to Buy and Sell Stock III</a><br><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">from</span> sys <span class="keyword">import</span> maxsize</span><br><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Solution</span>:</span></span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">maxProfit</span>(<span class="params">self, prices: List[<span class="built_in">int</span>]</span>) -&gt; int:</span></span><br><span class="line">        <span class="keyword">if</span> <span class="keyword">not</span> prices: <span class="keyword">return</span> <span class="number">0</span> </span><br><span class="line">        s1 = s2 = <span class="number">0</span></span><br><span class="line">        b1 = b2 = -maxsize</span><br><span class="line">        <span class="keyword">for</span> e <span class="keyword">in</span> prices:</span><br><span class="line">            s2 = <span class="built_in">max</span>(s2, b2 + e)</span><br><span class="line">            b2 = <span class="built_in">max</span>(b2, s1 - e)</span><br><span class="line">            s1 = <span class="built_in">max</span>(s1, b1 + e)</span><br><span class="line">            b1 = <span class="built_in">max</span>(b1, -e)</span><br><span class="line">        <span class="keyword">return</span> s2</span><br></pre></td></tr></table></figure></p>
+<p><img src="/imgs/Programming/30dayinlc/30d-in-Leetcode-06-BTST-3.png" alt=""></p>
+<hr>
+<p>7th day of Basic Algorithm training in Leetcode.<br><a target="_blank" rel="noopener external nofollow noreferrer" href="https://leetcode.com/problems/merge-two-sorted-lists/">Merge Two Sorted Lists</a></p>
+<p>Solution 1<br><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># Definition for singly-linked list.</span></span><br><span class="line"><span class="comment"># class ListNode:</span></span><br><span class="line"><span class="comment">#     def __init__(self, x):</span></span><br><span class="line"><span class="comment">#         self.val = x</span></span><br><span class="line"><span class="comment">#         self.next = None</span></span><br><span class="line"></span><br><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Solution</span>:</span></span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">mergeTwoLists</span>(<span class="params">self, l1: ListNode, l2: ListNode</span>) -&gt; ListNode:</span></span><br><span class="line">        <span class="keyword">if</span> l1 <span class="keyword">and</span> l2:</span><br><span class="line">            <span class="keyword">if</span> l1.val &gt; l2.val:</span><br><span class="line">                l1, l2 = l2, l1</span><br><span class="line">            l1.<span class="built_in">next</span> = self.mergeTwoLists(l1.<span class="built_in">next</span>, l2)</span><br><span class="line">        <span class="keyword">return</span> l1 <span class="keyword">or</span> l2</span><br></pre></td></tr></table></figure><br>Solution 2<br><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Solution</span>:</span></span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">mergeTwoLists</span>(<span class="params">self, l1: ListNode, l2: ListNode</span>) -&gt; ListNode:</span></span><br><span class="line">        <span class="keyword">if</span> <span class="literal">None</span> <span class="keyword">in</span> (l1, l2):</span><br><span class="line">            <span class="keyword">return</span> l1 <span class="keyword">or</span> l2</span><br><span class="line">        n0 = cur = ListNode(<span class="literal">None</span>)</span><br><span class="line">        n0.<span class="built_in">next</span> = l1</span><br><span class="line">        <span class="keyword">while</span> l1 <span class="keyword">and</span> l2:</span><br><span class="line">            <span class="keyword">if</span> l1.val &lt; l2.val:</span><br><span class="line">                l1 = l1.<span class="built_in">next</span></span><br><span class="line">            <span class="keyword">else</span>:</span><br><span class="line">                nxt = cur.<span class="built_in">next</span></span><br><span class="line">                cur.<span class="built_in">next</span> = l2</span><br><span class="line">                tmp = l2.<span class="built_in">next</span></span><br><span class="line">                l2.<span class="built_in">next</span> = nxt</span><br><span class="line">                l2 = tmp</span><br><span class="line">            cur = cur.<span class="built_in">next</span></span><br><span class="line">        cur.<span class="built_in">next</span> = l1 <span class="keyword">or</span> l2</span><br><span class="line">        <span class="keyword">return</span> n0.<span class="built_in">next</span></span><br></pre></td></tr></table></figure></p>
+<p><img src="/imgs/Programming/30dayinlc/30d-in-Leetcode-07-M2SL.png" alt=""></p>
+<hr>
+<p>8th day of Basic Algorithm training in Leetcode.<br><a target="_blank" rel="noopener external nofollow noreferrer" href="https://leetcode.com/problems/remove-duplicates-from-sorted-list/">Remove Duplicates from Sorted List</a></p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># Definition for singly-linked list.</span></span><br><span class="line"><span class="comment"># class ListNode:</span></span><br><span class="line"><span class="comment">#     def __init__(self, x):</span></span><br><span class="line"><span class="comment">#         self.val = x</span></span><br><span class="line"><span class="comment">#         self.next = None</span></span><br><span class="line"></span><br><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Solution</span>:</span></span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">deleteDuplicates</span>(<span class="params">self, head: ListNode</span>) -&gt; ListNode:</span></span><br><span class="line">        i, j = head, head.<span class="built_in">next</span> <span class="keyword">if</span> head <span class="keyword">else</span> <span class="literal">None</span></span><br><span class="line">        <span class="keyword">while</span> j:</span><br><span class="line">            <span class="keyword">if</span> i.val == j.val:</span><br><span class="line">                j = j.<span class="built_in">next</span></span><br><span class="line">                i.<span class="built_in">next</span> = j</span><br><span class="line">            <span class="keyword">else</span>:</span><br><span class="line">                i = j</span><br><span class="line">                j = i.<span class="built_in">next</span></span><br><span class="line">        <span class="keyword">return</span> head</span><br></pre></td></tr></table></figure>
+<p><img src="/imgs/Programming/30dayinlc/30d-in-Leetcode-08-RDSL.png" alt=""></p>
+<hr>
+<p>9th day of Basic Algorithm training in Leetcode.<br><a target="_blank" rel="noopener external nofollow noreferrer" href="https://leetcode.com/problems/linked-list-cycle/">Linked List Cycle</a></p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># Definition for singly-linked list.</span></span><br><span class="line"><span class="comment"># class ListNode:</span></span><br><span class="line"><span class="comment">#     def __init__(self, x):</span></span><br><span class="line"><span class="comment">#         self.val = x</span></span><br><span class="line"><span class="comment">#         self.next = None</span></span><br><span class="line"></span><br><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Solution</span>:</span></span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">hasCycle</span>(<span class="params">self, head: ListNode</span>) -&gt; bool:</span></span><br><span class="line">        <span class="keyword">if</span> <span class="keyword">not</span> head <span class="keyword">or</span> <span class="keyword">not</span> head.<span class="built_in">next</span>: <span class="keyword">return</span> <span class="literal">False</span></span><br><span class="line">        i, j = head, head.<span class="built_in">next</span></span><br><span class="line">        <span class="keyword">try</span>:</span><br><span class="line">            <span class="keyword">while</span> i <span class="keyword">is</span> <span class="keyword">not</span> j:</span><br><span class="line">                i = i.<span class="built_in">next</span></span><br><span class="line">                j = j.<span class="built_in">next</span>.<span class="built_in">next</span> </span><br><span class="line">            <span class="keyword">return</span> <span class="literal">True</span></span><br><span class="line">        <span class="keyword">except</span>:</span><br><span class="line">            <span class="keyword">return</span> <span class="literal">False</span></span><br></pre></td></tr></table></figure>
+<p><img src="/imgs/Programming/30dayinlc/30d-in-Leetcode-09-LLC.png" alt=""></p>
+<hr>
+<p>10th day of Basic Algorithm training in Leetcode.<br><a target="_blank" rel="noopener external nofollow noreferrer" href="https://leetcode.com/problems/add-two-numbers/">Add Two Numbers</a></p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># Definition for singly-linked list.</span></span><br><span class="line"><span class="comment"># class ListNode:</span></span><br><span class="line"><span class="comment">#     def __init__(self, x):</span></span><br><span class="line"><span class="comment">#         self.val = x</span></span><br><span class="line"><span class="comment">#         self.next = None</span></span><br><span class="line"></span><br><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Solution</span>:</span></span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">addTwoNumbers</span>(<span class="params">self, l1: ListNode, l2: ListNode</span>) -&gt; ListNode:</span></span><br><span class="line">        l3 = ListNode(<span class="number">0</span>)</span><br><span class="line">        rv = l3</span><br><span class="line">        i = j = <span class="number">0</span></span><br><span class="line">        <span class="keyword">while</span> l1 <span class="keyword">or</span> l2 <span class="keyword">or</span> i:</span><br><span class="line">            v1 = v2 = <span class="number">0</span></span><br><span class="line">            <span class="keyword">if</span> l1:</span><br><span class="line">                v1 = l1.val</span><br><span class="line">                l1 = l1.<span class="built_in">next</span></span><br><span class="line">            <span class="keyword">if</span> l2:</span><br><span class="line">                v2 = l2.val</span><br><span class="line">                l2 = l2.<span class="built_in">next</span></span><br><span class="line">            i, j = <span class="built_in">divmod</span>(v1 + v2 + i, <span class="number">10</span>)</span><br><span class="line">            l3.<span class="built_in">next</span> = ListNode(j)</span><br><span class="line">            l3 = l3.<span class="built_in">next</span></span><br><span class="line">        <span class="keyword">return</span> rv.<span class="built_in">next</span></span><br></pre></td></tr></table></figure>
+<p><img src="/imgs/Programming/30dayinlc/30d-in-Leetcode-10-Add-2-Nums.png" alt=""></p>
+<hr>
+<p>11th day of Basic Algorithm training in Leetcode.<br><a target="_blank" rel="noopener external nofollow noreferrer" href="https://leetcode.com/problems/remove-nth-node-from-end-of-list/">Remove Nth Node From End of List</a></p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># Definition for singly-linked list.</span></span><br><span class="line"><span class="comment"># class ListNode:</span></span><br><span class="line"><span class="comment">#     def __init__(self, x):</span></span><br><span class="line"><span class="comment">#         self.val = x</span></span><br><span class="line"><span class="comment">#         self.next = None</span></span><br><span class="line"></span><br><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Solution</span>:</span></span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">removeNthFromEnd</span>(<span class="params">self, head: ListNode, n: <span class="built_in">int</span></span>) -&gt; ListNode:</span></span><br><span class="line">        del_pt = ListNode(<span class="literal">None</span>)</span><br><span class="line">        del_pt.<span class="built_in">next</span> = head</span><br><span class="line">        rv = del_pt</span><br><span class="line">        j = <span class="number">0</span></span><br><span class="line">        <span class="keyword">while</span>(head):</span><br><span class="line">            <span class="keyword">if</span> j &gt;= n:</span><br><span class="line">                del_pt = del_pt.<span class="built_in">next</span></span><br><span class="line">            j += <span class="number">1</span></span><br><span class="line">            head = head.<span class="built_in">next</span></span><br><span class="line">        _ = del_pt.<span class="built_in">next</span>.<span class="built_in">next</span> <span class="keyword">if</span> del_pt.<span class="built_in">next</span>.<span class="built_in">next</span> <span class="keyword">else</span> <span class="literal">None</span></span><br><span class="line">        del_pt.<span class="built_in">next</span> = _ </span><br><span class="line">        <span class="keyword">return</span> rv.<span class="built_in">next</span></span><br></pre></td></tr></table></figure>
+<p><img src="/imgs/Programming/30dayinlc/30d-in-Leetcode-11-Remove-Nth-Node-from-End.png" alt=""></p>
+<hr>
+<p>12th day of Basic Algorithm training in Leetcode.<br><a target="_blank" rel="noopener external nofollow noreferrer" href="https://leetcode.com/problems/merge-k-sorted-lists/">Merge k Sorted Lists</a></p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># Definition for singly-linked list.</span></span><br><span class="line"><span class="comment"># class ListNode:</span></span><br><span class="line"><span class="comment">#     def __init__(self, x):</span></span><br><span class="line"><span class="comment">#         self.val = x</span></span><br><span class="line"><span class="comment">#         self.next = None</span></span><br><span class="line"><span class="keyword">import</span> heapq</span><br><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Solution</span>:</span></span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">mergeKLists</span>(<span class="params">self, lists: List[ListNode]</span>) -&gt; ListNode:</span></span><br><span class="line">        rv = ListNode(<span class="literal">None</span>)</span><br><span class="line">        pt = rv</span><br><span class="line">        h = []</span><br><span class="line">        <span class="keyword">for</span> n <span class="keyword">in</span> lists:</span><br><span class="line">            <span class="keyword">while</span> n:</span><br><span class="line">                heapq.heappush(h,n.val)</span><br><span class="line">                n = n.<span class="built_in">next</span></span><br><span class="line">        <span class="keyword">while</span> h:</span><br><span class="line">            val = heapq.heappop(h)</span><br><span class="line">            pt.<span class="built_in">next</span> = ListNode(val)</span><br><span class="line">            pt = pt.<span class="built_in">next</span></span><br><span class="line">        <span class="keyword">return</span> rv.<span class="built_in">next</span></span><br></pre></td></tr></table></figure>
+<p><img src="/imgs/Programming/30dayinlc/30d-in-Leetcode-12-Merge-K-Sorted-Lists.png" alt=""></p>
+<hr>
+<p>13th day of Basic Algorithm training in Leetcode.<br><a target="_blank" rel="noopener external nofollow noreferrer" href="https://leetcode.com/problems/roman-to-integer/">Roman to Integer</a></p>
+<p>Solution 1: Use RegularExpression module<br><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> re</span><br><span class="line">reg = re.<span class="built_in">compile</span>(<span class="string">r&#x27;IV|IX|XL|XC|CD|CM&#x27;</span>)</span><br><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Solution</span>:</span></span><br><span class="line">    romanValL = &#123;</span><br><span class="line">        <span class="string">&#x27;I&#x27;</span>:<span class="number">1</span>,</span><br><span class="line">        <span class="string">&#x27;V&#x27;</span>:<span class="number">5</span>,</span><br><span class="line">        <span class="string">&#x27;X&#x27;</span>:<span class="number">10</span>,</span><br><span class="line">        <span class="string">&#x27;L&#x27;</span>:<span class="number">50</span>,</span><br><span class="line">        <span class="string">&#x27;C&#x27;</span>:<span class="number">100</span>,</span><br><span class="line">        <span class="string">&#x27;D&#x27;</span>:<span class="number">500</span>,</span><br><span class="line">        <span class="string">&#x27;M&#x27;</span>:<span class="number">1000</span>,</span><br><span class="line">    &#125;</span><br><span class="line">    romanValH = &#123;</span><br><span class="line">        <span class="string">&#x27;IV&#x27;</span>:<span class="number">4</span>,</span><br><span class="line">        <span class="string">&#x27;IX&#x27;</span>:<span class="number">9</span>,</span><br><span class="line">        <span class="string">&#x27;XL&#x27;</span>:<span class="number">40</span>,</span><br><span class="line">        <span class="string">&#x27;XC&#x27;</span>:<span class="number">90</span>,</span><br><span class="line">        <span class="string">&#x27;CD&#x27;</span>:<span class="number">400</span>,</span><br><span class="line">        <span class="string">&#x27;CM&#x27;</span>:<span class="number">900</span>,</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">romanToInt</span>(<span class="params">self, s: <span class="built_in">str</span></span>) -&gt; int:</span></span><br><span class="line">        val = <span class="number">0</span></span><br><span class="line">        <span class="keyword">for</span> x <span class="keyword">in</span> reg.finditer(s):</span><br><span class="line">            val += self.romanValH[x[<span class="number">0</span>]]</span><br><span class="line">        <span class="keyword">if</span> val: s = re.sub(<span class="string">r&#x27;IV|IX|XL|XC|CD|CM&#x27;</span>, <span class="string">&#x27;&#x27;</span>, s)</span><br><span class="line">        <span class="keyword">for</span> x <span class="keyword">in</span> s:</span><br><span class="line">            val += self.romanValL[x]</span><br><span class="line">        <span class="keyword">return</span> val</span><br></pre></td></tr></table></figure></p>
+<p>Solution 2: Use plain replace method<br><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Solution</span>:</span></span><br><span class="line">    romanValL = &#123;</span><br><span class="line">        <span class="string">&#x27;I&#x27;</span>:<span class="number">1</span>,</span><br><span class="line">        <span class="string">&#x27;V&#x27;</span>:<span class="number">5</span>,</span><br><span class="line">        <span class="string">&#x27;X&#x27;</span>:<span class="number">10</span>,</span><br><span class="line">        <span class="string">&#x27;L&#x27;</span>:<span class="number">50</span>,</span><br><span class="line">        <span class="string">&#x27;C&#x27;</span>:<span class="number">100</span>,</span><br><span class="line">        <span class="string">&#x27;D&#x27;</span>:<span class="number">500</span>,</span><br><span class="line">        <span class="string">&#x27;M&#x27;</span>:<span class="number">1000</span>,</span><br><span class="line">    &#125;</span><br><span class="line">    romanValH = &#123;</span><br><span class="line">        <span class="string">&#x27;IV&#x27;</span>:<span class="number">4</span>,</span><br><span class="line">        <span class="string">&#x27;IX&#x27;</span>:<span class="number">9</span>,</span><br><span class="line">        <span class="string">&#x27;XL&#x27;</span>:<span class="number">40</span>,</span><br><span class="line">        <span class="string">&#x27;XC&#x27;</span>:<span class="number">90</span>,</span><br><span class="line">        <span class="string">&#x27;CD&#x27;</span>:<span class="number">400</span>,</span><br><span class="line">        <span class="string">&#x27;CM&#x27;</span>:<span class="number">900</span>,</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">romanToInt</span>(<span class="params">self, s: <span class="built_in">str</span></span>) -&gt; int:</span></span><br><span class="line">        val = <span class="number">0</span></span><br><span class="line">        <span class="keyword">for</span> x,v <span class="keyword">in</span> self.romanValH.items():</span><br><span class="line">            <span class="keyword">while</span> x <span class="keyword">in</span> s:</span><br><span class="line">                val += v</span><br><span class="line">                s = s.replace(x,<span class="string">&#x27;&#x27;</span>,<span class="number">1</span>)</span><br><span class="line">        <span class="keyword">for</span> x,v <span class="keyword">in</span> self.romanValL.items():</span><br><span class="line">            <span class="keyword">while</span> x <span class="keyword">in</span> s:</span><br><span class="line">                val += v</span><br><span class="line">                s = s.replace(x,<span class="string">&#x27;&#x27;</span>,<span class="number">1</span>)</span><br><span class="line">        <span class="keyword">return</span> val</span><br></pre></td></tr></table></figure></p>
+<p><img src="/imgs/Programming/30dayinlc/30d-in-Leetcode-13-roman-to-integer.png" alt=""></p>
+<hr>
+<p>14th day of Basic Algorithm training in Leetcode.<br><a target="_blank" rel="noopener external nofollow noreferrer" href="https://leetcode.com/problems/longest-common-prefix/">Longest Common Prefix</a></p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Solution</span>:</span></span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">longestCommonPrefix</span>(<span class="params">self, strs: List[<span class="built_in">str</span>]</span>) -&gt; str:</span></span><br><span class="line">        <span class="keyword">if</span> <span class="keyword">not</span> strs: <span class="keyword">return</span> <span class="string">&quot;&quot;</span></span><br><span class="line">        s_max, s_min = <span class="built_in">max</span>(strs), <span class="built_in">min</span>(strs)</span><br><span class="line">        </span><br><span class="line">        <span class="keyword">for</span> i, v <span class="keyword">in</span> <span class="built_in">enumerate</span>(s_min):</span><br><span class="line">            <span class="keyword">if</span> s_max[i] != v:</span><br><span class="line">                <span class="keyword">return</span> s_min[:i]</span><br><span class="line">        <span class="keyword">return</span> s_min</span><br></pre></td></tr></table></figure>
+<p><img src="/imgs/Programming/30dayinlc/30d-in-Leetcode-14-longest-common-prefix.png" alt=""></p>
+<hr>
+<p>15th day of Basic Algorithm training in Leetcode.<br><a target="_blank" rel="noopener external nofollow noreferrer" href="https://leetcode.com/problems/valid-parentheses/">Valid Parentheses</a></p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Solution</span>:</span></span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">isValid</span>(<span class="params">self, s: <span class="built_in">str</span></span>) -&gt; bool:</span></span><br><span class="line">        <span class="keyword">if</span> <span class="built_in">len</span>(s) % <span class="number">2</span>:</span><br><span class="line">            <span class="keyword">return</span> <span class="literal">False</span></span><br><span class="line">        v = []</span><br><span class="line">        d = &#123;</span><br><span class="line">            <span class="string">&#x27;&#125;&#x27;</span>: <span class="string">&#x27;&#123;&#x27;</span>,</span><br><span class="line">            <span class="string">&#x27;)&#x27;</span>: <span class="string">&#x27;(&#x27;</span>,</span><br><span class="line">            <span class="string">&#x27;]&#x27;</span>: <span class="string">&#x27;[&#x27;</span>,</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">for</span> e <span class="keyword">in</span> s:</span><br><span class="line">            <span class="keyword">if</span> e <span class="keyword">in</span> [<span class="string">&#x27;(&#x27;</span>,<span class="string">&#x27;[&#x27;</span>,<span class="string">&#x27;&#123;&#x27;</span>]:</span><br><span class="line">                v.append(e)</span><br><span class="line">            <span class="keyword">elif</span> <span class="keyword">not</span> v <span class="keyword">or</span> v.pop() != d[e]:</span><br><span class="line">                <span class="keyword">return</span> <span class="literal">False</span></span><br><span class="line">        <span class="keyword">return</span> <span class="keyword">not</span> v</span><br></pre></td></tr></table></figure>
+<p><img src="/imgs/Programming/30dayinlc/30d-in-Leetcode-15-valid-parentheses.png" alt=""></p>
+<hr>
+<p>16th day of Basic Algorithm training in Leetcode.<br><a target="_blank" rel="noopener external nofollow noreferrer" href="https://leetcode.com/problems/longest-substring-without-repeating-characters/">Longest Substring Without Repeating Characters</a></p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Solution</span>:</span></span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">lengthOfLongestSubstring</span>(<span class="params">self, s: <span class="built_in">str</span></span>) -&gt; int:</span></span><br><span class="line">        <span class="keyword">if</span> <span class="keyword">not</span> s: <span class="keyword">return</span> <span class="number">0</span></span><br><span class="line">        l = &#123;&#125;</span><br><span class="line">        st = m = <span class="number">0</span></span><br><span class="line">        <span class="keyword">for</span> i, e <span class="keyword">in</span> <span class="built_in">enumerate</span>(s):</span><br><span class="line">            <span class="keyword">if</span> e <span class="keyword">in</span> l: </span><br><span class="line">                st = <span class="built_in">max</span>(st, l[e] + <span class="number">1</span>)</span><br><span class="line">            m = <span class="built_in">max</span>(m, i - st + <span class="number">1</span>)</span><br><span class="line">            l[e] = i</span><br><span class="line">        <span class="keyword">return</span> m</span><br></pre></td></tr></table></figure>
+<p><img src="/imgs/Programming/30dayinlc/30d-in-Leetcode-16-LSWPC.png" alt=""></p>
+<hr>
+<p>17th day of Basic Algorithm training in Leetcode.<br><a target="_blank" rel="noopener external nofollow noreferrer" href="https://leetcode.com/problems/longest-palindromic-substring/">Longest Palindromic Substring</a></p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Solution</span>:</span></span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">longestPalindrome</span>(<span class="params">self, s: <span class="built_in">str</span></span>) -&gt; str:</span></span><br><span class="line">        l = <span class="built_in">len</span>(s)</span><br><span class="line">        <span class="keyword">if</span> l &lt;= <span class="number">1</span>: <span class="keyword">return</span> s</span><br><span class="line">        tl = <span class="number">1</span></span><br><span class="line">        j = <span class="number">1</span></span><br><span class="line">        rv = s[<span class="number">0</span>]</span><br><span class="line">        <span class="keyword">for</span> i <span class="keyword">in</span> <span class="built_in">range</span>(l):</span><br><span class="line">            <span class="keyword">if</span> i-tl &gt;= <span class="number">1</span> <span class="keyword">and</span> s[i - tl - <span class="number">1</span>: i + <span class="number">1</span>]==s[i - tl - <span class="number">1</span>: i + <span class="number">1</span>][::-<span class="number">1</span>]:</span><br><span class="line">                j = i - tl - <span class="number">1</span></span><br><span class="line">                tl += <span class="number">2</span></span><br><span class="line">                <span class="keyword">continue</span></span><br><span class="line"></span><br><span class="line">            <span class="keyword">if</span> i - tl &gt;= <span class="number">0</span> <span class="keyword">and</span> s[i - tl: i + <span class="number">1</span>] == s[i - tl: i + <span class="number">1</span>][::-<span class="number">1</span>]:</span><br><span class="line">                j = i - tl</span><br><span class="line">                tl += <span class="number">1</span></span><br><span class="line">        <span class="keyword">return</span> s[j: j + tl]</span><br></pre></td></tr></table></figure>
+<p><img src="/imgs/Programming/30dayinlc/30d-in-Leetcode-17-LPC.png" alt=""></p>
+<hr>
+<p>18th day of Basic Algorithm training in Leetcode.<br><a target="_blank" rel="noopener external nofollow noreferrer" href="https://leetcode.com/problems/regular-expression-matching/">Regular Expression Matching</a></p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> re</span><br><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Solution</span>:</span></span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">isMatch</span>(<span class="params">self, s: <span class="built_in">str</span>, p: <span class="built_in">str</span></span>) -&gt; bool:</span></span><br><span class="line">        <span class="keyword">if</span> re.match(<span class="string">&#x27;^&#x27;</span>+p+<span class="string">&#x27;$&#x27;</span>,s):</span><br><span class="line">            <span class="keyword">return</span> <span class="literal">True</span></span><br><span class="line">        <span class="keyword">else</span>:</span><br><span class="line">            <span class="keyword">return</span> <span class="literal">False</span></span><br></pre></td></tr></table></figure>
+<p><img src="/imgs/Programming/30dayinlc/30d-in-Leetcode-18-REXP.png" alt=""></p>
+<hr>
+<p>19th day of Basic Algorithm training in Leetcode<br><a target="_blank" rel="noopener external nofollow noreferrer" href="https://leetcode.com/problems/same-tree/">Same Tree</a></p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># Definition for a binary tree node.</span></span><br><span class="line"><span class="comment"># class TreeNode:</span></span><br><span class="line"><span class="comment">#     def __init__(self, x):</span></span><br><span class="line"><span class="comment">#         self.val = x</span></span><br><span class="line"><span class="comment">#         self.left = None</span></span><br><span class="line"><span class="comment">#         self.right = None</span></span><br><span class="line"></span><br><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Solution</span>:</span></span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">isSameTree</span>(<span class="params">self, p: TreeNode, q: TreeNode</span>) -&gt; bool:</span></span><br><span class="line">        <span class="keyword">if</span> <span class="keyword">not</span> <span class="built_in">any</span>([p,q]):</span><br><span class="line">            <span class="keyword">return</span> <span class="literal">True</span></span><br><span class="line">        <span class="keyword">elif</span> <span class="built_in">all</span>([p,q]) <span class="keyword">and</span> p.val == q.val:</span><br><span class="line">            <span class="keyword">return</span> self.isSameTree(p.left, q.left) <span class="keyword">and</span> self.isSameTree(p.right, q.right)</span><br><span class="line">        <span class="keyword">else</span>:</span><br><span class="line">            <span class="keyword">return</span> <span class="literal">False</span></span><br></pre></td></tr></table></figure>
+<p><img src="/imgs/Programming/30dayinlc/30d-in-Leetcode-19-Same-Tree.png" alt=""></p>
+<hr>
+<p>20th day of Basic Algorithm training in Leetcode<br><a target="_blank" rel="noopener external nofollow noreferrer" href="https://leetcode.com/problems/symmetric-tree/">Symmetric Tree</a></p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># Definition for a binary tree node.</span></span><br><span class="line"><span class="comment"># class TreeNode:</span></span><br><span class="line"><span class="comment">#     def __init__(self, x):</span></span><br><span class="line"><span class="comment">#         self.val = x</span></span><br><span class="line"><span class="comment">#         self.left = None</span></span><br><span class="line"><span class="comment">#         self.right = None</span></span><br><span class="line"></span><br><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Solution</span>:</span></span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">isSym</span>(<span class="params">self, Left, Right</span>):</span></span><br><span class="line">        <span class="keyword">if</span> <span class="keyword">not</span> Left <span class="keyword">and</span> <span class="keyword">not</span> Right:</span><br><span class="line">            <span class="keyword">return</span> <span class="literal">True</span></span><br><span class="line">        <span class="keyword">return</span> Left <span class="keyword">and</span> Right <span class="keyword">and</span> Left.val == Right.val <span class="keyword">and</span> self.isSym(Left.left, Right.right) <span class="keyword">and</span> self.isSym(Left.right, Right.left)</span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">isSymmetric</span>(<span class="params">self, root: TreeNode</span>) -&gt; bool:</span></span><br><span class="line">        <span class="keyword">return</span> self.isSym(root, root)</span><br><span class="line">        </span><br></pre></td></tr></table></figure>
+<p><img src="/imgs/Programming/30dayinlc/30d-in-Leetcode-20-Symmetric-Tree.png" alt=""></p>
+<hr>
+<p>21th day of Basic Algorithm training in Leetcode<br><a target="_blank" rel="noopener external nofollow noreferrer" href="https://leetcode.com/problems/maximum-depth-of-binary-tree/">Maximum Depth of Binary Tree</a></p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># Definition for a binary tree node.</span></span><br><span class="line"><span class="comment"># class TreeNode:</span></span><br><span class="line"><span class="comment">#     def __init__(self, x):</span></span><br><span class="line"><span class="comment">#         self.val = x</span></span><br><span class="line"><span class="comment">#         self.left = None</span></span><br><span class="line"><span class="comment">#         self.right = None</span></span><br><span class="line"></span><br><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Solution</span>:</span></span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">maxDepth</span>(<span class="params">self, root: TreeNode</span>) -&gt; int:</span></span><br><span class="line">        <span class="keyword">return</span> <span class="number">1</span> + <span class="built_in">max</span>(self.maxDepth(root.left), self.maxDepth(root.right)) <span class="keyword">if</span> root <span class="keyword">else</span> <span class="number">0</span></span><br></pre></td></tr></table></figure>
+<p><img src="/imgs/Programming/30dayinlc/30d-in-Leetcode-21-Maximum-Depth-of-BT.png" alt=""></p>
+<hr>
+<p>22th day of Basic Algorithm training in Leetcode<br><a target="_blank" rel="noopener external nofollow noreferrer" href="https://leetcode.com/problems/binary-tree-level-order-traversal/">Binary Tree Level Order Traversal</a></p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># Definition for a binary tree node.</span></span><br><span class="line"><span class="comment"># class TreeNode:</span></span><br><span class="line"><span class="comment">#     def __init__(self, x):</span></span><br><span class="line"><span class="comment">#         self.val = x</span></span><br><span class="line"><span class="comment">#         self.left = None</span></span><br><span class="line"><span class="comment">#         self.right = None</span></span><br><span class="line"></span><br><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Solution</span>:</span></span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">levelOrder</span>(<span class="params">self, root: TreeNode</span>) -&gt; List[List[int]]:</span></span><br><span class="line">        <span class="keyword">if</span> <span class="keyword">not</span> root:</span><br><span class="line">            <span class="keyword">return</span> []</span><br><span class="line">        lev_val = []</span><br><span class="line">        lev = <span class="number">0</span></span><br><span class="line"></span><br><span class="line">        lev_val.append([root.val])</span><br><span class="line">        dq = collections.deque([(<span class="number">1</span>, root.left, root.right)])</span><br><span class="line">        <span class="keyword">while</span> dq:</span><br><span class="line">            lev, l, r = dq.popleft()</span><br><span class="line">            <span class="keyword">if</span> l <span class="keyword">or</span> r <span class="keyword">and</span> <span class="built_in">len</span>(lev_val) &lt;= lev:</span><br><span class="line">                lev_val.append([])</span><br><span class="line">            <span class="keyword">if</span> l:</span><br><span class="line">                lev_val[lev].append(l.val)</span><br><span class="line">                dq.append((lev + <span class="number">1</span>, l.left, l.right))</span><br><span class="line">            <span class="keyword">if</span> r:</span><br><span class="line">                lev_val[lev].append(r.val)</span><br><span class="line">                dq.append((lev + <span class="number">1</span>, r.left, r.right))</span><br><span class="line">        <span class="keyword">while</span> [] <span class="keyword">in</span> lev_val:</span><br><span class="line">            lev_val.remove([])</span><br><span class="line">        <span class="keyword">return</span> lev_val</span><br></pre></td></tr></table></figure>
+<p><img src="/imgs/Programming/30dayinlc/30d-in-Leetcode-22-BT-Inorder-Traversal.png" alt=""></p>
+<hr>
+<p>23th day of Basic Algorithm training in Leetcode<br><a target="_blank" rel="noopener external nofollow noreferrer" href="https://leetcode.com/problems/unique-binary-search-trees-ii/">Unique Binary Search Trees II</a></p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># Definition for a binary tree node.</span></span><br><span class="line"><span class="comment"># class TreeNode:</span></span><br><span class="line"><span class="comment">#     def __init__(self, x):</span></span><br><span class="line"><span class="comment">#         self.val = x</span></span><br><span class="line"><span class="comment">#         self.left = None</span></span><br><span class="line"><span class="comment">#         self.right = None</span></span><br><span class="line"></span><br><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Solution</span>:</span></span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">generateTrees</span>(<span class="params">self, n: <span class="built_in">int</span></span>) -&gt; List[TreeNode]:</span></span><br><span class="line">        <span class="keyword">if</span> <span class="keyword">not</span> n:</span><br><span class="line">            <span class="keyword">return</span> []</span><br><span class="line">        <span class="keyword">return</span> self.gen(<span class="number">1</span>, n + <span class="number">1</span>)</span><br><span class="line">    </span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">gen</span>(<span class="params">self, s, e</span>):</span></span><br><span class="line">        <span class="keyword">if</span> s == e:</span><br><span class="line">            <span class="keyword">return</span> [<span class="literal">None</span>]</span><br><span class="line">        res = []</span><br><span class="line">        <span class="keyword">for</span> i <span class="keyword">in</span> <span class="built_in">range</span>(s, e):</span><br><span class="line">            <span class="keyword">for</span> left <span class="keyword">in</span> self.gen(s, i):</span><br><span class="line">                <span class="keyword">for</span> right <span class="keyword">in</span> self.gen(i + <span class="number">1</span>, e):</span><br><span class="line">                    node = TreeNode(i)</span><br><span class="line">                    node.left, node.right = left, right</span><br><span class="line">                    res.append(node)</span><br><span class="line">        <span class="keyword">return</span> res</span><br></pre></td></tr></table></figure>
+<p><img src="/imgs/Programming/30dayinlc/30d-in-Leetcode-23-Unique-BST-II.png" alt=""></p>
+<hr>
+<p>24th day of Basic Algorithm training in Leetcode<br><a target="_blank" rel="noopener external nofollow noreferrer" href="https://leetcode.com/problems/recover-binary-search-tree//">Recover Binary Search Tree</a></p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># Definition for a binary tree node.</span></span><br><span class="line"><span class="comment"># class TreeNode:</span></span><br><span class="line"><span class="comment">#     def __init__(self, x):</span></span><br><span class="line"><span class="comment">#         self.val = x</span></span><br><span class="line"><span class="comment">#         self.left = None</span></span><br><span class="line"><span class="comment">#         self.right = None</span></span><br><span class="line"></span><br><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Solution</span>:</span></span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">recoverTree</span>(<span class="params">self, root: TreeNode</span>) -&gt; <span class="keyword">None</span>:</span></span><br><span class="line">        current, previous, todel, stack = root, TreeNode(-<span class="built_in">float</span>(<span class="string">&#x27;inf&#x27;</span>)), [], []</span><br><span class="line">        <span class="keyword">while</span> current <span class="keyword">or</span> stack:</span><br><span class="line">            <span class="keyword">while</span> current:</span><br><span class="line">                stack.append(current)</span><br><span class="line">                current = current.left</span><br><span class="line">            node = stack.pop()</span><br><span class="line">            <span class="keyword">if</span> node.val &lt; previous.val: todel.append((previous, node))</span><br><span class="line">            previous, current = node, node.right</span><br><span class="line">        todel[<span class="number">0</span>][<span class="number">0</span>].val, todel[-<span class="number">1</span>][<span class="number">1</span>].val = todel[-<span class="number">1</span>][<span class="number">1</span>].val, todel[<span class="number">0</span>][<span class="number">0</span>].val</span><br></pre></td></tr></table></figure>
+<p><img src="/imgs/Programming/30dayinlc/30d-in-Leetcode-24-Recover-BST.png" alt=""></p>
+<hr>
+<p>25th day of Basic Algorithm training in Leetcode<br><a target="_blank" rel="noopener external nofollow noreferrer" href="https://leetcode.com/problems/best-time-to-buy-and-sell-stock-ii/">Best Time to Buy and Sell Stock II</a></p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Solution</span>:</span></span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">maxProfit</span>(<span class="params">self, prices: List[<span class="built_in">int</span>]</span>) -&gt; int:</span></span><br><span class="line">        <span class="keyword">return</span> <span class="built_in">sum</span>([<span class="built_in">max</span>(prices[day + <span class="number">1</span>] - prices[day], <span class="number">0</span>) \</span><br><span class="line">                    <span class="keyword">for</span> day <span class="keyword">in</span> <span class="built_in">range</span>(<span class="built_in">len</span>(prices) - <span class="number">1</span>)])</span><br></pre></td></tr></table></figure>
+<p><img src="/imgs/Programming/30dayinlc/30d-in-Leetcode-25-Best-Time-to-B-S-Stocks-2.png" alt=""></p>
+<hr>
+<p>26th day of Basic Algorithm training in Leetcode<br><a target="_blank" rel="noopener external nofollow noreferrer" href="https://leetcode.com/problems/is-subsequence/">Is Subsequence</a></p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Solution</span>:</span></span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">isSubsequence</span>(<span class="params">self, t: <span class="built_in">str</span>, s: <span class="built_in">str</span></span>) -&gt; bool:</span></span><br><span class="line">        p_s = p_t = <span class="number">0</span></span><br><span class="line">        l_s, l_t = <span class="built_in">len</span>(s), <span class="built_in">len</span>(t)</span><br><span class="line">        <span class="keyword">while</span> p_s &lt; l_s <span class="keyword">and</span> p_t &lt; l_t:</span><br><span class="line">            v = t[p_t]</span><br><span class="line">            <span class="keyword">if</span> s[p_s] == v:</span><br><span class="line">                p_t += <span class="number">1</span></span><br><span class="line">            p_s += <span class="number">1</span></span><br><span class="line">        <span class="keyword">return</span> p_t == l_t</span><br></pre></td></tr></table></figure>
+<p><img src="/imgs/Programming/30dayinlc/30d-in-Leetcode-26-Is-Subsequence.png" alt=""></p>
+<hr>
+<p>27th day of Basic Algorithm training in Leetcode<br><a target="_blank" rel="noopener external nofollow noreferrer" href="https://leetcode.com/problems/assign-cookies/">Assign Cookies</a></p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Solution</span>:</span></span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">findContentChildren</span>(<span class="params">self, g: List[<span class="built_in">int</span>], s: List[<span class="built_in">int</span>]</span>) -&gt; int:</span></span><br><span class="line">        g.sort()</span><br><span class="line">        s.sort()</span><br><span class="line">        assigned = <span class="number">0</span></span><br><span class="line">        p_s = p_g = <span class="number">0</span></span><br><span class="line">        l_s, l_g = <span class="built_in">len</span>(s), <span class="built_in">len</span>(g)</span><br><span class="line">        <span class="keyword">while</span> p_s &lt; l_s <span class="keyword">and</span> p_g &lt; l_g:</span><br><span class="line">            <span class="keyword">if</span> s[p_s] &gt;= g[p_g]:</span><br><span class="line">                assigned += <span class="number">1</span></span><br><span class="line">                p_g += <span class="number">1</span></span><br><span class="line">            p_s += <span class="number">1</span></span><br><span class="line">        <span class="keyword">return</span> assigned</span><br></pre></td></tr></table></figure>
+<p><img src="/imgs/Programming/30dayinlc/30d-in-Leetcode-27-Assign-Cookies.png" alt=""></p>
+<hr>
+<p>28th day of Basic Algorithm training in Leetcode<br><a target="_blank" rel="noopener external nofollow noreferrer" href="https://leetcode.com/problems/jump-game/">Jump Game</a></p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Solution</span>:</span></span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">canJump</span>(<span class="params">self, nums: List[<span class="built_in">int</span>]</span>) -&gt; bool:</span></span><br><span class="line">        step = <span class="number">0</span></span><br><span class="line">        l = <span class="built_in">len</span>(nums)</span><br><span class="line">        <span class="keyword">for</span> i, v <span class="keyword">in</span> <span class="built_in">enumerate</span>(nums):</span><br><span class="line">            <span class="keyword">if</span> i &gt; step:</span><br><span class="line">                <span class="keyword">return</span> <span class="literal">False</span></span><br><span class="line">            step = <span class="built_in">max</span>(step, i + v)</span><br><span class="line">            <span class="keyword">if</span> step &gt;= l:</span><br><span class="line">                <span class="keyword">return</span> <span class="literal">True</span></span><br><span class="line">        <span class="keyword">return</span> <span class="literal">True</span></span><br></pre></td></tr></table></figure>
+<p><img src="/imgs/Programming/30dayinlc/30d-in-Leetcode-28-Jump-Game.png" alt=""></p>
+<hr>
+<p>29th day of Basic Algorithm training in Leetcode<br><a target="_blank" rel="noopener external nofollow noreferrer" href="https://leetcode.com/problems/gas-station/">Gas Station</a></p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Solution</span>:</span></span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">canCompleteCircuit</span>(<span class="params">self, gas: List[<span class="built_in">int</span>], cost: List[<span class="built_in">int</span>]</span>) -&gt; int:</span></span><br><span class="line">        <span class="keyword">if</span> <span class="built_in">sum</span>(gas) &lt; <span class="built_in">sum</span>(cost): <span class="keyword">return</span> -<span class="number">1</span></span><br><span class="line">        l = <span class="built_in">len</span>(gas)</span><br><span class="line">        pt = tank = i = <span class="number">0</span></span><br><span class="line">        <span class="keyword">while</span> i &lt; l:</span><br><span class="line">            tank += gas[i] - cost[i] </span><br><span class="line">            i += <span class="number">1</span></span><br><span class="line">            <span class="keyword">if</span> tank &lt;= <span class="number">0</span>:</span><br><span class="line">                pt = i</span><br><span class="line">                tank = <span class="number">0</span></span><br><span class="line">        <span class="keyword">if</span> pt &gt;= l:</span><br><span class="line">            pt = <span class="number">0</span></span><br><span class="line">        <span class="keyword">return</span> pt</span><br></pre></td></tr></table></figure>
+<p><img src="/imgs/Programming/30dayinlc/30d-in-Leetcode-29-Gas-Station.png" alt=""></p>
+<hr>
+<p>30th day of Basic Algorithm training in Leetcode<br><a target="_blank" rel="noopener external nofollow noreferrer" href="https://leetcode.com/problems/wildcard-matching/">Wildcard Matching</a></p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Solution</span>:</span></span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">isMatch</span>(<span class="params">self, s: <span class="built_in">str</span>, p: <span class="built_in">str</span></span>) -&gt; bool:</span></span><br><span class="line">        length = <span class="built_in">len</span>(s)</span><br><span class="line">        <span class="keyword">if</span> <span class="built_in">len</span>(p) - p.count(<span class="string">&#x27;*&#x27;</span>) &gt; length:</span><br><span class="line">            <span class="keyword">return</span> <span class="literal">False</span></span><br><span class="line">        dp = [<span class="literal">True</span>] + [<span class="literal">False</span>]*length</span><br><span class="line">        <span class="keyword">for</span> i <span class="keyword">in</span> p:</span><br><span class="line">            <span class="keyword">if</span> i != <span class="string">&#x27;*&#x27;</span>:</span><br><span class="line">                <span class="keyword">for</span> n <span class="keyword">in</span> <span class="built_in">reversed</span>(<span class="built_in">range</span>(length)):</span><br><span class="line">                    dp[n+<span class="number">1</span>] = dp[n] <span class="keyword">and</span> (i == s[n] <span class="keyword">or</span> i == <span class="string">&#x27;?&#x27;</span>)</span><br><span class="line">            <span class="keyword">else</span>:</span><br><span class="line">                <span class="keyword">for</span> n <span class="keyword">in</span> <span class="built_in">range</span>(<span class="number">1</span>, length+<span class="number">1</span>):</span><br><span class="line">                    dp[n] = dp[n-<span class="number">1</span>] <span class="keyword">or</span> dp[n]</span><br><span class="line">            dp[<span class="number">0</span>] = dp[<span class="number">0</span>] <span class="keyword">and</span> i == <span class="string">&#x27;*&#x27;</span></span><br><span class="line">        <span class="keyword">return</span> dp[-<span class="number">1</span>]</span><br></pre></td></tr></table></figure>
+<p><img src="/imgs/Programming/30dayinlc/30d-in-Leetcode-30-Wildcard-Matching.png" alt=""></p>
+
+    </div>
+
+    
+    
+    
+
+    <footer class="post-footer">
+          
+
+<div class="post-copyright">
+<ul>
+  <li class="post-copyright-author">
+      <strong>Post author:  </strong>Obster-Y
+  </li>
+  <li class="post-copyright-link">
+      <strong>Post link: </strong>
+      <a href="https://obster-y.github.io/posts/c4304785-bbc2-11eb-8847-0772b2ac4cf2/" title="30 days in Leetcode (Basic Algorithm)">https://obster-y.github.io/posts/c4304785-bbc2-11eb-8847-0772b2ac4cf2/</a>
+  </li>
+  <li class="post-copyright-license">
+    <strong>Copyright Notice:  </strong>All articles in this blog are licensed under <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/" rel="noopener external nofollow noreferrer" target="_blank"><i class="fab fa-fw fa-creative-commons"></i>BY-NC-SA</a> unless stating additionally.
+  </li>
+</ul>
+</div>
+
+          <div class="post-tags">
+              <a href="/tags/Algorithm/" rel="tag"><i class="fa fa-tag"></i> Algorithm</a>
+          </div>
+
+        
+
+          <div class="post-nav">
+            <div class="post-nav-item">
+                <a href="/posts/c4304787-bbc2-11eb-8847-0772b2ac4cf2/" rel="prev" title="Introduction to Data Mining (Datawhale)">
+                  <i class="fa fa-chevron-left"></i> Introduction to Data Mining (Datawhale)
+                </a>
+            </div>
+            <div class="post-nav-item">
+            </div>
+          </div>
+    </footer>
+  </article>
+</div>
+
+
+
+
+
+
+    
+  <div class="comments">
+    <div id="utterances-container"></div>
+  </div>
+  
+
+<script>
+  window.addEventListener('tabs:register', () => {
+    let { activeClass } = CONFIG.comments;
+    if (CONFIG.comments.storage) {
+      activeClass = localStorage.getItem('comments_active') || activeClass;
+    }
+    if (activeClass) {
+      const activeTab = document.querySelector(`a[href="#comment-${activeClass}"]`);
+      if (activeTab) {
+        activeTab.click();
+      }
+    }
+  });
+  if (CONFIG.comments.storage) {
+    window.addEventListener('tabs:click', event => {
+      if (!event.target.matches('.tabs-comment .tab-content .tab-pane')) return;
+      const commentClass = event.target.classList[1];
+      localStorage.setItem('comments_active', commentClass);
+    });
+  }
+</script>
+</div>
+  </main>
+
+  <footer class="footer">
+    <div class="footer-inner">
+
+
+<div class="copyright">
+  &copy; 2018 – 
+  <span itemprop="copyrightYear">2022</span>
+  <span class="with-love">
+    <i class="fa fa-heart"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">Obster-Y</span>
+</div>
+<div class="busuanzi-count">
+    <span class="post-meta-item" id="busuanzi_container_site_pv" style="display: none;">
+      <span class="post-meta-item-icon">
+        <i class="fa fa-eye"></i>
+      </span>
+      <span class="site-pv" title="Total Views">
+        <span id="busuanzi_value_site_pv"></span>
+      </span>
+    </span>
+</div>
+
+    </div>
+  </footer>
+
+  
+
+
+  <script src="//cdn.jsdelivr.net/npm/animejs@3.2.1/lib/anime.min.js"></script>
+
+<script src="/js/utils.js"></script><script src="/js/motion.js"></script><script src="/js/next-boot.js"></script>
+
+  
+
+<script src="/js/local-search.js"></script>
+
+
+
+
+
+
+  
+  <script async src="https://busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+
+
+
+
+
+  <script>
+  if (typeof MathJax === 'undefined') {
+    window.MathJax = {
+      tex: {
+        inlineMath: {'[+]': [['$', '$']]},
+        tags: ''
+      },
+      options: {
+        renderActions: {
+          insertedScript: [200, () => {
+            document.querySelectorAll('mjx-container').forEach(node => {
+              const target = node.parentNode;
+              if (target.nodeName.toLowerCase() === 'li') {
+                target.parentNode.classList.add('has-jax');
+              }
+            });
+          }, '', false]
+        }
+      }
+    };
+    const script = document.createElement('script');
+    script.src = '//cdn.jsdelivr.net/npm/mathjax@3.1.2/es5/tex-mml-chtml.js';
+    script.defer = true;
+    document.head.appendChild(script);
+  } else {
+    MathJax.startup.document.state(0);
+    MathJax.typesetClear();
+    MathJax.texReset();
+    MathJax.typeset();
+  }
+</script>
+
+
+
+<script>
+NexT.utils.loadComments('#utterances-container', () => {
+  const script = document.createElement('script');
+  script.src = 'https://utteranc.es/client.js';
+  script.setAttribute('repo', "obster-y/comments");
+  script.setAttribute('issue-term', "pathname");
+  script.setAttribute('theme', "github-dark");
+  script.crossOrigin = 'anonymous';
+  script.async = true;
+  document.querySelector('#utterances-container').appendChild(script);
+});
+</script><!-- hexo-inject:begin --><!-- hexo-inject:end -->
+
+</body>
+</html>

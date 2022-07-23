@@ -1,0 +1,699 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <!-- hexo-inject:begin --><!-- hexo-inject:end --><meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=2">
+<meta name="theme-color" content="#222">
+<meta name="generator" content="Hexo 5.2.0">
+<meta name="baidu-site-verification" content="code-mytiWBVdjL" />
+<meta name="google-site-verification" content="nxAePyZIesHQ1FCgWQZBV1m6HPxrrxb4YjjUfmGavJo" />
+
+
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/logo.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/cls-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/cls-16x16.png">
+  <link rel="mask-icon" href="/images/logo.png" color="#222">
+
+<link rel="stylesheet" href="/css/main.css">
+
+
+
+<link rel="stylesheet" href="//cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5.15.1/css/all.min.css">
+  <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/animate.css@3.1.1/animate.min.css">
+
+<script class="hexo-configurations">
+    var NexT = window.NexT || {};
+    var CONFIG = {"hostname":"obster-y.github.io","root":"/","images":"/images","scheme":"Gemini","version":"8.1.0","exturl":false,"sidebar":{"position":"right","display":"post","padding":18,"offset":12},"copycode":true,"bookmark":{"enable":false,"color":"#222","save":"auto"},"fancybox":false,"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":"gitalk","storage":true,"lazyload":false,"nav":null},"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"fadeInDown","post_body":"fadeInDown","coll_header":"fadeInLeft","sidebar":"fadeInUp"}},"prism":false,"i18n":{"placeholder":"Searching...","empty":"We didn't find any results for the search: ${query}","hits_time":"${hits} results found in ${time} ms","hits":"${hits} results found"},"path":"/search.xml","localsearch":{"enable":true,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false}};
+  </script>
+<meta name="description" content="My own thought about create a thesis template.">
+<meta property="og:type" content="article">
+<meta property="og:title" content="How to create a thesis template? Take XJTU-thesis as an example">
+<meta property="og:url" content="https://obster-y.github.io/posts/fd5a6ef0-c860-11eb-b0c2-1da70d79dcb1/index.html">
+<meta property="og:site_name" content="Obster-Y&#39;s Blog">
+<meta property="og:description" content="My own thought about create a thesis template.">
+<meta property="og:locale" content="en_US">
+<meta property="og:image" content="https://obster-y.github.io/imgs/Tool/Softwares/LaTeX/20210620_17001624179638_1322x1379.png">
+<meta property="article:published_time" content="2021-06-08T13:54:00.000Z">
+<meta property="article:modified_time" content="2021-06-20T12:39:44.370Z">
+<meta property="article:author" content="Obster-Y">
+<meta property="article:tag" content="LaTeX">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://obster-y.github.io/imgs/Tool/Softwares/LaTeX/20210620_17001624179638_1322x1379.png">
+
+
+<link rel="canonical" href="https://obster-y.github.io/posts/fd5a6ef0-c860-11eb-b0c2-1da70d79dcb1/">
+
+
+<script class="page-configurations">
+  // https://hexo.io/docs/variables.html
+  CONFIG.page = {
+    sidebar: "",
+    isHome : false,
+    isPost : true,
+    lang   : 'en'
+  };
+</script>
+<title>How to create a thesis template? Take XJTU-thesis as an example | Obster-Y's Blog</title>
+  
+
+
+
+  <noscript>
+  <style>
+  body { margin-top: 2rem; }
+
+  .use-motion .menu-item,
+  .use-motion .sidebar,
+  .use-motion .post-block,
+  .use-motion .pagination,
+  .use-motion .comments,
+  .use-motion .post-header,
+  .use-motion .post-body,
+  .use-motion .collection-header {
+    visibility: visible;
+  }
+
+  .use-motion .header,
+  .use-motion .site-brand-container .toggle,
+  .use-motion .footer { opacity: initial; }
+
+  .use-motion .site-title,
+  .use-motion .site-subtitle,
+  .use-motion .custom-logo-image {
+    opacity: initial;
+    top: initial;
+  }
+
+  .use-motion .logo-line {
+    transform: scaleX(1);
+  }
+
+  .search-pop-overlay, .sidebar-nav { display: none; }
+  .sidebar-panel { display: block; }
+  </style>
+</noscript>
+
+<!-- hexo injector head_end start -->
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.12.0/dist/katex.min.css">
+<!-- hexo injector head_end end --><style>mjx-container[jax="SVG"] {
+  direction: ltr;
+}
+
+mjx-container[jax="SVG"] > svg {
+  overflow: visible;
+}
+
+mjx-container[jax="SVG"] > svg a {
+  fill: blue;
+  stroke: blue;
+}
+
+mjx-container[jax="SVG"][display="true"] {
+  display: block;
+  text-align: center;
+  margin: 1em 0;
+}
+
+mjx-container[jax="SVG"][justify="left"] {
+  text-align: left;
+}
+
+mjx-container[jax="SVG"][justify="right"] {
+  text-align: right;
+}
+
+g[data-mml-node="merror"] > g {
+  fill: red;
+  stroke: red;
+}
+
+g[data-mml-node="merror"] > rect[data-background] {
+  fill: yellow;
+  stroke: none;
+}
+
+g[data-mml-node="mtable"] > line[data-line] {
+  stroke-width: 70px;
+  fill: none;
+}
+
+g[data-mml-node="mtable"] > rect[data-frame] {
+  stroke-width: 70px;
+  fill: none;
+}
+
+g[data-mml-node="mtable"] > .mjx-dashed {
+  stroke-dasharray: 140;
+}
+
+g[data-mml-node="mtable"] > .mjx-dotted {
+  stroke-linecap: round;
+  stroke-dasharray: 0,140;
+}
+
+g[data-mml-node="mtable"] > svg {
+  overflow: visible;
+}
+
+[jax="SVG"] mjx-tool {
+  display: inline-block;
+  position: relative;
+  width: 0;
+  height: 0;
+}
+
+[jax="SVG"] mjx-tool > mjx-tip {
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+mjx-tool > mjx-tip {
+  display: inline-block;
+  padding: .2em;
+  border: 1px solid #888;
+  font-size: 70%;
+  background-color: #F8F8F8;
+  color: black;
+  box-shadow: 2px 2px 5px #AAAAAA;
+}
+
+g[data-mml-node="maction"][data-toggle] {
+  cursor: pointer;
+}
+
+mjx-status {
+  display: block;
+  position: fixed;
+  left: 1em;
+  bottom: 1em;
+  min-width: 25%;
+  padding: .2em .4em;
+  border: 1px solid #888;
+  font-size: 90%;
+  background-color: #F8F8F8;
+  color: black;
+}
+
+foreignObject[data-mjx-xml] {
+  font-family: initial;
+  line-height: normal;
+  overflow: visible;
+}
+
+.MathJax path {
+  stroke-width: 3;
+}
+
+mjx-container[display="true"] {
+  overflow: auto hidden;
+}
+
+mjx-container[display="true"] + br {
+  display: none;
+}
+</style><link rel="alternate" href="/atom.xml" title="Obster-Y's Blog" type="application/atom+xml"><!-- hexo-inject:begin --><!-- hexo-inject:end -->
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage" class="use-motion">
+  <!-- hexo-inject:begin --><!-- hexo-inject:end --><div class="headband"></div>
+
+  <main class="main">
+    <header class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-container">
+  <div class="site-nav-toggle">
+    <div class="toggle" aria-label="Toggle navigation bar">
+        <span class="toggle-line"></span>
+        <span class="toggle-line"></span>
+        <span class="toggle-line"></span>
+    </div>
+  </div>
+
+  <div class="site-meta">
+
+    <a href="/" class="brand" rel="start">
+      <i class="logo-line"></i>
+      <h1 class="site-title">Obster-Y's Blog</h1>
+      <i class="logo-line"></i>
+    </a>
+      <p class="site-subtitle" itemprop="description">A useless site</p>
+  </div>
+
+  <div class="site-nav-right">
+    <div class="toggle popup-trigger">
+        <i class="fa fa-search fa-fw fa-lg"></i>
+    </div>
+  </div>
+</div>
+
+
+
+<nav class="site-nav">
+  <ul class="main-menu menu">
+        <li class="menu-item menu-item-home"><a href="/" rel="section"><i class="fa fa-home fa-fw"></i>Home</a></li>
+        <li class="menu-item menu-item-tags"><a href="/tags/" rel="section"><i class="fa fa-tags fa-fw"></i>Tags</a></li>
+        <li class="menu-item menu-item-categories"><a href="/categories/" rel="section"><i class="fa fa-th fa-fw"></i>Categories</a></li>
+        <li class="menu-item menu-item-series"><a href="/series/" rel="section"><i class="fa fa-list fa-fw"></i>Series</a></li>
+        <li class="menu-item menu-item-archives"><a href="/archives/" rel="section"><i class="fa fa-archive fa-fw"></i>Archives</a></li>
+        <li class="menu-item menu-item-about"><a href="/about/" rel="section"><i class="fa fa-user fa-fw"></i>About</a></li>
+        <li class="menu-item menu-item-english"><a href="https://obster-y.github.io/" rel="section"><i class="fa fa-globe fa-fw"></i>English</a></li>
+        <li class="menu-item menu-item-简体中文"><a href="https://obster-y.github.io/zh-cn/" rel="section"><i class="fa fa-globe fa-fw"></i>简体中文</a></li>
+      <li class="menu-item menu-item-search">
+        <a role="button" class="popup-trigger"><i class="fa fa-search fa-fw"></i>Search
+        </a>
+      </li>
+  </ul>
+</nav>
+
+
+
+  <div class="search-pop-overlay">
+    <div class="popup search-popup"><div class="search-header">
+  <span class="search-icon">
+    <i class="fa fa-search"></i>
+  </span>
+  <div class="search-input-container">
+    <input autocomplete="off" autocapitalize="off" maxlength="80"
+           placeholder="Searching..." spellcheck="false"
+           type="search" class="search-input">
+  </div>
+  <span class="popup-btn-close">
+    <i class="fa fa-times-circle"></i>
+  </span>
+</div>
+<div class="search-result-container no-result">
+  <div class="search-result-icon">
+    <i class="fa fa-spinner fa-pulse fa-5x"></i>
+  </div>
+</div>
+
+    </div>
+  </div>
+
+</div>
+        
+  
+  <div class="toggle sidebar-toggle">
+    <span class="toggle-line"></span>
+    <span class="toggle-line"></span>
+    <span class="toggle-line"></span>
+  </div>
+
+  <aside class="sidebar">
+
+    <div class="sidebar-inner sidebar-nav-active sidebar-toc-active">
+      <ul class="sidebar-nav">
+        <li class="sidebar-nav-toc">
+          Table of Contents
+        </li>
+        <li class="sidebar-nav-overview">
+          Overview
+        </li>
+      </ul>
+
+      <div class="sidebar-panel-container">
+        <!--noindex-->
+        <section class="post-toc-wrap sidebar-panel">
+            <div class="post-toc animated"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#Template"><span class="nav-text">Template</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#Goal"><span class="nav-text">Goal</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#Mandatory"><span class="nav-text">Mandatory</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Optional"><span class="nav-text">Optional</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Structure"><span class="nav-text">Structure</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#Content"><span class="nav-text">Content</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Format"><span class="nav-text">Format</span></a></li></ol></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#XJTU-thesis"><span class="nav-text">XJTU-thesis</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#Committee-members"><span class="nav-text">Committee members</span></a></li></ol></li></ol></div>
+        </section>
+        <!--/noindex-->
+
+        <section class="site-overview-wrap sidebar-panel">
+          <div class="site-author site-overview-item animated" itemprop="author" itemscope itemtype="http://schema.org/Person">
+    <img class="site-author-image" itemprop="image" alt="Obster-Y"
+      src="/images/t1.jpg">
+  <p class="site-author-name" itemprop="name">Obster-Y</p>
+  <div class="site-description" itemprop="description"></div>
+</div>
+<div class="site-state-wrap site-overview-item animated">
+  <nav class="site-state">
+      <div class="site-state-item site-state-posts">
+          <a href="/archives/">
+        
+          <span class="site-state-item-count">45</span>
+          <span class="site-state-item-name">posts</span>
+        </a>
+      </div>
+      <div class="site-state-item site-state-categories">
+            <a href="/categories/">
+          
+        <span class="site-state-item-count">6</span>
+        <span class="site-state-item-name">categories</span></a>
+      </div>
+      <div class="site-state-item site-state-tags">
+            <a href="/tags/">
+          
+        <span class="site-state-item-count">19</span>
+        <span class="site-state-item-name">tags</span></a>
+      </div>
+  </nav>
+</div>
+  <div class="links-of-author site-overview-item animated">
+      <span class="links-of-author-item">
+        <a href="https://github.com/obster-y" title="GitHub → https:&#x2F;&#x2F;github.com&#x2F;obster-y" rel="noopener external nofollow noreferrer" target="_blank"><i class="fab fa-github fa-fw"></i>GitHub</a>
+      </span>
+  </div>
+
+
+
+        </section>
+      </div>
+        <div class="back-to-top animated">
+          <i class="fa fa-arrow-up"></i>
+          <span>0%</span>
+        </div>
+    </div>
+  </aside>
+  <div class="sidebar-dimmer"></div>
+
+
+    </header>
+
+    
+  <div class="reading-progress-bar"></div>
+
+  <a href="https://github.com/obster-y" class="github-corner" rel="noopener external nofollow noreferrer" target="_blank"><svg width="80" height="80" viewBox="0 0 250 250" aria-hidden="true"><path d="M0,0 L115,115 L130,115 L142,142 L250,250 L250,0 Z"></path><path d="M128.3,109.0 C113.8,99.7 119.0,89.6 119.0,89.6 C122.0,82.7 120.5,78.6 120.5,78.6 C119.2,72.0 123.4,76.3 123.4,76.3 C127.3,80.9 125.5,87.3 125.5,87.3 C122.9,97.6 130.6,101.9 134.4,103.2" fill="currentColor" style="transform-origin: 130px 106px;" class="octo-arm"></path><path d="M115.0,115.0 C114.9,115.1 118.7,116.5 119.8,115.4 L133.7,101.6 C136.9,99.2 139.9,98.4 142.2,98.6 C133.8,88.0 127.5,74.4 143.8,58.0 C148.5,53.4 154.0,51.2 159.7,51.0 C160.3,49.4 163.2,43.6 171.4,40.1 C171.4,40.1 176.1,42.5 178.8,56.2 C183.1,58.6 187.2,61.8 190.9,65.4 C194.5,69.0 197.7,73.2 200.1,77.6 C213.8,80.2 216.3,84.9 216.3,84.9 C212.7,93.1 206.9,96.0 205.4,96.6 C205.1,102.4 203.0,107.8 198.3,112.5 C181.9,128.9 168.3,122.5 157.7,114.1 C157.9,116.9 156.7,120.9 152.7,124.9 L141.0,136.5 C139.8,137.7 141.6,141.9 141.8,141.8 Z" fill="currentColor" class="octo-body"></path></svg></a>
+
+<noscript>
+  <div class="noscript-warning">Theme NexT works best with JavaScript enabled</div>
+</noscript>
+
+
+    <div class="main-inner post posts-expand">
+
+
+  
+
+
+<div class="post-block">
+  
+  
+
+  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="en">
+    <link itemprop="mainEntityOfPage" href="https://obster-y.github.io/posts/fd5a6ef0-c860-11eb-b0c2-1da70d79dcb1/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/t1.jpg">
+      <meta itemprop="name" content="Obster-Y">
+      <meta itemprop="description" content="">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Obster-Y's Blog">
+    </span>
+      <header class="post-header">
+        <h1 class="post-title" itemprop="name headline">
+          How to create a thesis template? Take XJTU-thesis as an example
+        </h1>
+
+        <div class="post-meta-container">
+          <div class="post-meta">
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar"></i>
+      </span>
+      <span class="post-meta-item-text">Posted on</span>
+
+      <time title="Created: 2021-06-08 21:54:00" itemprop="dateCreated datePublished" datetime="2021-06-08T21:54:00+08:00">2021-06-08</time>
+    </span>
+      <span class="post-meta-item">
+        <span class="post-meta-item-icon">
+          <i class="far fa-calendar-check"></i>
+        </span>
+        <span class="post-meta-item-text">Edited on</span>
+        <time title="Modified: 2021-06-20 20:39:44" itemprop="dateModified" datetime="2021-06-20T20:39:44+08:00">2021-06-20</time>
+      </span>
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-folder"></i>
+      </span>
+      <span class="post-meta-item-text">In</span>
+        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+          <a href="/categories/Programming/" itemprop="url" rel="index"><span itemprop="name">Programming</span></a>
+        </span>
+    </span>
+
+
+  
+    <span class="post-meta-item" title="Views" id="busuanzi_container_page_pv" style="display: none;">
+      <span class="post-meta-item-icon">
+        <i class="far fa-eye"></i>
+      </span>
+      <span class="post-meta-item-text">Views: </span>
+      <span id="busuanzi_value_page_pv"></span>
+    </span>
+</div>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+        <p>My own thought about create a thesis template.</p>
+<a id="more"></a>
+<h1 id="Template"><a href="#Template" class="headerlink" title="Template"></a>Template</h1><h2 id="Goal"><a href="#Goal" class="headerlink" title="Goal"></a>Goal</h2><h3 id="Mandatory"><a href="#Mandatory" class="headerlink" title="Mandatory"></a>Mandatory</h3><ol>
+<li>Fulfill requirements of the administration office.</li>
+<li>Seperate contents from its format.</li>
+<li>Available on different OS.</li>
+</ol>
+<h3 id="Optional"><a href="#Optional" class="headerlink" title="Optional"></a>Optional</h3><ol>
+<li>Easy to use and to modify.</li>
+</ol>
+<h2 id="Structure"><a href="#Structure" class="headerlink" title="Structure"></a>Structure</h2><p>Thus, a thesis template can be divided into two parts, formats and content, configurations about format should be extracted into options selected in the document, or not even shown in document, therefore, format configurations go to <code>.cls</code>, <code>.bst</code> and others.</p>
+<p>To make project more clean, content have many types, texts, codes, figures, biblography database and others. A thesis project structure can be described as:</p>
+<figure class="highlight text"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br></pre></td><td class="code"><pre><span class="line">|= proj/</span><br><span class="line">|  |= Codes/</span><br><span class="line">|  |  |- ...</span><br><span class="line">|  |= Figures/</span><br><span class="line">|  |  |- ...</span><br><span class="line">|  |= Main_Miscellaneous/</span><br><span class="line">|  |  |- misc.tex</span><br><span class="line">|  |  |- ...</span><br><span class="line">|  |= Main_Spine/</span><br><span class="line">|  |  |- body.tex</span><br><span class="line">|  |  |- ...</span><br><span class="line">|  |= Materials/</span><br><span class="line">|  |  |= BiblographyStyles/</span><br><span class="line">|  |  |  |- bst.bst</span><br><span class="line">|  |  |= Fonts/</span><br><span class="line">|  |  |  |- ...</span><br><span class="line">|  |= References/</span><br><span class="line">|  |  |- reference.bib</span><br><span class="line">|  |  |- ...</span><br><span class="line">|  |- latexmkrc</span><br><span class="line">|  |- main.tex</span><br><span class="line">|  |- README</span><br><span class="line">|  |- thesis.cls</span><br><span class="line">|  |- ...</span><br></pre></td></tr></table></figure>
+<h3 id="Content"><a href="#Content" class="headerlink" title="Content"></a>Content</h3><p>The contet of thesis has two type: variable and invariable, invariable content like some words in cover, headings, declarations and so on, conventional or bad template cannot extract these out of format, it’s not good.</p>
+<p>The content of mani.tex can be described as:<br><figure class="highlight text"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">|- options of document class</span><br><span class="line">|- variables</span><br><span class="line">|- content</span><br><span class="line">|  |- cover</span><br><span class="line">|  |- abstract</span><br><span class="line">|  |- table of contents</span><br><span class="line">|  |- body</span><br><span class="line">|  |- reference</span><br><span class="line">|  |- ...</span><br></pre></td></tr></table></figure></p>
+<p>Each content except body should be put in an isolated file, in or not in a environment:</p>
+<figure class="highlight text"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">|- \begin&#123;environment&#125;</span><br><span class="line">|- ...</span><br><span class="line">|- \end&#123;environment&#125;</span><br></pre></td></tr></table></figure>
+<h3 id="Format"><a href="#Format" class="headerlink" title="Format"></a>Format</h3><p>All formats are written in thesis.cls, I think this file can be divided into these parts:</p>
+<div class="table-container">
+<table>
+<thead>
+<tr>
+<th style="text-align:center">PARTS</th>
+<th style="text-align:center">USAGE</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:center">BASIC</td>
+<td style="text-align:center">for document class information, options…</td>
+</tr>
+<tr>
+<td style="text-align:center">UTILITIES</td>
+<td style="text-align:center">import some basic packages</td>
+</tr>
+<tr>
+<td style="text-align:center">MATH &amp; SYMBOLS</td>
+<td style="text-align:center">-</td>
+</tr>
+<tr>
+<td style="text-align:center">PAGES &amp; GEOMETRY</td>
+<td style="text-align:center">-</td>
+</tr>
+<tr>
+<td style="text-align:center">FONTS</td>
+<td style="text-align:center">-</td>
+</tr>
+<tr>
+<td style="text-align:center">VARIABLES</td>
+<td style="text-align:center">title, author, date and …</td>
+</tr>
+<tr>
+<td style="text-align:center">ENVIRONMENTS</td>
+<td style="text-align:center">float, algorithm, theorem, footnote, heading …</td>
+</tr>
+<tr>
+<td style="text-align:center">COMPONETS</td>
+<td style="text-align:center">cover, abstract, table of contents, glossary, reference …</td>
+</tr>
+</tbody>
+</table>
+</div>
+<hr>
+<h1 id="XJTU-thesis"><a href="#XJTU-thesis" class="headerlink" title="XJTU-thesis"></a>XJTU-thesis</h1><h2 id="Committee-members"><a href="#Committee-members" class="headerlink" title="Committee members"></a>Committee members</h2><p><img src="/imgs/Tool/Softwares/LaTeX/20210620_17001624179638_1322x1379.png" alt=""></p>
+<p>committee members can be added by sequence, and saved into a list, then display them in a page.</p>
+<figure class="highlight latex"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br><span class="line">73</span><br><span class="line">74</span><br><span class="line">75</span><br><span class="line">76</span><br><span class="line">77</span><br><span class="line">78</span><br><span class="line">79</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">\ExplSyntaxOn</span></span><br><span class="line"><span class="comment">% create a sequence to save members</span></span><br><span class="line"><span class="keyword">\seq_new:N</span> <span class="keyword">\g_defense_committee_seq</span></span><br><span class="line"><span class="keyword">\seq_clear:N</span> <span class="keyword">\g_defense_committee_seq</span></span><br><span class="line"><span class="keyword">\NewDocumentCommand</span> <span class="keyword">\addcommitteemember</span> &#123;m&#125;&#123;</span><br><span class="line">    <span class="keyword">\seq_set_split:Nnn</span> <span class="keyword">\l_tmpa_seq</span> &#123;,&#125; &#123;<span class="params">#1</span>&#125;</span><br><span class="line">    <span class="keyword">\clist_set_from_seq:NN</span> <span class="keyword">\l_tmpb_clist</span> <span class="keyword">\l_tmpa_seq</span></span><br><span class="line">    <span class="keyword">\seq_gput_right:Nx</span> <span class="keyword">\g_defense_committee_seq</span> <span class="keyword">\l_tmpb_clist</span></span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="keyword">\tl_set:Nn</span> <span class="keyword">\g_dc_tabular_tl</span> &#123;<span class="keyword">\sanhao</span>&#125;</span><br><span class="line"></span><br><span class="line"><span class="comment">% commands to set width and height of a box</span></span><br><span class="line"><span class="keyword">\box_new:N</span> <span class="keyword">\l_bp_set_to_box</span></span><br><span class="line"><span class="keyword">\cs_new_protected:Npn</span> <span class="keyword">\bp_box_set_to:NNn</span> <span class="params">#1</span> <span class="params">#2</span> <span class="params">#3</span></span><br><span class="line">&#123;</span><br><span class="line">  <span class="keyword">\hbox_set:Nn</span> <span class="keyword">\l_bp_set_to_box</span> &#123;<span class="params">#3</span>&#125;</span><br><span class="line">  <span class="keyword">\dim_set:Nn</span> <span class="params">#2</span> &#123; <span class="params">#1</span> <span class="keyword">\l_bp_set_to_box</span> &#125;</span><br><span class="line">  <span class="keyword">\box_set_eq:NN</span> <span class="keyword">\l_bp_set_to_box</span> <span class="keyword">\c_empty_box</span></span><br><span class="line">&#125;</span><br><span class="line"><span class="keyword">\cs_new_protected:Npn</span> <span class="keyword">\bp_set_to_height:Nn</span> &#123; <span class="keyword">\bp_box_set_to:NNn</span> <span class="keyword">\box_ht:N</span> &#125;</span><br><span class="line"><span class="keyword">\cs_new_protected:Npn</span> <span class="keyword">\bp_set_to_depth:Nn</span>  &#123; <span class="keyword">\bp_box_set_to:NNn</span> <span class="keyword">\box_dp:N</span> &#125;</span><br><span class="line"><span class="keyword">\cs_new_protected:Npn</span> <span class="keyword">\bp_set_to_width:Nn</span>  &#123; <span class="keyword">\bp_box_set_to:NNn</span> <span class="keyword">\box_wd:N</span> &#125;</span><br><span class="line"><span class="keyword">\cs_new:Npn</span> <span class="keyword">\WidthOfSpace</span> &#123; <span class="keyword">\tex_fontdimen:D</span> 2 <span class="keyword">\tex_font:D</span> &#125;</span><br><span class="line"></span><br><span class="line"><span class="comment">% generate token list of committe list</span></span><br><span class="line"><span class="keyword">\NewDocumentCommand</span> <span class="keyword">\gencommitteelist</span> &#123;&#125;&#123;</span><br><span class="line">  <span class="keyword">\fp_new:N</span> <span class="keyword">\l_moriambar_ratio_fp</span></span><br><span class="line">  <span class="keyword">\seq_gpop_left:NN</span> <span class="keyword">\g_defense_committee_seq</span> <span class="keyword">\l_dcc_tl</span></span><br><span class="line"></span><br><span class="line">  <span class="keyword">\dim_new:N</span> <span class="keyword">\spaceWidth</span></span><br><span class="line">  <span class="keyword">\bp_set_to_width:Nn</span> <span class="keyword">\spaceWidth</span> &#123;<span class="keyword">\clist_item:Nn</span> <span class="keyword">\l_dcc_tl</span> 1&#125;</span><br><span class="line"></span><br><span class="line">  <span class="keyword">\tl_gput_right:Nn</span> <span class="keyword">\g_dc_tabular_tl</span> &#123;&#123;<span class="keyword">\clist_item:Nn</span> <span class="keyword">\l_dcc_tl</span> 1 <span class="keyword">\clist_item:Nn</span> <span class="keyword">\l_dcc_tl</span> 3&#125;：<span class="built_in">&amp;</span><span class="keyword">\sanhao</span><span class="keyword">\underline</span>&#123;<span class="keyword">\parbox</span>[t]&#123;10em&#125;&#123;<span class="keyword">\clist_item:Nn</span> <span class="keyword">\l_dcc_tl</span> 2&#125;&#125;<span class="keyword">\xiaowu</span>（注：主席）<span class="keyword">\\</span>&#125;</span><br><span class="line"></span><br><span class="line">  <span class="keyword">\seq_map_variable:NNn</span> <span class="keyword">\g_defense_committee_seq</span> <span class="keyword">\i</span> &#123;</span><br><span class="line">    <span class="keyword">\bp_set_to_width:Nn</span> <span class="keyword">\spaceWidth</span> &#123;<span class="keyword">\clist_item:Nn</span> <span class="keyword">\i</span> 2&#125;</span><br><span class="line">    <span class="keyword">\tl_gput_right:Nn</span> <span class="keyword">\g_dc_tabular_tl</span> &#123;<span class="keyword">\sanhao</span>&#125;</span><br><span class="line">    <span class="keyword">\tl_gput_right:Nx</span> <span class="keyword">\g_dc_tabular_tl</span> &#123;&#123;<span class="keyword">\clist_item:Nn</span> <span class="keyword">\i</span> 1 <span class="keyword">\clist_item:Nn</span> <span class="keyword">\i</span> 3&#125;：<span class="built_in">&amp;</span>&#125;</span><br><span class="line">    <span class="keyword">\tl_gput_right:Nn</span> <span class="keyword">\g_dc_tabular_tl</span> &#123;<span class="keyword">\sanhao</span>&#125;</span><br><span class="line">    <span class="keyword">\tl_gput_right:Nx</span> <span class="keyword">\g_dc_tabular_tl</span> &#123;<span class="keyword">\underline</span>&#123;<span class="keyword">\exp_not:N</span> <span class="keyword">\parbox</span>[t]&#123;10em&#125;&#123;<span class="keyword">\clist_item:Nn</span> <span class="keyword">\i</span> 2&#125; &#125;<span class="keyword">\\</span>&#125;</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br><span class="line"><span class="keyword">\NewDocumentCommand</span> <span class="keyword">\defencecommittelist</span> &#123;&#125;&#123;</span><br><span class="line">  <span class="keyword">\tl_use:N</span> <span class="keyword">\g_dc_tabular_tl</span></span><br><span class="line">&#125;</span><br><span class="line"><span class="keyword">\ExplSyntaxOff</span></span><br><span class="line"></span><br><span class="line"><span class="comment">% Page</span></span><br><span class="line"><span class="keyword">\renewcommand</span>&#123;<span class="keyword">\thesiscommittes</span>&#125;&#123;</span><br><span class="line">  <span class="keyword">\gencommitteelist</span></span><br><span class="line">  <span class="keyword">\thispagestyle</span>&#123;empty&#125;</span><br><span class="line">  <span class="keyword">\ifthesis@english</span></span><br><span class="line">    <span class="keyword">\pdfbookmark</span>&#123;Defense Committee&#125;&#123;Defense Committee&#125;</span><br><span class="line">  <span class="keyword">\else</span></span><br><span class="line">    <span class="keyword">\pdfbookmark</span>&#123;答辩委员会&#125;&#123;Defense Committee-zh&#125;</span><br><span class="line">  <span class="keyword">\fi</span></span><br><span class="line">  <span class="keyword">\parbox</span>[t][5mm][t]&#123;<span class="keyword">\textwidth</span>&#125;&#123;&#125;</span><br><span class="line">  <span class="keyword">\begin</span>&#123;center&#125;</span><br><span class="line">    <span class="keyword">\sanhao</span> <span class="keyword">\bfseries</span> <span class="keyword">\chinesedegreename</span> 学位论文答辩委员会</span><br><span class="line">  <span class="keyword">\end</span>&#123;center&#125;</span><br><span class="line">  <span class="keyword">\vspace</span>&#123;2<span class="keyword">\baselineskip</span>&#125;</span><br><span class="line">  <span class="keyword">\begin</span>&#123;spacing&#125;&#123;2.0&#125;<span class="keyword">\begin</span>&#123;center&#125;</span><br><span class="line">    <span class="keyword">\sanhao</span> <span class="keyword">\bfseries</span> <span class="keyword">\zh@thetitle</span></span><br><span class="line">  <span class="keyword">\end</span>&#123;center&#125;<span class="keyword">\end</span>&#123;spacing&#125;</span><br><span class="line">  <span class="keyword">\vfill</span></span><br><span class="line">  <span class="keyword">\begin</span>&#123;center&#125;</span><br><span class="line">    <span class="keyword">\renewcommand</span>&#123;<span class="keyword">\arraystretch</span>&#125;&#123;2.5&#125;</span><br><span class="line">    <span class="keyword">\begin</span>&#123;tabular&#125;&#123;rl&#125;</span><br><span class="line">      <span class="keyword">\multicolumn</span>&#123;1&#125;&#123;l&#125;&#123;<span class="keyword">\sanhao</span> 答辩人：<span class="keyword">\zh@theauthor</span>&#125;<span class="built_in">&amp;</span><span class="keyword">\\</span></span><br><span class="line">      <span class="keyword">\multicolumn</span>&#123;1&#125;&#123;l&#125;&#123;<span class="keyword">\sanhao</span> 答辩委员会委员：&#125;<span class="built_in">&amp;</span><span class="keyword">\\</span></span><br><span class="line">      <span class="keyword">\defencecommittelist</span></span><br><span class="line">      <span class="keyword">\multicolumn</span>&#123;1&#125;&#123;l&#125;&#123;<span class="keyword">\sanhao</span> 答辩时间：<span class="keyword">\zh@thedefensedate</span>&#125;<span class="built_in">&amp;</span><span class="keyword">\\</span></span><br><span class="line">      <span class="keyword">\multicolumn</span>&#123;2&#125;&#123;l&#125;&#123;<span class="keyword">\sanhao</span> 答辩地点：<span class="keyword">\zh@thedefenseloc</span>&#125;<span class="keyword">\\</span></span><br><span class="line">    <span class="keyword">\end</span>&#123;tabular&#125;</span><br><span class="line">    <span class="keyword">\renewcommand</span>&#123;<span class="keyword">\arraystretch</span>&#125;&#123;1&#125;</span><br><span class="line">  <span class="keyword">\end</span>&#123;center&#125;</span><br><span class="line">  <span class="keyword">\cleardoublepage</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+    </div>
+
+    
+    
+    
+
+    <footer class="post-footer">
+          
+
+<div class="post-copyright">
+<ul>
+  <li class="post-copyright-author">
+      <strong>Post author:  </strong>Obster-Y
+  </li>
+  <li class="post-copyright-link">
+      <strong>Post link: </strong>
+      <a href="https://obster-y.github.io/posts/fd5a6ef0-c860-11eb-b0c2-1da70d79dcb1/" title="How to create a thesis template? Take XJTU-thesis as an example">https://obster-y.github.io/posts/fd5a6ef0-c860-11eb-b0c2-1da70d79dcb1/</a>
+  </li>
+  <li class="post-copyright-license">
+    <strong>Copyright Notice:  </strong>All articles in this blog are licensed under <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/" rel="noopener external nofollow noreferrer" target="_blank"><i class="fab fa-fw fa-creative-commons"></i>BY-NC-SA</a> unless stating additionally.
+  </li>
+</ul>
+</div>
+
+          <div class="post-tags">
+              <a href="/tags/LaTeX/" rel="tag"><i class="fa fa-tag"></i> LaTeX</a>
+          </div>
+
+        
+
+          <div class="post-nav">
+            <div class="post-nav-item">
+                <a href="/posts/ace36491-cf7c-11eb-b771-47c436b9f4e4/" rel="prev" title="Making PowerPoint more powerful">
+                  <i class="fa fa-chevron-left"></i> Making PowerPoint more powerful
+                </a>
+            </div>
+            <div class="post-nav-item">
+                <a href="/posts/5f054001-c85f-11eb-b360-c71a36657d19/" rel="next" title="Using Emacs-rime">
+                  Using Emacs-rime <i class="fa fa-chevron-right"></i>
+                </a>
+            </div>
+          </div>
+    </footer>
+  </article>
+</div>
+
+
+
+
+
+
+    
+  <div class="comments">
+    <div id="utterances-container"></div>
+  </div>
+  
+
+<script>
+  window.addEventListener('tabs:register', () => {
+    let { activeClass } = CONFIG.comments;
+    if (CONFIG.comments.storage) {
+      activeClass = localStorage.getItem('comments_active') || activeClass;
+    }
+    if (activeClass) {
+      const activeTab = document.querySelector(`a[href="#comment-${activeClass}"]`);
+      if (activeTab) {
+        activeTab.click();
+      }
+    }
+  });
+  if (CONFIG.comments.storage) {
+    window.addEventListener('tabs:click', event => {
+      if (!event.target.matches('.tabs-comment .tab-content .tab-pane')) return;
+      const commentClass = event.target.classList[1];
+      localStorage.setItem('comments_active', commentClass);
+    });
+  }
+</script>
+</div>
+  </main>
+
+  <footer class="footer">
+    <div class="footer-inner">
+
+
+<div class="copyright">
+  &copy; 2018 – 
+  <span itemprop="copyrightYear">2022</span>
+  <span class="with-love">
+    <i class="fa fa-heart"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">Obster-Y</span>
+</div>
+<div class="busuanzi-count">
+    <span class="post-meta-item" id="busuanzi_container_site_pv" style="display: none;">
+      <span class="post-meta-item-icon">
+        <i class="fa fa-eye"></i>
+      </span>
+      <span class="site-pv" title="Total Views">
+        <span id="busuanzi_value_site_pv"></span>
+      </span>
+    </span>
+</div>
+
+    </div>
+  </footer>
+
+  
+
+
+  <script src="//cdn.jsdelivr.net/npm/animejs@3.2.1/lib/anime.min.js"></script>
+
+<script src="/js/utils.js"></script><script src="/js/motion.js"></script><script src="/js/next-boot.js"></script>
+
+  
+
+<script src="/js/local-search.js"></script>
+
+
+
+
+
+
+  
+  <script async src="https://busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+
+
+
+
+
+  <script>
+  if (typeof MathJax === 'undefined') {
+    window.MathJax = {
+      tex: {
+        inlineMath: {'[+]': [['$', '$']]},
+        tags: ''
+      },
+      options: {
+        renderActions: {
+          insertedScript: [200, () => {
+            document.querySelectorAll('mjx-container').forEach(node => {
+              const target = node.parentNode;
+              if (target.nodeName.toLowerCase() === 'li') {
+                target.parentNode.classList.add('has-jax');
+              }
+            });
+          }, '', false]
+        }
+      }
+    };
+    const script = document.createElement('script');
+    script.src = '//cdn.jsdelivr.net/npm/mathjax@3.1.2/es5/tex-mml-chtml.js';
+    script.defer = true;
+    document.head.appendChild(script);
+  } else {
+    MathJax.startup.document.state(0);
+    MathJax.typesetClear();
+    MathJax.texReset();
+    MathJax.typeset();
+  }
+</script>
+
+
+
+<script>
+NexT.utils.loadComments('#utterances-container', () => {
+  const script = document.createElement('script');
+  script.src = 'https://utteranc.es/client.js';
+  script.setAttribute('repo', "obster-y/comments");
+  script.setAttribute('issue-term', "pathname");
+  script.setAttribute('theme', "github-dark");
+  script.crossOrigin = 'anonymous';
+  script.async = true;
+  document.querySelector('#utterances-container').appendChild(script);
+});
+</script><!-- hexo-inject:begin --><!-- hexo-inject:end -->
+
+</body>
+</html>
