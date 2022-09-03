@@ -2,7 +2,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
   <title>Y某的博客</title>
   <icon>https://obster-y.github.io/zh-cn/icon.png</icon>
-  <subtitle>这里的东西都没啥用(真的)</subtitle>
+  <subtitle>记录中...</subtitle>
   <link href="https://obster-y.github.io/zh-cn/atom.xml" rel="self"/>
   
   <link href="https://obster-y.github.io/zh-cn/"/>
@@ -257,7 +257,7 @@
     <link href="https://obster-y.github.io/zh-cn/posts/c4304786-bbc2-11eb-8847-0772b2ac4cf2/"/>
     <id>https://obster-y.github.io/zh-cn/posts/c4304786-bbc2-11eb-8847-0772b2ac4cf2/</id>
     <published>2021-05-21T09:58:18.000Z</published>
-    <updated>2021-05-26T09:25:44.060Z</updated>
+    <updated>2022-09-03T06:29:23.433Z</updated>
     
     
     <summary type="html">&lt;p&gt;一篇关于配置i3wm以及polybar的教程。&lt;/p&gt;
@@ -319,9 +319,9 @@
     <category term="程序设计" scheme="https://obster-y.github.io/zh-cn/categories/%E7%A8%8B%E5%BA%8F%E8%AE%BE%E8%AE%A1/"/>
     
     
-    <category term="正则表达式" scheme="https://obster-y.github.io/zh-cn/tags/%E6%AD%A3%E5%88%99%E8%A1%A8%E8%BE%BE%E5%BC%8F/"/>
-    
     <category term="更新中" scheme="https://obster-y.github.io/zh-cn/tags/%E6%9B%B4%E6%96%B0%E4%B8%AD/"/>
+    
+    <category term="正则表达式" scheme="https://obster-y.github.io/zh-cn/tags/%E6%AD%A3%E5%88%99%E8%A1%A8%E8%BE%BE%E5%BC%8F/"/>
     
   </entry>
   
@@ -340,9 +340,9 @@
     <category term="工具" scheme="https://obster-y.github.io/zh-cn/categories/%E5%B7%A5%E5%85%B7/"/>
     
     
-    <category term="更新中" scheme="https://obster-y.github.io/zh-cn/tags/%E6%9B%B4%E6%96%B0%E4%B8%AD/"/>
-    
     <category term="键盘" scheme="https://obster-y.github.io/zh-cn/tags/%E9%94%AE%E7%9B%98/"/>
+    
+    <category term="更新中" scheme="https://obster-y.github.io/zh-cn/tags/%E6%9B%B4%E6%96%B0%E4%B8%AD/"/>
     
   </entry>
   

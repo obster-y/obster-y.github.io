@@ -2,7 +2,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
   <title>Obster-Y&#39;s Blog</title>
   <icon>https://obster-y.github.io/icon.png</icon>
-  <subtitle>A useless site</subtitle>
+  <subtitle>Recording...</subtitle>
   <link href="https://obster-y.github.io/atom.xml" rel="self"/>
   
   <link href="https://obster-y.github.io/"/>

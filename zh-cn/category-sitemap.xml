@@ -9,6 +9,13 @@
 
 
     <url>
+        <loc>https://obster-y.github.io/zh-cn/categories/%25E5%25B7%25A5%25E5%2585%25B7/</loc>
+        <lastmod>2022-09-03T06:29:23.433Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.2</priority>
+    </url>
+
+    <url>
         <loc>https://obster-y.github.io/zh-cn/categories/M-Office/</loc>
         <lastmod>2021-11-13T09:11:15.330Z</lastmod>
         <changefreq>weekly</changefreq>
@@ -18,13 +25,6 @@
     <url>
         <loc>https://obster-y.github.io/zh-cn/categories/%25E8%258B%25B1%25E8%25AF%25AD/</loc>
         <lastmod>2021-06-20T13:19:50.390Z</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.2</priority>
-    </url>
-
-    <url>
-        <loc>https://obster-y.github.io/zh-cn/categories/%25E5%25B7%25A5%25E5%2585%25B7/</loc>
-        <lastmod>2021-06-08T13:55:01.270Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.2</priority>
     </url>

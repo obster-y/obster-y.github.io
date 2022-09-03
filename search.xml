@@ -462,136 +462,6 @@
       </tags>
   </entry>
   <entry>
-    <title>From Keyboard, Keyboard layout to Input Method and its&#39; scheme</title>
-    <url>/posts/c4302071-bbc2-11eb-8847-0772b2ac4cf2/</url>
-    <content><![CDATA[<p>Knowledge when configuring my keyboard and input method.</p>
-<a id="more"></a>
-<h1 id="Preface"><a href="#Preface" class="headerlink" title="Preface"></a>Preface</h1><p>This is merely an <strong>amateur article</strong>, It doesn’t has enough examples, meanings and the author doesn’t has a systematic knowledge structure. All data cames from Internet and experiment. It can be used to kill time for anyone who is interested in it. </p>
-<hr>
-<h1 id="Basic-Knowledge"><a href="#Basic-Knowledge" class="headerlink" title="Basic Knowledge"></a>Basic Knowledge</h1><h2 id="Keyboard"><a href="#Keyboard" class="headerlink" title="Keyboard"></a>Keyboard</h2><h3 id="Case"><a href="#Case" class="headerlink" title="Case"></a>Case</h3><h3 id="Switch"><a href="#Switch" class="headerlink" title="Switch"></a>Switch</h3><ul>
-<li>Mechanical switch</li>
-<li>Capacitive switch</li>
-<li>Membrane switch</li>
-</ul>
-<h3 id="Caps"><a href="#Caps" class="headerlink" title="Caps"></a>Caps</h3><ul>
-<li>Material</li>
-<li>Printing </li>
-<li>Length</li>
-<li>Height</li>
-<li>Blank/Side-printed</li>
-</ul>
-<h3 id="Miscellaneous"><a href="#Miscellaneous" class="headerlink" title="Miscellaneous"></a>Miscellaneous</h3><ul>
-<li>Editable Key Layout</li>
-<li>Lights</li>
-<li>Connector</li>
-<li>Powered Method</li>
-</ul>
-<h2 id="Keys-and-layout"><a href="#Keys-and-layout" class="headerlink" title="Keys and layout"></a>Keys and layout</h2><h3 id="Key-from-pressed-to-printed"><a href="#Key-from-pressed-to-printed" class="headerlink" title="Key: from pressed to printed"></a>Key: from pressed to printed</h3><h3 id="Physical-layout-ISO-ANSI-JIS-KS…"><a href="#Physical-layout-ISO-ANSI-JIS-KS…" class="headerlink" title="Physical layout: ISO, ANSI, JIS, KS…"></a>Physical layout: ISO, ANSI, JIS, KS…</h3><h3 id="Ctrl-Shift-Alt-AltGr-Meta-Super-Hyper-Fn"><a href="#Ctrl-Shift-Alt-AltGr-Meta-Super-Hyper-Fn" class="headerlink" title="Ctrl? Shift? Alt? AltGr? Meta? Super? Hyper? Fn?"></a>Ctrl? Shift? Alt? AltGr? Meta? Super? Hyper? Fn?</h3><h3 id="Latin-script-layout-QWERTY-and-its-variants"><a href="#Latin-script-layout-QWERTY-and-its-variants" class="headerlink" title="Latin-script layout: QWERTY and its variants"></a>Latin-script layout: QWERTY and its variants</h3><h3 id="Latin-script-layout-others"><a href="#Latin-script-layout-others" class="headerlink" title="Latin-script layout: others"></a>Latin-script layout: others</h3><ul>
-<li><p>Dvorak</p>
-</li>
-<li><p>Dvorak: One-handed / Programmer</p>
-</li>
-<li><p>Colemak</p>
-</li>
-<li><p>Workman / Norman</p>
-</li>
-</ul>
-<h3 id="East-Asian-languages"><a href="#East-Asian-languages" class="headerlink" title="East Asian languages"></a>East Asian languages</h3><ul>
-<li><p>Japanese</p>
-</li>
-<li><p>Korean</p>
-</li>
-<li><p>Chinese</p>
-</li>
-</ul>
-<h3 id="Other-languages"><a href="#Other-languages" class="headerlink" title="Other languages"></a>Other languages</h3><h2 id="Input-method"><a href="#Input-method" class="headerlink" title="Input method"></a>Input method</h2><h3 id="Commercial-IM"><a href="#Commercial-IM" class="headerlink" title="Commercial IM"></a>Commercial IM</h3><h3 id="Open-Source-IM"><a href="#Open-Source-IM" class="headerlink" title="Open-Source IM"></a>Open-Source IM</h3><h2 id="Input-scheme"><a href="#Input-scheme" class="headerlink" title="Input scheme"></a>Input scheme</h2><h3 id="Typing-in-a-healthy-way"><a href="#Typing-in-a-healthy-way" class="headerlink" title="Typing in a healthy way"></a>Typing in a healthy way</h3><h3 id="Schemes-for-Latin-script-or-Cyrillic-script"><a href="#Schemes-for-Latin-script-or-Cyrillic-script" class="headerlink" title="Schemes for Latin script or Cyrillic script"></a>Schemes for Latin script or Cyrillic script</h3><h3 id="Chinese-based-on-the-structure"><a href="#Chinese-based-on-the-structure" class="headerlink" title="Chinese: based on the structure"></a>Chinese: based on the structure</h3><h3 id="Chinese-based-on-the-pronounciation"><a href="#Chinese-based-on-the-pronounciation" class="headerlink" title="Chinese: based on the pronounciation"></a>Chinese: based on the pronounciation</h3><h3 id="Japanese-Korean"><a href="#Japanese-Korean" class="headerlink" title="Japanese/Korean"></a>Japanese/Korean</h3><h3 id="Evaluation-index-of-a-scheme"><a href="#Evaluation-index-of-a-scheme" class="headerlink" title="Evaluation index of a scheme"></a>Evaluation index of a scheme</h3><hr>
-<h1 id="Why-change-a-layout-method-scheme"><a href="#Why-change-a-layout-method-scheme" class="headerlink" title="Why change a layout / method / scheme"></a>Why change a layout / method / scheme</h1><h2 id="Cost"><a href="#Cost" class="headerlink" title="Cost"></a>Cost</h2><h2 id="Revenue"><a href="#Revenue" class="headerlink" title="Revenue"></a>Revenue</h2><hr>
-<h1 id="A-practical-example"><a href="#A-practical-example" class="headerlink" title="A practical example"></a>A practical example</h1><h2 id="How-to-select-customize-a-keyboard-and-its-layout-？"><a href="#How-to-select-customize-a-keyboard-and-its-layout-？" class="headerlink" title="How to select(customize) a keyboard(and its layout)？"></a>How to select(customize) a keyboard(and its layout)？</h2><h3 id="Select-a-keyboard"><a href="#Select-a-keyboard" class="headerlink" title="Select a keyboard"></a>Select a keyboard</h3><h3 id="Modify-a-layout-remapping"><a href="#Modify-a-layout-remapping" class="headerlink" title="Modify a layout(remapping)"></a>Modify a layout(remapping)</h3><h4 id="Depth-of-remapping："><a href="#Depth-of-remapping：" class="headerlink" title="Depth of remapping："></a>Depth of remapping：</h4><h5 id="Hardware-level-change-the-scan-code-for-physical-key"><a href="#Hardware-level-change-the-scan-code-for-physical-key" class="headerlink" title="Hardware level: change the scan code for physical key"></a>Hardware level: change the scan code for physical key</h5><h5 id="OS-level-change-the-scan-code-map"><a href="#OS-level-change-the-scan-code-map" class="headerlink" title="OS level: change the scan code map"></a>OS level: change the scan code map</h5><h5 id="Software-level-redirect-input-and-output"><a href="#Software-level-redirect-input-and-output" class="headerlink" title="Software level: redirect input and output"></a>Software level: redirect input and output</h5><h4 id="Windows"><a href="#Windows" class="headerlink" title="Windows"></a>Windows</h4><h4 id="nix"><a href="#nix" class="headerlink" title="*nix"></a>*nix</h4><h4 id="MacOS"><a href="#MacOS" class="headerlink" title="MacOS"></a>MacOS</h4><p>Nothing to write cause too poor to buy a mac. </p>
-<h2 id="How-to-select-customize-a-IM"><a href="#How-to-select-customize-a-IM" class="headerlink" title="How to select(customize) a IM?"></a>How to select(customize) a IM?</h2><h2 id="How-to-select-customize-a-input-scheme"><a href="#How-to-select-customize-a-input-scheme" class="headerlink" title="How to select(customize) a input scheme?"></a>How to select(customize) a input scheme?</h2><p>Test ref<a href="#ref-01"><sup>1</sup></a></p>
-<p>Test ref<a href="#ref-02"><sup>2</sup></a></p>
-<hr>
-<h1 id="Potential-Risks"><a href="#Potential-Risks" class="headerlink" title="Potential Risks"></a>Potential Risks</h1><h2 id="Syncing-on-differenc-OS"><a href="#Syncing-on-differenc-OS" class="headerlink" title="Syncing on differenc OS"></a>Syncing on differenc OS</h2><h2 id="Vi-Emacs-user-or-IDE-user"><a href="#Vi-Emacs-user-or-IDE-user" class="headerlink" title="Vi/Emacs user or IDE user"></a>Vi/Emacs user or IDE user</h2><hr>
-<h1 id="References"><a href="#References" class="headerlink" title="References"></a>References</h1><div id="ref-0"></div>
-
-<ul>
-<li>[] <a href="https://www.patrick-wied.at/projects/heatmap-keyboard/">Keyboard-Heatmap Visualizing</a></li>
-</ul>
-<div id="ref-0"></div>
-
-<ul>
-<li>[] <a href="https://tiansh.github.io/lqbz/sp">Statistic of Double Pinyin</a></li>
-</ul>
-<div id="ref-0"></div>
-
-<ul>
-<li>[] <a href="https://macroxue.github.io/shuangpin/eval.html/">Evaluation an optimization of a Double Pinyin scheme</a></li>
-</ul>
-<div id="ref-0"></div>
-
-<ul>
-<li>[] <a href="https://tieba.baidu.com/p/5142753627">Kitten Double Pinyin</a></li>
-</ul>
-<div id="ref-0"></div>
-
-<ul>
-<li>[] <a href="https://www.originativeco.com/pages/a-lesson-in-keycaps"></a></li>
-</ul>
-<div id="ref-0"></div>
-
-<ul>
-<li>[] <a href="https://sspai.com/post/66102"></a></li>
-</ul>
-<div id="ref-0"></div>
-
-<ul>
-<li>[] <a href="https://www.jianshu.com/p/9a3e820968ee"></a></li>
-</ul>
-<div id="ref-0"></div>
-
-<ul>
-<li>[] <a href="https://support.wasdkeyboards.com/hc/en-us/articles/115009701328-Keycap-Size-Compatibility"></a></li>
-</ul>
-<div id="ref-0"></div>
-
-<ul>
-<li>[] <a href="https://www.zfrontier.com/app/flow/4okzKBndN774"></a></li>
-</ul>
-<div id="ref-0"></div>
-
-<ul>
-<li>[] <a href="https://zhuanlan.zhihu.com/p/32040644"></a></li>
-</ul>
-<div id="ref-0"></div>
-
-<ul>
-<li>[] <a href="https://dygma.com/pages/mechanical-switches"></a></li>
-</ul>
-<div id="ref-0"></div>
-
-<ul>
-<li>[] <a href="https://www.howtoip.com/all-those-confusing-mechanical-keyboard-terms-explained/"></a></li>
-</ul>
-<div id="ref-0"></div>
-
-<ul>
-<li>[] <a href="https://indienova.com/indie-game-development/keyboard-design-and-ui-1/"></a></li>
-</ul>
-<div id="ref-0"></div>
-
-<ul>
-<li>[] <a href="https://switchandclick.com/ansi-vs-iso-layout/"></a></li>
-</ul>
-]]></content>
-      <categories>
-        <category>Tool</category>
-      </categories>
-      <tags>
-        <tag>Updating</tag>
-        <tag>Keyboard</tag>
-        <tag>Geek</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>Introduction to Data Mining (Datawhale)</title>
     <url>/posts/c4304787-bbc2-11eb-8847-0772b2ac4cf2/</url>
     <content><![CDATA[<p>Very basic introduction to data mining.</p>
@@ -1201,6 +1071,136 @@ Lasso is finished
       </categories>
       <tags>
         <tag>Data Mining</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>From Keyboard, Keyboard layout to Input Method and its&#39; scheme</title>
+    <url>/posts/c4302071-bbc2-11eb-8847-0772b2ac4cf2/</url>
+    <content><![CDATA[<p>Knowledge when configuring my keyboard and input method.</p>
+<a id="more"></a>
+<h1 id="Preface"><a href="#Preface" class="headerlink" title="Preface"></a>Preface</h1><p>This is merely an <strong>amateur article</strong>, It doesn’t has enough examples, meanings and the author doesn’t has a systematic knowledge structure. All data cames from Internet and experiment. It can be used to kill time for anyone who is interested in it. </p>
+<hr>
+<h1 id="Basic-Knowledge"><a href="#Basic-Knowledge" class="headerlink" title="Basic Knowledge"></a>Basic Knowledge</h1><h2 id="Keyboard"><a href="#Keyboard" class="headerlink" title="Keyboard"></a>Keyboard</h2><h3 id="Case"><a href="#Case" class="headerlink" title="Case"></a>Case</h3><h3 id="Switch"><a href="#Switch" class="headerlink" title="Switch"></a>Switch</h3><ul>
+<li>Mechanical switch</li>
+<li>Capacitive switch</li>
+<li>Membrane switch</li>
+</ul>
+<h3 id="Caps"><a href="#Caps" class="headerlink" title="Caps"></a>Caps</h3><ul>
+<li>Material</li>
+<li>Printing </li>
+<li>Length</li>
+<li>Height</li>
+<li>Blank/Side-printed</li>
+</ul>
+<h3 id="Miscellaneous"><a href="#Miscellaneous" class="headerlink" title="Miscellaneous"></a>Miscellaneous</h3><ul>
+<li>Editable Key Layout</li>
+<li>Lights</li>
+<li>Connector</li>
+<li>Powered Method</li>
+</ul>
+<h2 id="Keys-and-layout"><a href="#Keys-and-layout" class="headerlink" title="Keys and layout"></a>Keys and layout</h2><h3 id="Key-from-pressed-to-printed"><a href="#Key-from-pressed-to-printed" class="headerlink" title="Key: from pressed to printed"></a>Key: from pressed to printed</h3><h3 id="Physical-layout-ISO-ANSI-JIS-KS…"><a href="#Physical-layout-ISO-ANSI-JIS-KS…" class="headerlink" title="Physical layout: ISO, ANSI, JIS, KS…"></a>Physical layout: ISO, ANSI, JIS, KS…</h3><h3 id="Ctrl-Shift-Alt-AltGr-Meta-Super-Hyper-Fn"><a href="#Ctrl-Shift-Alt-AltGr-Meta-Super-Hyper-Fn" class="headerlink" title="Ctrl? Shift? Alt? AltGr? Meta? Super? Hyper? Fn?"></a>Ctrl? Shift? Alt? AltGr? Meta? Super? Hyper? Fn?</h3><h3 id="Latin-script-layout-QWERTY-and-its-variants"><a href="#Latin-script-layout-QWERTY-and-its-variants" class="headerlink" title="Latin-script layout: QWERTY and its variants"></a>Latin-script layout: QWERTY and its variants</h3><h3 id="Latin-script-layout-others"><a href="#Latin-script-layout-others" class="headerlink" title="Latin-script layout: others"></a>Latin-script layout: others</h3><ul>
+<li><p>Dvorak</p>
+</li>
+<li><p>Dvorak: One-handed / Programmer</p>
+</li>
+<li><p>Colemak</p>
+</li>
+<li><p>Workman / Norman</p>
+</li>
+</ul>
+<h3 id="East-Asian-languages"><a href="#East-Asian-languages" class="headerlink" title="East Asian languages"></a>East Asian languages</h3><ul>
+<li><p>Japanese</p>
+</li>
+<li><p>Korean</p>
+</li>
+<li><p>Chinese</p>
+</li>
+</ul>
+<h3 id="Other-languages"><a href="#Other-languages" class="headerlink" title="Other languages"></a>Other languages</h3><h2 id="Input-method"><a href="#Input-method" class="headerlink" title="Input method"></a>Input method</h2><h3 id="Commercial-IM"><a href="#Commercial-IM" class="headerlink" title="Commercial IM"></a>Commercial IM</h3><h3 id="Open-Source-IM"><a href="#Open-Source-IM" class="headerlink" title="Open-Source IM"></a>Open-Source IM</h3><h2 id="Input-scheme"><a href="#Input-scheme" class="headerlink" title="Input scheme"></a>Input scheme</h2><h3 id="Typing-in-a-healthy-way"><a href="#Typing-in-a-healthy-way" class="headerlink" title="Typing in a healthy way"></a>Typing in a healthy way</h3><h3 id="Schemes-for-Latin-script-or-Cyrillic-script"><a href="#Schemes-for-Latin-script-or-Cyrillic-script" class="headerlink" title="Schemes for Latin script or Cyrillic script"></a>Schemes for Latin script or Cyrillic script</h3><h3 id="Chinese-based-on-the-structure"><a href="#Chinese-based-on-the-structure" class="headerlink" title="Chinese: based on the structure"></a>Chinese: based on the structure</h3><h3 id="Chinese-based-on-the-pronounciation"><a href="#Chinese-based-on-the-pronounciation" class="headerlink" title="Chinese: based on the pronounciation"></a>Chinese: based on the pronounciation</h3><h3 id="Japanese-Korean"><a href="#Japanese-Korean" class="headerlink" title="Japanese/Korean"></a>Japanese/Korean</h3><h3 id="Evaluation-index-of-a-scheme"><a href="#Evaluation-index-of-a-scheme" class="headerlink" title="Evaluation index of a scheme"></a>Evaluation index of a scheme</h3><hr>
+<h1 id="Why-change-a-layout-method-scheme"><a href="#Why-change-a-layout-method-scheme" class="headerlink" title="Why change a layout / method / scheme"></a>Why change a layout / method / scheme</h1><h2 id="Cost"><a href="#Cost" class="headerlink" title="Cost"></a>Cost</h2><h2 id="Revenue"><a href="#Revenue" class="headerlink" title="Revenue"></a>Revenue</h2><hr>
+<h1 id="A-practical-example"><a href="#A-practical-example" class="headerlink" title="A practical example"></a>A practical example</h1><h2 id="How-to-select-customize-a-keyboard-and-its-layout-？"><a href="#How-to-select-customize-a-keyboard-and-its-layout-？" class="headerlink" title="How to select(customize) a keyboard(and its layout)？"></a>How to select(customize) a keyboard(and its layout)？</h2><h3 id="Select-a-keyboard"><a href="#Select-a-keyboard" class="headerlink" title="Select a keyboard"></a>Select a keyboard</h3><h3 id="Modify-a-layout-remapping"><a href="#Modify-a-layout-remapping" class="headerlink" title="Modify a layout(remapping)"></a>Modify a layout(remapping)</h3><h4 id="Depth-of-remapping："><a href="#Depth-of-remapping：" class="headerlink" title="Depth of remapping："></a>Depth of remapping：</h4><h5 id="Hardware-level-change-the-scan-code-for-physical-key"><a href="#Hardware-level-change-the-scan-code-for-physical-key" class="headerlink" title="Hardware level: change the scan code for physical key"></a>Hardware level: change the scan code for physical key</h5><h5 id="OS-level-change-the-scan-code-map"><a href="#OS-level-change-the-scan-code-map" class="headerlink" title="OS level: change the scan code map"></a>OS level: change the scan code map</h5><h5 id="Software-level-redirect-input-and-output"><a href="#Software-level-redirect-input-and-output" class="headerlink" title="Software level: redirect input and output"></a>Software level: redirect input and output</h5><h4 id="Windows"><a href="#Windows" class="headerlink" title="Windows"></a>Windows</h4><h4 id="nix"><a href="#nix" class="headerlink" title="*nix"></a>*nix</h4><h4 id="MacOS"><a href="#MacOS" class="headerlink" title="MacOS"></a>MacOS</h4><p>Nothing to write cause too poor to buy a mac. </p>
+<h2 id="How-to-select-customize-a-IM"><a href="#How-to-select-customize-a-IM" class="headerlink" title="How to select(customize) a IM?"></a>How to select(customize) a IM?</h2><h2 id="How-to-select-customize-a-input-scheme"><a href="#How-to-select-customize-a-input-scheme" class="headerlink" title="How to select(customize) a input scheme?"></a>How to select(customize) a input scheme?</h2><p>Test ref<a href="#ref-01"><sup>1</sup></a></p>
+<p>Test ref<a href="#ref-02"><sup>2</sup></a></p>
+<hr>
+<h1 id="Potential-Risks"><a href="#Potential-Risks" class="headerlink" title="Potential Risks"></a>Potential Risks</h1><h2 id="Syncing-on-differenc-OS"><a href="#Syncing-on-differenc-OS" class="headerlink" title="Syncing on differenc OS"></a>Syncing on differenc OS</h2><h2 id="Vi-Emacs-user-or-IDE-user"><a href="#Vi-Emacs-user-or-IDE-user" class="headerlink" title="Vi/Emacs user or IDE user"></a>Vi/Emacs user or IDE user</h2><hr>
+<h1 id="References"><a href="#References" class="headerlink" title="References"></a>References</h1><div id="ref-0"></div>
+
+<ul>
+<li>[] <a href="https://www.patrick-wied.at/projects/heatmap-keyboard/">Keyboard-Heatmap Visualizing</a></li>
+</ul>
+<div id="ref-0"></div>
+
+<ul>
+<li>[] <a href="https://tiansh.github.io/lqbz/sp">Statistic of Double Pinyin</a></li>
+</ul>
+<div id="ref-0"></div>
+
+<ul>
+<li>[] <a href="https://macroxue.github.io/shuangpin/eval.html/">Evaluation an optimization of a Double Pinyin scheme</a></li>
+</ul>
+<div id="ref-0"></div>
+
+<ul>
+<li>[] <a href="https://tieba.baidu.com/p/5142753627">Kitten Double Pinyin</a></li>
+</ul>
+<div id="ref-0"></div>
+
+<ul>
+<li>[] <a href="https://www.originativeco.com/pages/a-lesson-in-keycaps"></a></li>
+</ul>
+<div id="ref-0"></div>
+
+<ul>
+<li>[] <a href="https://sspai.com/post/66102"></a></li>
+</ul>
+<div id="ref-0"></div>
+
+<ul>
+<li>[] <a href="https://www.jianshu.com/p/9a3e820968ee"></a></li>
+</ul>
+<div id="ref-0"></div>
+
+<ul>
+<li>[] <a href="https://support.wasdkeyboards.com/hc/en-us/articles/115009701328-Keycap-Size-Compatibility"></a></li>
+</ul>
+<div id="ref-0"></div>
+
+<ul>
+<li>[] <a href="https://www.zfrontier.com/app/flow/4okzKBndN774"></a></li>
+</ul>
+<div id="ref-0"></div>
+
+<ul>
+<li>[] <a href="https://zhuanlan.zhihu.com/p/32040644"></a></li>
+</ul>
+<div id="ref-0"></div>
+
+<ul>
+<li>[] <a href="https://dygma.com/pages/mechanical-switches"></a></li>
+</ul>
+<div id="ref-0"></div>
+
+<ul>
+<li>[] <a href="https://www.howtoip.com/all-those-confusing-mechanical-keyboard-terms-explained/"></a></li>
+</ul>
+<div id="ref-0"></div>
+
+<ul>
+<li>[] <a href="https://indienova.com/indie-game-development/keyboard-design-and-ui-1/"></a></li>
+</ul>
+<div id="ref-0"></div>
+
+<ul>
+<li>[] <a href="https://switchandclick.com/ansi-vs-iso-layout/"></a></li>
+</ul>
+]]></content>
+      <categories>
+        <category>Tool</category>
+      </categories>
+      <tags>
+        <tag>Updating</tag>
+        <tag>Keyboard</tag>
+        <tag>Geek</tag>
       </tags>
   </entry>
   <entry>
