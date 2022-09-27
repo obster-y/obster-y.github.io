@@ -9,6 +9,20 @@
 
 
     <url>
+        <loc>https://obster-y.github.io/categories/Entertainment/</loc>
+        <lastmod>2022-09-27T08:49:07.421Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.2</priority>
+    </url>
+
+    <url>
+        <loc>https://obster-y.github.io/categories/Tool/</loc>
+        <lastmod>2022-09-27T08:49:07.421Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.2</priority>
+    </url>
+
+    <url>
         <loc>https://obster-y.github.io/categories/M-Office/</loc>
         <lastmod>2021-07-20T15:30:41.480Z</lastmod>
         <changefreq>weekly</changefreq>
@@ -32,20 +46,6 @@
     <url>
         <loc>https://obster-y.github.io/categories/Softwares/</loc>
         <lastmod>2021-06-20T12:41:12.350Z</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.2</priority>
-    </url>
-
-    <url>
-        <loc>https://obster-y.github.io/categories/Entertainment/</loc>
-        <lastmod>2021-06-20T07:37:19.720Z</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.2</priority>
-    </url>
-
-    <url>
-        <loc>https://obster-y.github.io/categories/Tool/</loc>
-        <lastmod>2021-05-30T12:44:38.720Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.2</priority>
     </url>

@@ -19,6 +19,63 @@
       </tags>
   </entry>
   <entry>
+    <title>Something about names</title>
+    <url>/posts/3f36dd70-3e41-11ed-b1ad-45f7947ee979/</url>
+    <content><![CDATA[<p>Discussion about some parts in family names.</p>
+<a id="more"></a>
+<h1 id="Patronymic"><a href="#Patronymic" class="headerlink" title="Patronymic"></a>Patronymic</h1><h2 id="son"><a href="#son" class="headerlink" title="-son"></a>-son</h2><p>Suffix of a name, likely to appear in surnames from English, very common.</p>
+<blockquote>
+<p>Johnson -&gt; son of John</p>
+</blockquote>
+<h2 id="Mc-Mac"><a href="#Mc-Mac" class="headerlink" title="Mc- / Mac-"></a>Mc- / Mac-</h2><p>Both from Scottish and Gaelic, “Mc-“ is the contraction of “Mac-“, “The son of”.</p>
+<blockquote>
+<p>McDonald -&gt; son of Donald<br>MacCabe -&gt; son of Cabe</p>
+</blockquote>
+<h2 id="Fitz"><a href="#Fitz" class="headerlink" title="Fitz-"></a>Fitz-</h2><p>From Anglo-Norman and Hiberno-Norman, “The son of”.</p>
+<blockquote>
+<p>FitzGerald -&gt; son of Gerald</p>
+</blockquote>
+<h2 id="Ap"><a href="#Ap" class="headerlink" title="Ap"></a>Ap</h2><p>Not a prefix but a part of surname, from Welsh “Map”, “The son of”. However it now reduced as prefix “Up-“ or “P-“.</p>
+<blockquote>
+<p>Upjohn -&gt; ap John -&gt; son of John<br>Powell -&gt; ap Hywel<br>Price -&gt; ap Rhys<br>Bowen -&gt; ab Owen</p>
+</blockquote>
+<h2 id="O’"><a href="#O’" class="headerlink" title="O’-"></a>O’-</h2><p>O’ is the Anglicized Ó from Gaelic, meaning “male descendant of”.</p>
+<blockquote>
+<p>O’Brian -&gt; grandson of Brian<br>O’Neal -&gt; grandson of Neal</p>
+</blockquote>
+<h1 id="Nobility-or-Profession"><a href="#Nobility-or-Profession" class="headerlink" title="Nobility or Profession"></a>Nobility or Profession</h1><h2 id="Von-Van-Ver"><a href="#Von-Van-Ver" class="headerlink" title="Von / Van / Ver"></a>Von / Van / Ver</h2><p>Von or Van is part of a surname, not prefix but in front of it. Most likely to appear in name from Germanic languages(DE and NL).</p>
+<p>In their original languages, they both mean “of” or “from”, represents nobility. It could mean nothing but a title, or could follow a location where the family come from. “Von” used in Germany and Austria, “Van or van” used in Belgium or Netherlands.</p>
+<p>Ver is the abbreviation of the word “Van der” means “from the”, possible used in Netherlands.</p>
+<blockquote>
+<p>Ludwig van Beethoven -&gt; from beet field (possible in Belgium)<br>John Von Neuman -&gt; newcomer (Von doesn’t mean ‘from’)<br>Johannes Vermeer -&gt; from sea / lake</p>
+</blockquote>
+<h2 id="De-Di-D’"><a href="#De-Di-D’" class="headerlink" title="De / Di / D’-"></a>De / Di / D’-</h2><p>It have various meanings from different languages.</p>
+<ul>
+<li>Germanic: “the”, followed by noun describing the looks of profession.</li>
+<li>Latin: “of”, may be patronymic or indicates nobility, often followed by name of locations, or husband’s name.</li>
+</ul>
+<blockquote>
+<p>Dani de Wit[NL] -&gt; the white<br>Marie de Bourbon[FR] -&gt; from Bourbon<br>Gianni De Michelis[IT] -&gt; son of Michelis<br>Fernando De Napoli[IT] -&gt; from Napoli<br>Iñaki de Miguel[SP] -&gt; son of Miguel<br>Juan Ponce de León[SP] -&gt; from León<br>Silvio De Sousa[PT] -&gt; from Sousa</p>
+</blockquote>
+<h2 id="El-Al"><a href="#El-Al" class="headerlink" title="El / Al"></a>El / Al</h2><p>From Arabic, followed by profession, place of some adjective.</p>
+<blockquote>
+<p>El-Haddad -&gt; the blacksmith<br>El-Shisheeny -&gt; from Chechen<br>El-Tayyib -&gt; the kind<br>Al-Gharbi -&gt; the westerner</p>
+</blockquote>
+<h1 id="References"><a href="#References" class="headerlink" title="References"></a>References</h1><ul>
+<li><a href="https://www.houseofnames.com/">https://www.houseofnames.com/</a></li>
+<li><a href="https://en.wikipedia.org/wiki/Welsh_surnames">https://en.wikipedia.org/wiki/Welsh_surnames</a></li>
+<li><a href="https://www.quora.com/Why-do-some-people-have-St-as-their-middle-name">https://www.quora.com/Why-do-some-people-have-St-as-their-middle-name</a></li>
+<li><a href="https://www.quora.com/What-does-De-mean-in-front-of-a-last-name">https://www.quora.com/What-does-De-mean-in-front-of-a-last-name</a></li>
+</ul>
+]]></content>
+      <categories>
+        <category>Entertainment</category>
+      </categories>
+      <tags>
+        <tag>Knowledge</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>Something about Regular Expressions</title>
     <url>/posts/d5481510-bd26-11eb-b78b-b7b8fc29a318/</url>
     <content><![CDATA[<h2 id="开始"><a href="#开始" class="headerlink" title="开始"></a>开始</h2><p>当在使用正则表达式时，你的目的就是从字符串中提取出你想要的东西，而正则表达式就是描述你要提取对象的一种语言；这种语言是跨平台的，在.NET, Java, JS, Py, Ruby, PHP上都可以使用。</p>
@@ -1201,6 +1258,120 @@ Lasso is finished
         <tag>Updating</tag>
         <tag>Keyboard</tag>
         <tag>Geek</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>Tools on Linux I used</title>
+    <url>/posts/3f36dd71-3e41-11ed-b1ad-45f7947ee979/</url>
+    <content><![CDATA[<a id="more"></a>
+<p>General:</p>
+<ul>
+<li>DE/WM: i3 | highly customizable(HCB)</li>
+<li>thunar: File manager</li>
+<li>sakura: Terminal emulator | more display features than alacritty, although lower refresh rate</li>
+<li>rofi: Application launcher | tried to integrated rofi-vscode, but failed</li>
+<li>polybar: Display system information</li>
+<li>rime: Input method frame | Polyglot necessity, HCB</li>
+<li>timeshift | backup and restore system</li>
+<li>kde connector | fast file transfer between cellphone</li>
+<li>arandr | visualization of xrandr</li>
+<li>gnome-clocks | world clock, alarm, stopwatch</li>
+</ul>
+<p>Shell Tools:<br>  Shell:</p>
+<pre><code>- zsh | shell itself
+- oh-my-zsh | more commands
+- powerlevel10k | better prompt
+</code></pre><p>  General:</p>
+<pre><code>- tmux | HCB
+- broot/br: File tree view &amp; search
+- ranger: File manager &amp; preview | can preview docs and pics
+- fzf / fzf-tmux: Faster search of files
+- dust: Directory usage
+- bat: alternative cat | has syntax highlight
+- bottom | systemc diagnostics, alternative htop &amp; gtop
+</code></pre><p>  Others:</p>
+<pre><code>- mapascii | display map in shell...
+- bc | calculator, better than my own alias of python
+- happy-hacking-gnu | remap a hhkb keyboard
+</code></pre><p>Downloader:</p>
+<ul>
+<li>Deluge | torrent downloader</li>
+<li>aria2 | gerneral downloader</li>
+<li>yt-dlp | video site downloader</li>
+</ul>
+<p>Image:</p>
+<ul>
+<li>Imagemagick</li>
+<li>Inkscape | for vector images</li>
+<li>Gimp + PS plugin | Looks like PhotoShop</li>
+<li>feh | for wallpapers</li>
+<li>geeqie | image viewer</li>
+</ul>
+<p>Recorder:</p>
+<ul>
+<li>flameshot | best screenshots</li>
+<li>OSB studio | video recorder </li>
+<li>peek | gif recorder</li>
+</ul>
+<p>Stream player:</p>
+<ul>
+<li>mpv | as video and music player</li>
+<li>mpd | as music server</li>
+<li>vlc | backup player</li>
+<li>ncmpcpp | as shell client, btw I thought it’s abbrv of ncmp + cpp, but actual is nc-mpc-pp for ncurses music player clien plus plus</li>
+<li>mpdevil | as gui client</li>
+<li>osdlyrics | display lyrics, but need a gui client(ncmpcpp is not enough)</li>
+</ul>
+<p>Other editor:</p>
+<ul>
+<li>blender</li>
+<li>kdenlive</li>
+<li>mypaint | drawer</li>
+<li>fontforge | design your own font</li>
+</ul>
+<p>Text editor:</p>
+<ul>
+<li>VS code | versatile, edit, compile, debug, test. for gui</li>
+<li>Vim | config from FLHonker/vim-plus-plus, for shell</li>
+<li>Emacs | Doom emacs, for org-mode</li>
+<li>Frescobaldi | Composer tool</li>
+</ul>
+<p>Communication &amp; calendar:</p>
+<ul>
+<li>Thunderbird | never tried other clients, only gui</li>
+<li>weechat | irc shell client</li>
+</ul>
+<p>Browsers:</p>
+<ul>
+<li>Firefox | Screw chrome and its sync</li>
+<li>Chrome | backup for nothing</li>
+</ul>
+<p>Syncing:</p>
+<ul>
+<li>syncthings | for syncting</li>
+</ul>
+<p>Learning:</p>
+<ul>
+<li>goldendict | best dictionary, just add more dicts, HCZB</li>
+<li>anki | memory toold</li>
+<li>zotero | paper manager</li>
+<li>calibre | ebook manager</li>
+<li>obsidian | notebook</li>
+</ul>
+<p>PDF:</p>
+<ul>
+<li>okular | pdf viewer &amp; marker</li>
+<li>pdftk</li>
+<li>pdfchain</li>
+</ul>
+<p>Games:<br>  Sudoku: gnome-sudoku<br>  Minesweeper: kmines<br>  Solitare: aisleriot</p>
+]]></content>
+      <categories>
+        <category>Tool</category>
+      </categories>
+      <tags>
+        <tag>Unfinished</tag>
+        <tag>Linux</tag>
       </tags>
   </entry>
   <entry>

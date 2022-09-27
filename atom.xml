@@ -6,7 +6,7 @@
   <link href="https://obster-y.github.io/atom.xml" rel="self"/>
   
   <link href="https://obster-y.github.io/"/>
-  <updated>2021-07-20T15:30:41.480Z</updated>
+  <updated>2022-09-27T08:49:07.421Z</updated>
   <id>https://obster-y.github.io/</id>
   
   <author>
@@ -15,6 +15,57 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>Something about names</title>
+    <link href="https://obster-y.github.io/posts/3f36dd70-3e41-11ed-b1ad-45f7947ee979/"/>
+    <id>https://obster-y.github.io/posts/3f36dd70-3e41-11ed-b1ad-45f7947ee979/</id>
+    <published>2022-09-27T06:00:00.000Z</published>
+    <updated>2022-09-27T08:49:07.421Z</updated>
+    
+    
+    <summary type="html">&lt;p&gt;Discussion about some parts in family names.&lt;/p&gt;</summary>
+    
+    
+    
+    <category term="Entertainment" scheme="https://obster-y.github.io/categories/Entertainment/"/>
+    
+    
+    <category term="Knowledge" scheme="https://obster-y.github.io/tags/Knowledge/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Tools on Linux I used</title>
+    <link href="https://obster-y.github.io/posts/3f36dd71-3e41-11ed-b1ad-45f7947ee979/"/>
+    <id>https://obster-y.github.io/posts/3f36dd71-3e41-11ed-b1ad-45f7947ee979/</id>
+    <published>2022-09-16T13:46:06.000Z</published>
+    <updated>2022-09-27T08:49:07.421Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;a id=&quot;more&quot;&gt;&lt;/a&gt;
+&lt;p&gt;General:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;DE/WM: i3 | highly customizable(HCB)&lt;/li&gt;
+&lt;li&gt;thunar: File manager&lt;/li&gt;
+&lt;li&gt;sakura: Terminal</summary>
+        
+      
+    
+    
+    
+    <category term="Tool" scheme="https://obster-y.github.io/categories/Tool/"/>
+    
+    
+    <category term="Unfinished" scheme="https://obster-y.github.io/tags/Unfinished/"/>
+    
+    <category term="Linux" scheme="https://obster-y.github.io/tags/Linux/"/>
+    
+  </entry>
   
   <entry>
     <title>Using Excel more powerful</title>
@@ -378,46 +429,6 @@
     
     <summary type="html">&lt;p&gt;The test of any democratic society lies not in how well it can control expression but in whether it gives freedom of thought and expression the widest possible latitude, however disputable or irritating the results may sometimes be.&lt;/p&gt;
 &lt;p&gt;One reason why it is hard to design and teach such courses is that they cut across the insistence by top American universities that liberal-arts education and professional education should be kept separate, taught in different schools.&lt;/p&gt;</summary>
-    
-    
-    
-    <category term="English" scheme="https://obster-y.github.io/categories/English/"/>
-    
-    
-    <category term="Writing" scheme="https://obster-y.github.io/tags/Writing/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>30 Days of Sentence Writing - Day 13</title>
-    <link href="https://obster-y.github.io/posts/57ff41a2-cf7d-11eb-b6cc-f33fd02118ad/"/>
-    <id>https://obster-y.github.io/posts/57ff41a2-cf7d-11eb-b6cc-f33fd02118ad/</id>
-    <published>2021-06-21T04:45:33.000Z</published>
-    <updated>2021-07-19T16:28:39.860Z</updated>
-    
-    
-    <summary type="html">&lt;p&gt;Whether the government should increase the financing of pure science at the expense of technology or vice versa often depends on the issue of which is seen as the driving force.&lt;/p&gt;
-&lt;p&gt;Now the company is suddenly claiming that the 2002 agreement is invalid because of the 2006 legislation, and that only the federal government has regulatory power over nuclear issues.&lt;/p&gt;</summary>
-    
-    
-    
-    <category term="English" scheme="https://obster-y.github.io/categories/English/"/>
-    
-    
-    <category term="Writing" scheme="https://obster-y.github.io/tags/Writing/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>30 Days of Sentence Writing - Day 12</title>
-    <link href="https://obster-y.github.io/posts/57ff41a1-cf7d-11eb-b6cc-f33fd02118ad/"/>
-    <id>https://obster-y.github.io/posts/57ff41a1-cf7d-11eb-b6cc-f33fd02118ad/</id>
-    <published>2021-06-20T03:24:59.000Z</published>
-    <updated>2021-07-19T16:10:29.980Z</updated>
-    
-    
-    <summary type="html">&lt;p&gt;(Today,) (as the economy emerges from the pandemic,) a reversal [of the primacy of capital (over labour)] beckons — and it will come sooner (than you think).&lt;/p&gt;
-&lt;p&gt;It might seem premature to predict a wonderful world of work only a year on from a labour-market catastrophe.&lt;/p&gt;</summary>
     
     
     
